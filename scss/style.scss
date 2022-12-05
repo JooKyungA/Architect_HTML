@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
 
 // 1. header 높이 안맞음
+// 2. .pic와 .next bottom 위치를 같은 방식으로 맞추는 방법을 모르겠어서 .next bottom에 적당히 px 줘서 맞췄는데..좀 더 괜찮은 방법이 없는지
 
 body {
 	background-color: #cbc9c6;
@@ -86,6 +87,7 @@ body {
 			p {
 				width: 300px;
 				margin-left: 25%;
+				font-size: 16px;
 			}
 			.pic {
 				width: 40%;
@@ -102,35 +104,67 @@ body {
 				}
 			}
 			.wrap {
-				width: 230px;
+				width: 250px;
 				height: 300px;
-				position: absolute;
-				top: 0;
-				left: 0;
+				// position: absolute;
+				// top: 0;
+				// left: 0;
 				#slider {
-					width: 230px;
+					width: 250px;
 					height: 300px;
 					position: absolute;
-					top: 300px;
+					top: 230px;
 					left: 0;
-					// overflow: hidden;
+					overflow: hidden;
 					ul {
-						width: 100%;
+						width: calc(100% * 5);
 						height: 100%;
-						overflow: hidden;
 						li {
-							width: 100%;
+							width: calc(100% / 5);
 							height: 100%;
 							float: left;
 							img {
 								width: 100%;
 								height: 100%;
 								object-fit: cover;
+								filter: saturate(70%);
 							}
 						}
 					}
 				}
+				.prev {
+					width: 100%;
+					height: 100%;
+					img {
+						width: 100px;
+						position: absolute;
+						left: 150px;
+						bottom: 50px;
+					}
+				}
+				.next {
+					width: 100%;
+					height: 100%;
+					img {
+						width: 100px;
+						position: absolute;
+						margin-left: 25%;
+						bottom: 50px;
+					}
+				}
+				.pagination {
+					position: absolute;
+					top: 400px;
+					margin-left: 25%;
+					font-size: 18px;
+					font-weight: 400;
+				}
 			}
 		}
+	}
+
+	#about {
+		width: 1180px;
+		height: 400vh;
 	}
 }

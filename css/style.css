@@ -85,6 +85,7 @@ body #visual .inner h1 {
 body #visual .inner p {
   width: 300px;
   margin-left: 25%;
+  font-size: 16px;
 }
 body #visual .inner .pic {
   width: 40%;
@@ -101,26 +102,23 @@ body #visual .inner .pic > img {
   filter: saturate(70%);
 }
 body #visual .inner .wrap {
-  width: 230px;
+  width: 250px;
   height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 body #visual .inner .wrap #slider {
-  width: 230px;
+  width: 250px;
   height: 300px;
   position: absolute;
-  top: 300px;
+  top: 230px;
   left: 0;
-}
-body #visual .inner .wrap #slider ul {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
+body #visual .inner .wrap #slider ul {
+  width: 500%;
+  height: 100%;
+}
 body #visual .inner .wrap #slider ul li {
-  width: 100%;
+  width: 20%;
   height: 100%;
   float: left;
 }
@@ -128,6 +126,38 @@ body #visual .inner .wrap #slider ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(70%);
+}
+body #visual .inner .wrap .prev {
+  width: 100%;
+  height: 100%;
+}
+body #visual .inner .wrap .prev img {
+  width: 100px;
+  position: absolute;
+  left: 150px;
+  bottom: 50px;
+}
+body #visual .inner .wrap .next {
+  width: 100%;
+  height: 100%;
+}
+body #visual .inner .wrap .next img {
+  width: 100px;
+  position: absolute;
+  margin-left: 25%;
+  bottom: 50px;
+}
+body #visual .inner .wrap .pagination {
+  position: absolute;
+  top: 400px;
+  margin-left: 25%;
+  font-size: 18px;
+  font-weight: 400;
+}
+body #about {
+  width: 1180px;
+  height: 400vh;
 }
 
 /*# sourceMappingURL=style.css.map */

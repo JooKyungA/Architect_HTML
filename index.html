@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/main.js"></script>
-  <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/anime.js"></script>
 </head>
 
 <body>
@@ -45,27 +46,75 @@
       <div class="wrap">
         <article id="slider">
           <ul>
-            <li data-index="1"><img src="img/slider1.jpg" alt=""></li>
-            <li data-index="2"><img src="img/slider2.jpg" alt=""></li>
-            <li data-index="3"><img src="img/slider3.jpg" alt=""></li>
-            <li data-index="4"><img src="img/slider4.jpg" alt=""></li>
-            <li data-index="5"><img src="img/slider5.jpg" alt=""></li>
-            <li data-index="6"><img src="img/slider6.jpg" alt=""></li>
+            <li data-index="1"><img src="img/slider/s1.jpg" alt=""></li>
+            <li data-index="2"><img src="img/slider/s2.jpg" alt=""></li>
+            <li data-index="3"><img src="img/slider/s3.jpg" alt=""></li>
+            <li data-index="4"><img src="img/slider/s4.jpg" alt=""></li>
+            <li data-index="5"><img src="img/slider/s6.jpg" alt=""></li>
           </ul>
         </article>
         <a href="#" class="prev">
-          <img src="" alt="">
+          <img src="img/btn_prev1.png" alt="">
         </a>
         <a href="#" class="next">
-          <img src="" alt="">
+          <img src="img/btn_next1.png" alt="">
         </a>
         <div class="pagination">
-          <span></span> --- <span></span>
-          <!-- js로 자동계산하기 -->
+          <strong></strong> - <span></span>
+          <!-- strong태그 css 다 하고 js 적용하기 -->
         </div>
       </div>
     </div>
   </figure>
+  <section id="about">
+    <!--department-->
+    <h1>ABOUT</h1>
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel iusto architecto, tempore eligendi nostrum
+      nesciunt maxime animi quam distinctio! Blanditiis!</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore recusandae veritatis molestias facere sint,
+      numquam quos. Ea illo earum id sed cumque in. Quis laboriosam odio mollitia voluptas perferendis veritatis vel
+      molestiae, dignissimos recusandae, placeat quibusdam similique excepturi autem amet reprehenderit id eos provident
+      eligendi esse in quidem tempore. Perspiciatis.</p>
+  </section>
+  <section id="gallery">
+    <h1>GALLERY</h1>
+    <ul>
+      <li>PRIVATE HOUSES</li>
+      <li>APARTMENTS</li>
+      <li>RESTAURANTS</li>
+      <li>SHOWROOMS</li>
+    </ul>
+    <div class="wrap">
+      <!-- 일단 figure에 있는 slider 복붙함. 사진 수정하기 -->
+      <article id="slider2">
+        <ul>
+          <li data-index="1"><img src="img/slider/s1.jpg" alt=""></li>
+          <li data-index="2"><img src="img/slider/s2.jpg" alt=""></li>
+          <li data-index="3"><img src="img/slider/s3.jpg" alt=""></li>
+          <li data-index="4"><img src="img/slider/s4.jpg" alt=""></li>
+          <li data-index="5"><img src="img/slider/s6.jpg" alt=""></li>
+        </ul>
+      </article>
+      <a href="#" class="prev">
+        <img src="img/btn_prev1.png" alt="">
+      </a>
+      <a href="#" class="next">
+        <img src="img/btn_next1.png" alt="">
+      </a>
+      <div class="pagination">
+        <strong></strong> - <span></span>
+        <!-- strong태그 css 다 하고 js 적용하기 -->
+      </div>
+    </div>
+
+  </section>
+  <section id="awards">
+    <!-- 표 만들기 -->
+  </section>
+  <section id="location">
+    <!--blog 대신 location으로 변경-->
+    <!-- 나중에생각해보기 -->
+  </section>
 
 </body>
 
