@@ -18,7 +18,7 @@ sp.innerText = total;
 
 // slider
 let enableClick = true;
-let speed = 400;
+let speed = 500;
 
 init();
 
@@ -26,20 +26,20 @@ next.addEventListener("click", (e) => {
   e.preventDefault();
   if (enableClick) {
     nextslide();
-    enableClink = false;
+    enableClick = false;
   }
 })
 prev.addEventListener("click", (e) => {
   e.preventDefault();
   if (enableClick) {
     prevslide();
-    enableClink = false;
+    enableClick = false;
   }
 })
 
 function init() {
   ul.style.left = "-100%";
-  // ul.prepend(ul.lastElementChild);
+  ul.prepend(ul.lastElementChild);
   ul.style.width = `${100 * len} %`;
   lis.forEach((el) => {
     el.style.width = `${100 / len}%`;
@@ -51,8 +51,8 @@ function nextslide() {
     value: "-200%",
     duration: speed,
     callback: () => {
-      ul.append(ul.firstElementChild);
       ul.style.left = "-100%";
+      ul.append(ul.firstElementChild);
       enableClick = true;
     }
   })
@@ -63,7 +63,7 @@ function prevslide() {
     value: "0%",
     duration: speed,
     callback: () => {
-      ul.style.left = "-100%"
+      ul.style.left = "-100%";
       ul.prepend(ul.lastElementChild);
       enableClick = true;
     }

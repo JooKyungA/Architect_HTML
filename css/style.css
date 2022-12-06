@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Raleway";
+  color: #0b0909;
 }
 
 ul,
@@ -16,96 +17,94 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
 body {
   background-color: #cbc9c6;
 }
-body #header {
+body main {
   width: 1180px;
-  height: 150px;
-  display: flex;
   margin: 0 auto;
-  padding: 5vh 0vw 0vh;
+  padding: 5vh 0vw 5vh;
 }
-body #header .inner {
+body main #header {
+  height: 110px;
+}
+body main #header .inner {
   width: 100%;
   height: 100%;
+  display: flex;
 }
-body #header .inner h1 {
-  width: 100%;
+body main #header .inner h1 {
+  width: 25%;
+  display: flex;
+}
+body main #header .inner h1 a {
+  font-size: 16px;
+  color: #0b0909;
+}
+body main #header .inner .nav_web {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+body main #header .inner .nav_web #gnb li {
   float: left;
+  margin-right: 20px;
+}
+body main #header .inner .nav_web #gnb li a {
+  font-size: 14px;
+  color: #333;
+}
+body main #header .inner .nav_web .sns li {
+  float: left;
+}
+body main #header .inner .nav_web .sns li:nth-of-type(1) {
+  margin-right: 20px;
+}
+body main #header .inner .nav_web .sns li a {
+  font-size: 14px;
+  color: #333;
+}
+body main #visual {
+  height: calc(95vh - 110px);
   position: relative;
 }
-body #header .inner h1 a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-weight: 700;
-  font-size: 15px;
-  color: #333;
-}
-body #header .inner .nav_web {
-  float: left;
-  margin-left: 25%;
-}
-body #header .inner .nav_web #gnb li a {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #333;
-}
-body #header .inner div {
-  float: left;
-  margin-left: 42vh;
-}
-body #header .inner div p {
-  font-size: 14px;
-  color: #333;
-}
-body #header .inner > ul {
-  float: right;
-}
-body #header .inner > ul li a {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #333;
-}
-body #visual {
-  width: 1180px;
-  height: calc(100vh - 150px);
-  margin: 0 auto;
-  position: relative;
-  padding: 2vh 0vw;
-}
-body #visual .inner h1 {
+body main #visual .inner .txt {
   width: 300px;
   margin-left: 25%;
+}
+body main #visual .inner .txt h1 {
   margin-bottom: 200px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 100px;
 }
-body #visual .inner p {
-  width: 300px;
-  margin-left: 25%;
+body main #visual .inner .txt p {
   font-size: 16px;
+  color: #333;
 }
-body #visual .inner .pic {
+body main #visual .inner .pic {
   width: 40%;
-  height: 85%;
-  overflow: hidden;
+  height: 650px;
   position: absolute;
-  top: 20px;
+  bottom: 100px;
   right: 0;
+  overflow: hidden;
 }
-body #visual .inner .pic > img {
+body main #visual .inner .pic > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
 }
-body #visual .inner .wrap {
+body main #visual .inner .wrap {
   width: 250px;
   height: 300px;
 }
-body #visual .inner .wrap #slider {
+body main #visual .inner .wrap #slider {
   width: 250px;
   height: 300px;
   position: absolute;
@@ -113,51 +112,86 @@ body #visual .inner .wrap #slider {
   left: 0;
   overflow: hidden;
 }
-body #visual .inner .wrap #slider ul {
+body main #visual .inner .wrap #slider ul {
   width: 500%;
   height: 100%;
+  transition: 1s;
 }
-body #visual .inner .wrap #slider ul li {
+body main #visual .inner .wrap #slider ul li {
   width: 20%;
   height: 100%;
   float: left;
 }
-body #visual .inner .wrap #slider ul li img {
+body main #visual .inner .wrap #slider ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
 }
-body #visual .inner .wrap .prev {
+body main #visual .inner .wrap .prev {
   width: 100%;
   height: 100%;
 }
-body #visual .inner .wrap .prev img {
+body main #visual .inner .wrap .prev img {
   width: 100px;
   position: absolute;
   left: 150px;
-  bottom: 50px;
+  bottom: 93px;
 }
-body #visual .inner .wrap .next {
+body main #visual .inner .wrap .next {
   width: 100%;
   height: 100%;
 }
-body #visual .inner .wrap .next img {
+body main #visual .inner .wrap .next img {
   width: 100px;
   position: absolute;
   margin-left: 25%;
-  bottom: 50px;
+  bottom: 93px;
 }
-body #visual .inner .wrap .pagination {
+body main #visual .inner .wrap .pagination {
   position: absolute;
   top: 400px;
   margin-left: 25%;
   font-size: 18px;
   font-weight: 400;
 }
-body #about {
-  width: 1180px;
-  height: 400vh;
+body main #about {
+  padding: 40px 0px 100px;
+  border-top: 2px solid #aaa;
+}
+body main #about .inner h1 {
+  margin-bottom: 50px;
+}
+body main #about .inner .txt {
+  display: flex;
+  justify-content: space-between;
+}
+body main #about .inner .txt h2 {
+  width: 400px;
+  font-size: 18px;
+  color: #333;
+}
+body main #about .inner .txt p {
+  width: 600px;
+  font-size: 17px;
+  text-align: justify;
+  color: #666;
+}
+body main #portfolio {
+  padding: 40px 0px 100px;
+  border-top: 2px solid #aaa;
+}
+body main #awards {
+  padding: 40px 0px 100px;
+  border-top: 2px solid #aaa;
+}
+body main #contact {
+  padding: 40px 0px 100px;
+  border-top: 2px solid #aaa;
+}
+body main #footer {
+  padding: 40px 0px 100px;
+  border-top: 2px solid #aaa;
 }
 
 /*# sourceMappingURL=style.css.map */
