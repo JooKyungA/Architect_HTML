@@ -108,7 +108,7 @@ body {
 						ul {
 							width: calc(100% * 5);
 							height: 100%;
-							transition: 1s;
+							// transition: 1s;
 							li {
 								width: calc(100% / 5);
 								height: 100%;
@@ -154,15 +154,15 @@ body {
 			}
 		}
 
-		// about 영역
+		// about 영역 (스크롤 적용하기)
 		#about {
-			padding: 40px 0px 100px;
+			padding: 30px 0px 70px;
 			border-top: 2px solid #aaa;
 			.inner {
 				h1 {
 					// font-size: 50px;
 					// font-weight: 500;
-					margin-bottom: 50px;
+					margin-bottom: 30px;
 				}
 				.txt {
 					display: flex;
@@ -182,33 +182,120 @@ body {
 			}
 		}
 
-		// portfolio 영역
+		// portfolio 영역 (탭메뉴 적용하기)
 		#portfolio {
-			padding: 40px 0px 100px;
+			padding: 30px 0px 60px;
 			border-top: 2px solid #aaa;
 			.inner {
+				width: 100%;
+				overflow: hidden;
 				h1 {
-					// font-size: 50px;
-					// font-weight: 400;
+					// float: left;
+				}
+				.tab {
+					width: 1180px;
+					float: right;
+					overflow: hidden;
+					nav {
+						width: 400px;
+						float: right;
+						margin-bottom: 50px;
+						ul {
+							width: 400px;
+							float: right;
+							display: flex;
+							li {
+								width: 100%;
+								height: 20px;
+								// float: left;
+								padding-left: 10px;
+								a {
+									display: block;
+									width: 100%;
+									height: 100%;
+									font-size: 14px;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+								}
+								&.on {
+									a {
+										color: #777;
+									}
+								}
+							}
+						}
+					}
+					section {
+						width: 100%;
+						height: 300px;
+						position: relative;
+						float: right;
+						article {
+							width: 100%;
+							height: 100%;
+							// transition: 0.5s;
+							position: absolute;
+							top: 0;
+							right: 0;
+							z-index: 1;
+							overflow: hidden;
+							display: flex;
+							div {
+								width: 380px;
+								height: 100%;
+								float: left;
+								margin-right: 20px;
+								overflow: hidden;
+								&:last-of-type {
+									margin-right: 0px;
+								}
+								img {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+									filter: saturate(70%);
+									transition: 0.5s;
+									&:hover {
+										transform: scale(1.2);
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
-		// awards 영역
+		// awards 영역 (아코디언 적용하기)
 		#awards {
-			padding: 40px 0px 100px;
+			padding: 30px 0px 100px;
 			border-top: 2px solid #aaa;
 		}
 
-		// contact 영역
+		// contact 영역 (지도 or form 넣기)
 		#contact {
-			padding: 40px 0px 100px;
+			padding: 30px 0px 100px;
 			border-top: 2px solid #aaa;
 		}
 
 		// footer 영역
 		#footer {
-			padding: 40px 0px 100px;
+			padding: 30px 0px 10px;
 			border-top: 2px solid #aaa;
+			h1 {
+				font-size: 20px;
+				font-weight: 500;
+				margin-bottom: 10px;
+			}
+			address {
+				font-style: normal;
+				font-size: 14px;
+				line-height: 1.5;
+				margin-bottom: 15px;
+			}
+			p {
+				font-size: 14px;
+			}
 		}
 	}
 }

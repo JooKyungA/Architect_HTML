@@ -1,4 +1,3 @@
-
 const slider = document.querySelector("#slider");
 const ul = slider.querySelector("ul");
 const lis = ul.querySelectorAll("li");

@@ -115,7 +115,6 @@ body main #visual .inner .wrap #slider {
 body main #visual .inner .wrap #slider ul {
   width: 500%;
   height: 100%;
-  transition: 1s;
 }
 body main #visual .inner .wrap #slider ul li {
   width: 20%;
@@ -156,11 +155,11 @@ body main #visual .inner .wrap .pagination {
   font-weight: 400;
 }
 body main #about {
-  padding: 40px 0px 100px;
+  padding: 30px 0px 70px;
   border-top: 2px solid #aaa;
 }
 body main #about .inner h1 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 body main #about .inner .txt {
   display: flex;
@@ -178,20 +177,106 @@ body main #about .inner .txt p {
   color: #666;
 }
 body main #portfolio {
-  padding: 40px 0px 100px;
+  padding: 30px 0px 60px;
   border-top: 2px solid #aaa;
 }
+body main #portfolio .inner {
+  width: 100%;
+  overflow: hidden;
+}
+body main #portfolio .inner .tab {
+  width: 1180px;
+  float: right;
+  overflow: hidden;
+}
+body main #portfolio .inner .tab nav {
+  width: 400px;
+  float: right;
+  margin-bottom: 50px;
+}
+body main #portfolio .inner .tab nav ul {
+  width: 400px;
+  float: right;
+  display: flex;
+}
+body main #portfolio .inner .tab nav ul li {
+  width: 100%;
+  height: 20px;
+  padding-left: 10px;
+}
+body main #portfolio .inner .tab nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #portfolio .inner .tab nav ul li.on a {
+  color: #777;
+}
+body main #portfolio .inner .tab section {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  float: right;
+}
+body main #portfolio .inner .tab section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+}
+body main #portfolio .inner .tab section article div {
+  width: 380px;
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+  overflow: hidden;
+}
+body main #portfolio .inner .tab section article div:last-of-type {
+  margin-right: 0px;
+}
+body main #portfolio .inner .tab section article div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(70%);
+  transition: 0.5s;
+}
+body main #portfolio .inner .tab section article div img:hover {
+  transform: scale(1.2);
+}
 body main #awards {
-  padding: 40px 0px 100px;
+  padding: 30px 0px 100px;
   border-top: 2px solid #aaa;
 }
 body main #contact {
-  padding: 40px 0px 100px;
+  padding: 30px 0px 100px;
   border-top: 2px solid #aaa;
 }
 body main #footer {
-  padding: 40px 0px 100px;
+  padding: 30px 0px 10px;
   border-top: 2px solid #aaa;
+}
+body main #footer h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+body main #footer address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+body main #footer p {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
