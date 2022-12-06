@@ -115,6 +115,9 @@ body main #visual .inner .wrap #slider {
 body main #visual .inner .wrap #slider ul {
   width: 500%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 body main #visual .inner .wrap #slider ul li {
   width: 20%;
