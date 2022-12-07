@@ -219,8 +219,9 @@ body #portfolio .inner .tab {
   overflow: hidden;
 }
 body #portfolio .inner .tab nav {
+  width: 500px;
   float: right;
-  margin: 20px 0px 50px;
+  margin: 30px 0px 50px;
 }
 body #portfolio .inner .tab nav ul {
   width: 100%;
@@ -243,7 +244,8 @@ body #portfolio .inner .tab nav ul li a {
   align-items: center;
 }
 body #portfolio .inner .tab nav ul li.on a {
-  color: #666;
+  color: #777;
+  text-decoration: underline;
 }
 body #portfolio .inner .tab section {
   width: 820px;
@@ -273,6 +275,7 @@ body #portfolio .inner .tab section article div {
   float: left;
   margin-right: 20px;
   overflow: hidden;
+  position: relative;
 }
 body #portfolio .inner .tab section article div:last-of-type {
   margin-right: 0px;
@@ -284,8 +287,41 @@ body #portfolio .inner .tab section article div img {
   filter: saturate(60%);
   transition: 0.5s;
 }
-body #portfolio .inner .tab section article div img:hover {
+body #portfolio .inner .tab section article div p {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 4px;
+  color: #fff;
+  opacity: 0;
+  z-index: 4;
+}
+body #portfolio .inner .tab section article div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  opacity: 0.8;
+  transition: 0.5s;
+  z-index: 3;
+}
+body #portfolio .inner .tab section article div:hover img {
   transform: scale(1.2);
+}
+body #portfolio .inner .tab section article div:hover p {
+  opacity: 1;
+}
+body #portfolio .inner .tab section article div:hover::after {
+  bottom: 0px;
+  left: 0;
 }
 body #awards .inner {
   width: 1180px;
@@ -306,7 +342,7 @@ body #awards .inner h1 {
 body #awards .inner .container {
   float: right;
   width: 700px;
-  margin-right: 5vw;
+  margin-right: 4vw;
 }
 body #awards .inner .container .tab {
   position: relative;
@@ -341,7 +377,7 @@ body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
   justify-content: flex-end;
   font-size: 100px;
   padding: 20px;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ label h3 {
   padding: 2px 10px;
@@ -432,7 +468,7 @@ body #contact .inner p {
 body #contact .inner .wrap {
   float: right;
   width: 400px;
-  margin: 100px 5vw 60px 0px;
+  margin: 100px 4vw 60px 0px;
   display: flex;
   flex-direction: column;
 }
@@ -476,7 +512,7 @@ body #contact .inner .wrap div input[type=submit] {
   color: #fff;
   margin: 10px 0px;
   position: absolute;
-  right: 5vw;
+  right: 4vw;
   bottom: 65px;
 }
 body #footer .inner {
