@@ -3,295 +3,353 @@
 @import "reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
 
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Raleway";
+	color: #0b0909;
+}
+ul,
+li,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
 h1 {
 	font-size: 50px;
 	font-weight: 500;
 }
 
 body {
-	background-color: #cbc9c6;
-	main {
-		width: 1180px;
-		margin: 0 auto;
-		padding: 5vh 0vw 5vh;
-		// header 영역
-		#header {
+	padding: 5vh 0vw 5vh;
+	background-color: #d8d6d3;
+	// background-color: #cbc9c6;
+
+	// header 영역
+	#header {
+		width: 100%;
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
 			height: 110px;
-			.inner {
-				width: 100%;
-				height: 100%;
+			display: flex;
+			h1 {
+				width: 25%;
 				display: flex;
-				h1 {
-					width: 25%;
-					display: flex;
-					a {
-						font-size: 16px;
-						color: #0b0909;
-					}
+				font-weight: 600;
+				a {
+					font-size: 16px;
+					color: #0b0909;
 				}
-				.nav_web {
-					width: 75%;
-					display: flex;
-					justify-content: space-between;
-					#gnb {
-						li {
-							float: left;
-							margin-right: 20px;
-							a {
-								font-size: 14px;
-								color: #333;
-							}
+			}
+			.nav_web {
+				width: 75%;
+				display: flex;
+				justify-content: space-between;
+				#gnb {
+					li {
+						float: left;
+						margin-right: 20px;
+						a {
+							font-size: 14px;
+							color: #333;
 						}
 					}
-					.sns {
-						li {
-							float: left;
-							&:nth-of-type(1) {
-								margin-right: 20px;
-							}
-							a {
-								font-size: 14px;
-								color: #333;
-							}
+				}
+				.sns {
+					li {
+						float: left;
+						&:nth-of-type(1) {
+							margin-right: 20px;
+						}
+						a {
+							font-size: 14px;
+							color: #333;
 						}
 					}
 				}
 			}
 		}
+	}
 
-		// visual 영역
-		#visual {
-			height: calc(100vh - 5vh - 110px);
-			position: relative;
-			.inner {
-				.txt {
-					width: 300px;
-					margin-left: 25%;
-					h1 {
-						margin-bottom: 200px;
-						font-weight: 500;
-						font-size: 100px;
-					}
-					p {
-						font-size: 16px;
-						color: #333;
-					}
+	// visual 영역
+	#visual {
+		width: 1180px;
+		// inner에 1180하면 사진 위치가 달라져서 일단 figure에 1180 적용
+		margin: 0 auto;
+		height: calc(100vh - 5vh - 110px);
+		position: relative;
+		overflow: hidden;
+		.inner {
+			width: 100%;
+			margin: 0 auto;
+			.txt {
+				width: 300px;
+				margin-left: 25%;
+				h1 {
+					margin-bottom: 200px;
+					font-weight: 500;
+					font-size: 100px;
 				}
-				.pic {
-					width: 40%;
-					height: 650px;
-					position: absolute;
-					bottom: 100px;
-					right: 0;
-					overflow: hidden;
-					> img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						filter: saturate(70%);
-					}
+				p {
+					font-size: 16px;
+					color: #333;
 				}
-				.wrap {
+			}
+			.pic {
+				width: 40%;
+				height: 650px;
+				position: absolute;
+				bottom: 100px;
+				right: 0;
+				overflow: hidden;
+				> img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					filter: saturate(70%);
+				}
+			}
+			.wrap {
+				width: 250px;
+				height: 300px;
+				// position: absolute;
+				// top: 0;
+				// left: 0;
+				#slider {
 					width: 250px;
 					height: 300px;
-					// position: absolute;
-					// top: 0;
-					// left: 0;
-					#slider {
-						width: 250px;
-						height: 300px;
+					position: absolute;
+					top: 230px;
+					left: 0;
+					overflow: hidden;
+					ul {
+						width: calc(100% * 5);
+						height: 100%;
 						position: absolute;
-						top: 230px;
+						top: 0;
 						left: 0;
-						overflow: hidden;
-						ul {
-							width: calc(100% * 5);
+						li {
+							width: calc(100% / 5);
 							height: 100%;
-							position: absolute;
-							top: 0;
-							left: 0;
-							li {
-								width: calc(100% / 5);
+							float: left;
+							img {
+								width: 100%;
 								height: 100%;
-								float: left;
-								img {
-									width: 100%;
-									height: 100%;
-									object-fit: cover;
-									filter: saturate(70%);
+								object-fit: cover;
+								filter: saturate(70%);
+							}
+						}
+					}
+				}
+				.prev {
+					width: 100%;
+					height: 100%;
+					img {
+						width: 100px;
+						position: absolute;
+						left: 150px;
+						bottom: 93px;
+					}
+				}
+				.next {
+					width: 100%;
+					height: 100%;
+					img {
+						width: 100px;
+						position: absolute;
+						margin-left: 25%;
+						bottom: 93px;
+					}
+				}
+				.pagination {
+					position: absolute;
+					top: 400px;
+					margin-left: 25%;
+					font-size: 18px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	// about 영역 (스크롤 적용하기)
+	#about {
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 30px 0px 70px;
+			border-top: 2px solid #aaa;
+			h1 {
+				// font-size: 50px;
+				// font-weight: 500;
+				margin-bottom: 30px;
+			}
+			.txt {
+				display: flex;
+				justify-content: space-between;
+				h2 {
+					width: 400px;
+					font-size: 18px;
+					color: #333;
+				}
+				p {
+					width: 600px;
+					font-size: 17px;
+					text-align: justify;
+					color: #666;
+				}
+			}
+		}
+	}
+
+	// portfolio 영역 (탭메뉴 적용하기, 마스크효과+글 넣기)
+	#portfolio {
+		width: 100%;
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 30px 0px 70px;
+			border-top: 2px solid #aaa;
+			overflow: hidden;
+			.tab {
+				width: 1180px;
+				float: right;
+				overflow: hidden;
+				nav {
+					width: 400px;
+					float: right;
+					margin-bottom: 50px;
+					ul {
+						width: 400px;
+						float: right;
+						display: flex;
+						li {
+							width: 100%;
+							height: 20px;
+							// float: left;
+							padding-left: 10px;
+							a {
+								display: block;
+								width: 100%;
+								height: 100%;
+								font-size: 14px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
+							&.on {
+								a {
+									color: #666;
 								}
 							}
 						}
 					}
-					.prev {
+				}
+				section {
+					width: 100%;
+					height: 300px;
+					position: relative;
+					float: right;
+					article {
 						width: 100%;
 						height: 100%;
-						img {
-							width: 100px;
-							position: absolute;
-							left: 150px;
-							bottom: 93px;
-						}
-					}
-					.next {
-						width: 100%;
-						height: 100%;
-						img {
-							width: 100px;
-							position: absolute;
-							margin-left: 25%;
-							bottom: 93px;
-						}
-					}
-					.pagination {
+						// transition: 0.5s;
 						position: absolute;
-						top: 400px;
-						margin-left: 25%;
-						font-size: 18px;
-						font-weight: 400;
+						top: 0;
+						right: 0;
+						z-index: 1;
+						overflow: hidden;
+						display: flex;
+						div {
+							width: 380px;
+							height: 100%;
+							float: left;
+							margin-right: 20px;
+							overflow: hidden;
+							&:last-of-type {
+								margin-right: 0px;
+							}
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								filter: saturate(60%);
+								transition: 0.5s;
+								&:hover {
+									transform: scale(1.2);
+								}
+							}
+						}
 					}
 				}
 			}
 		}
-
-		// about 영역 (스크롤 적용하기)
-		#about {
-			padding: 30px 0px 70px;
+	}
+	// awards 영역 (아코디언 적용하기)
+	#awards {
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 30px 0px 100px;
 			border-top: 2px solid #aaa;
-			.inner {
-				h1 {
-					// font-size: 50px;
-					// font-weight: 500;
-					margin-bottom: 30px;
-				}
-				.txt {
-					display: flex;
-					justify-content: space-between;
-					h2 {
-						width: 400px;
-						font-size: 18px;
-						color: #333;
-					}
-					p {
-						width: 600px;
-						font-size: 17px;
-						text-align: justify;
+		}
+	}
+
+	// contact 영역 (지도 or form 넣기)
+	#contact {
+		width: 100%;
+
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 30px 0px 100px;
+			border-top: 2px solid #aaa;
+		}
+	}
+
+	// footer 영역
+	#footer {
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 30px 0px 20px;
+			border-top: 2px solid #aaa;
+			h1 {
+				float: left;
+				font-size: 15px;
+				font-weight: 600;
+			}
+			ul {
+				float: right;
+				li {
+					float: left;
+					margin-left: 20px;
+					a {
+						font-size: 14px;
 						color: #666;
 					}
 				}
 			}
-		}
-
-		// portfolio 영역 (탭메뉴 적용하기)
-		#portfolio {
-			padding: 30px 0px 60px;
-			border-top: 2px solid #aaa;
-			.inner {
+			address {
+				float: left;
 				width: 100%;
-				overflow: hidden;
-				.tab {
-					width: 1180px;
-					float: right;
-					overflow: hidden;
-					nav {
-						width: 400px;
-						float: right;
-						margin-bottom: 50px;
-						ul {
-							width: 400px;
-							float: right;
-							display: flex;
-							li {
-								width: 100%;
-								height: 20px;
-								// float: left;
-								padding-left: 10px;
-								a {
-									display: block;
-									width: 100%;
-									height: 100%;
-									font-size: 14px;
-									display: flex;
-									justify-content: center;
-									align-items: center;
-								}
-								&.on {
-									a {
-										color: #777;
-									}
-								}
-							}
-						}
-					}
-					section {
-						width: 100%;
-						height: 300px;
-						position: relative;
-						float: right;
-						article {
-							width: 100%;
-							height: 100%;
-							// transition: 0.5s;
-							position: absolute;
-							top: 0;
-							right: 0;
-							z-index: 1;
-							overflow: hidden;
-							display: flex;
-							div {
-								width: 380px;
-								height: 100%;
-								float: left;
-								margin-right: 20px;
-								overflow: hidden;
-								&:last-of-type {
-									margin-right: 0px;
-								}
-								img {
-									width: 100%;
-									height: 100%;
-									object-fit: cover;
-									filter: saturate(70%);
-									transition: 0.5s;
-									&:hover {
-										transform: scale(1.2);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		// awards 영역 (아코디언 적용하기)
-		#awards {
-			padding: 30px 0px 100px;
-			border-top: 2px solid #aaa;
-		}
-
-		// contact 영역 (지도 or form 넣기)
-		#contact {
-			padding: 30px 0px 100px;
-			border-top: 2px solid #aaa;
-		}
-
-		// footer 영역
-		#footer {
-			padding: 30px 0px 10px;
-			border-top: 2px solid #aaa;
-			h1 {
-				font-size: 20px;
-				font-weight: 500;
+				font-style: normal;
+				font-size: 13px;
+				line-height: 1.5;
+				color: #555;
+				margin-top: 10px;
 				margin-bottom: 10px;
 			}
-			address {
-				font-style: normal;
-				font-size: 14px;
-				line-height: 1.5;
-				margin-bottom: 15px;
-			}
 			p {
-				font-size: 14px;
+				float: left;
+				width: 100%;
+				font-size: 13px;
+				color: #555;
+				margin-bottom: 30px;
 			}
 		}
 	}
