@@ -1,3 +1,4 @@
+// slider 관련 js--------------------------
 const slider = document.querySelector("#slider");
 const ul = slider.querySelector("ul");
 const lis = ul.querySelectorAll("li");
@@ -67,4 +68,42 @@ function prevslide() {
       enableClick = true;
     }
   })
+}
+
+// tab menu 관련 js--------------------------
+const tab = document.querySelector(".tab");
+const btns = tab.querySelectorAll("ul li");
+const boxes = tab.querySelectorAll("section article");
+// let enableClick = true;
+// let speed = 500;
+
+btns.forEach((_el, _ind) => {
+  _el.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let isOn = e.currentTarget.classList.contains("on");
+    if (isOn) return;
+
+    if (enableClick) {
+      enableClick = false;
+
+      activation(btns, _ind);
+      activation(boxes, _ind);
+      // new Anim(main,{
+      //   prop:""
+      // })
+    }
+  })
+})
+
+function activation(list, index) {
+  for (let k of list) {
+    k.classList.remove("on");
+    list[index].classList.add("on");
+
+    setTimeout(() => {
+      enableClick = true;
+    }, speed)
+  }
+
 }
