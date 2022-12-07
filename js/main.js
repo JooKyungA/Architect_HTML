@@ -89,9 +89,6 @@ btns.forEach((_el, _ind) => {
 
       activation(btns, _ind);
       activation(boxes, _ind);
-      // new Anim(main,{
-      //   prop:""
-      // })
     }
   })
 })
@@ -104,6 +101,7 @@ function activation(list, index) {
     setTimeout(() => {
       enableClick = true;
     }, speed)
+
   }
 
 }
