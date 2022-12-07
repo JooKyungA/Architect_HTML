@@ -235,7 +235,7 @@ body {
 				overflow: hidden;
 				nav {
 					float: right;
-					margin-bottom: 50px;
+					margin: 20px 0px 50px;
 					ul {
 						width: 100%;
 						display: flex;
@@ -263,8 +263,8 @@ body {
 					}
 				}
 				section {
-					width: 100%;
-					height: 300px;
+					width: 820px;
+					height: 250px;
 					position: relative;
 					float: right;
 					article {
@@ -283,7 +283,7 @@ body {
 							opacity: 1;
 						}
 						div {
-							width: 380px;
+							width: 260px;
 							height: 100%;
 							float: left;
 							margin-right: 20px;
@@ -314,6 +314,118 @@ body {
 			margin: 0 auto;
 			padding: 30px 0px 100px;
 			border-top: 2px solid #aaa;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			h1 {
+				float: left;
+				width: 100%;
+				margin-bottom: 70px;
+			}
+			.container {
+				float: right;
+				width: 700px;
+				margin-right: 5vw;
+				.tab {
+					position: relative;
+					background: #d8d6d3;
+					padding: 0px 20px 10px;
+					// margin-right: 20px;
+					border-top: 1px solid #333;
+					// box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+					overflow: hidden;
+					&:hover label::after {
+						color: #333;
+					}
+					input[type="radio"] {
+						appearance: none;
+						&:checked + label::after {
+							transform: rotate(135deg);
+							color: #333;
+						}
+						&:checked ~ .content {
+							max-height: 100vh;
+							p {
+								color: #333;
+							}
+						}
+						&:checked ~ label h2 {
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							top: 0px;
+							left: 0px;
+							color: rgba(255, 255, 255, 0.5);
+							justify-content: flex-end;
+							font-size: 100px;
+							padding: 20px;
+							transition: 0.2s;
+						}
+						&:checked ~ label h3 {
+							// background: #333;
+							padding: 2px 10px;
+							font-weight: bold;
+							color: #333;
+							border-radius: 2px;
+							// box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+						}
+					}
+					label {
+						display: flex;
+						align-items: center;
+						margin-bottom: 10px;
+						cursor: pointer;
+						&::after {
+							content: "+";
+							position: absolute;
+							right: 20px;
+							font-size: 32px;
+							transition: all 1s;
+							color: rgba(0, 0, 0, 0.1);
+						}
+						h2 {
+							width: 60px;
+							height: 40px;
+							// background: rgba(0, 0, 0, 0.3);
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							color: #333;
+							font-size: 20px;
+							margin-right: 50px;
+						}
+						h3 {
+							position: relative;
+							font-weight: 500;
+							color: #333;
+							z-index: 10;
+						}
+					}
+					.content {
+						max-height: 0;
+						transition: 1s;
+						overflow: hidden;
+						display: flex;
+						img {
+							width: 200px;
+							height: 150px;
+							padding: 10px 0;
+							margin: 0px 20px;
+							z-index: 10;
+							filter: saturate(50%);
+						}
+						p {
+							width: 400px;
+							position: relative;
+							padding: 10px 0;
+							color: #333;
+							z-index: 10;
+						}
+					}
+				}
+			}
 		}
 	}
 
