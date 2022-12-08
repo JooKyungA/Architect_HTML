@@ -23,6 +23,9 @@
 // 	font-weight: 500;
 // }
 
+$tablet: 1179px;
+$mobile: 539px;
+
 body {
 	padding: 5vh 0vw 5vh;
 
@@ -31,8 +34,8 @@ body {
 		width: 100%;
 		.inner {
 			width: 1180px;
-			margin: 0 auto;
 			height: 110px;
+			margin: 0 auto;
 			display: flex;
 			h1 {
 				width: 25%;
@@ -87,8 +90,8 @@ body {
 	#visual {
 		width: 1180px;
 		// inner에 1180하면 사진 위치가 달라져서 일단 figure에 1180 적용
-		margin: 0 auto;
 		height: calc(100vh - 5vh - 110px);
+		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
 		.inner {
@@ -108,7 +111,7 @@ body {
 				}
 			}
 			.pic {
-				width: 40%;
+				width: 470px;
 				height: 650px;
 				position: absolute;
 				bottom: 100px;
@@ -131,7 +134,7 @@ body {
 					width: 250px;
 					height: 300px;
 					position: absolute;
-					top: 230px;
+					top: 240px;
 					left: 0;
 					overflow: hidden;
 					ul {
@@ -170,7 +173,7 @@ body {
 					img {
 						width: 100px;
 						position: absolute;
-						margin-left: 25%;
+						left: 25%;
 						bottom: 93px;
 					}
 				}
@@ -215,7 +218,7 @@ body {
 		}
 	}
 
-	// portfolio 영역 (탭접근성 적용하기, 마스크효과+글 넣기)
+	// portfolio 영역 (탭접근성 적용하기)
 	#portfolio {
 		width: 100%;
 		.inner {
@@ -627,5 +630,139 @@ body {
 		}
 	}
 }
-@media screen and (max-height: 1179px) {
+
+// tablet
+@media screen and (max-width: 1179px) {
+	body {
+		// padding: 0vh 0vw;
+		// header 영역
+		#header {
+			// width: 100%;
+			height: 15vh;
+			.inner {
+				width: 100%;
+				// height: 15vh;
+				padding: 0vh 5vw;
+				// align-items: center;
+				// border: 1px solid red;
+				h1 {
+					display: none;
+				}
+				.nav_web {
+					display: none;
+				}
+			}
+		}
+
+		// visual 영역
+		#visual {
+			width: 100%;
+			height: calc(100vh - 19vh);
+			overflow: visible;
+			.inner {
+				.txt {
+					width: 25%;
+					position: absolute;
+					h1 {
+						// font-size: 12vh;
+						width: 30%;
+						margin-top: -110px;
+						margin-left: -12vw;
+					}
+					p {
+						margin-top: -200px;
+						margin-left: -12vw;
+					}
+				}
+				.pic {
+					// width: 45vw;
+					height: 650px;
+					margin-right: 5vw;
+					z-index: -1;
+				}
+			}
+			.wrap {
+				// position: relative;
+				#slider {
+					margin: 5vh 5vw;
+				}
+				.prev {
+					img {
+						margin-bottom: 20vh;
+						margin-left: 16vw;
+					}
+				}
+				.next {
+					img {
+						margin-bottom: 13vh;
+						margin-left: 5vw;
+					}
+				}
+				.pagination {
+					display: none;
+				}
+			}
+		}
+
+		// about 영역
+		#about {
+			.inner {
+				width: 100%;
+				padding: 3vw 5vw 5vw;
+				.txt {
+					display: flex;
+					flex-direction: column;
+					h2 {
+						width: 100%;
+						margin-bottom: 15px;
+					}
+					p {
+						width: 100%;
+					}
+				}
+			}
+		}
+		#portfolio {
+			.inner {
+				width: 100%;
+				padding: 3vw 5vw 5vw;
+			}
+		}
+		#awards {
+			.inner {
+				width: 100%;
+				height: 670px;
+				padding: 3vw 5vw 5vw;
+				.container {
+					margin-top: 6vh;
+				}
+			}
+		}
+		#contact {
+			.inner {
+				width: 100%;
+				padding: 3vw 5vw 5vw;
+				h1 {
+					width: 100%;
+				}
+				p {
+					display: none;
+				}
+				.wrap {
+					margin: 5vh 4vw 6vh 0vw;
+					div {
+						input[type="submit"] {
+							margin: -1vh 5vw;
+						}
+					}
+				}
+			}
+		}
+		#footer {
+			.inner {
+				width: 100%;
+				padding: 3vw 5vw 5vw;
+			}
+		}
+	}
 }
