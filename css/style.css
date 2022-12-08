@@ -117,7 +117,7 @@ body #visual .inner .pic {
 }
 body #visual .inner .pic > img {
   width: 100%;
-  height: 100%;
+  height: 650px;
   object-fit: cover;
   filter: saturate(70%);
 }
@@ -441,7 +441,7 @@ body #awards .inner .container .tab .content img {
   padding: 10px 0;
   margin: 0px 20px 0px 0px;
   z-index: 10;
-  filter: saturate(50%);
+  filter: saturate(70%);
 }
 body #awards .inner .container .tab .content p {
   width: 400px;
