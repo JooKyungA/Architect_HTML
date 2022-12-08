@@ -220,28 +220,28 @@ body #portfolio .inner::after {
 body #portfolio .inner h1 {
   float: left;
 }
-body #portfolio .inner .tab {
+body #portfolio .inner .container {
   width: 1180px;
   float: right;
   overflow: hidden;
 }
-body #portfolio .inner .tab nav {
+body #portfolio .inner .container .tab {
   width: 500px;
   float: right;
   margin: 30px 0px 50px;
 }
-body #portfolio .inner .tab nav ul {
+body #portfolio .inner .container .tab ul {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-body #portfolio .inner .tab nav ul li {
+body #portfolio .inner .container .tab ul li {
   width: 100%;
   height: 20px;
   float: left;
   margin-left: 30px;
 }
-body #portfolio .inner .tab nav ul li a {
+body #portfolio .inner .container .tab ul li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -250,17 +250,17 @@ body #portfolio .inner .tab nav ul li a {
   justify-content: center;
   align-items: center;
 }
-body #portfolio .inner .tab nav ul li.on a {
+body #portfolio .inner .container .tab ul li.on a {
   color: #777;
   text-decoration: underline;
 }
-body #portfolio .inner .tab section {
+body #portfolio .inner .container section {
   width: 820px;
   height: 250px;
   position: relative;
   float: right;
 }
-body #portfolio .inner .tab section article {
+body #portfolio .inner .container section article {
   width: 100%;
   height: 100%;
   transition: 0.5s;
@@ -272,11 +272,11 @@ body #portfolio .inner .tab section article {
   display: none;
   opacity: 0;
 }
-body #portfolio .inner .tab section article.on {
+body #portfolio .inner .container section article.on {
   display: block;
   opacity: 1;
 }
-body #portfolio .inner .tab section article div {
+body #portfolio .inner .container section article div {
   width: 260px;
   height: 100%;
   float: left;
@@ -284,17 +284,17 @@ body #portfolio .inner .tab section article div {
   overflow: hidden;
   position: relative;
 }
-body #portfolio .inner .tab section article div:last-of-type {
+body #portfolio .inner .container section article div:last-of-type {
   margin-right: 0px;
 }
-body #portfolio .inner .tab section article div img {
+body #portfolio .inner .container section article div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(60%);
   transition: 0.5s;
 }
-body #portfolio .inner .tab section article div p {
+body #portfolio .inner .container section article div p {
   display: block;
   width: 100%;
   position: absolute;
@@ -307,7 +307,7 @@ body #portfolio .inner .tab section article div p {
   opacity: 0;
   z-index: 4;
 }
-body #portfolio .inner .tab section article div::after {
+body #portfolio .inner .container section article div::after {
   content: "";
   display: block;
   width: 100%;
@@ -320,13 +320,13 @@ body #portfolio .inner .tab section article div::after {
   transition: 0.5s;
   z-index: 3;
 }
-body #portfolio .inner .tab section article div:hover img {
+body #portfolio .inner .container section article div:hover img {
   transform: scale(1.2);
 }
-body #portfolio .inner .tab section article div:hover p {
+body #portfolio .inner .container section article div:hover p {
   opacity: 1;
 }
-body #portfolio .inner .tab section article div:hover::after {
+body #portfolio .inner .container section article div:hover::after {
   bottom: 0px;
   left: 0;
 }
@@ -350,7 +350,6 @@ body #awards .inner .container {
   margin-top: 30px;
   float: right;
   width: 700px;
-  margin-right: 4vw;
 }
 body #awards .inner .container .tab {
   width: 700px;

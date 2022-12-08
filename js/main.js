@@ -71,9 +71,9 @@ function prevslide() {
 }
 
 // tab menu 관련 js--------------------------
-const tab = document.querySelector(".tab");
-const btns = tab.querySelectorAll("ul li");
-const boxes = tab.querySelectorAll("section article");
+const container = document.querySelector(".container");
+const btns = container.querySelectorAll("ul li");
+const boxes = container.querySelectorAll("section article");
 // let enableClick = true;
 // let speed = 500;
 
