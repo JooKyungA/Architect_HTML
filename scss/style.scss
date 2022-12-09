@@ -37,7 +37,8 @@ body {
 			height: 110px;
 			margin: 0 auto;
 			display: flex;
-			h1 {
+			position: relative;
+			> h1 {
 				width: 25%;
 				display: flex;
 				font-weight: 600;
@@ -46,7 +47,7 @@ body {
 					color: #0b0909;
 				}
 			}
-			.nav_web {
+			.menuWeb {
 				width: 75%;
 				&::after {
 					content: "";
@@ -80,6 +81,109 @@ body {
 							font-size: 14px;
 							color: #333;
 						}
+					}
+				}
+			}
+			.btnCall {
+				position: absolute;
+				right: 5vw;
+				top: 10%;
+				transform: translateY(-50%);
+				display: none;
+				width: 20px;
+				height: 20px;
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #0b0909;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: top 0.5s 0s, transform 0.5s 0.5s;
+				}
+				&::after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #0b0909;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+				}
+				span {
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #0b0909;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					margin-top: -1px;
+					transition: 1s;
+					text-indent: -9999px;
+				}
+				&.on {
+					&::before {
+						top: 50%;
+						margin-top: -1px;
+						transform: rotate(45deg);
+					}
+					&::after {
+						bottom: 50%;
+						margin-bottom: -1px;
+						transform: rotate(-45deg);
+					}
+					span {
+						transform: translateX(100%);
+						opacity: 0;
+					}
+				}
+			}
+			.menuMo {
+				width: 270px;
+				height: 100vh;
+				background-color: #0b0909;
+				text-align: center;
+				position: fixed;
+				top: 0;
+				left: -270px;
+				padding: 35px 30px;
+				z-index: 10;
+				transition: 0.5s;
+				&.on {
+					left: 0;
+				}
+				h1 {
+					padding-bottom: 30px;
+					border-bottom: 1px solid #666;
+					a {
+						display: block;
+						font-size: 24px;
+						color: #d6d3d3;
+						text-align: left;
+						line-height: 1.4;
+						display: flex;
+						justify-content: center;
+					}
+					p {
+						font-size: 12px;
+						color: #d6d3d3;
+					}
+				}
+			}
+			#gnbMo {
+				li {
+					a {
+						display: block;
+						width: 100%;
+						padding: 20px 0;
+						border-bottom: 1px solid #555;
+						font-size: 14px;
+						color: #fff;
 					}
 				}
 			}
@@ -230,6 +334,7 @@ body {
 			padding: 30px 0px 70px;
 			border-top: 2px solid #aaa;
 			overflow: hidden;
+			position: relative;
 			&::after {
 				content: "";
 				display: block;
@@ -238,6 +343,7 @@ body {
 			h1 {
 				float: left;
 			}
+
 			.container {
 				width: 1180px;
 				float: right;
@@ -259,7 +365,6 @@ body {
 							width: 100%;
 							height: 20px;
 							float: left;
-							margin-left: 15px;
 							a {
 								display: block;
 								width: 100%;
@@ -642,13 +747,16 @@ body {
 		#header {
 			.inner {
 				width: 100%;
-				height: 16vh;
+				height: 12vh;
 				padding: 0vh 5vw;
-				h1 {
+				> h1 {
 					display: none;
 				}
-				.nav_web {
+				.menuWeb {
 					display: none;
+				}
+				.btnCall {
+					display: block;
 				}
 			}
 		}
@@ -787,14 +895,14 @@ body {
 // 중간 - 935px--------------------
 @media screen and (max-width: 935px) {
 	body {
-		padding: 2vh 0vw 0vh;
+		padding: 5vh 0vw 5vh;
 
-		header 영역 #header {
-			.inner {
-				padding: 0vh 5vw;
-				height: 5vh;
-			}
-		}
+		// header 영역
+		// #header {
+		// 	.inner {
+
+		// 	}
+		// }
 
 		// visual 영역
 		#visual {
@@ -808,7 +916,7 @@ body {
 					}
 					p {
 						margin-top: -200px;
-						margin-left: -18vw;
+						margin-left: -15vw;
 					}
 				}
 				.pic {
@@ -851,7 +959,6 @@ body {
 							width: 40%;
 							float: right;
 							li {
-								margin-left: 2vw;
 								float: left;
 							}
 						}
@@ -915,13 +1022,12 @@ body {
 // mobile - 539px -------------------
 @media screen and (max-width: 539px) {
 	body {
-		padding: 2vh 0vw 0vh;
+		padding: 5vh 0vw 5vh;
 
 		// header 영역
 		#header {
 			.inner {
-				padding: 0vh 5vw;
-				height: 4vh;
+				height: 1vh;
 			}
 		}
 
@@ -933,7 +1039,7 @@ body {
 					h1 {
 						font-size: 80px;
 						margin-top: -2vw;
-						margin-left: -20vw;
+						margin-left: -16vw;
 					}
 					p {
 						display: none;
