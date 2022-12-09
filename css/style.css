@@ -159,7 +159,7 @@ body #visual .inner .wrap .prev {
 body #visual .inner .wrap .prev img {
   width: 100px;
   position: absolute;
-  left: 150px;
+  left: 13%;
   bottom: 93px;
 }
 body #visual .inner .wrap .next {
@@ -173,8 +173,11 @@ body #visual .inner .wrap .next img {
   bottom: 93px;
 }
 body #visual .inner .wrap .pagination {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 400px;
+  left: 0;
   margin-left: 25%;
   font-size: 18px;
   font-weight: 400;
@@ -229,7 +232,7 @@ body #portfolio .inner .container {
 body #portfolio .inner .container .tab {
   width: 500px;
   float: right;
-  margin: 30px 0px 50px;
+  margin: 30px 0px 20px;
 }
 body #portfolio .inner .container .tab ul {
   width: 100%;
@@ -271,6 +274,11 @@ body #portfolio .inner .container section article {
   overflow: hidden;
   display: none;
   opacity: 0;
+}
+body #portfolio .inner .container section article::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 body #portfolio .inner .container section article.on {
   display: block;
@@ -535,10 +543,10 @@ body #contact .inner .wrap div input[type=submit] {
   border-radius: 0%;
   background-color: #0b0909;
   color: #fff;
-  margin: 10px 0px 0px;
+  margin: 10px 0px 0px 0px;
   position: absolute;
   right: 4vw;
-  bottom: 65px;
+  bottom: 6vh;
 }
 body #footer .inner {
   width: 1180px;
@@ -583,7 +591,7 @@ body #footer .inner p {
 @media screen and (max-width: 1179px) {
   body #header .inner {
     width: 100%;
-    height: 15vh;
+    height: 16vh;
     padding: 0vh 5vw;
   }
   body #header .inner h1 {
@@ -594,7 +602,7 @@ body #footer .inner p {
   }
   body #visual {
     width: 100%;
-    height: 81vh;
+    height: 79vh;
     overflow: visible;
   }
   body #visual .inner .txt {
@@ -613,6 +621,7 @@ body #footer .inner p {
   body #visual .inner .pic {
     height: 650px;
     margin-right: 5vw;
+    bottom: 15vh;
     z-index: -1;
   }
   body #visual .inner .pic img {
@@ -620,15 +629,17 @@ body #footer .inner p {
     height: 100%;
   }
   body #visual .wrap #slider {
-    margin: 5vh 5vw;
+    margin: 5vh 8vw;
   }
   body #visual .wrap .prev img {
-    margin-bottom: 20vh;
-    margin-left: 16vw;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 10vh;
+    margin-left: 20vw;
   }
   body #visual .wrap .next img {
-    margin-bottom: 13vh;
-    margin-left: 5vw;
+    margin-bottom: 7vh;
+    margin-left: 9vw;
   }
   body #visual .wrap .pagination {
     display: none;
@@ -674,9 +685,7 @@ body #footer .inner p {
     margin: 50px 4vw 60px 0vw;
   }
   body #contact .inner .wrap div input[type=submit] {
-    margin: 0px 50px;
-    right: 0;
-    bottom: 0;
+    margin: 2vh 5vw 0vh 0vw;
   }
   body #footer .inner {
     width: 100%;
@@ -700,7 +709,6 @@ body #footer .inner p {
   body #visual .inner .txt p {
     margin-top: -200px;
     margin-left: -18vw;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
   body #visual .inner .pic {
     height: 600px;
@@ -727,7 +735,8 @@ body #footer .inner p {
     float: right;
   }
   body #portfolio .inner .container .tab ul {
-    width: 100%;
+    float: right;
+    width: 60%;
     z-index: 10;
   }
   body #portfolio .inner .container .tab ul li {
@@ -768,17 +777,10 @@ body #footer .inner p {
   body #awards .inner .container .tab label h3 {
     margin-right: 15px;
   }
-  body #contact .inner input[type=submit] {
-    margin: -10px 0px 0px;
-    bottom: 0px;
-  }
 }
 @media screen and (max-width: 539px) {
   body {
     padding: 2vh 0vw 0vh;
-  }
-  body #header {
-    border: 1px solid red;
   }
   body #header .inner {
     padding: 0vh 5vw;
@@ -798,7 +800,7 @@ body #footer .inner p {
   body #visual .inner .pic {
     width: 70vw;
     height: 50vh;
-    top: 12vh;
+    top: 10vh;
     bottom: 0px;
     margin-right: 0vw;
   }
@@ -807,16 +809,33 @@ body #footer .inner p {
   }
   body #portfolio .inner .container .tab {
     width: 200px;
-    float: left;
-  }
-  body #portfolio .inner .container .tab ul {
-    justify-content: center;
-    z-index: 10;
+    float: right;
   }
   body #portfolio .inner .container .tab ul li {
-    margin: 2vw;
+    margin: 0vh 5px;
+  }
+  body #portfolio .inner .container section article div {
+    float: left;
   }
   body #portfolio .inner .container section article div:nth-of-type(1) {
+    display: none;
+  }
+  body #awards .inner .container {
+    width: 90%;
+  }
+  body #awards .inner .container .tab {
+    padding: 10px 0px 10px;
+  }
+  body #awards .inner .container .tab input[type=radio]:checked ~ .content p {
+    display: none;
+  }
+  body #awards .inner .container .tab label h2 {
+    font-size: 16px;
+  }
+  body #awards .inner .container .tab label h3 {
+    font-size: 14px;
+  }
+  body #awards .inner .container .tab .content p {
     display: none;
   }
 }

@@ -163,7 +163,7 @@ body {
 					img {
 						width: 100px;
 						position: absolute;
-						left: 150px;
+						left: 13%;
 						bottom: 93px;
 					}
 				}
@@ -178,8 +178,11 @@ body {
 					}
 				}
 				.pagination {
+					width: 100%;
+					height: 100%;
 					position: absolute;
 					top: 400px;
+					left: 0;
 					margin-left: 25%;
 					font-size: 18px;
 					font-weight: 400;
@@ -242,7 +245,7 @@ body {
 				.tab {
 					width: 500px;
 					float: right;
-					margin: 30px 0px 50px;
+					margin: 30px 0px 20px;
 					ul {
 						width: 100%;
 						display: flex;
@@ -285,6 +288,11 @@ body {
 						overflow: hidden;
 						display: none;
 						opacity: 0;
+						&::after {
+							content: "";
+							display: block;
+							clear: both;
+						}
 						&.on {
 							display: block;
 							opacity: 1;
@@ -576,10 +584,10 @@ body {
 						border-radius: 0%;
 						background-color: #0b0909;
 						color: #fff;
-						margin: 10px 0px 0px;
+						margin: 10px 0px 0px 0px;
 						position: absolute;
 						right: 4vw;
-						bottom: 65px;
+						bottom: 6vh;
 					}
 				}
 			}
@@ -637,7 +645,7 @@ body {
 		#header {
 			.inner {
 				width: 100%;
-				height: 15vh;
+				height: 16vh;
 				padding: 0vh 5vw;
 				h1 {
 					display: none;
@@ -651,7 +659,7 @@ body {
 		// visual 영역
 		#visual {
 			width: 100%;
-			height: calc(100vh - 19vh);
+			height: calc(100vh - 21vh);
 			overflow: visible;
 			.inner {
 				.txt {
@@ -672,6 +680,7 @@ body {
 					// width: 45vw;
 					height: 650px;
 					margin-right: 5vw;
+					bottom: 15vh;
 					z-index: -1;
 					img {
 						width: 100%;
@@ -682,18 +691,20 @@ body {
 			.wrap {
 				// position: relative;
 				#slider {
-					margin: 5vh 5vw;
+					margin: 5vh 8vw;
 				}
 				.prev {
 					img {
-						margin-bottom: 20vh;
-						margin-left: 16vw;
+						left: 0;
+						bottom: 0;
+						margin-bottom: 10vh;
+						margin-left: 20vw;
 					}
 				}
 				.next {
 					img {
-						margin-bottom: 13vh;
-						margin-left: 5vw;
+						margin-bottom: 7vh;
+						margin-left: 9vw;
 					}
 				}
 				.pagination {
@@ -757,9 +768,9 @@ body {
 					margin: 50px 4vw 60px 0vw;
 					div {
 						input[type="submit"] {
-							margin: 0px 50px;
-							right: 0;
-							bottom: 0;
+							margin: 2vh 5vw 0vh 0vw;
+							// right: 0;
+							// bottom: 0;
 						}
 					}
 				}
@@ -801,7 +812,6 @@ body {
 					p {
 						margin-top: -200px;
 						margin-left: -18vw;
-						text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 					}
 				}
 				.pic {
@@ -841,7 +851,8 @@ body {
 						width: 100%;
 						float: right;
 						ul {
-							width: 100%;
+							float: right;
+							width: 60%;
 							// justify-content: center;
 							// float: left;
 							z-index: 10;
@@ -903,15 +914,6 @@ body {
 		}
 
 		// contact 영역
-		#contact {
-			.inner {
-				input[type="submit"] {
-					margin: -10px 0px 0px;
-					bottom: 0px;
-					// 위치가 이상함..이동이 안됨
-				}
-			}
-		}
 
 		// #footer {
 
@@ -926,7 +928,6 @@ body {
 
 		// header 영역
 		#header {
-			border: 1px solid red;
 			.inner {
 				padding: 0vh 5vw;
 				height: 4vh;
@@ -950,7 +951,7 @@ body {
 				.pic {
 					width: 70vw;
 					height: 50vh;
-					top: 12vh;
+					top: 10vh;
 					bottom: 0px;
 					margin-right: 0vw;
 				}
@@ -962,27 +963,58 @@ body {
 
 		// about 영역
 
+		// portfolio 영역 (수정해야함)
 		#portfolio {
 			.inner {
 				.container {
 					.tab {
 						width: 200px;
-						float: left;
+						float: right;
 						ul {
-							justify-content: center;
-							// float: left;
-							z-index: 10;
 							li {
-								margin: 2vw;
+								margin: 0vh 5px;
 							}
 						}
 					}
 					section {
 						article {
 							div {
+								float: left;
 								&:nth-of-type(1) {
 									display: none;
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// awards 영역
+		#awards {
+			.inner {
+				.container {
+					width: 90%;
+					.tab {
+						padding: 10px 0px 10px;
+						input[type="radio"] {
+							&:checked ~ .content {
+								p {
+									display: none;
+								}
+							}
+						}
+						label {
+							h2 {
+								font-size: 16px;
+							}
+							h3 {
+								font-size: 14px;
+							}
+						}
+						.content {
+							p {
+								display: none;
 							}
 						}
 					}
