@@ -229,6 +229,11 @@ body #portfolio .inner .container {
   float: right;
   overflow: hidden;
 }
+body #portfolio .inner .container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 body #portfolio .inner .container .tab {
   width: 500px;
   float: right;
@@ -243,7 +248,7 @@ body #portfolio .inner .container .tab ul li {
   width: 100%;
   height: 20px;
   float: left;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 body #portfolio .inner .container .tab ul li a {
   display: block;
@@ -267,18 +272,14 @@ body #portfolio .inner .container section {
 body #portfolio .inner .container section article {
   width: 100%;
   height: 100%;
-  transition: 0.5s;
+  transition: opacity 5s;
   position: absolute;
   top: 0;
+  right: 0;
   z-index: 1;
   overflow: hidden;
   display: none;
   opacity: 0;
-}
-body #portfolio .inner .container section article::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 body #portfolio .inner .container section article.on {
   display: block;
@@ -735,23 +736,22 @@ body #footer .inner p {
     float: right;
   }
   body #portfolio .inner .container .tab ul {
+    width: 40%;
     float: right;
-    width: 60%;
-    z-index: 10;
   }
   body #portfolio .inner .container .tab ul li {
     margin: 2vw;
+    float: left;
   }
   body #portfolio .inner .container section {
-    width: 100%;
+    width: 100vw;
     height: 200px;
   }
   body #portfolio .inner .container section article {
-    width: 40%;
+    width: 100%;
   }
   body #portfolio .inner .container section article div {
-    width: 100%;
-    margin-right: 0;
+    width: 48%;
   }
   body #portfolio .inner .container section article div:first-of-type {
     display: none;
@@ -805,19 +805,6 @@ body #footer .inner p {
     margin-right: 0vw;
   }
   body #visual .wrap {
-    display: none;
-  }
-  body #portfolio .inner .container .tab {
-    width: 200px;
-    float: right;
-  }
-  body #portfolio .inner .container .tab ul li {
-    margin: 0vh 5px;
-  }
-  body #portfolio .inner .container section article div {
-    float: left;
-  }
-  body #portfolio .inner .container section article div:nth-of-type(1) {
     display: none;
   }
   body #awards .inner .container {
