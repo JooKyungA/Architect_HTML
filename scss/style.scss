@@ -52,22 +52,44 @@ body {
 			}
 		}
 	}
-	.btnScroll {
+	.scroll {
 		position: fixed;
-		right: 50px;
+		right: 2vw;
 		top: 50%;
 		transform: translateY(-50%);
+		z-index: 20;
 		li {
-			width: 20px;
-			height: 20px;
-			border-radius: 10px;
-			background-color: rgba(109, 108, 108, 0.167);
-			margin-bottom: 20px;
-			cursor: pointer;
-			transition: 0.5s;
-			&.on {
-				// height: 80px;
-				background: rgb(83, 83, 83);
+			// background-color: rgba(109, 108, 108, 0.167);
+			// background-color: rgba(143, 140, 140, 0.384);
+			display: flex;
+			justify-content: flex-end;
+			align-content: center;
+
+			a {
+				display: block;
+				width: 12px;
+				height: 12px;
+				line-height: 24px;
+				margin-left: 1vw;
+				border-radius: 6px;
+				background-color: #eee;
+				margin-bottom: 20px;
+				cursor: pointer;
+				transition: 0.5s;
+			}
+			p {
+				font-size: 10px;
+				color: #0b0909;
+				opacity: 0;
+				transition: 1;
+			}
+			&.on a,
+			&:hover.a {
+				transform: scale(1.2);
+				background-color: #fff;
+			}
+			&:hover p {
+				opacity: 1;
 			}
 		}
 	}
