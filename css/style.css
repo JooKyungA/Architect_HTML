@@ -50,6 +50,24 @@ body #skipNavi li a {
 body #skipNavi li a.on {
   top: 0;
 }
+body .btnScroll {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .btnScroll li {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(109, 108, 108, 0.167);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body .btnScroll li.on {
+  background: rgb(83, 83, 83);
+}
 body #header {
   width: 100%;
 }
