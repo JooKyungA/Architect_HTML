@@ -365,6 +365,7 @@ body {
 							width: 100%;
 							height: 20px;
 							float: left;
+							margin-left: 2vw;
 							a {
 								display: block;
 								width: 100%;
@@ -469,9 +470,6 @@ body {
 		.inner {
 			width: 1180px;
 			height: 650px;
-			// award영역 둘쑥날쑥하지 않게 고정해둠
-			// 근데 높이를 낮게 주면 아코디언 메뉴 클릭할때마다 빠져나가고..
-			// 높게 주자니 아코디언 메뉴 선택 안됐을때 빈공간이 너무 큼
 			margin: 0 auto;
 			padding: 30px 0px 30px;
 			border-top: 2px solid #aaa;
@@ -582,7 +580,7 @@ body {
 							height: 150px;
 							padding: 10px 0;
 							margin: 0px 20px 0px 0px;
-							z-index: 10;
+							// z-index: 10;
 							filter: saturate(70%);
 						}
 						p {
@@ -992,10 +990,9 @@ body {
 					width: 80%;
 					.tab {
 						width: 100%;
-						// padding-right: 20px;
 						input[type="radio"] {
 							&:checked ~ label h2 {
-								display: none;
+								font-size: 40px;
 							}
 						}
 						label {
@@ -1013,14 +1010,12 @@ body {
 
 		// contact 영역
 
-		// #footer {
-
-		// }
+		// footer 영역
 	}
 }
 
 // mobile - 539px -------------------
-@media screen and (max-width: 539px) {
+@media screen and (max-width: $mobile) {
 	body {
 		padding: 5vh 0vw 5vh;
 
@@ -1067,11 +1062,14 @@ body {
 					.tab {
 						width: 100%;
 						float: left;
-						// ul {
-						// 	li {
-						// 		// margin: 0vh 5px;
-						// 	}
-						// }
+						ul {
+							li {
+								margin-left: 2vw;
+								a {
+									font-size: 11px;
+								}
+							}
+						}
 					}
 					section {
 						height: 250px;
@@ -1091,15 +1089,20 @@ body {
 		// awards 영역
 		#awards {
 			.inner {
+				// height: 650px;
 				.container {
 					width: 90%;
 					.tab {
 						padding: 10px 0px 10px;
 						input[type="radio"] {
 							&:checked ~ .content {
+								// max-height: 150px;
 								p {
-									display: none;
+									overflow: scroll;
 								}
+							}
+							&:checked ~ label h2 {
+								display: none;
 							}
 						}
 						label {
@@ -1111,13 +1114,32 @@ body {
 							}
 						}
 						.content {
+							flex-direction: column;
+							img {
+								width: 150px;
+								height: 100px;
+							}
 							p {
-								display: none;
+								width: 100%;
+								height: 100%;
+								padding: 2px 0;
 							}
 						}
 					}
 				}
 			}
 		}
+
+		// contact 영역
+		#contact {
+			.inner {
+				.wrap {
+					width: 100%;
+					margin: 50px 0vw 60px 0vw;
+				}
+			}
+		}
+
+		// footer 영역
 	}
 }
