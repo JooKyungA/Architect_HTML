@@ -58,10 +58,10 @@ body #header .inner {
   height: 110px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   position: relative;
 }
 body #header .inner > h1 {
-  width: 11%;
   font-weight: 600;
 }
 body #header .inner > h1 a {
@@ -72,7 +72,6 @@ body #header .inner > h1 a {
 }
 body #header .inner .menuWeb {
   width: 75%;
-  margin-left: 14%;
 }
 body #header .inner .menuWeb::after {
   content: "";
@@ -92,7 +91,6 @@ body #header .inner .menuWeb #gnb li a {
 }
 body #header .inner .menuWeb #gnb li a:hover {
   color: #a9a9a9;
-  text-shadow: 1px 1px 2px rgba(250, 250, 250, 0.4);
 }
 body #header .inner .menuWeb .sns {
   float: right;
@@ -211,18 +209,48 @@ body #visual {
   position: relative;
   overflow: hidden;
 }
+body #visual.off .btnOpen {
+  margin-bottom: -100%;
+  opacity: 0;
+}
+body #visual.off .txt {
+  margin-top: -100%;
+  opacity: 0;
+}
+body #visual.off .pic {
+  margin-right: -100%;
+  opacity: 0;
+}
+body #visual.off .wrap {
+  margin-left: -200%;
+  opacity: 0;
+}
 body #visual .inner {
   width: 100%;
   margin: 0 auto;
 }
+body #visual .inner .btnOpen {
+  display: block;
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  left: 25%;
+  bottom: 100px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+  text-decoration-line: underline;
+  transition: 1s 0s;
+}
 body #visual .inner .txt {
   width: 300px;
   margin-left: 25%;
+  transition: 1s 0s;
 }
 body #visual .inner .txt h1 {
   margin-bottom: 200px;
   font-weight: 500;
-  font-size: 100px;
+  font-size: 120px;
 }
 body #visual .inner .txt p {
   font-size: 16px;
@@ -235,6 +263,7 @@ body #visual .inner .pic {
   bottom: 100px;
   right: 0;
   overflow: hidden;
+  transition: 1s 0.2s;
 }
 body #visual .inner .pic > img {
   width: 100%;
@@ -245,12 +274,13 @@ body #visual .inner .pic > img {
 body #visual .inner .wrap {
   width: 250px;
   height: 300px;
+  transition: 1s 0.4s;
 }
 body #visual .inner .wrap #slider {
   width: 250px;
   height: 300px;
   position: absolute;
-  top: 240px;
+  top: 290px;
   left: 0;
   overflow: hidden;
 }
@@ -279,8 +309,8 @@ body #visual .inner .wrap .prev {
 body #visual .inner .wrap .prev img {
   width: 100px;
   position: absolute;
-  left: 13%;
-  bottom: 93px;
+  left: 0%;
+  bottom: 98px;
 }
 body #visual .inner .wrap .next {
   width: 100%;
@@ -289,12 +319,12 @@ body #visual .inner .wrap .next {
 body #visual .inner .wrap .next img {
   width: 100px;
   position: absolute;
-  left: 25%;
-  bottom: 93px;
+  left: 13%;
+  bottom: 98px;
 }
 body #visual .inner .wrap .pagination {
   width: 100%;
-  height: 100%;
+  height: 20px;
   position: absolute;
   top: 400px;
   left: 0;
@@ -707,6 +737,81 @@ body #footer .inner p {
   color: #555;
   margin-bottom: 30px;
 }
+body #aside {
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+body #aside .top {
+  width: 0%;
+  height: 1px;
+  background: #111;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body #aside .right {
+  width: 1px;
+  height: 0%;
+  background: #111;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+body #aside .bottom {
+  width: 0%;
+  height: 1px;
+  background: #111;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+body #aside .left {
+  width: 1px;
+  height: 0%;
+  background: #111;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+body #aside .inner {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body #aside .inner .pic {
+  width: 30%;
+}
+body #aside .inner .content {
+  width: 65%;
+}
+body #aside .inner .content h2 {
+  font: normal 5vw/1 "work sans";
+  color: #fff;
+  margin-bottom: 20px;
+}
+body #aside .inner .content p {
+  font: 16px/1.3 "arial";
+  color: #666;
+}
+body #aside .inner .content .btnClose {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
 
 @media screen and (max-width: 1179px) {
   body #header .inner {
@@ -728,6 +833,10 @@ body #footer .inner p {
     height: 79vh;
     overflow: visible;
   }
+  body #visual .inner .btnOpen {
+    margin-left: -12vw;
+    margin-bottom: 33vh;
+  }
   body #visual .inner .txt {
     width: 25%;
     position: absolute;
@@ -744,7 +853,7 @@ body #footer .inner p {
   body #visual .inner .pic {
     height: 650px;
     margin-right: 5vw;
-    bottom: 15vh;
+    bottom: 12vh;
     z-index: -1;
   }
   body #visual .inner .pic img {
@@ -758,11 +867,11 @@ body #footer .inner p {
     left: 0;
     bottom: 0;
     margin-bottom: 10vh;
-    margin-left: 20vw;
+    margin-left: 30vw;
   }
   body #visual .wrap .next img {
     margin-bottom: 7vh;
-    margin-left: 9vw;
+    margin-left: 18vw;
   }
   body #visual .wrap .pagination {
     display: none;
@@ -822,12 +931,16 @@ body #footer .inner p {
   body #visual {
     height: 80vh;
   }
+  body #visual .inner .btnOpen {
+    margin-left: -18vw;
+    margin-bottom: 30vh;
+  }
   body #visual .inner .txt h1 {
     margin-left: -18vw;
   }
   body #visual .inner .txt p {
     margin-top: -200px;
-    margin-left: -15vw;
+    margin-left: -18vw;
   }
   body #visual .inner .pic {
     height: 600px;
@@ -895,6 +1008,16 @@ body #footer .inner p {
   body #awards .inner .container .tab label h3 {
     margin-right: 15px;
   }
+  body #aside .inner {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body #aside .inner .pic {
+    width: 80%;
+  }
+  body #aside .inner .content {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 539px) {
   body {
@@ -904,7 +1027,11 @@ body #footer .inner p {
     height: 1vh;
   }
   body #visual {
-    height: 67vh;
+    height: 70vh;
+  }
+  body #visual .inner .btnOpen {
+    margin-left: -16vw;
+    margin-bottom: 33vh;
   }
   body #visual .inner .txt h1 {
     font-size: 80px;
@@ -976,6 +1103,15 @@ body #footer .inner p {
   body #contact .inner .wrap {
     width: 100%;
     margin: 50px 0vw 60px 0vw;
+  }
+  body #aside {
+    top: 3%;
+  }
+  body #aside .inner {
+    justify-content: space-around;
+  }
+  body #aside .inner .pic {
+    margin-top: 30px;
   }
 }
 
