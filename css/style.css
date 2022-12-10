@@ -369,6 +369,18 @@ body #visual .inner .wrap .pagination {
   font-size: 18px;
   font-weight: 400;
 }
+body #about.on .inner h1 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+body #about.on .inner .txt h2 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+body #about.on .inner .txt p {
+  transform: translateX(0%);
+  opacity: 1;
+}
 body #about .inner {
   width: 1180px;
   margin: 0 auto;
@@ -377,6 +389,9 @@ body #about .inner {
 }
 body #about .inner h1 {
   margin-bottom: 30px;
+  transition: 1s;
+  transform: translateX(-20%);
+  opacity: 0;
 }
 body #about .inner .txt {
   display: flex;
@@ -386,12 +401,18 @@ body #about .inner .txt h2 {
   width: 400px;
   font-size: 18px;
   color: #333;
+  transition: 1s;
+  transform: translateX(-20%);
+  opacity: 0;
 }
 body #about .inner .txt p {
   width: 600px;
   font-size: 17px;
   text-align: justify;
   color: #666;
+  transition: 1s;
+  transform: translateX(20%);
+  opacity: 0;
 }
 body #portfolio {
   width: 100%;

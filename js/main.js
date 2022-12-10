@@ -17,6 +17,7 @@ console.log(posArr);
 
 const base = -300;
 
+
 for (let el of scrollView) {
   posArr.push(el.offsetTop);
 }
@@ -28,7 +29,7 @@ window.addEventListener("scroll", () => {
     if (scroll >= posArr[index] + base) {
       btnScroll.forEach((el, index) => {
         el.classList.remove("on");
-        scrollView[index].classList.remove("on");
+        // scrollView[index].classList.remove("on");
       })
       btnScroll[index].classList.add('on');
       scrollView[index].classList.add("on");
