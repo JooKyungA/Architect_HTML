@@ -28,10 +28,34 @@ $mobile: 539px;
 
 body {
 	padding: 5vh 0vw 5vh;
-
+	position: relative;
+	#skipNavi {
+		z-index: 10;
+		// position: absolute;
+		li {
+			a {
+				display: block;
+				width: 100%;
+				height: 40px;
+				background: rgba(9, 8, 8, 0.666);
+				font-size: 15px;
+				font-weight: bold;
+				line-height: 40px;
+				color: #fff;
+				text-align: center;
+				position: fixed;
+				left: 0;
+				top: -40px;
+				&.on {
+					top: 0;
+				}
+			}
+		}
+	}
 	// header 영역
 	#header {
 		width: 100%;
+		// padding: 5vh 0vw 0vh;
 		.inner {
 			width: 1180px;
 			height: 110px;
@@ -39,16 +63,18 @@ body {
 			display: flex;
 			position: relative;
 			> h1 {
-				width: 25%;
-				display: flex;
+				width: 11%;
 				font-weight: 600;
 				a {
+					display: block;
+					width: 100%;
 					font-size: 16px;
 					color: #0b0909;
 				}
 			}
 			.menuWeb {
 				width: 75%;
+				margin-left: 14%;
 				&::after {
 					content: "";
 					display: block;
