@@ -1076,9 +1076,6 @@ body #aside .inner .content .btnClose {
   body #awards .inner .container .tab {
     padding: 10px 0px 10px;
   }
-  body #awards .inner .container .tab input[type=radio]:checked ~ .content p {
-    overflow: scroll;
-  }
   body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
     display: none;
   }
