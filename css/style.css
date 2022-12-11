@@ -245,9 +245,10 @@ body #visual {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  min-height: 750px;
 }
 body #visual.off .btnOpen {
-  margin-bottom: -100%;
+  margin-top: -100%;
   opacity: 0;
 }
 body #visual.off .txt {
@@ -264,6 +265,7 @@ body #visual.off .wrap {
 }
 body #visual .inner {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 body #visual .inner .btnOpen {
@@ -272,7 +274,7 @@ body #visual .inner .btnOpen {
   height: 20px;
   position: absolute;
   left: 25%;
-  bottom: 100px;
+  top: 640px;
   font-size: 14px;
   line-height: 20px;
   color: #777;
@@ -893,7 +895,7 @@ body #aside .inner .content .btnClose {
   }
   body #visual .inner .btnOpen {
     margin-left: -12vw;
-    margin-bottom: 33vh;
+    margin-top: -340px;
   }
   body #visual .inner .txt {
     width: 25%;
@@ -991,7 +993,7 @@ body #aside .inner .content .btnClose {
   }
   body #visual .inner .btnOpen {
     margin-left: -18vw;
-    margin-bottom: 30vh;
+    margin-top: -300px;
   }
   body #visual .inner .txt h1 {
     margin-left: -18vw;
@@ -1089,7 +1091,7 @@ body #aside .inner .content .btnClose {
   }
   body #visual .inner .btnOpen {
     margin-left: -16vw;
-    margin-bottom: 33vh;
+    margin-top: -420px;
   }
   body #visual .inner .txt h1 {
     font-size: 80px;
@@ -1101,7 +1103,7 @@ body #aside .inner .content .btnClose {
   }
   body #visual .inner .pic {
     width: 70vw;
-    height: 50vh;
+    height: 500px;
     top: 10vh;
     bottom: 0px;
     margin-right: 0vw;
