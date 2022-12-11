@@ -13,11 +13,7 @@ for (let el of skipNavi) {
 const scrollView = document.querySelectorAll(".scrollView");
 const btnScroll = document.querySelectorAll(".scroll li");
 let posArr = [];
-console.log(posArr);
-
 const base = -300;
-
-
 for (let el of scrollView) {
   posArr.push(el.offsetTop);
 }
@@ -37,8 +33,6 @@ window.addEventListener("scroll", () => {
   })
 
 })
-
-
 btnScroll.forEach((el, index) => {
   el.addEventListener("click", () => {
     new Anim(window, {
