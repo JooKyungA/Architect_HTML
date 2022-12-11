@@ -4,7 +4,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Raleway";
-  color: #0b0909;
+  color: #efefef;
 }
 
 ul,
@@ -23,7 +23,7 @@ h1 {
 }
 
 body {
-  background-color: #e4e4e4;
+  background-color: #0b0909;
 }
 
 body {
@@ -37,11 +37,11 @@ body #skipNavi li a {
   display: block;
   width: 100%;
   height: 40px;
-  background: rgba(9, 8, 8, 0.666);
+  background: rgba(236, 233, 233, 0.666);
   font-size: 15px;
   font-weight: bold;
   line-height: 40px;
-  color: #fff;
+  color: #0b0909;
   text-align: center;
   position: fixed;
   left: 0;
@@ -76,7 +76,7 @@ body .scroll li a {
 }
 body .scroll li p {
   font-size: 10px;
-  color: #0b0909;
+  color: #eee;
   opacity: 0;
   transition: 1;
 }
@@ -105,7 +105,7 @@ body #header .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
-  color: #0b0909;
+  color: #efefef;
 }
 body #header .inner .menuWeb {
   width: 75%;
@@ -124,7 +124,7 @@ body #header .inner .menuWeb #gnb li {
 }
 body #header .inner .menuWeb #gnb li a {
   font-size: 14px;
-  color: #333;
+  color: #efefef;
 }
 body #header .inner .menuWeb #gnb li a:hover {
   color: #a9a9a9;
@@ -140,7 +140,6 @@ body #header .inner .menuWeb .sns li:nth-of-type(1) {
 }
 body #header .inner .menuWeb .sns li a {
   font-size: 14px;
-  color: #333;
 }
 body #header .inner .btnCall {
   position: absolute;
@@ -156,7 +155,7 @@ body #header .inner .btnCall::before {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #0b0909;
+  background-color: #efefef;
   position: absolute;
   top: 0;
   left: 0;
@@ -167,7 +166,7 @@ body #header .inner .btnCall::after {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #0b0909;
+  background-color: #efefef;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -177,7 +176,7 @@ body #header .inner .btnCall span {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #0b0909;
+  background-color: #efefef;
   position: absolute;
   top: 50%;
   left: 0;
@@ -202,7 +201,7 @@ body #header .inner .btnCall.on span {
 body #header .inner .menuMo {
   width: 270px;
   height: 100vh;
-  background-color: #0b0909;
+  background-color: #efefef;
   text-align: center;
   position: fixed;
   top: 0;
@@ -221,7 +220,7 @@ body #header .inner .menuMo h1 {
 body #header .inner .menuMo h1 a {
   display: block;
   font-size: 24px;
-  color: #d6d3d3;
+  color: #0b0909;
   text-align: left;
   line-height: 1.4;
   display: flex;
@@ -229,7 +228,7 @@ body #header .inner .menuMo h1 a {
 }
 body #header .inner .menuMo h1 p {
   font-size: 12px;
-  color: #d6d3d3;
+  color: #0b0909;
 }
 body #header .inner #gnbMo li a {
   display: block;
@@ -237,7 +236,7 @@ body #header .inner #gnbMo li a {
   padding: 20px 0;
   border-bottom: 1px solid #555;
   font-size: 14px;
-  color: #fff;
+  color: #0b0909;
 }
 body #visual {
   width: 1180px;
@@ -277,7 +276,7 @@ body #visual .inner .btnOpen {
   top: 640px;
   font-size: 14px;
   line-height: 20px;
-  color: #777;
+  color: #bbb;
   text-decoration-line: underline;
   transition: 1s 0s;
 }
@@ -293,7 +292,7 @@ body #visual .inner .txt h1 {
 }
 body #visual .inner .txt p {
   font-size: 16px;
-  color: #333;
+  color: #aaa;
 }
 body #visual .inner .pic {
   width: 470px;
@@ -402,7 +401,7 @@ body #about .inner .txt {
 body #about .inner .txt h2 {
   width: 400px;
   font-size: 18px;
-  color: #333;
+  color: #efefef;
   transition: 1s;
   transform: translateX(-20%);
   opacity: 0;
@@ -411,7 +410,7 @@ body #about .inner .txt p {
   width: 600px;
   font-size: 17px;
   text-align: justify;
-  color: #666;
+  color: #ddd;
   transition: 1s;
   transform: translateX(20%);
   opacity: 0;
@@ -471,7 +470,7 @@ body #portfolio .inner .container .tab ul li a {
   align-items: center;
 }
 body #portfolio .inner .container .tab ul li.on a {
-  color: #777;
+  color: #efefef;
   text-decoration: underline;
 }
 body #portfolio .inner .container section {
@@ -580,7 +579,7 @@ body #awards .inner .container .tab {
   overflow: hidden;
 }
 body #awards .inner .container .tab:hover label::after {
-  color: #333;
+  color: #efefef;
 }
 body #awards .inner .container .tab input[type=radio] {
   appearance: none;
@@ -588,14 +587,14 @@ body #awards .inner .container .tab input[type=radio] {
 }
 body #awards .inner .container .tab input[type=radio]:checked + label::after {
   transform: rotate(135deg);
-  color: #333;
+  color: #efefef;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ .content {
   max-height: 150px;
   padding: 0px 10px;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ .content p {
-  color: #666;
+  color: #ccc;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ label {
   margin: 0px 0px 5px;
@@ -606,16 +605,16 @@ body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
   position: absolute;
   top: 30px;
   left: 0px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.366);
   justify-content: flex-end;
-  font-size: 100px;
+  font-size: 70px;
   padding: 10px;
   transition: 0.5s;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ label h3 {
   padding: 0px 10px;
   font-weight: bold;
-  color: #333;
+  color: #efefef;
   border-radius: 2px;
 }
 body #awards .inner .container .tab label {
@@ -629,7 +628,7 @@ body #awards .inner .container .tab label::after {
   right: 20px;
   font-size: 32px;
   transition: all 1s;
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(121, 119, 119, 0.841);
 }
 body #awards .inner .container .tab label h2 {
   width: 60px;
@@ -637,7 +636,7 @@ body #awards .inner .container .tab label h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
+  color: #efefef;
   font-size: 20px;
   margin-right: 50px;
   margin-left: 10px;
@@ -645,7 +644,7 @@ body #awards .inner .container .tab label h2 {
 body #awards .inner .container .tab label h3 {
   position: relative;
   font-weight: 500;
-  color: #333;
+  color: #efefef;
   z-index: 10;
 }
 body #awards .inner .container .tab .content {
@@ -665,7 +664,7 @@ body #awards .inner .container .tab .content p {
   width: 400px;
   position: relative;
   padding: 10px 0;
-  color: #333;
+  color: #ccc;
   z-index: 10;
 }
 body #contact {
@@ -690,7 +689,7 @@ body #contact .inner h1 {
 body #contact .inner p {
   width: 500px;
   font-size: 22px;
-  color: #666;
+  color: #efefef;
   position: absolute;
   top: 50%;
   left: 0;
@@ -735,6 +734,9 @@ body #contact .inner .wrap div select {
 body #contact .inner .wrap div select:focus {
   outline: none;
 }
+body #contact .inner .wrap div select option {
+  color: #0b0909;
+}
 body #contact .inner .wrap div textarea {
   width: 100%;
   height: 25px;
@@ -751,8 +753,8 @@ body #contact .inner .wrap div input[type=submit] {
   width: 100px;
   height: 30px;
   border-radius: 0%;
-  background-color: #0b0909;
-  color: #fff;
+  background-color: #efefef;
+  color: #0b0909;
   margin: 10px 0px 0px 0px;
   position: absolute;
   right: 4vw;
@@ -778,7 +780,7 @@ body #footer .inner ul li {
 }
 body #footer .inner ul li a {
   font-size: 14px;
-  color: #666;
+  color: #efefef;
 }
 body #footer .inner address {
   float: left;
@@ -786,7 +788,7 @@ body #footer .inner address {
   font-style: normal;
   font-size: 13px;
   line-height: 1.5;
-  color: #555;
+  color: #efefef;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -794,7 +796,7 @@ body #footer .inner p {
   float: left;
   width: 100%;
   font-size: 13px;
-  color: #555;
+  color: #efefef;
   margin-bottom: 30px;
 }
 body #aside {
@@ -860,12 +862,12 @@ body #aside .inner .content {
 }
 body #aside .inner .content h2 {
   font: normal 5vw/1 "work sans";
-  color: #fff;
+  color: #0b0909;
   margin-bottom: 20px;
 }
 body #aside .inner .content p {
   font: 16px/1.3 "arial";
-  color: #666;
+  color: #0b0909;
 }
 body #aside .inner .content .btnClose {
   position: absolute;
