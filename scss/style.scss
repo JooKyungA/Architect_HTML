@@ -6,12 +6,29 @@ $mobile: 539px;
 
 @import "reset.scss";
 @import "sub_layout.scss";
+@import "about.scss";
+@import "portfolio.scss";
+@import "youtube.scss";
+@import "location.scss";
+@import "community.scss";
+@import "join.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
 
+/*
+h1
+color:#efefef;
+톤다운 1
+color:#a9a9a9;
+톤다운 2
+color: rgb(110, 109, 109);
+포인트
+color: rgb(203, 119, 10);
+*/
+
 body {
 	// padding: 5vh 0vw 5vh;
-	position: relative;
+	// position: relative;
 
 	#skipNavi {
 		z-index: 10;
@@ -51,26 +68,26 @@ body {
 
 			a {
 				display: block;
-				width: 12px;
-				height: 12px;
+				width: 9px;
+				height: 9px;
 				line-height: 24px;
 				margin-left: 1vw;
-				border-radius: 6px;
-				background-color: #eee;
+				border-radius: 1px;
+				background-color: rgb(110, 109, 109);
 				margin-bottom: 20px;
 				cursor: pointer;
 				transition: 0.5s;
 			}
 			p {
 				font-size: 10px;
-				color: #eee;
+				color: rgb(110, 109, 109);
 				opacity: 0;
 				transition: 1;
 			}
 			&.on a,
 			&:hover.a {
-				transform: scale(1.2);
-				background-color: #fff;
+				transform: scale(1.1);
+				background-color: #efefef;
 			}
 			&:hover p {
 				opacity: 1;
@@ -101,9 +118,6 @@ body {
 			}
 			.menuWeb {
 				width: 75%;
-				// display: flex;
-				// justify-content: space-between;
-				// margin-left: 14%;
 				&::after {
 					content: "";
 					display: block;
@@ -118,9 +132,7 @@ body {
 							font-size: 14px;
 							color: #efefef;
 							&:hover {
-								color: #a9a9a9;
-								// text-shadow: 1px 1px 2px
-								// 	rgba(250, 250, 250, 0.4);
+								color: #9a9a9a;
 							}
 						}
 					}
@@ -134,7 +146,6 @@ body {
 						}
 						a {
 							font-size: 14px;
-							// color: #333;
 						}
 					}
 				}
@@ -253,7 +264,7 @@ body {
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-		min-height: 750px;
+		// min-height: 750px;
 
 		&.off {
 			.btnOpen {
@@ -284,10 +295,10 @@ body {
 				height: 20px;
 				position: absolute;
 				left: 25%;
-				top: 650px;
+				top: 640px;
 				font-size: 14px;
 				line-height: 20px;
-				color: #bbb;
+				color: rgb(203, 119, 10);
 				text-decoration-line: underline;
 				transition: 1s 0s;
 			}
@@ -302,7 +313,7 @@ body {
 				}
 				p {
 					font-size: 16px;
-					color: #aaa;
+					color: rgb(110, 109, 109);
 				}
 			}
 			.pic {
@@ -411,7 +422,7 @@ body {
 			width: 1180px;
 			margin: 0 auto;
 			padding: 30px 0px 70px;
-			border-top: 2px solid #a9a9a9;
+			border-top: 2px solid #9a9a9a;
 
 			h1 {
 				// font-size: 50px;
@@ -427,7 +438,7 @@ body {
 				h2 {
 					width: 400px;
 					font-size: 18px;
-					color: #efefef;
+					color: #9a9a9a;
 					transition: 1s;
 					transform: translateX(-20%);
 					opacity: 0;
@@ -436,7 +447,7 @@ body {
 					width: 600px;
 					font-size: 17px;
 					text-align: justify;
-					color: #ddd;
+					color: rgb(110, 109, 109);
 					transition: 1s;
 					transform: translateX(20%);
 					opacity: 0;
@@ -491,13 +502,14 @@ body {
 								width: 100%;
 								height: 100%;
 								font-size: 14px;
+								color: rgb(110, 109, 109);
 								display: flex;
 								justify-content: center;
 								align-items: center;
 							}
 							&.on {
 								a {
-									color: #efefef;
+									color: rgb(203, 119, 10);
 									text-decoration: underline;
 								}
 							}
@@ -538,7 +550,7 @@ body {
 								width: 100%;
 								height: 100%;
 								object-fit: cover;
-								filter: saturate(60%);
+								filter: saturate(70%);
 								transition: 0.5s;
 							}
 							p {
@@ -617,7 +629,7 @@ body {
 					border-top: 1px solid #333;
 					overflow: hidden;
 					&:hover label::after {
-						color: #efefef;
+						color: rgb(203, 119, 10);
 					}
 					input[type="radio"] {
 						appearance: none;
@@ -626,14 +638,14 @@ body {
 						// }
 						&:checked + label::after {
 							transform: rotate(135deg);
-							color: #efefef;
+							color: rgb(203, 119, 10);
 						}
 						&:checked ~ .content {
 							max-height: 150px;
 							padding: 0px 10px;
 
 							p {
-								color: #ccc;
+								color: #9a9a9a;
 							}
 						}
 						&:checked ~ label {
@@ -670,7 +682,7 @@ body {
 							right: 20px;
 							font-size: 32px;
 							transition: all 1s;
-							color: rgba(121, 119, 119, 0.841);
+							color: rgb(110, 109, 109);
 						}
 						h2 {
 							width: 60px;
@@ -686,7 +698,7 @@ body {
 						h3 {
 							position: relative;
 							font-weight: 500;
-							color: #efefef;
+							color: #9a9a9a;
 							z-index: 10;
 						}
 					}
@@ -737,7 +749,7 @@ body {
 			p {
 				width: 500px;
 				font-size: 22px;
-				color: #efefef;
+				color: #9a9a9a;
 				position: absolute;
 				top: 50%;
 				left: 0;
@@ -836,7 +848,8 @@ body {
 					margin-left: 20px;
 					a {
 						font-size: 14px;
-						color: #efefef;
+						color: #9a9a9a;
+						// color: rgb(203, 119, 10);
 					}
 				}
 			}
@@ -846,7 +859,7 @@ body {
 				font-style: normal;
 				font-size: 13px;
 				line-height: 1.5;
-				color: #efefef;
+				color: #9a9a9a;
 				margin-top: 10px;
 				margin-bottom: 10px;
 			}
@@ -854,7 +867,7 @@ body {
 				float: left;
 				width: 100%;
 				font-size: 13px;
-				color: #efefef;
+				color: #9a9a9a;
 				margin-bottom: 30px;
 			}
 		}
@@ -865,7 +878,7 @@ body {
 		width: 60vw;
 		height: 60vh;
 		position: absolute;
-		top: 5%;
+		top: 20%;
 		left: 50%;
 		transform: translateX(-50%);
 		display: none;
@@ -920,12 +933,13 @@ body {
 			.content {
 				width: 65%;
 				h2 {
-					font: normal 5vw/1 "work sans";
+					font-size: 5vw;
 					color: #0b0909;
 					margin-bottom: 20px;
 				}
 				p {
-					font: 16px/1.3 "arial";
+					font-size: 16px;
+					line-height: 1.3;
 					color: #0b0909;
 				}
 				.btnClose {
@@ -968,7 +982,7 @@ body {
 			.inner {
 				.btnOpen {
 					margin-left: -12vw;
-					margin-top: -340px;
+					margin-top: -343px;
 				}
 				.txt {
 					width: 25%;
@@ -1094,6 +1108,13 @@ body {
 		}
 
 		// aside 영역
+		#aside {
+			.inner {
+				.pic {
+					margin-bottom: 2vh;
+				}
+			}
+		}
 	}
 }
 
@@ -1225,13 +1246,24 @@ body {
 		// aside 영역
 		#aside {
 			.inner {
-				flex-direction: column;
+				// flex-direction: column;
 				justify-content: space-around;
+				align-content: center;
 				.pic {
-					width: 80%;
+					width: 65%;
 				}
 				.content {
 					width: 80%;
+					h2 {
+						font-size: 4vw;
+					}
+					p {
+						font-size: 14px;
+						line-height: 1.2;
+					}
+					.btnClose {
+						margin-top: -10px;
+					}
 				}
 			}
 		}
@@ -1364,11 +1396,29 @@ body {
 
 		// aside 영역
 		#aside {
-			top: 3%;
+			top: 12%;
 			.inner {
-				justify-content: space-around;
+				padding: 2vw;
+				align-content: center;
 				.pic {
-					margin-top: 30px;
+					width: 70%;
+					margin-top: 2vh;
+				}
+				.content {
+					h2 {
+						font-size: 20px;
+						color: #0b0909;
+						margin-bottom: 20px;
+					}
+					p {
+						font-size: 12px;
+						line-height: 1.2;
+						color: #0b0909;
+					}
+					.btnClose {
+						margin-top: -22px;
+						margin-right: -20px;
+					}
 				}
 			}
 		}
