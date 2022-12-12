@@ -27,11 +27,11 @@ body {
   background-color: #0b0909;
 }
 
-body #header {
+body #header_sub {
   width: 100%;
   padding: 5vh 0vw 0vh;
 }
-body #header .inner {
+body #header_sub .inner {
   width: 1180px;
   height: 110px;
   margin: 0 auto;
@@ -39,50 +39,50 @@ body #header .inner {
   justify-content: space-between;
   position: relative;
 }
-body #header .inner > h1 {
+body #header_sub .inner > h1 {
   font-weight: 600;
 }
-body #header .inner > h1 a {
+body #header_sub .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
   color: #efefef;
 }
-body #header .inner .menuWeb {
+body #header_sub .inner .menuWeb {
   width: 75%;
 }
-body #header .inner .menuWeb::after {
+body #header_sub .inner .menuWeb::after {
   content: "";
   display: block;
   clear: both;
 }
-body #header .inner .menuWeb #gnb {
+body #header_sub .inner .menuWeb #gnb {
   float: left;
 }
-body #header .inner .menuWeb #gnb li {
+body #header_sub .inner .menuWeb #gnb li {
   float: left;
   margin-right: 20px;
 }
-body #header .inner .menuWeb #gnb li a {
+body #header_sub .inner .menuWeb #gnb li a {
   font-size: 14px;
   color: #efefef;
 }
-body #header .inner .menuWeb #gnb li a:hover {
-  color: #a9a9a9;
+body #header_sub .inner .menuWeb #gnb li a:hover {
+  color: rgb(203, 119, 10);
 }
-body #header .inner .menuWeb .sns {
+body #header_sub .inner .menuWeb .sns {
   float: right;
 }
-body #header .inner .menuWeb .sns li {
+body #header_sub .inner .menuWeb .sns li {
   float: left;
 }
-body #header .inner .menuWeb .sns li:nth-of-type(1) {
+body #header_sub .inner .menuWeb .sns li:nth-of-type(1) {
   margin-right: 20px;
 }
-body #header .inner .menuWeb .sns li a {
+body #header_sub .inner .menuWeb .sns li a {
   font-size: 14px;
 }
-body #header .inner .btnCall {
+body #header_sub .inner .btnCall {
   position: absolute;
   right: 5vw;
   top: 10%;
@@ -91,7 +91,7 @@ body #header .inner .btnCall {
   width: 20px;
   height: 20px;
 }
-body #header .inner .btnCall::before {
+body #header_sub .inner .btnCall::before {
   content: "";
   display: block;
   width: 100%;
@@ -102,7 +102,7 @@ body #header .inner .btnCall::before {
   left: 0;
   transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
-body #header .inner .btnCall::after {
+body #header_sub .inner .btnCall::after {
   content: "";
   display: block;
   width: 100%;
@@ -113,7 +113,7 @@ body #header .inner .btnCall::after {
   left: 0;
   transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
-body #header .inner .btnCall span {
+body #header_sub .inner .btnCall span {
   display: block;
   width: 100%;
   height: 2px;
@@ -125,21 +125,21 @@ body #header .inner .btnCall span {
   transition: 1s;
   text-indent: -9999px;
 }
-body #header .inner .btnCall.on::before {
+body #header_sub .inner .btnCall.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-body #header .inner .btnCall.on::after {
+body #header_sub .inner .btnCall.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-body #header .inner .btnCall.on span {
+body #header_sub .inner .btnCall.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-body #header .inner .menuMo {
+body #header_sub .inner .menuMo {
   width: 270px;
   height: 100vh;
   background-color: #efefef;
@@ -151,14 +151,14 @@ body #header .inner .menuMo {
   z-index: 10;
   transition: 0.5s;
 }
-body #header .inner .menuMo.on {
+body #header_sub .inner .menuMo.on {
   left: 0;
 }
-body #header .inner .menuMo h1 {
+body #header_sub .inner .menuMo h1 {
   padding-bottom: 30px;
   border-bottom: 1px solid #666;
 }
-body #header .inner .menuMo h1 a {
+body #header_sub .inner .menuMo h1 a {
   display: block;
   font-size: 24px;
   color: #0b0909;
@@ -167,11 +167,11 @@ body #header .inner .menuMo h1 a {
   display: flex;
   justify-content: center;
 }
-body #header .inner .menuMo h1 p {
+body #header_sub .inner .menuMo h1 p {
   font-size: 12px;
   color: #0b0909;
 }
-body #header .inner #gnbMo li a {
+body #header_sub .inner #gnbMo li a {
   display: block;
   width: 100%;
   padding: 20px 0;
@@ -179,60 +179,64 @@ body #header .inner #gnbMo li a {
   font-size: 14px;
   color: #0b0909;
 }
-body .sub_content {
+body .content_sub {
   width: 100%;
   padding: 0 0 150px;
   overflow: hidden;
 }
-body .sub_content .inner {
+body .content_sub .inner {
   width: 1180px;
   margin: 0 auto;
   min-height: 500px;
   position: relative;
 }
-body .sub_content .inner h1 {
+body .content_sub .inner h1 {
+  width: 65%;
   font-size: 50px;
   color: #efefef;
-  margin-bottom: 60px;
+  border-bottom: 1px solid #9a9a9a;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
-body .sub_content .inner h1::after {
+body .content_sub .inner > p {
+  width: 65%;
+  font-size: 16px;
+  color: #9a9a9a;
+  margin-bottom: 200px;
+}
+body .content_sub .inner > p::after {
   content: "";
   display: block;
-  width: 70%;
+  width: 100%;
   height: 1px;
   background-color: #9a9a9a;
   position: absolute;
-  top: 20%;
+  top: 300px;
   left: 0;
 }
-body .sub_content .inner p {
-  width: 70%;
-  font-size: 20px;
-  color: #9a9a9a;
-}
-body #footer .inner {
+body #footer_sub .inner {
   width: 1180px;
   margin: 0 auto;
   padding: 30px 0px 20px;
   border-top: 2px solid #aaa;
 }
-body #footer .inner h1 {
+body #footer_sub .inner h1 {
   float: left;
   font-size: 15px;
   font-weight: 600;
 }
-body #footer .inner ul {
+body #footer_sub .inner ul {
   float: right;
 }
-body #footer .inner ul li {
+body #footer_sub .inner ul li {
   float: left;
   margin-left: 20px;
 }
-body #footer .inner ul li a {
+body #footer_sub .inner ul li a {
   font-size: 14px;
   color: #efefef;
 }
-body #footer .inner address {
+body #footer_sub .inner address {
   float: left;
   width: 100%;
   font-style: normal;
@@ -242,7 +246,7 @@ body #footer .inner address {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-body #footer .inner p {
+body #footer_sub .inner p {
   float: left;
   width: 100%;
   font-size: 13px;
@@ -251,33 +255,195 @@ body #footer .inner p {
 }
 
 @media screen and (max-width: 1179px) {
-  body #header .inner {
+  body #header_sub .inner {
     width: 100%;
     height: 12vh;
     padding: 0vh 5vw;
   }
-  body #header .inner > h1 {
+  body #header_sub .inner > h1 {
     display: none;
   }
-  body #header .inner .menuWeb {
+  body #header_sub .inner .menuWeb {
     display: none;
   }
-  body #header .inner .btnCall {
+  body #header_sub .inner .btnCall {
     display: block;
   }
-  body .sub_content .inner {
+  body .content_sub .inner {
     padding: 3vw 5vw 5vw;
   }
-  body #footer .inner {
+  body #footer_sub .inner {
     width: 100%;
     padding: 3vw 5vw 5vw;
   }
 }
 @media screen and (max-width: 539px) {
-  body #header .inner {
+  body #header_sub .inner {
     height: 1vh;
   }
 }
+.contact {
+  width: 100%;
+}
+.contact::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.contact .content {
+  width: 580px;
+  float: left;
+}
+.contact .content div {
+  width: 280px;
+  height: 210px;
+  float: left;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.contact .content div img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+.contact .content div p {
+  width: 100%;
+  font-size: 18px;
+  color: #efefef;
+  margin-bottom: 15px;
+}
+.contact .content div span {
+  width: 100%;
+  font-size: 16px;
+  color: #9a9a9a;
+}
+.contact .wrap {
+  float: right;
+  width: 580px;
+  margin: 0px 0px 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 50px 15px;
+}
+.contact .wrap h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.contact .wrap div {
+  width: 100%;
+  font-size: 14px;
+}
+.contact .wrap div label {
+  width: 100%;
+  display: block;
+  padding: 15px 0px 3px;
+  color: #9a9a9a;
+}
+.contact .wrap div input[type=text],
+.contact .wrap div input[type=email] {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+}
+.contact .wrap div input[type=text]:focus,
+.contact .wrap div input[type=email]:focus {
+  outline: none;
+}
+.contact .wrap div select {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+}
+.contact .wrap div select:focus {
+  outline: none;
+}
+.contact .wrap div select option {
+  color: #0b0909;
+}
+.contact .wrap div textarea {
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+  resize: none;
+}
+.contact .wrap div textarea:focus {
+  outline: none;
+}
+.contact .wrap div input[type=submit] {
+  width: 100px;
+  height: 30px;
+  border-radius: 0%;
+  background-color: #efefef;
+  color: #0b0909;
+  margin: 15px 0px 0px 380px;
+}
+.contact #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  float: left;
+}
+.contact::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.contact .traffic {
+  float: left;
+}
+.contact .traffic li {
+  float: left;
+  margin-right: 20px;
+}
+.contact .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+}
+.contact .traffic li.on a {
+  background: #fff;
+  color: #333;
+}
+.contact .branch {
+  float: right;
+}
+.contact .branch li {
+  float: left;
+  margin-left: 10px;
+}
+.contact .branch li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+}
+.contact .branch li.on a {
+  background: #fff;
+  color: #333;
+}
+
 /*
 h1
 color:#efefef;
@@ -386,7 +552,7 @@ body #header .inner .menuWeb #gnb li a {
   color: #efefef;
 }
 body #header .inner .menuWeb #gnb li a:hover {
-  color: #9a9a9a;
+  color: rgb(203, 119, 10);
 }
 body #header .inner .menuWeb .sns {
   float: right;
@@ -846,7 +1012,7 @@ body #awards .inner .container .tab input[type=radio] {
 }
 body #awards .inner .container .tab input[type=radio]:checked + label::after {
   transform: rotate(135deg);
-  color: rgb(203, 119, 10);
+  opacity: 0;
 }
 body #awards .inner .container .tab input[type=radio]:checked ~ .content {
   max-height: 150px;
@@ -873,7 +1039,7 @@ body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
 body #awards .inner .container .tab input[type=radio]:checked ~ label h3 {
   padding: 0px 10px;
   font-weight: bold;
-  color: #efefef;
+  color: rgb(203, 119, 10);
   border-radius: 2px;
 }
 body #awards .inner .container .tab label {

@@ -9,7 +9,7 @@ $mobile: 539px;
 @import "about.scss";
 @import "portfolio.scss";
 @import "youtube.scss";
-@import "location.scss";
+@import "contact.scss";
 @import "community.scss";
 @import "join.scss";
 
@@ -132,7 +132,7 @@ body {
 							font-size: 14px;
 							color: #efefef;
 							&:hover {
-								color: #9a9a9a;
+								color: rgb(203, 119, 10);
 							}
 						}
 					}
@@ -638,7 +638,8 @@ body {
 						// }
 						&:checked + label::after {
 							transform: rotate(135deg);
-							color: rgb(203, 119, 10);
+							// color: rgb(203, 119, 10);
+							opacity: 0;
 						}
 						&:checked ~ .content {
 							max-height: 150px;
@@ -658,7 +659,7 @@ body {
 							top: 30px;
 							left: 0px;
 							color: rgba(255, 255, 255, 0.366);
-							// background-color: #efefef6c;
+							// color: rgb(203, 119, 10);
 							justify-content: flex-end;
 							font-size: 70px;
 							padding: 10px;
@@ -667,7 +668,8 @@ body {
 						&:checked ~ label h3 {
 							padding: 0px 10px;
 							font-weight: bold;
-							color: #efefef;
+							// color: #efefef;
+							color: rgb(203, 119, 10);
 							border-radius: 2px;
 						}
 					}
@@ -762,13 +764,6 @@ body {
 				margin: 100px 4vw 60px 0px;
 				display: flex;
 				flex-direction: column;
-				// justify-content: space-around;
-				// align-content: flex-start;
-				// h2 {
-				// 	font-size: 30px;
-				// 	font-weight: 400;
-				// 	margin-bottom: 20px;
-				// }
 				div {
 					width: 100%;
 					font-size: 14px;

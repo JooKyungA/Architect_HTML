@@ -1,0 +1,171 @@
+.contact {
+	width: 100%;
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.content {
+		width: 580px;
+		float: left;
+		div {
+			width: 280px;
+			height: 210px;
+			float: left;
+			padding: 20px;
+			// text-align: center;
+			display: flex;
+			flex-direction: column;
+			// justify-content: space-evenly;
+			// align-items: center;
+			img {
+				width: 32px;
+				height: 32px;
+				object-fit: cover;
+				margin-bottom: 30px;
+			}
+			p {
+				width: 100%;
+				// height: 100%;
+				font-size: 18px;
+				color: #efefef;
+				margin-bottom: 15px;
+			}
+			span {
+				width: 100%;
+				// height: 100%;
+				font-size: 16px;
+				color: #9a9a9a;
+			}
+		}
+	}
+	.wrap {
+		float: right;
+		width: 580px;
+		margin: 0px 0px 100px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		padding: 10px 50px 15px;
+		h2 {
+			font-size: 40px;
+			margin-bottom: 10px;
+			display: flex;
+			// justify-content: center;
+			align-items: flex-start;
+		}
+		div {
+			width: 100%;
+			font-size: 14px;
+			label {
+				width: 100%;
+				display: block;
+				padding: 15px 0px 3px;
+				color: #9a9a9a;
+			}
+			input[type="text"],
+			input[type="email"] {
+				width: 100%;
+				height: 30px;
+				border: none;
+				border-bottom: 2px solid #333;
+				background: none;
+				&:focus {
+					outline: none;
+				}
+			}
+			select {
+				width: 100%;
+				height: 30px;
+				border: none;
+				border-bottom: 2px solid #333;
+				background: none;
+				&:focus {
+					outline: none;
+				}
+				option {
+					color: #0b0909;
+				}
+			}
+			textarea {
+				width: 100%;
+				height: 25px;
+				margin-top: 5px;
+				border: none;
+				border-bottom: 2px solid #333;
+				background: none;
+				resize: none;
+				&:focus {
+					outline: none;
+				}
+			}
+			input[type="submit"] {
+				width: 100px;
+				height: 30px;
+				border-radius: 0%;
+				background-color: #efefef;
+				color: #0b0909;
+				margin: 15px 0px 0px 380px;
+				// position: absolute;
+				// right: 0;
+				// bottom: -40px;
+			}
+		}
+	}
+
+	#map {
+		width: 100%;
+		height: 500px;
+		border: 1px solid #000;
+		margin-bottom: 20px;
+		float: left;
+	}
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.traffic {
+		float: left;
+		li {
+			float: left;
+			margin-right: 20px;
+			a {
+				display: block;
+				width: 200px;
+				height: 40px;
+				background: #555;
+				font: bold 12px/40px "맑은 고딕";
+				color: #fff;
+				text-align: center;
+				border: 1px solid #555;
+			}
+			&.on a {
+				background: #fff;
+				color: #333;
+			}
+		}
+	}
+
+	.branch {
+		float: right;
+		li {
+			float: left;
+			margin-left: 10px;
+			a {
+				display: block;
+				width: 200px;
+				height: 40px;
+				background: #555;
+				font: bold 12px/40px "맑은 고딕";
+				color: #fff;
+				text-align: center;
+				border: 1px solid #555;
+			}
+			&.on a {
+				background: #fff;
+				color: #333;
+			}
+		}
+	}
+}

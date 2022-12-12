@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTFOLIO</title>
+  <title>CONTACT</title>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2344832bcf340a372af469cc87640dea"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
   <script defer src="js/anime.js"></script>
+  <script defer src="js/contact.js"></script>
 </head>
 
 <body>
@@ -54,10 +56,77 @@
     </div>
   </header>
 
-  <section class="content_sub portfolio">
+  <section class="content_sub contact">
     <div class="inner">
-      <h1>PORTFOLIO</h1>
-      <p>서브페이지 내용</p>
+      <h1>CONTACT</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, facere labore reiciendis blanditiis deleniti
+        pariatur maxime voluptatum earum, ab animi cupiditate.
+      </p>
+      <div class="content">
+        <div>
+          <img src="img/placeholder.png" alt="">
+          <p>ADDRESS</p>
+          <span>86, Sangil-ro, Bucheon-si, Gyeonggi-do, Republic of Korea</span>
+        </div>
+        <div>
+          <img src="img/time.png" alt="">
+          <p>OPENING HOURS</p>
+          <span>Monday to Friday : 9am to 6pm </span>
+
+        </div>
+        <div>
+          <img src="img/email.png" alt="">
+          <p>EMAIL</p>
+          <span>mail@pslarchtecture.com</span>
+        </div>
+        <div>
+          <img src="img/call.png" alt="">
+          <p>PHONE</p>
+          <span>+82 02-1234-5678</span>
+        </div>
+      </div>
+      <div class="wrap">
+        <h2>Get In Touch</h2>
+        <div>
+          <label for="Name">NAME</label>
+          <input type="text" name="Name" id="Name">
+        </div>
+        <div>
+          <label for="">E-MAIL</label>
+          <input type="email">
+        </div>
+        <div>
+          <label for="Project">TYPE OF PROJECT</label>
+          <select name="typeOfProject" id="Project">
+            <option value=""></option>
+            <option value="">HOUSE</option>
+            <option value="">OFFICE</option>
+            <option value="">RESTAURANT</option>
+            <option value="">OTHERS</option>
+          </select>
+        </div>
+        <div>
+          <label for="">MESSAGE</label>
+          <textarea name="" id="" cols="" rows=""></textarea>
+        </div>
+        <div>
+          <input type="submit" value="SUBMIT">
+        </div>
+      </div>
+
+      <div id="map"></div>
+      <ul class="traffic">
+        <li><a href="#">교통정보 보기</a></li>
+        <li class="on"><a href="#">교통정보 끄기</a></li>
+      </ul>
+
+      <ul class="branch">
+        <li class="on" data-index="0"><a href="#">본점</a></li>
+        <li data-index="1"><a href="#">안양지점</a></li>
+        <li data-index="2"><a href="#">서울지점</a></li>
+      </ul>
+
 
     </div>
   </section>
