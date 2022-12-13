@@ -50,7 +50,7 @@ btnScroll.forEach((el, index) => {
 // view content 관련---------------------
 const btnOpen = document.querySelector(".btnOpen");
 const visual = document.querySelector("#visual");
-const aside = document.querySelector("aside");
+const aside = document.querySelector("#aside");
 const btnClose = aside.querySelector(".btnClose");
 const _top = aside.querySelector(".top");
 const _right = aside.querySelector(".right");

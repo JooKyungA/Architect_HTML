@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
 
 $tablet: 1179px;
 $middle: 935px;
@@ -12,8 +13,6 @@ $mobile: 539px;
 @import "contact.scss";
 @import "community.scss";
 @import "join.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
 
 /*
 h1

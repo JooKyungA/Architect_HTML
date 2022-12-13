@@ -292,6 +292,70 @@ body #footer_sub .inner p {
     right: 5vw;
   }
 }
+.vidList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.vidList article {
+  width: 48%;
+  height: 400px;
+  border: 1px solid rgb(110, 109, 109);
+  margin-bottom: 40px;
+}
+.vidList article .pic {
+  display: block;
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+}
+.vidList article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vidList article .con {
+  width: 100%;
+  height: 40%;
+  padding: 20px;
+}
+.vidList article .con h2 {
+  font: bold 20px/1.2 "arial";
+  color: #a9a9a9;
+  margin-bottom: 15px;
+}
+.vidList article .con p {
+  font: 14px/1.4 "arial";
+  color: rgb(110, 109, 109);
+  margin-bottom: 20px;
+}
+.vidList article .con span {
+  font: bold 16px/1 "arial";
+  color: rgb(203, 119, 10);
+}
+.vidList figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vidList figure.pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .contact {
   width: 100%;
 }
