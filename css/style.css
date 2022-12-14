@@ -35,7 +35,7 @@ body {
 
 body #header_sub {
   width: 100%;
-  padding: 5vh 0vw 0vh;
+  padding: 50px 0vw 0vh;
 }
 body #header_sub .inner {
   width: 1180px;
@@ -46,13 +46,14 @@ body #header_sub .inner {
   position: relative;
 }
 body #header_sub .inner > h1 {
-  font-weight: 600;
+  width: 11%;
+  margin-right: 14%;
 }
 body #header_sub .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
-  color: #efefef;
+  font-weight: bold;
 }
 body #header_sub .inner .menuWeb {
   width: 75%;
@@ -71,7 +72,6 @@ body #header_sub .inner .menuWeb #gnb li {
 }
 body #header_sub .inner .menuWeb #gnb li a {
   font-size: 14px;
-  color: #efefef;
 }
 body #header_sub .inner .menuWeb #gnb li a:hover {
   color: rgb(203, 119, 10);
@@ -90,7 +90,7 @@ body #header_sub .inner .menuWeb .sns li a {
 }
 body #header_sub .inner .btnCall {
   position: absolute;
-  right: 5vw;
+  right: 0vw;
   top: 10%;
   transform: translateY(-50%);
   display: none;
@@ -265,10 +265,14 @@ body #footer_sub .inner p {
 }
 
 @media screen and (max-width: 1179px) {
+  body #header_sub {
+    padding: 5vh 5vw 0vh;
+  }
   body #header_sub .inner {
     width: 100%;
-    height: 12vh;
-    padding: 0vh 5vw;
+  }
+  body #header_sub .inner > h1 {
+    width: 100%;
   }
   body #header_sub .inner .menuWeb {
     display: none;
@@ -655,7 +659,7 @@ body #footer_sub .inner p {
   }
 }
 /*
-h1
+전체
 color:#efefef;
 톤다운 1
 color:#a9a9a9;
@@ -711,6 +715,7 @@ body .scroll li a {
 body .scroll li p {
   font-size: 10px;
   color: rgb(110, 109, 109);
+  cursor: pointer;
   opacity: 0;
   transition: 1;
 }
@@ -723,7 +728,7 @@ body .scroll li:hover p {
 }
 body #header {
   width: 100%;
-  padding: 5vh 0vw 0vh;
+  padding: 50px 0vw 0vh;
 }
 body #header .inner {
   width: 1180px;
@@ -734,13 +739,14 @@ body #header .inner {
   position: relative;
 }
 body #header .inner > h1 {
-  font-weight: 600;
+  width: 11%;
+  margin-right: 14%;
 }
 body #header .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
-  color: #efefef;
+  font-weight: bold;
 }
 body #header .inner .menuWeb {
   width: 75%;
@@ -759,7 +765,6 @@ body #header .inner .menuWeb #gnb li {
 }
 body #header .inner .menuWeb #gnb li a {
   font-size: 14px;
-  color: #efefef;
 }
 body #header .inner .menuWeb #gnb li a:hover {
   color: rgb(203, 119, 10);
@@ -778,7 +783,7 @@ body #header .inner .menuWeb .sns li a {
 }
 body #header .inner .btnCall {
   position: absolute;
-  right: 5vw;
+  right: 0vw;
   top: 10%;
   transform: translateY(-50%);
   display: none;
@@ -876,13 +881,14 @@ body #header .inner #gnbMo li a {
 }
 body #visual {
   width: 1180px;
-  height: calc(95vh - 110px);
+  height: calc(100vh - 110px - 50px);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  min-height: 750px;
 }
 body #visual.off .btnOpen {
-  margin-top: -100%;
+  margin-bottom: -100%;
   opacity: 0;
 }
 body #visual.off .txt {
@@ -893,22 +899,23 @@ body #visual.off .pic {
   margin-right: -100%;
   opacity: 0;
 }
-body #visual.off .wrap {
-  margin-left: -200%;
+body #visual.off .wrap #slider,
+body #visual.off .wrap .prev,
+body #visual.off .wrap .next {
+  margin-left: -100%;
   opacity: 0;
 }
 body #visual .inner {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
 body #visual .inner .btnOpen {
   display: block;
-  width: 50%;
+  width: 150px;
   height: 20px;
   position: absolute;
   left: 25%;
-  top: 640px;
+  bottom: 98px;
   font-size: 14px;
   line-height: 20px;
   color: rgb(203, 119, 10);
@@ -917,13 +924,15 @@ body #visual .inner .btnOpen {
 }
 body #visual .inner .txt {
   width: 300px;
-  margin-left: 25%;
+  position: absolute;
+  top: 0;
+  left: 25%;
   transition: 1s 0s;
 }
 body #visual .inner .txt h1 {
   margin-bottom: 200px;
-  font-weight: 500;
   font-size: 120px;
+  font-weight: 500;
 }
 body #visual .inner .txt p {
   font-size: 16px;
@@ -933,7 +942,7 @@ body #visual .inner .pic {
   width: 470px;
   height: 650px;
   position: absolute;
-  bottom: 100px;
+  top: 10px;
   right: 0;
   overflow: hidden;
   transition: 1s 0.2s;
@@ -944,11 +953,6 @@ body #visual .inner .pic > img {
   object-fit: cover;
   filter: saturate(70%);
 }
-body #visual .inner .wrap {
-  width: 250px;
-  height: 300px;
-  transition: 1s 0.4s;
-}
 body #visual .inner .wrap #slider {
   width: 250px;
   height: 300px;
@@ -956,6 +960,7 @@ body #visual .inner .wrap #slider {
   top: 290px;
   left: 0;
   overflow: hidden;
+  transition: 1s 0.4s;
 }
 body #visual .inner .wrap #slider ul {
   width: 500%;
@@ -976,24 +981,28 @@ body #visual .inner .wrap #slider ul li img {
   filter: saturate(70%);
 }
 body #visual .inner .wrap .prev {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 98px;
+  transition: 1s 0.4s;
 }
 body #visual .inner .wrap .prev img {
-  width: 100px;
-  position: absolute;
-  left: 0%;
-  bottom: 98px;
-}
-body #visual .inner .wrap .next {
   width: 100%;
   height: 100%;
 }
-body #visual .inner .wrap .next img {
+body #visual .inner .wrap .next {
   width: 100px;
+  height: 15px;
   position: absolute;
   left: 13%;
   bottom: 98px;
+  transition: 1s 0.4s;
+}
+body #visual .inner .wrap .next img {
+  width: 100px;
+  height: 100%;
 }
 body #visual .inner .wrap .pagination {
   width: 100%;
@@ -1513,10 +1522,11 @@ body #aside .inner .content .btnClose {
 }
 
 @media screen and (max-width: 1179px) {
+  body #header {
+    padding: 5vh 5vw 0vh;
+  }
   body #header .inner {
     width: 100%;
-    height: 12vh;
-    padding: 0vh 5vw;
   }
   body #header .inner > h1 {
     display: none;
@@ -1532,48 +1542,36 @@ body #aside .inner .content .btnClose {
   }
   body #visual {
     width: 100%;
-    height: 79vh;
+    height: calc(95vh - 110px);
     overflow: visible;
   }
   body #visual .inner .btnOpen {
-    margin-left: -12vw;
-    margin-top: -343px;
+    left: 12vw;
+    top: 310px;
+    bottom: 0px;
   }
   body #visual .inner .txt {
-    width: 25%;
-    position: absolute;
+    width: 35vw;
+    top: -110px;
+    left: 12vw;
   }
   body #visual .inner .txt h1 {
-    width: 30%;
-    margin-top: -110px;
-    margin-left: -12vw;
-  }
-  body #visual .inner .txt p {
-    margin-top: -200px;
-    margin-left: -12vw;
+    margin-bottom: 0px;
   }
   body #visual .inner .pic {
-    height: 650px;
-    margin-right: 5vw;
-    bottom: 12vh;
+    top: 40px;
+    right: 5vw;
     z-index: -1;
   }
-  body #visual .inner .pic img {
-    width: 100%;
-    height: 100%;
-  }
   body #visual .wrap #slider {
-    margin: 5vh 8vw;
+    margin-top: 5.5vh;
+    margin-left: 8vw;
   }
-  body #visual .wrap .prev img {
-    left: 0;
-    bottom: 0;
-    margin-bottom: 10vh;
-    margin-left: 30vw;
+  body #visual .wrap .prev {
+    margin-left: 8vw;
   }
-  body #visual .wrap .next img {
-    margin-bottom: 7vh;
-    margin-left: 18vw;
+  body #visual .wrap .next {
+    margin-left: 10vw;
   }
   body #visual .wrap .pagination {
     display: none;
@@ -1630,25 +1628,14 @@ body #aside .inner .content .btnClose {
   }
 }
 @media screen and (max-width: 935px) {
-  body #visual {
-    height: 80vh;
-  }
   body #visual .inner .btnOpen {
-    margin-left: -18vw;
-    margin-top: -300px;
+    top: 325px;
   }
-  body #visual .inner .txt h1 {
-    margin-left: -18vw;
-  }
-  body #visual .inner .txt p {
-    margin-top: -200px;
-    margin-left: -18vw;
+  body #visual .inner .txt {
+    width: 45vw;
   }
   body #visual .inner .pic {
     height: 600px;
-    top: 3vh;
-    bottom: 0px;
-    margin-right: 5vw;
   }
   body #visual .wrap {
     display: none;
@@ -1732,29 +1719,27 @@ body #aside .inner .content .btnClose {
   }
 }
 @media screen and (max-width: 539px) {
-  body #header .inner {
-    height: 1vh;
-  }
   body #visual {
-    height: 70vh;
+    height: 600px;
+    min-height: auto;
   }
   body #visual .inner .btnOpen {
-    margin-left: -16vw;
-    margin-top: -420px;
+    left: 8vw;
+    top: 180px;
+  }
+  body #visual .inner .txt {
+    width: 40vw;
+    left: 8vw;
   }
   body #visual .inner .txt h1 {
-    font-size: 80px;
-    margin-top: -2vw;
-    margin-left: -16vw;
+    font-size: 90px;
   }
   body #visual .inner .txt p {
     display: none;
   }
   body #visual .inner .pic {
-    width: 70vw;
-    height: 500px;
-    top: 10vh;
-    bottom: 0px;
+    width: 70%;
+    height: 55vh;
     margin-right: 0vw;
   }
   body #visual .wrap {
