@@ -296,6 +296,110 @@ body #footer_sub .inner p {
     right: 5vw;
   }
 }
+.about .inner .content {
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+}
+.about .inner .content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.about .inner .content h2 {
+  width: 100%;
+  float: left;
+  font-size: 30px;
+  font-weight: 400;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.about .inner .content h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: rgb(203, 119, 10);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about .inner .content div {
+  width: 800px;
+  height: 400px;
+  float: right;
+  background-image: url(../img/about.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+.about .inner .content p {
+  width: 800px;
+  float: right;
+  font-size: 18px;
+  color: #9a9a9a;
+}
+.about .inner .team {
+  width: 100%;
+  position: relative;
+}
+.about .inner .team::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.about .inner .team h2 {
+  font-size: 30px;
+  font-weight: 400;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.about .inner .team h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: rgb(203, 119, 10);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about .inner .team .wrap article {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+  padding: 10px 10px;
+}
+.about .inner .team .wrap article:last-of-type {
+  margin-right: 0px;
+}
+.about .inner .team .wrap article .pic {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  filter: saturate(70%);
+  margin-bottom: 15px;
+}
+.about .inner .team .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(70%);
+}
+.about .inner .team .wrap article h3,
+.about .inner .team .wrap article p {
+  padding: 0px 15px;
+}
+.about .inner .team .wrap article h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.about .inner .team .wrap article p {
+  font-size: 16px;
+  color: #9a9a9a;
+}
+
 .vidList {
   width: 100%;
   display: flex;

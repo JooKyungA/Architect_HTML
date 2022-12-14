@@ -1,6 +1,116 @@
-body {
-	.about {
-		.inner {
+.about {
+	.inner {
+		.content {
+			width: 100%;
+			margin-bottom: 100px;
+			position: relative;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			h2 {
+				width: 100%;
+				float: left;
+				font-size: 30px;
+				font-weight: 400;
+				padding-top: 10px;
+				margin-bottom: 30px;
+				&::after {
+					content: "";
+					display: block;
+					width: 70px;
+					height: 1px;
+					background-color: rgb(203, 119, 10);
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+			div {
+				width: 800px;
+				height: 400px;
+				float: right;
+				background-image: url(../img/about.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				margin-bottom: 30px;
+			}
+			p {
+				width: 800px;
+				float: right;
+				font-size: 18px;
+				color: #9a9a9a;
+			}
+		}
+		.team {
+			width: 100%;
+			position: relative;
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			h2 {
+				font-size: 30px;
+				font-weight: 400;
+				padding-top: 10px;
+				margin-bottom: 30px;
+				&::after {
+					content: "";
+					display: block;
+					width: 70px;
+					height: 1px;
+					background-color: rgb(203, 119, 10);
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+			.wrap {
+				article {
+					width: 280px;
+					float: left;
+					margin-right: 20px;
+					padding: 10px 10px;
+					&:last-of-type {
+						margin-right: 0px;
+					}
+					.pic {
+						width: 100%;
+						height: 300px;
+						overflow: hidden;
+						filter: saturate(70%);
+						margin-bottom: 15px;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							filter: saturate(70%);
+							// &::after {
+							// 	content: "";
+							// 	display: block;
+							// 	width: 100%;
+							// 	height: 100%;
+							// 	background-color: rgba(0, 0, 0, 0.5);
+							// }
+						}
+					}
+					h3,
+					p {
+						padding: 0px 15px;
+					}
+					h3 {
+						font-size: 18px;
+						margin-bottom: 5px;
+					}
+					p {
+						font-size: 16px;
+						color: #9a9a9a;
+					}
+				}
+			}
 		}
 	}
 }
