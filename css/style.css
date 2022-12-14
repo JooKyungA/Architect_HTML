@@ -765,6 +765,7 @@ body #header .inner .menuWeb #gnb li {
 }
 body #header .inner .menuWeb #gnb li a {
   font-size: 14px;
+  transition: 0.5s;
 }
 body #header .inner .menuWeb #gnb li a:hover {
   color: rgb(203, 119, 10);
@@ -922,6 +923,10 @@ body #visual .inner .btnOpen {
   text-decoration-line: underline;
   transition: 1s 0s;
 }
+body #visual .inner .btnOpen:hover {
+  color: rgb(249, 173, 110);
+  font-size: 15px;
+}
 body #visual .inner .txt {
   width: 300px;
   position: absolute;
@@ -952,6 +957,10 @@ body #visual .inner .pic > img {
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
+  transition: 0.5s;
+}
+body #visual .inner .pic > img:hover {
+  transform: scale(1.2);
 }
 body #visual .inner .wrap #slider {
   width: 250px;
@@ -979,6 +988,10 @@ body #visual .inner .wrap #slider ul li img {
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
+  transition: 0.5s;
+}
+body #visual .inner .wrap #slider ul li img:hover {
+  transform: scale(1.2);
 }
 body #visual .inner .wrap .prev {
   width: 100px;
@@ -1014,18 +1027,6 @@ body #visual .inner .wrap .pagination {
   font-size: 18px;
   font-weight: 400;
 }
-body #about.on .inner h1 {
-  transform: translateX(0%);
-  opacity: 1;
-}
-body #about.on .inner .txt h2 {
-  transform: translateX(0%);
-  opacity: 1;
-}
-body #about.on .inner .txt p {
-  transform: translateX(0%);
-  opacity: 1;
-}
 body #about .inner {
   width: 1180px;
   margin: 0 auto;
@@ -1034,9 +1035,9 @@ body #about .inner {
 }
 body #about .inner h1 {
   margin-bottom: 30px;
-  transition: 1s;
-  transform: translateX(-20%);
+  transform: translateY(-50%);
   opacity: 0;
+  transition: 1s;
 }
 body #about .inner .txt {
   display: flex;
@@ -1046,18 +1047,30 @@ body #about .inner .txt h2 {
   width: 400px;
   font-size: 18px;
   color: #9a9a9a;
-  transition: 1s;
   transform: translateX(-20%);
   opacity: 0;
+  transition: 1s 0.5s;
 }
 body #about .inner .txt p {
   width: 600px;
   font-size: 17px;
   text-align: justify;
   color: rgb(110, 109, 109);
-  transition: 1s;
   transform: translateX(20%);
   opacity: 0;
+  transition: 1s 0.5s;
+}
+body #about.on .inner h1 {
+  transform: translateY(0%);
+  opacity: 1;
+}
+body #about.on .inner .txt h2 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+body #about.on .inner .txt p {
+  transform: translateX(0%);
+  opacity: 1;
 }
 body #portfolio {
   width: 100%;
@@ -1077,11 +1090,17 @@ body #portfolio .inner::after {
 }
 body #portfolio .inner h1 {
   float: left;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
 }
 body #portfolio .inner .container {
   width: 1180px;
   float: right;
   overflow: hidden;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: 1s 0.5s;
 }
 body #portfolio .inner .container::after {
   content: "";
@@ -1113,6 +1132,10 @@ body #portfolio .inner .container .tab ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
+}
+body #portfolio .inner .container .tab ul li a:hover {
+  color: rgb(203, 119, 10);
 }
 body #portfolio .inner .container .tab ul li.on a {
   color: rgb(203, 119, 10);
@@ -1156,6 +1179,7 @@ body #portfolio .inner .container section article div img {
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
+  transform: translateY(10%);
   transition: 0.5s;
 }
 body #portfolio .inner .container section article div p {
@@ -1185,13 +1209,21 @@ body #portfolio .inner .container section article div::after {
   z-index: 3;
 }
 body #portfolio .inner .container section article div:hover img {
-  transform: scale(1.2);
+  transform: translateY(0%);
 }
 body #portfolio .inner .container section article div:hover p {
   opacity: 1;
 }
 body #portfolio .inner .container section article div:hover::after {
   bottom: 0px;
+}
+body #portfolio.on .inner h1 {
+  transform: translateY(0%);
+  opacity: 1;
+}
+body #portfolio.on .inner .container {
+  transform: translateY(0%);
+  opacity: 1;
 }
 body #awards .inner {
   width: 1180px;
@@ -1208,11 +1240,17 @@ body #awards .inner::after {
 body #awards .inner h1 {
   float: left;
   width: 100%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
 }
 body #awards .inner .container {
   margin-top: 30px;
   float: right;
   width: 700px;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: 1s 0.5s;
 }
 body #awards .inner .container .tab {
   width: 700px;
@@ -1312,6 +1350,14 @@ body #awards .inner .container .tab .content p {
   color: #ccc;
   z-index: 10;
 }
+body #awards.on .inner h1 {
+  transform: translateY(0%);
+  opacity: 1;
+}
+body #awards.on .inner .container {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
 body #contact {
   width: 100%;
 }
@@ -1330,16 +1376,21 @@ body #contact .inner::after {
 body #contact .inner h1 {
   float: left;
   width: 30%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 1s;
 }
 body #contact .inner p {
   width: 500px;
   font-size: 22px;
   color: #9a9a9a;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   margin: 0 3vw;
-  transform: translateY(-50%);
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: 1s 0.5s;
 }
 body #contact .inner .wrap {
   float: right;
@@ -1347,6 +1398,9 @@ body #contact .inner .wrap {
   margin: 150px 4vw 50px 0px;
   display: flex;
   flex-direction: column;
+  transform: translateX(20%);
+  opacity: 0;
+  transition: 1s 0.5s;
 }
 body #contact .inner .wrap div {
   width: 100%;
@@ -1401,6 +1455,23 @@ body #contact .inner .wrap div input[type=submit] {
   background-color: #efefef;
   color: #0b0909;
   margin: 30px 0px 0px 300px;
+  transition: 1s;
+}
+body #contact .inner .wrap div input[type=submit]:hover {
+  background-color: rgb(203, 119, 10);
+}
+body #contact.on .inner h1 {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 1s;
+}
+body #contact.on .inner p {
+  transform: translateX(0%);
+  opacity: 1;
+}
+body #contact.on .inner .wrap {
+  transform: translateX(0%);
+  opacity: 1;
 }
 body #footer .inner {
   width: 1180px;
@@ -1423,6 +1494,7 @@ body #footer .inner ul li {
 body #footer .inner ul li a {
   font-size: 14px;
   color: #9a9a9a;
+  transition: 0.5s;
 }
 body #footer .inner ul li a:hover {
   color: rgb(203, 119, 10);
@@ -1488,7 +1560,7 @@ body #aside .left {
 body #aside .inner {
   width: 100%;
   height: 100%;
-  background: #c5c4c4;
+  background: #e4e4e4;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1513,7 +1585,7 @@ body #aside .inner .content h2 {
 body #aside .inner .content p {
   font-size: 16px;
   line-height: 1.3;
-  color: #0b0909;
+  color: #9a9a9a;
 }
 body #aside .inner .content .btnClose {
   position: absolute;

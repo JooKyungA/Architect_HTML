@@ -137,17 +137,6 @@ btnClose.addEventListener("click", (e) => {
   })
 })
 
-
-// btnCall 관련 js-----------------------
-// const btnCall = document.querySelector(".btnCall");
-// const menuMo = document.querySelector(".menuMo");
-
-// btnCall.onclick = function (e) {
-//   e.preventDefault();
-//   btnCall.classList.toggle("on");
-//   menuMo.classList.toggle("on");
-// }
-
 // slider 관련 js--------------------------
 const slider = document.querySelector("#slider");
 const ul = slider.querySelector("ul");
