@@ -1375,32 +1375,61 @@ body #contact .inner::after {
 }
 body #contact .inner h1 {
   float: left;
-  width: 30%;
+  width: 100%;
+  margin-bottom: 60px;
   transform: translateY(-50%);
   opacity: 0;
   transition: 1s;
 }
-body #contact .inner p {
-  width: 500px;
-  font-size: 22px;
-  color: #9a9a9a;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  margin: 0 3vw;
+body #contact .inner .content {
+  width: 580px;
+  float: left;
   transform: translateX(-20%);
   opacity: 0;
   transition: 1s 0.5s;
 }
-body #contact .inner .wrap {
-  float: right;
-  width: 400px;
-  margin: 150px 4vw 50px 0px;
+body #contact .inner .content div {
+  width: 280px;
+  height: 210px;
+  float: left;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+}
+body #contact .inner .content div img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+body #contact .inner .content div p {
+  width: 100%;
+  font-size: 18px;
+  color: #efefef;
+  margin-bottom: 15px;
+}
+body #contact .inner .content div span {
+  width: 100%;
+  font-size: 16px;
+  color: #9a9a9a;
+}
+body #contact .inner .wrap {
+  float: right;
+  width: 580px;
+  margin: 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 50px 15px;
   transform: translateX(20%);
   opacity: 0;
   transition: 1s 0.5s;
+}
+body #contact .inner .wrap h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
 }
 body #contact .inner .wrap div {
   width: 100%;
@@ -1410,6 +1439,7 @@ body #contact .inner .wrap div label {
   width: 100%;
   display: block;
   padding: 15px 0px 3px;
+  color: #9a9a9a;
 }
 body #contact .inner .wrap div input[type=text],
 body #contact .inner .wrap div input[type=email] {
@@ -1454,8 +1484,8 @@ body #contact .inner .wrap div input[type=submit] {
   border-radius: 0%;
   background-color: #efefef;
   color: #0b0909;
-  margin: 30px 0px 0px 300px;
-  transition: 1s;
+  margin: 15px 0px 0px 380px;
+  transition: 0.5s;
 }
 body #contact .inner .wrap div input[type=submit]:hover {
   background-color: rgb(203, 119, 10);
@@ -1465,7 +1495,7 @@ body #contact.on .inner h1 {
   opacity: 1;
   transition: 1s;
 }
-body #contact.on .inner p {
+body #contact.on .inner .content {
   transform: translateX(0%);
   opacity: 1;
 }
@@ -1682,14 +1712,19 @@ body #aside .inner .content .btnClose {
   body #contact .inner h1 {
     width: 100%;
   }
-  body #contact .inner p {
-    display: none;
+  body #contact .inner .content {
+    width: 100%;
+  }
+  body #contact .inner .content div {
+    width: 49%;
   }
   body #contact .inner .wrap {
-    margin: 50px 4vw 60px 0vw;
+    width: 100%;
+    margin: 0 auto;
   }
   body #contact .inner .wrap div input[type=submit] {
-    margin: 2vh 5vw 0vh 0vw;
+    float: right;
+    margin: 15px 0px 0px 0px;
   }
   body #footer .inner {
     width: 100%;
