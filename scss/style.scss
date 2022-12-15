@@ -13,6 +13,7 @@ $mobile: 539px;
 @import "contact.scss";
 @import "community.scss";
 @import "join.scss";
+@import "joinResult.scss";
 
 /*
 전체
@@ -148,9 +149,6 @@ body {
 						}
 						a {
 							font-size: 14px;
-							i {
-								color: rgb(203, 119, 10);
-							}
 						}
 					}
 				}
@@ -573,11 +571,6 @@ body {
 						&.on {
 							display: block;
 							opacity: 1;
-							// div {
-							// 	img {
-							// 		transform: translateY(0%);
-							// 	}
-							// }
 						}
 						div {
 							width: 260px;
@@ -594,7 +587,6 @@ body {
 								height: 100%;
 								object-fit: cover;
 								filter: saturate(70%);
-								transform: translateY(30%);
 								transition: 0.5s;
 							}
 							p {
@@ -933,6 +925,8 @@ body {
 						background-color: #efefef;
 						color: #0b0909;
 						margin: 15px 0px 0px 380px;
+						cursor: pointer;
+
 						transition: 0.5s;
 
 						// position: absolute;
@@ -940,6 +934,7 @@ body {
 						// bottom: -40px;
 						&:hover {
 							background-color: rgb(203, 119, 10);
+							color: #efefef;
 						}
 					}
 				}

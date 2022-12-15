@@ -407,7 +407,7 @@ body #footer_sub .inner p {
   color: rgb(203, 119, 10);
 }
 .about .inner .team .wrap article .pic:hover img {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .about .inner .team .wrap article .pic:hover p a {
   opacity: 1;
@@ -596,6 +596,12 @@ body #footer_sub .inner p {
   background-color: #efefef;
   color: #0b0909;
   margin: 15px 0px 0px 380px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact .wrap div input[type=submit]:hover {
+  background-color: rgb(203, 119, 10);
+  color: #efefef;
 }
 .contact #map {
   width: 100%;
@@ -788,6 +794,96 @@ body #footer_sub .inner p {
     display: none;
   }
 }
+.join .inner fieldset {
+  border: none;
+}
+.join .inner fieldset h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.join .inner fieldset #terms {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #0b0909;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+.join .inner fieldset .agreement {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 10px 70px 0px;
+}
+.join .inner fieldset .agreement label[for=agree] {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.join .inner fieldset table {
+  width: 100%;
+  border-top: 2px solid #9a9a9a;
+  border-bottom: 2px solid #9a9a9a;
+}
+.join .inner fieldset table th,
+.join .inner fieldset table td {
+  border-bottom: 1px solid rgb(110, 109, 109);
+  padding: 25px;
+}
+.join .inner fieldset table th {
+  width: 20%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+.join .inner fieldset table th:last-child {
+  text-align: center;
+}
+.join .inner fieldset table th input[type=submit] {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #0b0909;
+  margin: 10px auto;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #0b0909;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.join .inner fieldset table th input[type=submit]:hover {
+  background-color: rgb(203, 119, 10);
+  color: #efefef;
+}
+.join .inner fieldset table td {
+  border-left: 1px solid #9a9a9a;
+}
+.join .inner fieldset table td input[type=text],
+.join .inner fieldset table td input[type=password],
+.join .inner fieldset table td select {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #9a9a9a;
+}
+.join .inner fieldset table td select option {
+  color: #0b0909;
+}
+.join .inner fieldset table td input[type=radio],
+.join .inner fieldset table td input[type=checkbox] {
+  margin-right: 5px;
+}
+.join .inner fieldset table td label {
+  margin-right: 25px;
+}
+.join .inner fieldset table td p {
+  font: 11px/1 "맑은고딕";
+  color: rgb(203, 119, 10);
+  margin-top: 10px;
+}
+
 /*
 전체
 color:#efefef;
@@ -911,9 +1007,6 @@ body #header .inner .menuWeb .sns li:nth-of-type(1) {
 }
 body #header .inner .menuWeb .sns li a {
   font-size: 14px;
-}
-body #header .inner .menuWeb .sns li a i {
-  color: rgb(203, 119, 10);
 }
 body #header .inner .btnCall {
   position: absolute;
@@ -1312,7 +1405,6 @@ body #portfolio .inner .container section article div img {
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
-  transform: translateY(30%);
   transition: 0.5s;
 }
 body #portfolio .inner .container section article div p {
@@ -1619,10 +1711,12 @@ body #contact .inner .wrap div input[type=submit] {
   background-color: #efefef;
   color: #0b0909;
   margin: 15px 0px 0px 380px;
+  cursor: pointer;
   transition: 0.5s;
 }
 body #contact .inner .wrap div input[type=submit]:hover {
   background-color: rgb(203, 119, 10);
+  color: #efefef;
 }
 body #contact.on .inner h1 {
   transform: translateY(0%);

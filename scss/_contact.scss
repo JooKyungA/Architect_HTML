@@ -106,9 +106,16 @@
 				background-color: #efefef;
 				color: #0b0909;
 				margin: 15px 0px 0px 380px;
+				cursor: pointer;
+
+				transition: 0.5s;
 				// position: absolute;
 				// right: 0;
 				// bottom: -40px;
+				&:hover {
+					background-color: rgb(203, 119, 10);
+					color: #efefef;
+				}
 			}
 		}
 	}

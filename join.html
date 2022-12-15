@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/btnCall.js"></script>
   <script defer src="js/anime.js"></script>
+  <script defer src="js/validation.js"></script>
 </head>
 
 <body>
@@ -57,7 +58,118 @@
   <section class="content_sub join">
     <div class="inner">
       <h1>JOIN</h1>
-      <p>서브페이지 내용</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores, delectus illo quidem quae,
+        dolor ea exercitationem soluta, consequuntur sed iure error fuga.</p>
+      <form action="joinResult.html" method="get" id="member">
+        <fieldset>
+          <legend class="hidden">회원가입 폼 입력 양식</legend>
+          <h2>회원약관</h2>
+          <textarea name="terms" id="terms">
+            제 1 장 총 칙
+            제 1 조 (목적)
+            본 이용약관(이하 '약관'이라 합니다)은 클래식아티스트와 이용 고객(이하 '회원'이라 합니다)간에 클래식아티스트가 제공하는 홈페이지 서비스(이하 '홈페이지' 또는 '서비스'라 합니다)의 가입조건 및 이용에 관한 제반 사항과 기타 필요한 사항을 구체적으로 규정함을 목적으로 합니다.
+            제 2 조 (용어의 정의)
+            (1) 이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+            '회원'이라 함은 이 약관에 동의하고 서비스를 이용하는 이용자를 말합니다.
+            '이용계약'이라 함은 이 약관을 포함하여 서비스 이용과 관련하여 클래식아티스트와 회원 간에 체결하는 모든 계약을 말합니다.
+            '이용자ID'라 함은 회원의 식별 및 서비스 이용을 위하여 회원의 신청에 따라 클래식아티스트가 회원별로 부여하는 고유한 문자와 숫자의 조합을 말합니다.
+            '비밀번호'라 함은 이용자ID로 식별되는 회원의 본인 여부를 검증하기 위하여 회원이 설정하여 클래식아티스트에 등록한 고유의 문자와 숫자의 조합을 말합니다.
+            '단말기'라 함은 서비스에 접속하기 위해 회원이 이용하는 개인용 컴퓨터, PDA, 태블릿pc, 스마트폰 등의 전산장치를 말합니다.
+            '해지'라 함은 클래식아티스트 또는 회원이 이용계약을 해약하는 것을 말합니다.
+            (2) 이 약관에서 사용하는 용어 중 제1항에서 정하지 아니한 것은 관계 법령 및 별도 개별약관에서 정하는 바에 따르며, 그 외에는 일반 관례에 따릅니다.
+            제 3 조 (이용약관의 효력 및 변경)
+            (1) 이 약관은 홈페이지를 통해 온라인으로 공시하고 회원의 동의와 회원가입으로 효력을 발생하며, 합리적인 사유가 발생할 경우 클래식아티스트는 관련 법령에 위배되지 않는 범위 안에서 개정할 수 있습니다. 개정된 약관은 정당한 절차에 따라 홈페이지를 통해 공지함으로써 효력을 발휘합니다.
+            (2) 회원은 정기적으로 홈페이지를 방문하여 약관의 변경사항을 확인하여야 합니다. 변경된 약관에 대한 정보를 알지 못해 발생하는 회원의 피해는 클래식아티스트에서 책임지지 않습니다.
+            (3) 회원은 변경된 약관에 동의하지 않을 경우 회원 탈퇴(해지)를 요청할 수 있습니다.
+            제 4 조 (약관외 준칙)
+            클래식아티스트는 필요한 경우 서비스 내의 개별항목에 대하여 개별약관 정할 수 있으며, 이 약관과 개별약관의 내용이 상충되는 경우에는 개별약관의 내용을 우선하여 적용합니다.
+          </textarea>
+          <div class="agreement">
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">약관에 동의합니다</label>
+          </div>
+          <h2>MEMBER INFORMATION</h2>
+          <table>
+            <caption class="hidden">회원가입을 위한 아이디, 비밀번호, 이메일 ,성별, 학력, 취미, 남기는 말 입력 테이블</caption>
+
+            <tbody>
+              <tr>
+                <th scope="row"><label for="name">Name</label></th>
+                <td>
+                  <input type="text" name="name" id="name" placeholder="이름을 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="userid">User ID</label></th>
+                <td>
+                  <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd1">Password</label></th>
+                <td>
+                  <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd2">Confirm Password</label></th>
+                <td>
+                  <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="email">E-mail</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요.">
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">Member Type</th>
+                <td>
+                  <input type="radio" name="memberType" id="corporate" value="corporate">
+                  <label for="corporate">Corporate</label>
+                  <input type="radio" name="memberType" id="individual" value="individual">
+                  <label for="individual">Individual</label>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="city">City</label></th>
+                <td>
+                  <select name="city" id="city">
+                    <option value="">선택하세요</option>
+                    <option value="seoul">Seoul</option>
+                    <option value="incheon">Incheon</option>
+                    <option value="gyeonggi-do">Gyeonggi-do</option>
+                    <option value="others">Others</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Project of Interest</th>
+                <td>
+                  <input type="checkbox" name="project" id="house" value="house">
+                  <label for="house">House</label>
+                  <input type="checkbox" name="project" id="office" value="office">
+                  <label for="office">Office</label>
+                  <input type="checkbox" name="project" id="restaurant" value="restaurant">
+                  <label for="restaurant">Restaurant</label>
+                  <input type="checkbox" name="project" id="others" value="others">
+                  <label for="others">Others</label>
+
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <input type="submit" value="SUBMIT">
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+
+      </form>
 
     </div>
   </section>
