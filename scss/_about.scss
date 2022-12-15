@@ -15,7 +15,7 @@
 				font-size: 30px;
 				font-weight: 400;
 				padding-top: 10px;
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 				&::after {
 					content: "";
 					display: block;
@@ -28,7 +28,7 @@
 				}
 			}
 			div {
-				width: 800px;
+				width: 870px;
 				height: 400px;
 				float: right;
 				background-image: url(../img/about.jpg);
@@ -38,7 +38,7 @@
 				margin-bottom: 30px;
 			}
 			p {
-				width: 800px;
+				width: 870px;
 				float: right;
 				font-size: 18px;
 				color: #9a9a9a;
@@ -56,7 +56,7 @@
 				font-size: 30px;
 				font-weight: 400;
 				padding-top: 10px;
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 				&::after {
 					content: "";
 					display: block;
@@ -83,6 +83,8 @@
 						overflow: hidden;
 						filter: saturate(70%);
 						margin-bottom: 15px;
+
+						position: relative;
 						img {
 							width: 100%;
 							height: 100%;
@@ -96,16 +98,45 @@
 							// 	background-color: rgba(0, 0, 0, 0.5);
 							// }
 						}
+						p {
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							a {
+								font-size: 25px;
+								padding: 10px;
+								opacity: 0;
+								i {
+									color: rgb(203, 119, 10);
+								}
+							}
+						}
+						&:hover {
+							img {
+								opacity: 0.3;
+							}
+							p {
+								a {
+									opacity: 1;
+									z-index: 3;
+								}
+							}
+						}
 					}
 					h3,
-					p {
+					> p {
 						padding: 0px 15px;
 					}
 					h3 {
 						font-size: 18px;
 						margin-bottom: 5px;
 					}
-					p {
+					> p {
 						font-size: 16px;
 						color: #9a9a9a;
 					}

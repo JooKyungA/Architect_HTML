@@ -148,6 +148,9 @@ body {
 						}
 						a {
 							font-size: 14px;
+							i {
+								color: rgb(203, 119, 10);
+							}
 						}
 					}
 				}
@@ -570,6 +573,11 @@ body {
 						&.on {
 							display: block;
 							opacity: 1;
+							// div {
+							// 	img {
+							// 		transform: translateY(0%);
+							// 	}
+							// }
 						}
 						div {
 							width: 260px;
@@ -578,8 +586,6 @@ body {
 							margin-left: 20px;
 							overflow: hidden;
 							position: relative;
-							// transform: translateY(-10%);
-							// transition: 1s;
 							&:first-of-type {
 								margin-left: 0px;
 							}
@@ -588,7 +594,7 @@ body {
 								height: 100%;
 								object-fit: cover;
 								filter: saturate(70%);
-								transform: translateY(10%);
+								transform: translateY(30%);
 								transition: 0.5s;
 							}
 							p {
@@ -619,8 +625,8 @@ body {
 							}
 							&:hover {
 								img {
-									// transform: scale(1.2);
-									transform: translateY(0%);
+									transform: scale(1.2);
+									bottom: 0;
 								}
 								p {
 									opacity: 1;
