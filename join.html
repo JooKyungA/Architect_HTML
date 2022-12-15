@@ -94,38 +94,7 @@
 
             <tbody>
               <tr>
-                <th scope="row"><label for="name">Name</label></th>
-                <td>
-                  <input type="text" name="name" id="name" placeholder="이름을 입력하세요.">
-                </td>
-              </tr>
-              <tr>
-                <th scope="row"><label for="userid">User ID</label></th>
-                <td>
-                  <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
-                </td>
-              </tr>
-              <tr>
-                <th scope="row"><label for="pwd1">Password</label></th>
-                <td>
-                  <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
-                </td>
-              </tr>
-              <tr>
-                <th scope="row"><label for="pwd2">Confirm Password</label></th>
-                <td>
-                  <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요.">
-                </td>
-              </tr>
-              <tr>
-                <th scope="row"><label for="email">E-mail</label></th>
-                <td>
-                  <input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요.">
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">Member Type</th>
+                <th scope="row">Member Type *</th>
                 <td>
                   <input type="radio" name="memberType" id="corporate" value="corporate">
                   <label for="corporate">Corporate</label>
@@ -135,7 +104,47 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="city">City</label></th>
+                <th scope="row"><label for="name">Name *</label></th>
+                <td>
+                  <input type="text" name="name" id="name" placeholder="이름을 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="userid">User ID *</label></th>
+                <td>
+                  <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd1">Password *</label></th>
+                <td>
+                  <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd2">Confirm Password *</label></th>
+                <td>
+                  <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="phone">Phone *</label></th>
+                <td>
+
+                  <input type="tel" id="phone" name="phone" placeholder="010-0000-0000"
+                    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="email">E-mail *</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="이메일주소를 입력하세요.">
+                </td>
+              </tr>
+
+
+              <tr>
+                <th scope="row"><label for="city">City *</label></th>
                 <td>
                   <select name="city" id="city">
                     <option value="">선택하세요</option>
@@ -147,17 +156,12 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row">Project of Interest</th>
+                <th scope="row">Marketing Concent</th>
                 <td>
-                  <input type="checkbox" name="project" id="house" value="house">
-                  <label for="house">House</label>
-                  <input type="checkbox" name="project" id="office" value="office">
-                  <label for="office">Office</label>
-                  <input type="checkbox" name="project" id="restaurant" value="restaurant">
-                  <label for="restaurant">Restaurant</label>
-                  <input type="checkbox" name="project" id="others" value="others">
-                  <label for="others">Others</label>
-
+                  <input type="checkbox" name="marketing" id="marketing_sms" value="marketing_sms">
+                  <label for="marketing_sms">SMS</label>
+                  <input type="checkbox" name="marketing" id="marketing_email" value="marketing_email">
+                  <label for="marketing_email">E-mail</label>
                 </td>
               </tr>
               <tr>

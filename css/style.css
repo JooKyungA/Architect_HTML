@@ -840,6 +840,7 @@ body #footer_sub .inner p {
 }
 .join .inner fieldset table th:last-child {
   text-align: center;
+  border-bottom: none;
 }
 .join .inner fieldset table th input[type=submit] {
   width: 150px;
@@ -862,6 +863,7 @@ body #footer_sub .inner p {
 }
 .join .inner fieldset table td input[type=text],
 .join .inner fieldset table td input[type=password],
+.join .inner fieldset table td input[type=tel],
 .join .inner fieldset table td select {
   width: 50%;
   background-color: rgba(0, 0, 0, 0.03);
