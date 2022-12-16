@@ -101,3 +101,69 @@
 		}
 	}
 }
+// tablet - 1179px--------------------
+
+@media screen and (max-width: $tablet) {
+}
+
+// 중간 - 935px--------------------
+
+@media screen and (max-width: $middle) {
+	.join {
+		.inner {
+			fieldset {
+				table {
+					th,
+					td {
+						padding: 25px 20px 25px 8px;
+					}
+					th {
+						width: 25%;
+					}
+					td {
+						input[type="text"],
+						input[type="password"],
+						input[type="tel"] {
+							width: 220px;
+						}
+						input[name="email"] {
+							width: 180px;
+						}
+						select {
+							width: 120px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// mobile - 539px -------------------
+@media screen and (max-width: $mobile) {
+	.join {
+		.inner {
+			fieldset {
+				table {
+					th {
+						width: 30%;
+					}
+					td {
+						input[type="text"],
+						input[type="password"],
+						input[type="tel"] {
+							width: 100%;
+						}
+						input[name="email"] {
+							width: 180px;
+						}
+						select {
+							width: 120px;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

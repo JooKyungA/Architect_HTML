@@ -141,3 +141,53 @@
 		}
 	}
 }
+
+// tablet - 1179px--------------------
+
+@media screen and (max-width: $tablet) {
+	.about {
+		.inner {
+			.content {
+				div {
+					width: 100%;
+				}
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// 중간 - 935px--------------------
+
+@media screen and (max-width: $middle) {
+	.about {
+		.inner {
+			.team {
+				.wrap {
+					article {
+						width: calc(100% / 2);
+						// height: 400px;
+						padding: 10px 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// mobile - 539px -------------------
+@media screen and (max-width: $mobile) {
+	.about {
+		.inner {
+			.team {
+				.wrap {
+					article {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
