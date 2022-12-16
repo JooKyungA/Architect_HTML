@@ -72,6 +72,7 @@ body #header_sub .inner .menuWeb #gnb li {
 }
 body #header_sub .inner .menuWeb #gnb li a {
   font-size: 14px;
+  transition: 0.5s;
 }
 body #header_sub .inner .menuWeb #gnb li a:hover {
   color: rgb(203, 119, 10);
@@ -81,12 +82,19 @@ body #header_sub .inner .menuWeb .sns {
 }
 body #header_sub .inner .menuWeb .sns li {
   float: left;
-}
-body #header_sub .inner .menuWeb .sns li:nth-of-type(1) {
   margin-right: 20px;
+}
+body #header_sub .inner .menuWeb .sns li:last-of-type {
+  margin-right: 0px;
 }
 body #header_sub .inner .menuWeb .sns li a {
   font-size: 14px;
+}
+body #header_sub .inner .menuWeb .sns li a i {
+  transition: 0.5s;
+}
+body #header_sub .inner .menuWeb .sns li a:hover i {
+  color: rgb(203, 119, 10);
 }
 body #header_sub .inner .btnCall {
   position: absolute;
@@ -178,12 +186,26 @@ body #header_sub .inner .menuMo h1 p {
   font-size: 12px;
   color: #464646;
 }
-body #header_sub .inner #gnbMo li a {
+body #header_sub .inner .menuMo #gnbMo {
+  margin-bottom: 300px;
+}
+body #header_sub .inner .menuMo #gnbMo li a {
   display: block;
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid rgb(172, 166, 166);
   font-size: 14px;
+  color: #636262;
+}
+body #header_sub .inner .menuMo .snsMo {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body #header_sub .inner .menuMo .snsMo li a i {
+  font-size: 13px;
   color: #636262;
 }
 body .content_sub {
@@ -1007,12 +1029,19 @@ body #header .inner .menuWeb .sns {
 }
 body #header .inner .menuWeb .sns li {
   float: left;
-}
-body #header .inner .menuWeb .sns li:nth-of-type(1) {
   margin-right: 20px;
+}
+body #header .inner .menuWeb .sns li:last-of-type {
+  margin-right: 0px;
 }
 body #header .inner .menuWeb .sns li a {
   font-size: 14px;
+}
+body #header .inner .menuWeb .sns li a i {
+  transition: 0.5s;
+}
+body #header .inner .menuWeb .sns li a:hover i {
+  color: rgb(203, 119, 10);
 }
 body #header .inner .btnCall {
   position: absolute;
@@ -1104,12 +1133,26 @@ body #header .inner .menuMo h1 p {
   font-size: 12px;
   color: #464646;
 }
-body #header .inner #gnbMo li a {
+body #header .inner .menuMo #gnbMo {
+  margin-bottom: 300px;
+}
+body #header .inner .menuMo #gnbMo li a {
   display: block;
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid rgb(172, 166, 166);
   font-size: 14px;
+  color: #636262;
+}
+body #header .inner .menuMo .snsMo {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body #header .inner .menuMo .snsMo li a i {
+  font-size: 13px;
   color: #636262;
 }
 body #visual {

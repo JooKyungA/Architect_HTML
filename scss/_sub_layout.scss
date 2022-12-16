@@ -34,6 +34,8 @@ body {
 						margin-right: 20px;
 						a {
 							font-size: 14px;
+							transition: 0.5s;
+
 							&:hover {
 								color: rgb(203, 119, 10);
 							}
@@ -44,11 +46,21 @@ body {
 					float: right;
 					li {
 						float: left;
-						&:nth-of-type(1) {
-							margin-right: 20px;
+						margin-right: 20px;
+
+						&:last-of-type {
+							margin-right: 0px;
 						}
 						a {
 							font-size: 14px;
+							i {
+								transition: 0.5s;
+							}
+							&:hover {
+								i {
+									color: rgb(203, 119, 10);
+								}
+							}
 						}
 					}
 				}
@@ -144,16 +156,32 @@ body {
 						color: #464646;
 					}
 				}
-			}
-			#gnbMo {
-				li {
-					a {
-						display: block;
-						width: 100%;
-						padding: 20px 0;
-						border-bottom: 1px solid rgb(172, 166, 166);
-						font-size: 14px;
-						color: #636262;
+				#gnbMo {
+					margin-bottom: 300px;
+					li {
+						a {
+							display: block;
+							width: 100%;
+							padding: 20px 0;
+							border-bottom: 1px solid rgb(172, 166, 166);
+							font-size: 14px;
+							color: #636262;
+						}
+					}
+				}
+				.snsMo {
+					display: block;
+					width: 100%;
+					padding: 20px 0;
+					display: flex;
+					justify-content: space-evenly;
+					li {
+						a {
+							i {
+								font-size: 13px;
+								color: #636262;
+							}
+						}
 					}
 				}
 			}
