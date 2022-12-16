@@ -282,13 +282,12 @@ body {
 				margin-right: -100%;
 				opacity: 0;
 			}
-			.wrap {
-				#slider,
-				.prev,
-				.next {
-					margin-left: -100%;
-					opacity: 0;
-				}
+			#slider,
+			.prev,
+			.next,
+			.pagination {
+				margin-left: -100%;
+				opacity: 0;
 			}
 		}
 		// &.on {
@@ -419,6 +418,7 @@ body {
 					margin-left: 25%;
 					font-size: 18px;
 					font-weight: 400;
+					transition: 1s 0.4s;
 				}
 			}
 		}

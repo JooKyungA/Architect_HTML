@@ -366,13 +366,9 @@ body #footer_sub .inner p {
   left: 0;
 }
 .about .inner .team .wrap article {
-  width: 280px;
+  width: 25%;
   float: left;
-  margin-right: 20px;
-  padding: 10px 10px;
-}
-.about .inner .team .wrap article:last-of-type {
-  margin-right: 0px;
+  padding: 10px 20px;
 }
 .about .inner .team .wrap article .pic {
   width: 100%;
@@ -863,9 +859,17 @@ body #footer_sub .inner p {
 }
 .join .inner fieldset table td input[type=text],
 .join .inner fieldset table td input[type=password],
-.join .inner fieldset table td input[type=tel],
-.join .inner fieldset table td select {
+.join .inner fieldset table td input[type=tel] {
   width: 50%;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #9a9a9a;
+}
+.join .inner fieldset table td input[name=email] {
+  width: 25%;
+}
+.join .inner fieldset table td select {
+  width: 25%;
   background-color: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #9a9a9a;
@@ -1128,9 +1132,10 @@ body #visual.off .pic {
   margin-right: -100%;
   opacity: 0;
 }
-body #visual.off .wrap #slider,
-body #visual.off .wrap .prev,
-body #visual.off .wrap .next {
+body #visual.off #slider,
+body #visual.off .prev,
+body #visual.off .next,
+body #visual.off .pagination {
   margin-left: -100%;
   opacity: 0;
 }
@@ -1254,6 +1259,7 @@ body #visual .inner .wrap .pagination {
   margin-left: 25%;
   font-size: 18px;
   font-weight: 400;
+  transition: 1s 0.4s;
 }
 body #about .inner {
   width: 1180px;

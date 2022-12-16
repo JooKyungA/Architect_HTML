@@ -4,9 +4,9 @@ const btnSubmit = form.querySelector("input[type=submit]");
 btnSubmit.addEventListener("click", (e) => {
   if (!isTxt("name")) e.preventDefault();
   if (!isTxt("userid", 5)) e.preventDefault();
-  if (!isEmail("email")) e.preventDefault();
+  if (!isTel("phone")) e.preventDefault();
+  if (!isEmail("email", "company")) e.preventDefault();
   if (!isCheck("memberType")) e.preventDefault();
-  if (!isSelect("city")) e.preventDefault();
   if (!isPwd("pwd1", "pwd2", 5)) e.preventDefault();
 })
 
@@ -29,25 +29,70 @@ function isTxt(el, len) {
     return false;
   }
 }
-
-function isEmail(el) {
+function isTel(el, len) {
+  if (len === undefined) len = 13;
   let input = form.querySelector(`[name=${el}]`);
   let txt = input.value;
-
-  if (/@/.test(txt)) {
+  if (txt.length >= len && /-/.test(txt)) {
     const errMsgs = input.closest("td").querySelectorAll("p");
     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
+
     return true;
   } else {
     const errMsgs = input.closest("td").querySelectorAll("p");
     if (errMsgs.length > 0) return false;
 
     const errMsg = document.createElement("p");
-    errMsg.append("@를 포함한 전체 이메일 주소를 입력하세요");
+    errMsg.append(`하이픈(-)을 포함하여 휴대폰번호를 입력해주세요`);
     input.closest("td").append(errMsg);
     return false;
   }
 }
+function isEmail(el1, el2, len) {
+  if (len === undefined) len = 1;
+  let emailId = form.querySelector(`[name=${el1}]`);
+  let emailSel = form.querySelector(`[name=${el2}]`);
+  let emailSel_index = emailSel.options.selectedIndex;
+
+  let txt = emailId.value;
+  let val = emailSel[emailSel_index].value;
+
+  if (txt.length >= len && val !== "") {
+    const errMsgs = emailId.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) emailId.closest("td").querySelector("p").remove();
+
+    return true;
+  } else {
+    const errMsgs = emailId.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) return false;
+
+    const errMsg = document.createElement("p");
+    errMsg.append(`이메일을 ${len}글자 이상 입력하고 항목을 선택해주세요.`);
+    emailId.closest("td").append(errMsg);
+    return false;
+  }
+
+}
+
+
+// function isEmail(el) {
+//   let input = form.querySelector(`[name=${el}]`);
+//   let txt = input.value;
+
+//   if (/@/.test(txt)) {
+//     const errMsgs = input.closest("td").querySelectorAll("p");
+//     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
+//     return true;
+//   } else {
+//     const errMsgs = input.closest("td").querySelectorAll("p");
+//     if (errMsgs.length > 0) return false;
+
+//     const errMsg = document.createElement("p");
+//     errMsg.append("@를 포함한 전체 이메일 주소를 입력하세요");
+//     input.closest("td").append(errMsg);
+//     return false;
+//   }
+// }
 
 function isCheck(el) {
   let inputs = form.querySelectorAll(`[name=${el}]`);
@@ -74,28 +119,28 @@ function isCheck(el) {
   }
 }
 
-function isSelect(el) {
-  let sel = form.querySelector(`[name=${el}]`);
-  let sel_index = sel.options.selectedIndex;
+// function isSelect(el) {
+//   let sel = form.querySelector(`[name=${el}]`);
+//   let sel_index = sel.options.selectedIndex;
 
-  let val = sel[sel_index].value;
+//   let val = sel[sel_index].value;
 
-  if (val !== "") {
-    const errMsgs = sel.closest("td").querySelectorAll("p");
-    if (errMsgs.length > 0) sel.closest("td").querySelector("p").remove();
+//   if (val !== "") {
+//     const errMsgs = sel.closest("td").querySelectorAll("p");
+//     if (errMsgs.length > 0) sel.closest("td").querySelector("p").remove();
 
-    return true;
-  } else {
-    const errMsgs = sel.closest("td").querySelectorAll("p");
-    if (errMsgs.length > 0) return false;
+//     return true;
+//   } else {
+//     const errMsgs = sel.closest("td").querySelectorAll("p");
+//     if (errMsgs.length > 0) return false;
 
-    const errMsg = document.createElement("p");
-    errMsg.append("항목을 선택해 주세요");
-    sel.closest("td").append(errMsg);
+//     const errMsg = document.createElement("p");
+//     errMsg.append("항목을 선택해 주세요");
+//     sel.closest("td").append(errMsg);
 
-    return false;
-  }
-}
+//     return false;
+//   }
+// }
 function isPwd(el1, el2, len) {
   let pwd1 = form.querySelector(`[name=${el1}]`);
   let pwd2 = form.querySelector(`[name=${el2}]`);
