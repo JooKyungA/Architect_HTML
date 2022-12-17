@@ -65,10 +65,25 @@ body {
 					width: 100%;
 					border: 1px solid rgb(110, 109, 109);
 					padding: 20px 10px;
+					transition: 0.5s;
 					// box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+					&:hover {
+						border: none;
+						background-color: rgba(203, 119, 10, 0.7);
+						a {
+							img {
+								filter: grayscale(0%);
+							}
+						}
+						p {
+							color: #efefef;
+						}
+					}
 					a {
 						img {
 							width: 100%;
+							filter: grayscale(70%);
+							transition: 0.5s;
 						}
 					}
 					p {
@@ -77,6 +92,7 @@ body {
 						color: #9a9a9a;
 						margin-top: 10px;
 						margin-bottom: 10px;
+						transition: 0.5s;
 					}
 					span {
 						display: flex;

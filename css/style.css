@@ -550,9 +550,22 @@ body #gallery #list li div {
   width: 100%;
   border: 1px solid rgb(110, 109, 109);
   padding: 20px 10px;
+  transition: 0.5s;
+}
+body #gallery #list li div:hover {
+  border: none;
+  background-color: rgba(203, 119, 10, 0.7);
+}
+body #gallery #list li div:hover a img {
+  filter: grayscale(0%);
+}
+body #gallery #list li div:hover p {
+  color: #efefef;
 }
 body #gallery #list li div a img {
   width: 100%;
+  filter: grayscale(70%);
+  transition: 0.5s;
 }
 body #gallery #list li div p {
   font-size: 13px;
@@ -560,6 +573,7 @@ body #gallery #list li div p {
   color: #9a9a9a;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: 0.5s;
 }
 body #gallery #list li div span {
   display: flex;

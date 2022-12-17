@@ -63,6 +63,7 @@ frame.addEventListener("click", (e) => {
     pop.innerHTML = pops;
 
     body.append(pop);
+    body.style.overflow = "hidden";
   } else {
     return;
   }
@@ -76,7 +77,10 @@ body.addEventListener("click", (e) => {
 
   if (pop != null) {
     let close = pop.querySelector('.close');
-    if (e.target == close) pop.remove();
+    if (e.target == close) {
+      pop.remove();
+      body.style.overflow = "auto";
+    }
   }
 
 })
