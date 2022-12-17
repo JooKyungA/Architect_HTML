@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
+  <script defer src="js/flickr.js"></script>
   <script defer src="js/btnCall.js"></script>
-  <script defer src="js/anime.js"></script>
 </head>
 
 <body>
@@ -63,8 +62,18 @@
   <section class="content_sub portfolio">
     <div class="inner">
       <h1>PORTFOLIO</h1>
-      <p>서브페이지 내용</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla autem adipisci deleniti minus voluptate sit
+        dolorem voluptates! Possimus odio rerum amet omnis quas?</p>
+      <section id="searchBox">
+        <input type="text" id="search" placeholder="검색어 입력">
+        <button class="btnSearch">SEARCH</button>
+      </section>
+      <section id="gallery">
+        <img src="img/loading.gif" class="loading" alt="이미지 전체를 불러오는 동안 사용자가 로딩중임을 알 수 있도록 화면에 나타낼 로딩 이미지">
+        <ul id="list">
 
+        </ul>
+      </section>
     </div>
   </section>
 

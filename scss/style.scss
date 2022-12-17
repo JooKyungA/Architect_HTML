@@ -806,7 +806,7 @@ body {
 			width: 1180px;
 			margin: 0 auto;
 			padding: 30px 0px 80px;
-			border-top: 2px solid #aaa;
+			border-top: 2px solid rgb(110, 109, 109);
 			position: relative;
 			&::after {
 				content: "";
@@ -1168,7 +1168,7 @@ body {
 	}
 }
 
-// 중간 - 935px--------------------
+// middle - 935px--------------------
 @media screen and (max-width: $middle) {
 	body {
 		// header 영역
