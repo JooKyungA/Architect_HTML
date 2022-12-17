@@ -164,20 +164,23 @@
 				margin-bottom: 15px;
 				transition: 0.3s;
 			}
-			&.on a {
-				color: rgb(203, 119, 10);
-				border-bottom: 1px solid rgb(203, 119, 10);
-			}
+
 			.txt {
 				width: 100%;
 				p {
 					font-size: 14px;
-					color: #d6d5d5;
+					color: #cdcccc;
 					margin-bottom: 10px;
 				}
 				span {
 					font-size: 13px;
 					color: #9a9a9a;
+				}
+			}
+			&.on {
+				a {
+					color: rgb(203, 119, 10);
+					border-bottom: 1px solid rgb(203, 119, 10);
 				}
 			}
 		}

@@ -5,7 +5,7 @@
 	justify-content: space-between;
 	align-content: flex-start;
 	article {
-		width: 48%;
+		width: 32%;
 		height: 450px;
 		border-top: 1px solid rgb(110, 109, 109);
 		padding-top: 2vh;
@@ -31,17 +31,17 @@
 			padding: 20px;
 			h2 {
 				font: bold 20px/1.2 "arial";
-				color: #a9a9a9;
+				color: rgb(203, 119, 10, 0.8);
 				margin-bottom: 15px;
 			}
 			p {
 				font: 14px/1.4 "arial";
-				color: rgb(110, 109, 109);
+				color: #a9a9a9;
 				margin-bottom: 20px;
 			}
 			span {
-				font: bold 16px/1 "arial";
-				color: rgb(203, 119, 10);
+				font: 16px/1 "arial";
+				color: rgb(110, 109, 109);
 			}
 		}
 	}
@@ -59,22 +59,29 @@
 		align-items: center;
 		.btnClose {
 			position: absolute;
-			top: 50px;
-			right: 50px;
-			color: #fff;
+			top: 15px;
+			right: 2vw;
+			font-size: 50px;
+			font-weight: bold;
+			color: rgb(203, 119, 10);
 			cursor: pointer;
+			transform: rotate(45deg);
 		}
 	}
 }
 // tablet - 1179px--------------------
 
-// @media screen and (max-width: $tablet) {
-// }
-
-// 중간 - 935px--------------------
-
-// @media screen and (max-width: $middle) {
-// }
+@media screen and (max-width: $tablet) {
+	.vidList {
+		figure.pop {
+			padding: 8vw;
+			.btnClose {
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+}
 
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {

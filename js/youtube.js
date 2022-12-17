@@ -1,7 +1,7 @@
 const vidList = document.querySelector(".vidList");
 const key = 'AIzaSyCe4VTdOeeczNpK2P90-h1K2ZmPWygTVOY';
 const playlistId = 'PLB11APmWdapRtpUvss55ipqwUpcIxj3Eq';
-const num = 6;
+const num = 9;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
 fetch(url)
@@ -15,12 +15,12 @@ fetch(url)
 
     items.map((el) => {
       let title = el.snippet.title;
-      if (title.length > 20) {
-        title = title.substr(0, 20) + "...";
+      if (title.length > 25) {
+        title = title.substr(0, 25) + "...";
       }
       let con = el.snippet.description;
-      if (con.length > 40) {
-        con = con.substr(0, 40) + "...";
+      if (con.length > 90) {
+        con = con.substr(0, 90) + "...";
       }
       let date = el.snippet.publishedAt;
       date = date.split("T")[0];
@@ -51,7 +51,7 @@ vidList.addEventListener("click", (e) => {
   pop.classList.add("pop");
   pop.innerHTML = `
       <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
-      <span class="btnClose">close</span>
+      <span class="btnClose">+</span>
     `;
   vidList.append(pop);
 })

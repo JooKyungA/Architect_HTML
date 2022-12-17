@@ -489,7 +489,7 @@ body #footer_sub .inner p {
   align-content: flex-start;
 }
 .vidList article {
-  width: 48%;
+  width: 32%;
   height: 450px;
   border-top: 1px solid rgb(110, 109, 109);
   padding-top: 2vh;
@@ -517,17 +517,17 @@ body #footer_sub .inner p {
 }
 .vidList article .con h2 {
   font: bold 20px/1.2 "arial";
-  color: #a9a9a9;
+  color: rgba(203, 119, 10, 0.8);
   margin-bottom: 15px;
 }
 .vidList article .con p {
   font: 14px/1.4 "arial";
-  color: rgb(110, 109, 109);
+  color: #a9a9a9;
   margin-bottom: 20px;
 }
 .vidList article .con span {
-  font: bold 16px/1 "arial";
-  color: rgb(203, 119, 10);
+  font: 16px/1 "arial";
+  color: rgb(110, 109, 109);
 }
 .vidList figure.pop {
   width: 100%;
@@ -544,12 +544,24 @@ body #footer_sub .inner p {
 }
 .vidList figure.pop .btnClose {
   position: absolute;
-  top: 50px;
-  right: 50px;
-  color: #fff;
+  top: 15px;
+  right: 2vw;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(203, 119, 10);
   cursor: pointer;
+  transform: rotate(45deg);
 }
 
+@media screen and (max-width: 1179px) {
+  .vidList figure.pop {
+    padding: 8vw;
+  }
+  .vidList figure.pop .btnClose {
+    top: 0;
+    right: 0;
+  }
+}
 @media screen and (max-width: 539px) {
   .vidList article {
     width: 100%;
@@ -698,21 +710,21 @@ body #footer_sub .inner p {
   margin-bottom: 15px;
   transition: 0.3s;
 }
-.contact .branch li.on a {
-  color: rgb(203, 119, 10);
-  border-bottom: 1px solid rgb(203, 119, 10);
-}
 .contact .branch li .txt {
   width: 100%;
 }
 .contact .branch li .txt p {
   font-size: 14px;
-  color: #d6d5d5;
+  color: #cdcccc;
   margin-bottom: 10px;
 }
 .contact .branch li .txt span {
   font-size: 13px;
   color: #9a9a9a;
+}
+.contact .branch li.on a {
+  color: rgb(203, 119, 10);
+  border-bottom: 1px solid rgb(203, 119, 10);
 }
 
 @media screen and (max-width: 1179px) {
@@ -759,7 +771,7 @@ body #footer_sub .inner p {
 }
 .community .inner table {
   width: 100%;
-  border-bottom: 2px solid #111;
+  border-bottom: 2px solid #333;
   border-collapse: collapse;
   margin-bottom: 50px;
 }
@@ -768,8 +780,8 @@ body #footer_sub .inner p {
 }
 .community .inner table tr th {
   padding: 15px;
-  background: #444;
-  color: #dedede;
+  background: rgb(78, 77, 77);
+  color: #efefef;
 }
 .community .inner table tr th:nth-of-type(1) {
   width: 10%;
@@ -781,7 +793,7 @@ body #footer_sub .inner p {
   width: 15%;
 }
 .community .inner table tr td {
-  padding: 13px;
+  padding: 15px 13px;
   border-bottom: 1px solid #444;
   text-align: center;
   color: #9a9a9a;
@@ -1085,12 +1097,12 @@ body .scroll li a {
 }
 body .scroll li p {
   font-size: 10px;
-  color: rgb(110, 109, 109);
+  color: rgb(203, 119, 10);
   cursor: pointer;
   opacity: 0;
   transition: 1;
 }
-body .scroll li.on a, body .scroll li:hover.a {
+body .scroll li.on a, body .scroll li:hover a {
   transform: scale(1.1);
   background-color: #efefef;
 }
@@ -1421,6 +1433,12 @@ body #about .inner h1 {
   opacity: 0;
   transition: 1s;
 }
+body #about .inner h1 a {
+  transition: 0.5s;
+}
+body #about .inner h1 a:hover {
+  color: rgb(203, 119, 10);
+}
 body #about .inner .txt {
   display: flex;
   justify-content: space-between;
@@ -1475,6 +1493,12 @@ body #portfolio .inner h1 {
   transform: translateY(-50%);
   opacity: 0;
   transition: 1s;
+}
+body #portfolio .inner h1 a {
+  transition: 0.5s;
+}
+body #portfolio .inner h1 a:hover {
+  color: rgb(203, 119, 10);
 }
 body #portfolio .inner .container {
   width: 1180px;
@@ -1784,12 +1808,12 @@ body #news .inner .wrap article:nth-of-type(1) {
 body #news .inner .wrap article:nth-of-type(2) {
   transform: translateY(30%);
   opacity: 0;
-  transition: 0.5s 1s;
+  transition: 0.5s 0.8s;
 }
 body #news .inner .wrap article:nth-of-type(3) {
   transform: translateY(30%);
   opacity: 0;
-  transition: 0.5s 1.5s;
+  transition: 0.5s 1.1s;
 }
 body #news .inner .wrap article h2 {
   padding-top: 15px;
