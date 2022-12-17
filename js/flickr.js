@@ -5,7 +5,6 @@ const loading = document.querySelector(".loading");
 
 const input = document.querySelector("#search");
 const btnSearch = document.querySelector(".btnSearch");
-const main = document.querySelector("main");
 const base = "https://www.flickr.com/services/rest/?";
 const method1 = "flickr.interestingness.getList";
 const method2 = "flickr.photos.search";
@@ -49,28 +48,63 @@ frame.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target == frame) return;
 
-  let target = e.target.closest(".item").querySelector(".thumb");
+  let target = e.target.closest(".item").querySelector("div");
+  console.log(e.target);
+  console.log(target);
 
-  if (e.target == target) {
-    let imgSrc = target.parentElement.getAttribute("href");
+  if (e.target.closest("div") == target) {
+
+
+    let imgSrc = e.target.closest(".item").querySelector("a").getAttribute("href");
 
     let pop = document.createElement("aside");
     pop.classList.add('pop');
     let pops = `
-    <img src="${imgSrc}">
-    <span class="close">+</span>
-  `;
+      <img src="${imgSrc}">
+      <span class="close">+</span>
+    `;
     pop.innerHTML = pops;
 
     body.append(pop);
     body.style.overflow = "hidden";
+
   } else {
     return;
   }
-
-
-
 })
+
+
+// frame.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (e.target == frame) return;
+//   let target = e.target.closest(".item").querySelector(".thumb");
+
+//   if (e.target == target) {
+
+//     let imgSrc = target.parentElement.getAttribute("href");
+
+//     let pop = document.createElement("aside");
+//     pop.classList.add('pop');
+//     let pops = `
+//       <img src="${imgSrc}">
+//       <span class="close">+</span>
+//     `;
+//     pop.innerHTML = pops;
+
+//     body.append(pop);
+//     body.style.overflow = "hidden";
+
+
+//   } else {
+//     return;
+//   }
+
+
+
+
+
+
+// })
 
 body.addEventListener("click", (e) => {
   let pop = body.querySelector(".pop");
@@ -87,8 +121,6 @@ body.addEventListener("click", (e) => {
 
 
 
-
-//리스트를 만드는 함수
 callData(url1);
 
 function callData(url) {
@@ -113,16 +145,7 @@ function callData(url) {
       } else {
         loading.classList.remove("off");
         alert("검색이 되지 않습니다, 검색하신 이미지의 데이터가 없습니다")
-
-
       }
-
-
-
-
-
-
-
     })
 }
 
@@ -147,7 +170,6 @@ function createList(items) {
   `;
 
   })
-
   frame.innerHTML = htmls;
 }
 
