@@ -145,16 +145,6 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let len = lis.length;
 
-// span
-const pg = document.querySelector(".pagination");
-const sp = pg.querySelector("span");
-const total = lis.length;
-sp.innerText = total;
-
-// strong --> css까지 완성하고 나서 다시 작성해보기
-// const str = pg.querySelector("strong");
-// str.innerText = 
-
 // slider
 let enableClick = true;
 let speed = 500;
@@ -213,8 +203,6 @@ function prevslide() {
 const container = document.querySelector(".container");
 const btns = container.querySelectorAll("ul li");
 const boxes = container.querySelectorAll("section article");
-// let enableClick = true;
-// let speed = 500;
 
 btns.forEach((_el, _ind) => {
   _el.addEventListener("click", (e) => {
@@ -240,7 +228,5 @@ function activation(list, index) {
     setTimeout(() => {
       enableClick = true;
     }, speed)
-
   }
-
 }

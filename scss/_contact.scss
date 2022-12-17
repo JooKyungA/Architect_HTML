@@ -8,16 +8,13 @@
 	.content {
 		width: 580px;
 		float: left;
-		div {
+		> div {
 			width: 280px;
 			height: 210px;
 			float: left;
 			padding: 20px;
-			// text-align: center;
 			display: flex;
 			flex-direction: column;
-			// justify-content: space-evenly;
-			// align-items: center;
 			img {
 				width: 32px;
 				height: 32px;
@@ -25,15 +22,11 @@
 				margin-bottom: 30px;
 			}
 			p {
-				width: 100%;
-				// height: 100%;
 				font-size: 18px;
 				color: #efefef;
 				margin-bottom: 15px;
 			}
 			span {
-				width: 100%;
-				// height: 100%;
 				font-size: 16px;
 				color: #9a9a9a;
 			}
@@ -121,7 +114,7 @@
 	}
 
 	#map {
-		width: 100%;
+		width: 70%;
 		height: 500px;
 		border: 1px solid #000;
 		margin-bottom: 20px;
@@ -132,47 +125,60 @@
 		display: block;
 		clear: both;
 	}
-	.traffic {
-		float: left;
-		li {
-			float: left;
-			margin-right: 20px;
-			a {
-				display: block;
-				width: 200px;
-				height: 40px;
-				background: #555;
-				font: bold 12px/40px "맑은 고딕";
-				color: #fff;
-				text-align: center;
-				border: 1px solid #555;
-			}
-			&.on a {
-				background: #fff;
-				color: #333;
-			}
-		}
-	}
+	// .traffic {
+	// 	float: left;
+	// 	li {
+	// 		float: left;
+	// 		margin-right: 20px;
+	// 		a {
+	// 			display: block;
+	// 			width: 200px;
+	// 			height: 40px;
+	// 			background: #555;
+	// 			font: bold 12px/40px "맑은 고딕";
+	// 			color: #fff;
+	// 			text-align: center;
+	// 			border: 1px solid #555;
+	// 		}
+	// 		&.on a {
+	// 			background: #fff;
+	// 			color: #333;
+	// 		}
+	// 	}
+	// }
 
 	.branch {
+		width: 25%;
 		float: right;
 		li {
+			height: calc(500px / 3);
 			float: left;
-			margin-left: 10px;
 			a {
 				display: block;
-				width: 200px;
-				height: 40px;
-				background: #555;
-				font: bold 12px/40px "맑은 고딕";
+				width: 100%;
+				height: 50px;
+				font: bold 16px/50px "맑은 고딕";
 				letter-spacing: 2px;
 				color: #fff;
-				text-align: center;
-				border: 1px solid #555;
+				border-bottom: 1px solid #9a9a9a;
+				margin-bottom: 15px;
+				transition: 0.3s;
 			}
 			&.on a {
-				background: #fff;
-				color: #333;
+				color: rgb(203, 119, 10);
+				border-bottom: 1px solid rgb(203, 119, 10);
+			}
+			.txt {
+				width: 100%;
+				p {
+					font-size: 14px;
+					color: #d6d5d5;
+					margin-bottom: 10px;
+				}
+				span {
+					font-size: 13px;
+					color: #9a9a9a;
+				}
 			}
 		}
 	}
@@ -180,13 +186,57 @@
 // tablet - 1179px--------------------
 
 @media screen and (max-width: $tablet) {
+	.contact {
+		.content {
+			width: 100%;
+			div {
+				width: 49%;
+			}
+		}
+		.wrap {
+			width: 100%;
+			margin: 0 auto;
+			div {
+				input[type="submit"] {
+					float: right;
+					margin: 15px 0px 0px 0px;
+				}
+			}
+		}
+	}
 }
 
 // 중간 - 935px--------------------
 
 @media screen and (max-width: $middle) {
+	.contact {
+		#map {
+			width: 100%;
+		}
+		.branch {
+			width: 100%;
+			float: left;
+			li {
+				width: 33.333%;
+				padding: 0px 20px;
+			}
+		}
+	}
 }
 
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {
+	.contact {
+		#map {
+			width: 100%;
+		}
+		.branch {
+			width: 100%;
+			float: left;
+			li {
+				width: 100%;
+				padding: 0px 20px;
+			}
+		}
+	}
 }

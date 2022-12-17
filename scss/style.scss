@@ -310,19 +310,11 @@ body {
 			}
 			#slider,
 			.prev,
-			.next,
-			.pagination {
+			.next {
 				margin-left: -100%;
 				opacity: 0;
 			}
 		}
-		// &.on {
-		// 	.inner {
-		// 		.btnOpen {
-		// 			transform: translateY(0%);
-		// 		}
-		// 	}
-		// }
 		.inner {
 			width: 100%;
 			height: 100%;
@@ -435,17 +427,6 @@ body {
 						height: 100%;
 					}
 				}
-				.pagination {
-					width: 100%;
-					height: 20px;
-					position: absolute;
-					top: 400px;
-					left: 0;
-					margin-left: 25%;
-					font-size: 18px;
-					font-weight: 400;
-					transition: 1s 0.4s;
-				}
 			}
 		}
 	}
@@ -542,7 +523,7 @@ body {
 					display: block;
 					clear: both;
 				}
-				.tab {
+				#tab {
 					width: 500px;
 					float: right;
 					margin: 30px 0px 20px;
@@ -699,31 +680,28 @@ body {
 				transform: rotateY(180deg);
 				opacity: 0;
 				transition: 1s 0.5s;
-				.tab {
+				.award_tab {
 					width: 700px;
 					height: 100%;
 					position: relative;
-					// background: #333;
 					margin: 0px;
 					padding: 10px 10px 10px;
 					border-top: 1px solid #333;
 					overflow: hidden;
 					&:hover label::after {
 						color: rgb(203, 119, 10);
+						font-size: 35px;
 					}
 					input[type="radio"] {
 						appearance: none;
 						position: absolute;
-						// &:checked ^ .tab{
-						// }
 						&:checked + label::after {
 							transform: rotate(135deg);
-							// color: rgb(203, 119, 10);
 							opacity: 0;
 						}
 						&:checked ~ .content {
 							max-height: 150px;
-							padding: 0px 10px;
+							padding: 0px 15px;
 
 							p {
 								color: #9a9a9a;
@@ -739,16 +717,14 @@ body {
 							top: 30px;
 							left: 0px;
 							color: rgba(255, 255, 255, 0.366);
-							// color: rgb(203, 119, 10);
 							justify-content: flex-end;
 							font-size: 70px;
 							padding: 10px;
 							transition: 0.5s;
 						}
 						&:checked ~ label h3 {
-							padding: 0px 10px;
+							padding: 0px 15px;
 							font-weight: bold;
-							// color: #efefef;
 							color: rgb(203, 119, 10);
 							border-radius: 2px;
 						}
@@ -756,7 +732,6 @@ body {
 					label {
 						display: flex;
 						align-items: center;
-						// margin-bottom: 10px;
 						cursor: pointer;
 						&::after {
 							content: "+";
@@ -794,7 +769,6 @@ body {
 							height: 150px;
 							padding: 10px 0;
 							margin: 0px 20px 0px 0px;
-							// z-index: 10;
 							filter: saturate(70%);
 						}
 						p {
@@ -822,8 +796,9 @@ body {
 		}
 	}
 
-	// contact 영역
-	#contact {
+	// news 영역
+
+	#news {
 		width: 100%;
 		.inner {
 			width: 1180px;
@@ -837,242 +812,101 @@ body {
 				clear: both;
 			}
 			h1 {
-				float: left;
 				width: 100%;
+				float: left;
 				margin-bottom: 60px;
 				transform: translateY(-50%);
 				opacity: 0;
 				transition: 1s;
 			}
-			.content {
-				width: 580px;
-				float: left;
-				transform: translateX(-20%);
-				opacity: 0;
-				transition: 1s 0.5s;
-				div {
+			.wrap {
+				width: 100%;
+				float: right;
+				display: flex;
+				justify-content: flex-end;
+				article {
 					width: 280px;
-					height: 210px;
 					float: left;
-					padding: 20px;
-					// text-align: center;
-					display: flex;
-					flex-direction: column;
-					// justify-content: space-evenly;
-					// align-items: center;
-					img {
-						width: 32px;
-						height: 32px;
-						object-fit: cover;
-						margin-bottom: 30px;
+					margin-left: 25px;
+					// padding: 10px;
+					border-top: 1px solid #9a9a9a;
+					&:nth-of-type(1) {
+						transform: translateY(30%);
+						opacity: 0;
+						transition: 0.5s 0.5s;
+					}
+					&:nth-of-type(2) {
+						transform: translateY(30%);
+						opacity: 0;
+						transition: 0.5s 1s;
+					}
+					&:nth-of-type(3) {
+						transform: translateY(30%);
+						opacity: 0;
+						transition: 0.5s 1.5s;
+					}
+					h2 {
+						// width: 100%;
+						padding-top: 15px;
+						margin-bottom: 25px;
+
+						a {
+							font-size: 19px;
+							color: rgb(203, 119, 10);
+							opacity: 0.8;
+							transition: 0.5s;
+							&:hover {
+								font-size: 20px;
+								opacity: 1;
+							}
+						}
+					}
+					.pic {
+						width: 100%;
+						height: 200px;
+						overflow: hidden;
+						margin-bottom: 15px;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							filter: saturate(70%);
+							transition: 0.5s;
+							&:hover {
+								filter: saturate(100%);
+								transform: scale(1.2);
+							}
+						}
 					}
 					p {
-						width: 100%;
-						// height: 100%;
-						font-size: 18px;
-						color: #efefef;
-						margin-bottom: 15px;
-					}
-					span {
-						width: 100%;
-						// height: 100%;
-						font-size: 16px;
+						font-size: 14px;
 						color: #9a9a9a;
 					}
 				}
 			}
-			.wrap {
-				float: right;
-				width: 580px;
-				margin: 0px 0px 20px;
-				display: flex;
-				flex-direction: column;
-				position: relative;
-				padding: 10px 50px 15px;
-				transform: translateX(20%);
-				opacity: 0;
-				transition: 1s 0.5s;
-				h2 {
-					font-size: 40px;
-					margin-bottom: 10px;
-					display: flex;
-					// justify-content: center;
-					align-items: flex-start;
-				}
-				div {
-					width: 100%;
-					font-size: 14px;
-					label {
-						width: 100%;
-						display: block;
-						padding: 15px 0px 3px;
-						color: #9a9a9a;
-					}
-					input[type="text"],
-					input[type="email"] {
-						width: 100%;
-						height: 30px;
-						border: none;
-						border-bottom: 2px solid #333;
-						background: none;
-						&:focus {
-							outline: none;
-						}
-					}
-					select {
-						width: 100%;
-						height: 30px;
-						border: none;
-						border-bottom: 2px solid #333;
-						background: none;
-						&:focus {
-							outline: none;
-						}
-						option {
-							color: #0b0909;
-						}
-					}
-					textarea {
-						width: 100%;
-						height: 25px;
-						margin-top: 5px;
-						border: none;
-						border-bottom: 2px solid #333;
-						background: none;
-						resize: none;
-						&:focus {
-							outline: none;
-						}
-					}
-					input[type="submit"] {
-						width: 100px;
-						height: 30px;
-						border-radius: 0%;
-						background-color: #efefef;
-						color: #0b0909;
-						margin: 15px 0px 0px 380px;
-						cursor: pointer;
-
-						transition: 0.5s;
-
-						// position: absolute;
-						// right: 0;
-						// bottom: -40px;
-						&:hover {
-							background-color: rgb(203, 119, 10);
-							color: #efefef;
-						}
-					}
-				}
-			}
-
-			// p {
-			// 	width: 500px;
-			// 	font-size: 22px;
-			// 	color: #9a9a9a;
-			// 	position: absolute;
-			// 	top: 40%;
-			// 	left: 0;
-			// 	margin: 0 3vw;
-			// 	transform: translateX(-20%);
-			// 	opacity: 0;
-			// 	transition: 1s 0.5s;
-			// }
-
-			// .wrap {
-			// 	float: right;
-			// 	width: 400px;
-			// 	margin: 150px 4vw 50px 0px;
-			// 	display: flex;
-			// 	flex-direction: column;
-			// 	transform: translateX(20%);
-			// 	opacity: 0;
-			// 	transition: 1s 0.5s;
-			// 	div {
-			// 		width: 100%;
-			// 		font-size: 14px;
-			// 		label {
-			// 			width: 100%;
-			// 			display: block;
-			// 			padding: 15px 0px 3px;
-			// 		}
-			// 		input[type="text"],
-			// 		input[type="email"] {
-			// 			width: 100%;
-			// 			height: 30px;
-			// 			border: none;
-			// 			border-bottom: 2px solid #333;
-			// 			background: none;
-			// 			&:focus {
-			// 				outline: none;
-			// 			}
-			// 		}
-			// 		select {
-			// 			width: 100%;
-			// 			height: 30px;
-			// 			border: none;
-			// 			border-bottom: 2px solid #333;
-			// 			background: none;
-			// 			&:focus {
-			// 				outline: none;
-			// 			}
-			// 			option {
-			// 				color: #0b0909;
-			// 			}
-			// 		}
-			// 		textarea {
-			// 			width: 100%;
-			// 			height: 25px;
-			// 			margin-top: 5px;
-			// 			border: none;
-			// 			border-bottom: 2px solid #333;
-			// 			background: none;
-			// 			resize: none;
-			// 			&:focus {
-			// 				outline: none;
-			// 			}
-			// 		}
-			// 		input[type="submit"] {
-			// 			width: 100px;
-			// 			height: 30px;
-			// 			border-radius: 0%;
-			// 			background-color: #efefef;
-			// 			color: #0b0909;
-			// 			margin: 30px 0px 0px 300px;
-			// 			// position: absolute;
-			// 			// right: 4vw;
-			// 			// bottom: 6vh;
-			// 			transition: 1s;
-			// 			&:hover {
-			// 				background-color: rgb(203, 119, 10);
-			// 			}
-			// 		}
-			// 	}
-			// }
 		}
 		&.on {
 			.inner {
 				h1 {
 					transform: translateY(0%);
 					opacity: 1;
-					transition: 1s;
-				}
-				.content {
-					transform: translateX(0%);
-					opacity: 1;
 				}
 				.wrap {
-					transform: translateX(0%);
-					opacity: 1;
+					article {
+						&:nth-of-type(1) {
+							transform: translateY(0%);
+							opacity: 1;
+						}
+						&:nth-of-type(2) {
+							transform: translateY(0%);
+							opacity: 1;
+						}
+						&:nth-of-type(3) {
+							transform: translateY(0%);
+							opacity: 1;
+						}
+					}
 				}
-				// p {
-				// 	transform: translateX(0%);
-				// 	opacity: 1;
-				// }
-				// .wrap {
-				// 	transform: translateX(0%);
-				// 	opacity: 1;
-				// }
 			}
 		}
 	}
@@ -1262,9 +1096,6 @@ body {
 				.next {
 					margin-left: 10vw;
 				}
-				.pagination {
-					display: none;
-				}
 			}
 		}
 
@@ -1308,43 +1139,11 @@ body {
 			}
 		}
 
-		// contact 영역
-		#contact {
+		// news 영역
+		#news {
 			.inner {
 				width: 100%;
 				padding: 30px 5vw 50px;
-				h1 {
-					width: 100%;
-				}
-				.content {
-					width: 100%;
-					div {
-						width: 49%;
-					}
-				}
-				.wrap {
-					width: 100%;
-					margin: 0 auto;
-					div {
-						input[type="submit"] {
-							float: right;
-							margin: 15px 0px 0px 0px;
-						}
-					}
-				}
-				// p {
-				// 	display: none;
-				// }
-				// .wrap {
-				// 	margin: 50px 4vw 60px 0vw;
-				// 	div {
-				// 		input[type="submit"] {
-				// 			margin: 2vh 5vw 0vh 0vw;
-				// 			// right: 0;
-				// 			// bottom: 0;
-				// 		}
-				// 	}
-				// }
 			}
 		}
 
@@ -1371,11 +1170,6 @@ body {
 @media screen and (max-width: $middle) {
 	body {
 		// header 영역
-		// #header {
-		// 	.inner {
-
-		// 	}
-		// }
 
 		// visual 영역
 		#visual {
@@ -1401,7 +1195,6 @@ body {
 				.txt {
 					p {
 						width: 100%;
-						// text-align: justify;
 					}
 				}
 			}
@@ -1429,7 +1222,6 @@ body {
 					}
 					section {
 						width: 100%;
-						// height: 250px;
 						article {
 							width: 100%;
 							margin-right: 0px;
@@ -1454,11 +1246,11 @@ body {
 				.container {
 					margin-top: 6vh;
 					width: 80%;
-					.tab {
+					.award_tab {
 						width: 100%;
 						input[type="radio"] {
 							&:checked ~ label h2 {
-								font-size: 40px;
+								display: none;
 							}
 						}
 						label {
@@ -1474,15 +1266,34 @@ body {
 			}
 		}
 
-		// contact 영역
+		// news 영역
+		#news {
+			.inner {
+				.wrap {
+					flex-wrap: wrap;
+					article {
+						width: 38%;
+						margin-bottom: 25px;
+						&:nth-of-type(1) {
+							float: left;
+						}
+						&:nth-of-type(2) {
+							float: right;
+						}
+						&:nth-of-type(3) {
+							width: calc(76% + 25px);
+						}
+					}
+				}
+			}
+		}
 
 		// footer 영역
 
 		// aside 영역
 		#aside {
 			.inner {
-				// flex-direction: column;
-				justify-content: space-around;
+				justify-content: center;
 				align-content: center;
 				.pic {
 					width: 65%;
@@ -1491,6 +1302,7 @@ body {
 					width: 80%;
 					h2 {
 						font-size: 4vw;
+						text-align: center;
 					}
 					p {
 						font-size: 14px;
@@ -1547,14 +1359,14 @@ body {
 		#portfolio {
 			.inner {
 				.container {
-					.tab {
+					#tab {
 						width: 100%;
 						float: left;
 						ul {
 							li {
 								margin-left: 2vw;
 								a {
-									font-size: 11px;
+									font-size: 12px;
 								}
 							}
 						}
@@ -1577,12 +1389,15 @@ body {
 		// awards 영역
 		#awards {
 			.inner {
-				// height: 650px;
+				height: 750px;
 				.container {
-					width: 90%;
-					.tab {
+					width: 100%;
+					.award_tab {
 						padding: 10px 0px 10px;
 						input[type="radio"] {
+							&:checked ~ .content {
+								max-height: 200px;
+							}
 							&:checked ~ label h2 {
 								display: none;
 							}
@@ -1593,6 +1408,7 @@ body {
 							}
 							h3 {
 								font-size: 14px;
+								padding: 10px 30px 10px 0px;
 							}
 						}
 						.content {
@@ -1612,12 +1428,17 @@ body {
 			}
 		}
 
-		// contact 영역
-		#contact {
+		// news 영역
+		#news {
 			.inner {
 				.wrap {
-					width: 100%;
-					margin: 50px 0vw 60px 0vw;
+					article {
+						width: 100%;
+						margin-left: 0px;
+						&:nth-of-type(3) {
+							width: 100%;
+						}
+					}
 				}
 			}
 		}

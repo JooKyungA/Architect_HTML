@@ -35,7 +35,7 @@
       <p>AWARDS</p><a href="#"></a>
     </li>
     <li>
-      <p>CONTACT</p><a href="#"></a>
+      <p>NEWS</p><a href="#"></a>
     </li>
   </ul>
   <!-- header 영역 -->
@@ -116,10 +116,6 @@
         <a href="#" class="next">
           <img src="img/white_btn_next.png" alt="">
         </a>
-        <div class="pagination">
-          <strong></strong> - <span></span>
-          <!-- strong태그 css 다 하고 js 적용하기 -->
-        </div>
       </div>
     </div>
   </figure>
@@ -149,7 +145,7 @@
     <div class="inner">
       <h1>PORTFOLIO</h1>
       <div class="container">
-        <div class="tab">
+        <div id="tab">
           <ul>
             <li class="on"><a href="#">HOUSE</a></li>
             <li><a href="#">OFFICE</a></li>
@@ -228,7 +224,7 @@
     <div class="inner">
       <h1>AWARDS</h1>
       <div class="container">
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc1">
           <label for="acc1">
             <h2>2022</h2>
@@ -241,7 +237,7 @@
           </div>
         </div>
 
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc2">
           <label for="acc2">
             <h2>2021</h2>
@@ -253,7 +249,7 @@
           </div>
         </div>
 
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc3">
           <label for="acc3">
             <h2>2019</h2>
@@ -266,7 +262,7 @@
           </div>
         </div>
 
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc4">
           <label for="acc4">
             <h2>2018</h2>
@@ -278,7 +274,7 @@
           </div>
         </div>
 
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc5">
           <label for="acc5">
             <h2>2017</h2>
@@ -290,7 +286,7 @@
           </div>
         </div>
 
-        <div class="tab">
+        <div class="award_tab">
           <input type="radio" name="acc" id="acc6">
           <label for="acc6">
             <h2>2016</h2>
@@ -306,90 +302,34 @@
     </div>
   </section>
 
-  <!-- contact 영역 -->
-  <section id="contact" class="scrollView">
-    <div class="inner">
-      <h1>CONTACT</h1>
-      <!-- <p>If you have questions or need any general information, please comoplete this form to request the information
-        you need. It will be an honor to help you.</p> -->
-      <div class="content">
-        <div>
-          <img src="img/placeholder.png" alt="">
-          <p>ADDRESS</p>
-          <span>86, Sangil-ro, Bucheon-si, Gyeonggi-do, Republic of Korea</span>
-        </div>
-        <div>
-          <img src="img/time.png" alt="">
-          <p>OPENING HOURS</p>
-          <span>Monday to Friday : 9am to 6pm </span>
+  <!-- news 영역 -->
 
-        </div>
-        <div>
-          <img src="img/email.png" alt="">
-          <p>EMAIL</p>
-          <span>mail@pslarchtectures.com</span>
-        </div>
-        <div>
-          <img src="img/call.png" alt="">
-          <p>PHONE</p>
-          <span>+82 02-1234-5678</span>
-        </div>
-      </div>
+  <section id="news" class="scrollView">
+    <div class="inner">
+      <h1>NEWS</h1>
       <div class="wrap">
-        <h2>Get In Touch</h2>
-        <div>
-          <label for="Name">NAME</label>
-          <input type="text" name="Name" id="Name">
-        </div>
-        <div>
-          <label for="">E-MAIL</label>
-          <input type="email">
-        </div>
-        <div>
-          <label for="Project">TYPE OF PROJECT</label>
-          <select name="typeOfProject" id="Project">
-            <option value=""></option>
-            <option value="">HOUSE</option>
-            <option value="">OFFICE</option>
-            <option value="">RESTAURANT</option>
-            <option value="">OTHERS</option>
-          </select>
-        </div>
-        <div>
-          <label for="">MESSAGE</label>
-          <textarea name="" id="" cols="" rows=""></textarea>
-        </div>
-        <div>
-          <input type="submit" value="SUBMIT">
-        </div>
+        <article>
+          <h2><a href="#">Lorem, ipsum.</a></h2>
+          <div class="pic">
+            <img src="img/news/pic1.jpg" alt="">
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, reiciendis?</p>
+        </article>
+        <article>
+          <h2><a href="#">Lorem, ipsum.</a></h2>
+          <div class="pic">
+            <img src="img/news/pic2.jpg" alt="">
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, reiciendis?</p>
+        </article>
+        <article>
+          <h2><a href="#">Lorem, ipsum.</a></h2>
+          <div class="pic">
+            <img src="img/news/pic3.jpg" alt="">
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, reiciendis?</p>
+        </article>
       </div>
-      <!-- <div class="wrap">
-        <div>
-          <label for="Name">NAME</label>
-          <input type="text" name="Name" id="Name">
-        </div>
-        <div>
-          <label for="">E-MAIL</label>
-          <input type="email">
-        </div>
-        <div>
-          <label for="Project">TYPE OF PROJECT</label>
-          <select name="typeOfProject" id="Project">
-            <option value=""></option>
-            <option value="">HOUSE</option>
-            <option value="">OFFICE</option>
-            <option value="">RESTAURANT</option>
-            <option value="">OTHERS</option>
-          </select>
-        </div>
-        <div>
-          <label for="">MESSAGE</label>
-          <textarea name="" id="" cols="" rows=""></textarea>
-        </div>
-        <div>
-          <input type="submit" value="SUBMIT">
-        </div>
-      </div> -->
     </div>
   </section>
 

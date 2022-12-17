@@ -568,7 +568,7 @@ body #footer_sub .inner p {
   width: 580px;
   float: left;
 }
-.contact .content div {
+.contact .content > div {
   width: 280px;
   height: 210px;
   float: left;
@@ -576,20 +576,18 @@ body #footer_sub .inner p {
   display: flex;
   flex-direction: column;
 }
-.contact .content div img {
+.contact .content > div img {
   width: 32px;
   height: 32px;
   object-fit: cover;
   margin-bottom: 30px;
 }
-.contact .content div p {
-  width: 100%;
+.contact .content > div p {
   font-size: 18px;
   color: #efefef;
   margin-bottom: 15px;
 }
-.contact .content div span {
-  width: 100%;
+.contact .content > div span {
   font-size: 16px;
   color: #9a9a9a;
 }
@@ -670,7 +668,7 @@ body #footer_sub .inner p {
   color: #efefef;
 }
 .contact #map {
-  width: 100%;
+  width: 70%;
   height: 500px;
   border: 1px solid #000;
   margin-bottom: 20px;
@@ -681,50 +679,84 @@ body #footer_sub .inner p {
   display: block;
   clear: both;
 }
-.contact .traffic {
-  float: left;
-}
-.contact .traffic li {
-  float: left;
-  margin-right: 20px;
-}
-.contact .traffic li a {
-  display: block;
-  width: 200px;
-  height: 40px;
-  background: #555;
-  font: bold 12px/40px "맑은 고딕";
-  color: #fff;
-  text-align: center;
-  border: 1px solid #555;
-}
-.contact .traffic li.on a {
-  background: #fff;
-  color: #333;
-}
 .contact .branch {
+  width: 25%;
   float: right;
 }
 .contact .branch li {
+  height: 166.6666666667px;
   float: left;
-  margin-left: 10px;
 }
 .contact .branch li a {
   display: block;
-  width: 200px;
-  height: 40px;
-  background: #555;
-  font: bold 12px/40px "맑은 고딕";
+  width: 100%;
+  height: 50px;
+  font: bold 16px/50px "맑은 고딕";
   letter-spacing: 2px;
   color: #fff;
-  text-align: center;
-  border: 1px solid #555;
+  border-bottom: 1px solid #9a9a9a;
+  margin-bottom: 15px;
+  transition: 0.3s;
 }
 .contact .branch li.on a {
-  background: #fff;
-  color: #333;
+  color: rgb(203, 119, 10);
+  border-bottom: 1px solid rgb(203, 119, 10);
+}
+.contact .branch li .txt {
+  width: 100%;
+}
+.contact .branch li .txt p {
+  font-size: 14px;
+  color: #d6d5d5;
+  margin-bottom: 10px;
+}
+.contact .branch li .txt span {
+  font-size: 13px;
+  color: #9a9a9a;
 }
 
+@media screen and (max-width: 1179px) {
+  .contact .content {
+    width: 100%;
+  }
+  .contact .content div {
+    width: 49%;
+  }
+  .contact .wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact .wrap div input[type=submit] {
+    float: right;
+    margin: 15px 0px 0px 0px;
+  }
+}
+@media screen and (max-width: 935px) {
+  .contact #map {
+    width: 100%;
+  }
+  .contact .branch {
+    width: 100%;
+    float: left;
+  }
+  .contact .branch li {
+    width: 33.333%;
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .contact #map {
+    width: 100%;
+  }
+  .contact .branch {
+    width: 100%;
+    float: left;
+  }
+  .contact .branch li {
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
 .community .inner table {
   width: 100%;
   border-bottom: 2px solid #111;
@@ -1262,8 +1294,7 @@ body #visual.off .pic {
 }
 body #visual.off #slider,
 body #visual.off .prev,
-body #visual.off .next,
-body #visual.off .pagination {
+body #visual.off .next {
   margin-left: -100%;
   opacity: 0;
 }
@@ -1378,17 +1409,6 @@ body #visual .inner .wrap .next img {
   width: 100px;
   height: 100%;
 }
-body #visual .inner .wrap .pagination {
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  top: 400px;
-  left: 0;
-  margin-left: 25%;
-  font-size: 18px;
-  font-weight: 400;
-  transition: 1s 0.4s;
-}
 body #about .inner {
   width: 1180px;
   margin: 0 auto;
@@ -1469,23 +1489,23 @@ body #portfolio .inner .container::after {
   display: block;
   clear: both;
 }
-body #portfolio .inner .container .tab {
+body #portfolio .inner .container #tab {
   width: 500px;
   float: right;
   margin: 30px 0px 20px;
 }
-body #portfolio .inner .container .tab ul {
+body #portfolio .inner .container #tab ul {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-body #portfolio .inner .container .tab ul li {
+body #portfolio .inner .container #tab ul li {
   width: 100%;
   height: 20px;
   float: left;
   margin-left: 2vw;
 }
-body #portfolio .inner .container .tab ul li a {
+body #portfolio .inner .container #tab ul li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -1496,10 +1516,10 @@ body #portfolio .inner .container .tab ul li a {
   align-items: center;
   transition: 0.5s;
 }
-body #portfolio .inner .container .tab ul li a:hover {
+body #portfolio .inner .container #tab ul li a:hover {
   color: rgb(203, 119, 10);
 }
-body #portfolio .inner .container .tab ul li.on a {
+body #portfolio .inner .container #tab ul li.on a {
   color: rgb(203, 119, 10);
   text-decoration: underline;
 }
@@ -1614,7 +1634,7 @@ body #awards .inner .container {
   opacity: 0;
   transition: 1s 0.5s;
 }
-body #awards .inner .container .tab {
+body #awards .inner .container .award_tab {
   width: 700px;
   height: 100%;
   position: relative;
@@ -1623,28 +1643,29 @@ body #awards .inner .container .tab {
   border-top: 1px solid #333;
   overflow: hidden;
 }
-body #awards .inner .container .tab:hover label::after {
+body #awards .inner .container .award_tab:hover label::after {
   color: rgb(203, 119, 10);
+  font-size: 35px;
 }
-body #awards .inner .container .tab input[type=radio] {
+body #awards .inner .container .award_tab input[type=radio] {
   appearance: none;
   position: absolute;
 }
-body #awards .inner .container .tab input[type=radio]:checked + label::after {
+body #awards .inner .container .award_tab input[type=radio]:checked + label::after {
   transform: rotate(135deg);
   opacity: 0;
 }
-body #awards .inner .container .tab input[type=radio]:checked ~ .content {
+body #awards .inner .container .award_tab input[type=radio]:checked ~ .content {
   max-height: 150px;
-  padding: 0px 10px;
+  padding: 0px 15px;
 }
-body #awards .inner .container .tab input[type=radio]:checked ~ .content p {
+body #awards .inner .container .award_tab input[type=radio]:checked ~ .content p {
   color: #9a9a9a;
 }
-body #awards .inner .container .tab input[type=radio]:checked ~ label {
+body #awards .inner .container .award_tab input[type=radio]:checked ~ label {
   margin: 0px 0px 5px;
 }
-body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
+body #awards .inner .container .award_tab input[type=radio]:checked ~ label h2 {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1656,18 +1677,18 @@ body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
   padding: 10px;
   transition: 0.5s;
 }
-body #awards .inner .container .tab input[type=radio]:checked ~ label h3 {
-  padding: 0px 10px;
+body #awards .inner .container .award_tab input[type=radio]:checked ~ label h3 {
+  padding: 0px 15px;
   font-weight: bold;
   color: rgb(203, 119, 10);
   border-radius: 2px;
 }
-body #awards .inner .container .tab label {
+body #awards .inner .container .award_tab label {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-body #awards .inner .container .tab label::after {
+body #awards .inner .container .award_tab label::after {
   content: "+";
   position: absolute;
   right: 20px;
@@ -1675,7 +1696,7 @@ body #awards .inner .container .tab label::after {
   transition: all 1s;
   color: rgb(110, 109, 109);
 }
-body #awards .inner .container .tab label h2 {
+body #awards .inner .container .award_tab label h2 {
   width: 60px;
   height: 40px;
   display: flex;
@@ -1686,26 +1707,26 @@ body #awards .inner .container .tab label h2 {
   margin-right: 50px;
   margin-left: 10px;
 }
-body #awards .inner .container .tab label h3 {
+body #awards .inner .container .award_tab label h3 {
   position: relative;
   font-weight: 500;
   color: #9a9a9a;
   z-index: 10;
 }
-body #awards .inner .container .tab .content {
+body #awards .inner .container .award_tab .content {
   max-height: 0;
   transition: 1s;
   overflow: hidden;
   display: flex;
 }
-body #awards .inner .container .tab .content img {
+body #awards .inner .container .award_tab .content img {
   width: 200px;
   height: 150px;
   padding: 10px 0;
   margin: 0px 20px 0px 0px;
   filter: saturate(70%);
 }
-body #awards .inner .container .tab .content p {
+body #awards .inner .container .award_tab .content p {
   width: 400px;
   position: relative;
   padding: 10px 0;
@@ -1720,151 +1741,105 @@ body #awards.on .inner .container {
   transform: rotateY(0deg);
   opacity: 1;
 }
-body #contact {
+body #news {
   width: 100%;
 }
-body #contact .inner {
+body #news .inner {
   width: 1180px;
   margin: 0 auto;
   padding: 30px 0px 80px;
   border-top: 2px solid #aaa;
   position: relative;
 }
-body #contact .inner::after {
+body #news .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-body #contact .inner h1 {
-  float: left;
+body #news .inner h1 {
   width: 100%;
+  float: left;
   margin-bottom: 60px;
   transform: translateY(-50%);
   opacity: 0;
   transition: 1s;
 }
-body #contact .inner .content {
-  width: 580px;
-  float: left;
-  transform: translateX(-20%);
-  opacity: 0;
-  transition: 1s 0.5s;
-}
-body #contact .inner .content div {
-  width: 280px;
-  height: 210px;
-  float: left;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-body #contact .inner .content div img {
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  margin-bottom: 30px;
-}
-body #contact .inner .content div p {
+body #news .inner .wrap {
   width: 100%;
-  font-size: 18px;
-  color: #efefef;
-  margin-bottom: 15px;
-}
-body #contact .inner .content div span {
-  width: 100%;
-  font-size: 16px;
-  color: #9a9a9a;
-}
-body #contact .inner .wrap {
   float: right;
-  width: 580px;
-  margin: 0px 0px 20px;
   display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 10px 50px 15px;
-  transform: translateX(20%);
+  justify-content: flex-end;
+}
+body #news .inner .wrap article {
+  width: 280px;
+  float: left;
+  margin-left: 25px;
+  border-top: 1px solid #9a9a9a;
+}
+body #news .inner .wrap article:nth-of-type(1) {
+  transform: translateY(30%);
   opacity: 0;
-  transition: 1s 0.5s;
+  transition: 0.5s 0.5s;
 }
-body #contact .inner .wrap h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
+body #news .inner .wrap article:nth-of-type(2) {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: 0.5s 1s;
 }
-body #contact .inner .wrap div {
-  width: 100%;
-  font-size: 14px;
+body #news .inner .wrap article:nth-of-type(3) {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: 0.5s 1.5s;
 }
-body #contact .inner .wrap div label {
-  width: 100%;
-  display: block;
-  padding: 15px 0px 3px;
-  color: #9a9a9a;
+body #news .inner .wrap article h2 {
+  padding-top: 15px;
+  margin-bottom: 25px;
 }
-body #contact .inner .wrap div input[type=text],
-body #contact .inner .wrap div input[type=email] {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-}
-body #contact .inner .wrap div input[type=text]:focus,
-body #contact .inner .wrap div input[type=email]:focus {
-  outline: none;
-}
-body #contact .inner .wrap div select {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-}
-body #contact .inner .wrap div select:focus {
-  outline: none;
-}
-body #contact .inner .wrap div select option {
-  color: #0b0909;
-}
-body #contact .inner .wrap div textarea {
-  width: 100%;
-  height: 25px;
-  margin-top: 5px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-  resize: none;
-}
-body #contact .inner .wrap div textarea:focus {
-  outline: none;
-}
-body #contact .inner .wrap div input[type=submit] {
-  width: 100px;
-  height: 30px;
-  border-radius: 0%;
-  background-color: #efefef;
-  color: #0b0909;
-  margin: 15px 0px 0px 380px;
-  cursor: pointer;
+body #news .inner .wrap article h2 a {
+  font-size: 19px;
+  color: rgb(203, 119, 10);
+  opacity: 0.8;
   transition: 0.5s;
 }
-body #contact .inner .wrap div input[type=submit]:hover {
-  background-color: rgb(203, 119, 10);
-  color: #efefef;
+body #news .inner .wrap article h2 a:hover {
+  font-size: 20px;
+  opacity: 1;
 }
-body #contact.on .inner h1 {
+body #news .inner .wrap article .pic {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+body #news .inner .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(70%);
+  transition: 0.5s;
+}
+body #news .inner .wrap article .pic img:hover {
+  filter: saturate(100%);
+  transform: scale(1.2);
+}
+body #news .inner .wrap article p {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+body #news.on .inner h1 {
   transform: translateY(0%);
   opacity: 1;
-  transition: 1s;
 }
-body #contact.on .inner .content {
-  transform: translateX(0%);
+body #news.on .inner .wrap article:nth-of-type(1) {
+  transform: translateY(0%);
   opacity: 1;
 }
-body #contact.on .inner .wrap {
-  transform: translateX(0%);
+body #news.on .inner .wrap article:nth-of-type(2) {
+  transform: translateY(0%);
+  opacity: 1;
+}
+body #news.on .inner .wrap article:nth-of-type(3) {
+  transform: translateY(0%);
   opacity: 1;
 }
 body #footer .inner {
@@ -2039,9 +2014,6 @@ body #aside .inner .content .btnClose {
   body #visual .wrap .next {
     margin-left: 10vw;
   }
-  body #visual .wrap .pagination {
-    display: none;
-  }
   body #about .inner {
     width: 100%;
     padding: 3vw 5vw 5vw;
@@ -2069,26 +2041,9 @@ body #aside .inner .content .btnClose {
   body #awards .inner .container {
     margin-top: 6vh;
   }
-  body #contact .inner {
+  body #news .inner {
     width: 100%;
     padding: 30px 5vw 50px;
-  }
-  body #contact .inner h1 {
-    width: 100%;
-  }
-  body #contact .inner .content {
-    width: 100%;
-  }
-  body #contact .inner .content div {
-    width: 49%;
-  }
-  body #contact .inner .wrap {
-    width: 100%;
-    margin: 0 auto;
-  }
-  body #contact .inner .wrap div input[type=submit] {
-    float: right;
-    margin: 15px 0px 0px 0px;
   }
   body #footer .inner {
     width: 100%;
@@ -2156,20 +2111,36 @@ body #aside .inner .content .btnClose {
     margin-top: 6vh;
     width: 80%;
   }
-  body #awards .inner .container .tab {
+  body #awards .inner .container .award_tab {
     width: 100%;
   }
-  body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
-    font-size: 40px;
+  body #awards .inner .container .award_tab input[type=radio]:checked ~ label h2 {
+    display: none;
   }
-  body #awards .inner .container .tab label h2 {
+  body #awards .inner .container .award_tab label h2 {
     margin-right: 20px;
   }
-  body #awards .inner .container .tab label h3 {
+  body #awards .inner .container .award_tab label h3 {
     margin-right: 15px;
   }
+  body #news .inner .wrap {
+    flex-wrap: wrap;
+  }
+  body #news .inner .wrap article {
+    width: 38%;
+    margin-bottom: 25px;
+  }
+  body #news .inner .wrap article:nth-of-type(1) {
+    float: left;
+  }
+  body #news .inner .wrap article:nth-of-type(2) {
+    float: right;
+  }
+  body #news .inner .wrap article:nth-of-type(3) {
+    width: calc(76% + 25px);
+  }
   body #aside .inner {
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
   }
   body #aside .inner .pic {
@@ -2180,6 +2151,7 @@ body #aside .inner .content .btnClose {
   }
   body #aside .inner .content h2 {
     font-size: 4vw;
+    text-align: center;
   }
   body #aside .inner .content p {
     font-size: 14px;
@@ -2216,15 +2188,15 @@ body #aside .inner .content .btnClose {
   body #visual .wrap {
     display: none;
   }
-  body #portfolio .inner .container .tab {
+  body #portfolio .inner .container #tab {
     width: 100%;
     float: left;
   }
-  body #portfolio .inner .container .tab ul li {
+  body #portfolio .inner .container #tab ul li {
     margin-left: 2vw;
   }
-  body #portfolio .inner .container .tab ul li a {
-    font-size: 11px;
+  body #portfolio .inner .container #tab ul li a {
+    font-size: 12px;
   }
   body #portfolio .inner .container section {
     height: 250px;
@@ -2235,36 +2207,46 @@ body #aside .inner .content .btnClose {
   body #portfolio .inner .container section article div:first-of-type {
     display: none;
   }
-  body #awards .inner .container {
-    width: 90%;
+  body #awards .inner {
+    height: 750px;
   }
-  body #awards .inner .container .tab {
+  body #awards .inner .container {
+    width: 100%;
+  }
+  body #awards .inner .container .award_tab {
     padding: 10px 0px 10px;
   }
-  body #awards .inner .container .tab input[type=radio]:checked ~ label h2 {
+  body #awards .inner .container .award_tab input[type=radio]:checked ~ .content {
+    max-height: 200px;
+  }
+  body #awards .inner .container .award_tab input[type=radio]:checked ~ label h2 {
     display: none;
   }
-  body #awards .inner .container .tab label h2 {
+  body #awards .inner .container .award_tab label h2 {
     font-size: 16px;
   }
-  body #awards .inner .container .tab label h3 {
+  body #awards .inner .container .award_tab label h3 {
     font-size: 14px;
+    padding: 10px 30px 10px 0px;
   }
-  body #awards .inner .container .tab .content {
+  body #awards .inner .container .award_tab .content {
     flex-direction: column;
   }
-  body #awards .inner .container .tab .content img {
+  body #awards .inner .container .award_tab .content img {
     width: 150px;
     height: 100px;
   }
-  body #awards .inner .container .tab .content p {
+  body #awards .inner .container .award_tab .content p {
     width: 100%;
     height: 100%;
     padding: 2px 0;
   }
-  body #contact .inner .wrap {
+  body #news .inner .wrap article {
     width: 100%;
-    margin: 50px 0vw 60px 0vw;
+    margin-left: 0px;
+  }
+  body #news .inner .wrap article:nth-of-type(3) {
+    width: 100%;
   }
   body #aside {
     top: 12%;
