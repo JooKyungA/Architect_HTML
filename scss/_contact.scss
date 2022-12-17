@@ -44,7 +44,6 @@
 			font-size: 40px;
 			margin-bottom: 10px;
 			display: flex;
-			// justify-content: center;
 			align-items: flex-start;
 		}
 		div {
@@ -96,17 +95,21 @@
 				width: 100px;
 				height: 30px;
 				border-radius: 0%;
-				background-color: #efefef;
-				color: #0b0909;
+				background: linear-gradient(
+					45deg,
+					rgb(203, 119, 10),
+					rgb(252, 114, 8)
+				);
+				color: #efefef;
 				margin: 15px 0px 0px 380px;
 				cursor: pointer;
-
 				transition: 0.5s;
-				// position: absolute;
-				// right: 0;
-				// bottom: -40px;
 				&:hover {
-					background-color: rgb(203, 119, 10);
+					background: linear-gradient(
+						45deg,
+						rgb(250, 158, 59),
+						rgb(203, 119, 10)
+					);
 					color: #efefef;
 				}
 			}
@@ -116,7 +119,6 @@
 	#map {
 		width: 70%;
 		height: 500px;
-		border: 1px solid #000;
 		margin-bottom: 20px;
 		float: left;
 	}
@@ -125,28 +127,6 @@
 		display: block;
 		clear: both;
 	}
-	// .traffic {
-	// 	float: left;
-	// 	li {
-	// 		float: left;
-	// 		margin-right: 20px;
-	// 		a {
-	// 			display: block;
-	// 			width: 200px;
-	// 			height: 40px;
-	// 			background: #555;
-	// 			font: bold 12px/40px "맑은 고딕";
-	// 			color: #fff;
-	// 			text-align: center;
-	// 			border: 1px solid #555;
-	// 		}
-	// 		&.on a {
-	// 			background: #fff;
-	// 			color: #333;
-	// 		}
-	// 	}
-	// }
-
 	.branch {
 		width: 25%;
 		float: right;
@@ -202,7 +182,7 @@
 			div {
 				input[type="submit"] {
 					float: right;
-					margin: 15px 0px 0px 0px;
+					margin: 15px 0px 30px 0px;
 				}
 			}
 		}

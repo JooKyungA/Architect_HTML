@@ -831,7 +831,7 @@ body {
 					float: left;
 					margin-left: 25px;
 					// padding: 10px;
-					border-top: 1px solid #9a9a9a;
+					border-top: 1px solid rgb(110, 109, 109);
 					&:nth-of-type(1) {
 						transform: translateY(30%);
 						opacity: 0;
@@ -924,6 +924,12 @@ body {
 				float: left;
 				font-size: 15px;
 				font-weight: 600;
+				a {
+					transition: 0.5s;
+					&:hover {
+						color: rgb(203, 119, 10);
+					}
+				}
 			}
 			ul {
 				float: right;

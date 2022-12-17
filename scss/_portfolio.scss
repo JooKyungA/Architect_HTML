@@ -148,6 +148,14 @@ body {
 // tablet - 1179px--------------------
 
 @media screen and (max-width: $tablet) {
+	body {
+		aside {
+			padding: 8vw;
+			span {
+				top: -15px;
+			}
+		}
+	}
 }
 
 // middle - 935px--------------------

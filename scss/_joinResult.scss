@@ -1,4 +1,57 @@
 .joinResult {
 	.inner {
+		.wrap {
+			width: 100%;
+			height: 600px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url(../img/join.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			opacity: 0.8;
+			.txt {
+				width: 30%;
+				height: 80%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				backdrop-filter: blur(10px);
+				i {
+					font-size: 50px;
+					color: #9a9a9a;
+					margin-bottom: 20px;
+				}
+				p {
+					font-size: 18px;
+					color: #efefef;
+					margin-bottom: 100px;
+				}
+				a {
+					display: block;
+					width: 100px;
+					height: 30px;
+					font-size: 16px;
+					line-height: 30px;
+					color: #efefef;
+					background: linear-gradient(
+						45deg,
+						rgb(203, 119, 10),
+						rgb(252, 114, 8)
+					);
+					text-align: center;
+					transition: 0.5s;
+					&:hover {
+						background: linear-gradient(
+							45deg,
+							rgb(250, 158, 59),
+							rgb(203, 119, 10)
+						);
+					}
+				}
+			}
+		}
 	}
 }

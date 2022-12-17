@@ -49,11 +49,8 @@ frame.addEventListener("click", (e) => {
   if (e.target == frame) return;
 
   let target = e.target.closest(".item").querySelector("div");
-  console.log(e.target);
-  console.log(target);
 
   if (e.target.closest("div") == target) {
-
 
     let imgSrc = e.target.closest(".item").querySelector("a").getAttribute("href");
 
@@ -72,39 +69,6 @@ frame.addEventListener("click", (e) => {
     return;
   }
 })
-
-
-// frame.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (e.target == frame) return;
-//   let target = e.target.closest(".item").querySelector(".thumb");
-
-//   if (e.target == target) {
-
-//     let imgSrc = target.parentElement.getAttribute("href");
-
-//     let pop = document.createElement("aside");
-//     pop.classList.add('pop');
-//     let pops = `
-//       <img src="${imgSrc}">
-//       <span class="close">+</span>
-//     `;
-//     pop.innerHTML = pops;
-
-//     body.append(pop);
-//     body.style.overflow = "hidden";
-
-
-//   } else {
-//     return;
-//   }
-
-
-
-
-
-
-// })
 
 body.addEventListener("click", (e) => {
   let pop = body.querySelector(".pop");

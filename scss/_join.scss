@@ -53,12 +53,23 @@
 						font-size: 14px;
 						line-height: 40px;
 						font-weight: 400;
-						color: #0b0909;
+						background: linear-gradient(
+							45deg,
+							rgb(203, 119, 10),
+							rgb(252, 114, 8)
+						);
+
+						color: #efefef;
+
 						cursor: pointer;
 						transition: 0.5s;
 						&:hover {
-							background-color: rgb(203, 119, 10);
-							color: #efefef;
+							background: linear-gradient(
+								45deg,
+								rgb(250, 158, 59),
+								rgb(203, 119, 10)
+							);
+							// color: #0b0909;
 						}
 					}
 				}

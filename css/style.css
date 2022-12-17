@@ -622,6 +622,14 @@ body aside span {
   transform: rotate(45deg);
 }
 
+@media screen and (max-width: 1179px) {
+  body aside {
+    padding: 8vw;
+  }
+  body aside span {
+    top: -15px;
+  }
+}
 @media screen and (max-width: 935px) {
   body #gallery #list li {
     width: 33.3333333333%;
@@ -656,10 +664,11 @@ body aside span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.8;
   transition: 0.5s;
 }
 .vidList article .pic img:hover {
-  opacity: 0.4;
+  opacity: 1;
 }
 .vidList article .con {
   width: 100%;
@@ -820,20 +829,19 @@ body aside span {
   width: 100px;
   height: 30px;
   border-radius: 0%;
-  background-color: #efefef;
-  color: #0b0909;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  color: #efefef;
   margin: 15px 0px 0px 380px;
   cursor: pointer;
   transition: 0.5s;
 }
 .contact .wrap div input[type=submit]:hover {
-  background-color: rgb(203, 119, 10);
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
   color: #efefef;
 }
 .contact #map {
   width: 70%;
   height: 500px;
-  border: 1px solid #000;
   margin-bottom: 20px;
   float: left;
 }
@@ -891,7 +899,7 @@ body aside span {
   }
   .contact .wrap div input[type=submit] {
     float: right;
-    margin: 15px 0px 0px 0px;
+    margin: 15px 0px 30px 0px;
   }
 }
 @media screen and (max-width: 935px) {
@@ -1111,13 +1119,13 @@ body aside span {
   font-size: 14px;
   line-height: 40px;
   font-weight: 400;
-  color: #0b0909;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  color: #efefef;
   cursor: pointer;
   transition: 0.5s;
 }
 .join .inner fieldset table th input[type=submit]:hover {
-  background-color: rgb(203, 119, 10);
-  color: #efefef;
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
 }
 .join .inner fieldset table td {
   border-left: 1px solid #9a9a9a;
@@ -1192,6 +1200,52 @@ body aside span {
     margin-top: 10px;
   }
 }
+.joinResult .inner .wrap {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/join.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+}
+.joinResult .inner .wrap .txt {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.joinResult .inner .wrap .txt i {
+  font-size: 50px;
+  color: #9a9a9a;
+  margin-bottom: 20px;
+}
+.joinResult .inner .wrap .txt p {
+  font-size: 18px;
+  color: #efefef;
+  margin-bottom: 100px;
+}
+.joinResult .inner .wrap .txt a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #efefef;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  text-align: center;
+  transition: 0.5s;
+}
+.joinResult .inner .wrap .txt a:hover {
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
+}
+
 /*
 전체
 color:#efefef;
@@ -1949,7 +2003,7 @@ body #news .inner .wrap article {
   width: 280px;
   float: left;
   margin-left: 25px;
-  border-top: 1px solid #9a9a9a;
+  border-top: 1px solid rgb(110, 109, 109);
 }
 body #news .inner .wrap article:nth-of-type(1) {
   transform: translateY(30%);
@@ -2027,6 +2081,12 @@ body #footer .inner h1 {
   float: left;
   font-size: 15px;
   font-weight: 600;
+}
+body #footer .inner h1 a {
+  transition: 0.5s;
+}
+body #footer .inner h1 a:hover {
+  color: rgb(203, 119, 10);
 }
 body #footer .inner ul {
   float: right;
