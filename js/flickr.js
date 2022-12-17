@@ -21,10 +21,10 @@ const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&forma
 btnSearch.addEventListener("click", () => {
   let tag = input.value;
   tag = tag.trim();
-  const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+  const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
   if (tag != '') {
-    callData(url);
+    callData(url2);
   } else {
     alert("검색어를 입력하세요.");
   }
@@ -35,9 +35,9 @@ input.addEventListener("keypress", (e) => {
   if (e.keyCode == 13) {
     let tag = input.value;
     tag = tag.trim();
-    const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+    const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
     if (tag != '') {
-      callData(url);
+      callData(url2);
     } else {
       alert("검색어를 입력하세요.");
     }
@@ -58,11 +58,11 @@ frame.addEventListener("click", (e) => {
     pop.classList.add('pop');
     let pops = `
     <img src="${imgSrc}">
-    <span class="close">close</span>
+    <span class="close">+</span>
   `;
     pop.innerHTML = pops;
 
-    main.append(pop);
+    body.append(pop);
   } else {
     return;
   }
@@ -86,6 +86,7 @@ body.addEventListener("click", (e) => {
 
 //리스트를 만드는 함수
 callData(url1);
+
 function callData(url) {
 
   frame.innerHTML = "";
