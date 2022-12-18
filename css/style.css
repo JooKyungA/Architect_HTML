@@ -46,8 +46,8 @@ body #header_sub .inner {
   position: relative;
 }
 body #header_sub .inner > h1 {
-  width: 11%;
-  margin-right: 14%;
+  width: 12%;
+  margin-right: 13%;
 }
 body #header_sub .inner > h1 a {
   display: block;
@@ -568,7 +568,7 @@ body #gallery #list li div:hover p {
 }
 body #gallery #list li div a img {
   width: 100%;
-  filter: grayscale(80%);
+  filter: grayscale(70%);
   transition: 0.5s;
 }
 body #gallery #list li div p {
@@ -595,7 +595,7 @@ body #gallery #list li div span strong {
   font-size: 11px;
   color: rgb(203, 119, 10);
 }
-body aside {
+body aside.pop {
   width: 100%;
   height: 100%;
   padding: 5vw;
@@ -608,10 +608,10 @@ body aside {
   justify-content: center;
   align-items: center;
 }
-body aside img {
+body aside.pop img {
   height: 100%;
 }
-body aside span {
+body aside.pop span {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -623,10 +623,10 @@ body aside span {
 }
 
 @media screen and (max-width: 1179px) {
-  body aside {
+  body aside.pop {
     padding: 8vw;
   }
-  body aside span {
+  body aside.pop span {
     top: -15px;
   }
 }
@@ -1327,8 +1327,8 @@ body #header .inner {
   position: relative;
 }
 body #header .inner > h1 {
-  width: 11%;
-  margin-right: 14%;
+  width: 12%;
+  margin-right: 13%;
 }
 body #header .inner > h1 a {
   display: block;
@@ -2164,7 +2164,7 @@ body #aside .left {
 body #aside .inner {
   width: 100%;
   height: 100%;
-  background: #e4e4e4;
+  background: #cfcece;
   position: absolute;
   top: 0px;
   left: 0px;

@@ -85,7 +85,7 @@ body {
 					a {
 						img {
 							width: 100%;
-							filter: grayscale(80%);
+							filter: grayscale(70%);
 							transition: 0.5s;
 						}
 					}
@@ -117,7 +117,7 @@ body {
 			}
 		}
 	}
-	aside {
+	aside.pop {
 		width: 100%;
 		height: 100%;
 		padding: 5vw;
@@ -149,7 +149,7 @@ body {
 
 @media screen and (max-width: $tablet) {
 	body {
-		aside {
+		aside.pop {
 			padding: 8vw;
 			span {
 				top: -15px;
