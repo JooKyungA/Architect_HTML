@@ -1667,21 +1667,21 @@ body #visual {
   overflow: hidden;
   min-height: 750px;
 }
-body #visual.off .btnOpen {
+body #visual.off .inner .btnOpen {
   margin-bottom: -100%;
   opacity: 0;
 }
-body #visual.off .txt {
+body #visual.off .inner .txt {
   margin-top: -100%;
   opacity: 0;
 }
-body #visual.off .pic {
+body #visual.off .inner .pic {
   margin-right: -100%;
   opacity: 0;
 }
-body #visual.off #slider,
-body #visual.off .prev,
-body #visual.off .next {
+body #visual.off .inner .wrap .slider,
+body #visual.off .inner .wrap .prev,
+body #visual.off .inner .wrap .next {
   margin-left: -100%;
   opacity: 0;
 }
@@ -2409,14 +2409,14 @@ body #aside .inner .content .btnClose {
     right: 5vw;
     z-index: -1;
   }
-  body #visual .wrap #slider {
+  body #visual .inner .wrap .slider {
     margin-top: 5.5vh;
     margin-left: 8vw;
   }
-  body #visual .wrap .prev {
+  body #visual .inner .wrap .prev {
     margin-left: 8vw;
   }
-  body #visual .wrap .next {
+  body #visual .inner .wrap .next {
     margin-left: 10vw;
   }
   body #about .inner {
@@ -2468,7 +2468,7 @@ body #aside .inner .content .btnClose {
   body #visual .inner .pic {
     height: 600px;
   }
-  body #visual .wrap {
+  body #visual .inner .wrap {
     display: none;
   }
   body #about .inner .txt p {
@@ -2589,9 +2589,6 @@ body #aside .inner .content .btnClose {
     width: 70%;
     height: 55vh;
     margin-right: 0vw;
-  }
-  body #visual .wrap {
-    display: none;
   }
   body #portfolio .inner .container #tab {
     width: 100%;
