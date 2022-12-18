@@ -56,13 +56,16 @@ for (let i = 0; i < markerOptions.length; i++) {
     moveTo(markerOptions[i].latlng);
   }
 }
+
 window.onresize = () => {
   let active_btn = document.querySelector(".branch li.on");
   let active_index = active_btn.getAttribute("data-index");
   map.setCenter(markerOptions[active_index].latlng);
 }
+
 var mapTypeControl = new kakao.maps.MapTypeControl();
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 

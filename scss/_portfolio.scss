@@ -16,7 +16,11 @@ body {
 		.btnSearch {
 			width: 80px;
 			height: 30px;
-			background: rgb(71, 70, 70);
+			background: linear-gradient(
+				45deg,
+				rgb(203, 119, 10),
+				rgb(252, 114, 8)
+			);
 			font-size: 12px;
 			line-height: 30px;
 			text-align: center;
@@ -27,7 +31,11 @@ body {
 			vertical-align: top;
 			transition: 0.5s;
 			&:hover {
-				background-color: rgb(203, 119, 10);
+				background: linear-gradient(
+					45deg,
+					rgb(250, 158, 59),
+					rgb(249, 157, 36)
+				);
 			}
 		}
 	}
@@ -85,7 +93,7 @@ body {
 					a {
 						img {
 							width: 100%;
-							filter: grayscale(70%);
+							filter: grayscale(60%);
 							transition: 0.5s;
 						}
 					}
@@ -150,7 +158,11 @@ body {
 @media screen and (max-width: $tablet) {
 	body {
 		aside.pop {
-			padding: 8vw;
+			padding: 1vw;
+			img {
+				width: 90%;
+				height: 70%;
+			}
 			span {
 				top: -15px;
 			}
@@ -167,6 +179,12 @@ body {
 				li {
 					width: calc(100% / 3);
 				}
+			}
+		}
+		aside.pop {
+			img {
+				width: 90%;
+				height: 50%;
 			}
 		}
 	}

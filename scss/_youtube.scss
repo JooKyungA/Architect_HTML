@@ -86,8 +86,13 @@
 
 // middle - 935px--------------------
 
-// @media screen and (max-width: $middle) {
-// }
+@media screen and (max-width: $middle) {
+	.vidList {
+		figure.pop {
+			padding: 15vh 4vw;
+		}
+	}
+}
 
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {
@@ -95,6 +100,9 @@
 		article {
 			width: 100%;
 			margin-bottom: 25px;
+		}
+		figure.pop {
+			padding: 25vh 4vw;
 		}
 	}
 }

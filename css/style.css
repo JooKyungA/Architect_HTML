@@ -499,7 +499,7 @@ body #searchBox input[type=text] {
 body #searchBox .btnSearch {
   width: 80px;
   height: 30px;
-  background: rgb(71, 70, 70);
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
   font-size: 12px;
   line-height: 30px;
   text-align: center;
@@ -511,7 +511,7 @@ body #searchBox .btnSearch {
   transition: 0.5s;
 }
 body #searchBox .btnSearch:hover {
-  background-color: rgb(203, 119, 10);
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
 }
 body #gallery {
   width: 100%;
@@ -568,7 +568,7 @@ body #gallery #list li div:hover p {
 }
 body #gallery #list li div a img {
   width: 100%;
-  filter: grayscale(70%);
+  filter: grayscale(60%);
   transition: 0.5s;
 }
 body #gallery #list li div p {
@@ -624,7 +624,11 @@ body aside.pop span {
 
 @media screen and (max-width: 1179px) {
   body aside.pop {
-    padding: 8vw;
+    padding: 1vw;
+  }
+  body aside.pop img {
+    width: 90%;
+    height: 70%;
   }
   body aside.pop span {
     top: -15px;
@@ -633,6 +637,10 @@ body aside.pop span {
 @media screen and (max-width: 935px) {
   body #gallery #list li {
     width: 33.3333333333%;
+  }
+  body aside.pop img {
+    width: 90%;
+    height: 50%;
   }
 }
 @media screen and (max-width: 539px) {
@@ -722,10 +730,18 @@ body aside.pop span {
     right: 0;
   }
 }
+@media screen and (max-width: 935px) {
+  .vidList figure.pop {
+    padding: 15vh 4vw;
+  }
+}
 @media screen and (max-width: 539px) {
   .vidList article {
     width: 100%;
     margin-bottom: 25px;
+  }
+  .vidList figure.pop {
+    padding: 25vh 4vw;
   }
 }
 .contact {
@@ -1206,11 +1222,31 @@ body aside.pop span {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.joinResult .inner .wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: url(../img/join.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.8;
+  filter: blur(5px);
+  opacity: 0.4;
+}
+.joinResult .inner .wrap .pic {
+  width: 30%;
+  height: 80%;
+  background-image: url(../img/join.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
 }
 .joinResult .inner .wrap .txt {
   width: 30%;
@@ -1220,21 +1256,23 @@ body aside.pop span {
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
-  background-color: #efefef;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 2;
 }
 .joinResult .inner .wrap .txt i {
   font-size: 50px;
-  color: #0b0909;
+  color: #ddd;
   margin-bottom: 20px;
 }
 .joinResult .inner .wrap .txt p {
   font-size: 18px;
-  color: rgb(110, 109, 109);
+  color: #ddd;
   margin-bottom: 40px;
 }
 .joinResult .inner .wrap .txt p strong {
   font-size: 19px;
-  color: rgb(110, 109, 109);
+  color: #ddd;
 }
 .joinResult .inner .wrap .txt span {
   font-size: 13px;
@@ -1549,7 +1587,7 @@ body #visual .inner .btnOpen:hover {
   font-size: 15px;
 }
 body #visual .inner .txt {
-  width: 300px;
+  width: 320px;
   position: absolute;
   top: 0;
   left: 25%;
@@ -1982,22 +2020,22 @@ body #awards.on .inner .container {
   transform: rotateY(0deg);
   opacity: 1;
 }
-body #news {
+body #blog {
   width: 100%;
 }
-body #news .inner {
+body #blog .inner {
   width: 1180px;
   margin: 0 auto;
   padding: 30px 0px 80px;
   border-top: 2px solid rgb(110, 109, 109);
   position: relative;
 }
-body #news .inner::after {
+body #blog .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-body #news .inner h1 {
+body #blog .inner h1 {
   width: 100%;
   float: left;
   margin-bottom: 60px;
@@ -2005,81 +2043,81 @@ body #news .inner h1 {
   opacity: 0;
   transition: 1s;
 }
-body #news .inner .wrap {
+body #blog .inner .wrap {
   width: 100%;
   float: right;
   display: flex;
   justify-content: flex-end;
 }
-body #news .inner .wrap article {
+body #blog .inner .wrap article {
   width: 280px;
   float: left;
   margin-left: 25px;
   border-top: 1px solid rgb(110, 109, 109);
 }
-body #news .inner .wrap article:nth-of-type(1) {
+body #blog .inner .wrap article:nth-of-type(1) {
   transform: translateY(30%);
   opacity: 0;
   transition: 0.5s 0.5s;
 }
-body #news .inner .wrap article:nth-of-type(2) {
+body #blog .inner .wrap article:nth-of-type(2) {
   transform: translateY(30%);
   opacity: 0;
   transition: 0.5s 0.8s;
 }
-body #news .inner .wrap article:nth-of-type(3) {
+body #blog .inner .wrap article:nth-of-type(3) {
   transform: translateY(30%);
   opacity: 0;
   transition: 0.5s 1.1s;
 }
-body #news .inner .wrap article h2 {
+body #blog .inner .wrap article h2 {
   padding-top: 15px;
   margin-bottom: 25px;
 }
-body #news .inner .wrap article h2 a {
+body #blog .inner .wrap article h2 a {
   font-size: 19px;
   color: rgb(203, 119, 10);
   opacity: 0.8;
   transition: 0.5s;
 }
-body #news .inner .wrap article h2 a:hover {
+body #blog .inner .wrap article h2 a:hover {
   font-size: 20px;
   opacity: 1;
 }
-body #news .inner .wrap article .pic {
+body #blog .inner .wrap article .pic {
   width: 100%;
   height: 200px;
   overflow: hidden;
   margin-bottom: 15px;
 }
-body #news .inner .wrap article .pic img {
+body #blog .inner .wrap article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
   transition: 0.5s;
 }
-body #news .inner .wrap article .pic img:hover {
+body #blog .inner .wrap article .pic img:hover {
   filter: saturate(100%);
   transform: scale(1.2);
 }
-body #news .inner .wrap article p {
+body #blog .inner .wrap article p {
   font-size: 14px;
   color: #9a9a9a;
 }
-body #news.on .inner h1 {
+body #blog.on .inner h1 {
   transform: translateY(0%);
   opacity: 1;
 }
-body #news.on .inner .wrap article:nth-of-type(1) {
+body #blog.on .inner .wrap article:nth-of-type(1) {
   transform: translateY(0%);
   opacity: 1;
 }
-body #news.on .inner .wrap article:nth-of-type(2) {
+body #blog.on .inner .wrap article:nth-of-type(2) {
   transform: translateY(0%);
   opacity: 1;
 }
-body #news.on .inner .wrap article:nth-of-type(3) {
+body #blog.on .inner .wrap article:nth-of-type(3) {
   transform: translateY(0%);
   opacity: 1;
 }
@@ -2288,7 +2326,7 @@ body #aside .inner .content .btnClose {
   body #awards .inner .container {
     margin-top: 6vh;
   }
-  body #news .inner {
+  body #blog .inner {
     width: 100%;
     padding: 30px 5vw 50px;
   }
@@ -2370,20 +2408,20 @@ body #aside .inner .content .btnClose {
   body #awards .inner .container .award_tab label h3 {
     margin-right: 15px;
   }
-  body #news .inner .wrap {
+  body #blog .inner .wrap {
     flex-wrap: wrap;
   }
-  body #news .inner .wrap article {
+  body #blog .inner .wrap article {
     width: 38%;
     margin-bottom: 25px;
   }
-  body #news .inner .wrap article:nth-of-type(1) {
+  body #blog .inner .wrap article:nth-of-type(1) {
     float: left;
   }
-  body #news .inner .wrap article:nth-of-type(2) {
+  body #blog .inner .wrap article:nth-of-type(2) {
     float: right;
   }
-  body #news .inner .wrap article:nth-of-type(3) {
+  body #blog .inner .wrap article:nth-of-type(3) {
     width: calc(76% + 25px);
   }
   body #aside .inner {
@@ -2488,11 +2526,11 @@ body #aside .inner .content .btnClose {
     height: 100%;
     padding: 2px 0;
   }
-  body #news .inner .wrap article {
+  body #blog .inner .wrap article {
     width: 100%;
     margin-left: 0px;
   }
-  body #news .inner .wrap article:nth-of-type(3) {
+  body #blog .inner .wrap article:nth-of-type(3) {
     width: 100%;
   }
   body #aside {
