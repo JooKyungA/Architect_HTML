@@ -109,7 +109,7 @@ function callData(url) {
         delayLoading();
       } else {
         loading.classList.remove("off");
-        alert("검색이 되지 않습니다, 검색하신 이미지의 데이터가 없습니다")
+        alert("검색하신 이미지의 데이터가 없습니다")
       }
     })
 }

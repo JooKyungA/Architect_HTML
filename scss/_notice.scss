@@ -1,4 +1,4 @@
-.community {
+.notice {
 	.inner {
 		table {
 			width: 100%;
@@ -15,7 +15,7 @@
 					background: rgb(78, 77, 77);
 					color: #efefef;
 					&:nth-of-type(1) {
-						width: 10%;
+						width: 12%;
 					}
 					&:nth-of-type(3) {
 						width: 15%;
@@ -95,7 +95,7 @@
 }
 // tablet - 1179px--------------------
 @media screen and (max-width: $tablet) {
-	.community {
+	.notice {
 		.inner {
 			table {
 				tr {
@@ -135,7 +135,7 @@
 
 // middle - 935px--------------------
 // @media screen and (max-width: $middle) {
-//   .community{
+//   .notice{
 //     .inner{
 
 //     }
@@ -144,7 +144,7 @@
 
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {
-	.community {
+	.notice {
 		.inner {
 			table {
 				tr {

@@ -18,16 +18,28 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				backdrop-filter: blur(10px);
+				padding: 20px 30px;
+				background-color: #efefef;
 				i {
 					font-size: 50px;
-					color: #9a9a9a;
+					color: #0b0909;
 					margin-bottom: 20px;
 				}
 				p {
 					font-size: 18px;
-					color: #efefef;
-					margin-bottom: 100px;
+					color: rgb(110, 109, 109);
+					margin-bottom: 40px;
+					strong {
+						font-size: 19px;
+						color: rgb(110, 109, 109);
+					}
+				}
+				span {
+					font-size: 13px;
+					line-height: 1.5;
+					color: #9a9a9a;
+					margin-bottom: 90px;
+					text-align: center;
 				}
 				a {
 					display: block;
@@ -47,7 +59,7 @@
 						background: linear-gradient(
 							45deg,
 							rgb(250, 158, 59),
-							rgb(203, 119, 10)
+							rgb(249, 157, 36)
 						);
 					}
 				}

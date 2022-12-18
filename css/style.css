@@ -928,55 +928,55 @@ body aside.pop span {
     padding: 0px 20px;
   }
 }
-.community .inner table {
+.notice .inner table {
   width: 100%;
   border-bottom: 2px solid #333;
   border-collapse: collapse;
   margin-bottom: 50px;
 }
-.community .inner table tr:hover td, .community .inner table tr:hover a {
+.notice .inner table tr:hover td, .notice .inner table tr:hover a {
   color: rgb(203, 119, 10);
 }
-.community .inner table tr th {
+.notice .inner table tr th {
   padding: 15px;
   background: rgb(78, 77, 77);
   color: #efefef;
 }
-.community .inner table tr th:nth-of-type(1) {
-  width: 10%;
+.notice .inner table tr th:nth-of-type(1) {
+  width: 12%;
 }
-.community .inner table tr th:nth-of-type(3) {
+.notice .inner table tr th:nth-of-type(3) {
   width: 15%;
 }
-.community .inner table tr th:nth-of-type(4) {
+.notice .inner table tr th:nth-of-type(4) {
   width: 15%;
 }
-.community .inner table tr td {
+.notice .inner table tr td {
   padding: 15px 13px;
   border-bottom: 1px solid #444;
   text-align: center;
   color: #9a9a9a;
 }
-.community .inner table tr td:nth-of-type(2) {
+.notice .inner table tr td:nth-of-type(2) {
   text-align: left;
 }
-.community .inner table tr td:nth-of-type(3) {
+.notice .inner table tr td:nth-of-type(3) {
   font-family: "맑은 고딕";
 }
-.community .inner table tr td a {
+.notice .inner table tr td a {
   color: #9a9a9a;
   line-height: 1.4;
 }
-.community .inner .pagination {
+.notice .inner .pagination {
   width: 100%;
   text-align: center;
 }
-.community .inner .pagination::after {
+.notice .inner .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.community .inner .pagination .prev {
+.notice .inner .pagination .prev {
   float: left;
   display: block;
   width: 30px;
@@ -985,7 +985,7 @@ body aside.pop span {
   font-size: 20px;
   text-align: center;
 }
-.community .inner .pagination .next {
+.notice .inner .pagination .next {
   float: right;
   display: block;
   width: 30px;
@@ -994,12 +994,12 @@ body aside.pop span {
   font-size: 20px;
   text-align: center;
 }
-.community .inner .pagination .numbers {
+.notice .inner .pagination .numbers {
   display: inline-block;
   text-align: center;
   font-size: 0;
 }
-.community .inner .pagination .numbers a {
+.notice .inner .pagination .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -1010,56 +1010,56 @@ body aside.pop span {
   margin: 0 5px;
   transition: 0.5s;
 }
-.community .inner .pagination .numbers a:hover {
+.notice .inner .pagination .numbers a:hover {
   background: rgb(203, 119, 10);
   color: #efefef;
 }
 
 @media screen and (max-width: 1179px) {
-  .community .inner table tr th:nth-of-type(1) {
+  .notice .inner table tr th:nth-of-type(1) {
     width: 13%;
   }
-  .community .inner table tr th:nth-of-type(3) {
+  .notice .inner table tr th:nth-of-type(3) {
     width: 20%;
   }
-  .community .inner table tr th:nth-of-type(4) {
+  .notice .inner table tr th:nth-of-type(4) {
     width: 0%;
     display: none;
   }
-  .community .inner table tr td:nth-of-type(4) {
+  .notice .inner table tr td:nth-of-type(4) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(6) {
+  .notice .inner .pagination .numbers a:nth-of-type(6) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(7) {
+  .notice .inner .pagination .numbers a:nth-of-type(7) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(8) {
+  .notice .inner .pagination .numbers a:nth-of-type(8) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(9) {
+  .notice .inner .pagination .numbers a:nth-of-type(9) {
     display: none;
   }
-  .community .inner .pagination .numbers a:nth-of-type(10) {
+  .notice .inner .pagination .numbers a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 539px) {
-  .community .inner table tr th {
+  .notice .inner table tr th {
     font-size: 13px;
   }
-  .community .inner table tr th:nth-of-type(1) {
+  .notice .inner table tr th:nth-of-type(1) {
     width: 0%;
     display: none;
   }
-  .community .inner table tr th:nth-of-type(3) {
+  .notice .inner table tr th:nth-of-type(3) {
     width: 29%;
   }
-  .community .inner table tr td:nth-of-type(1) {
+  .notice .inner table tr td:nth-of-type(1) {
     display: none;
   }
-  .community .inner .pagination .numbers {
+  .notice .inner .pagination .numbers {
     display: none;
   }
 }
@@ -1219,17 +1219,29 @@ body aside.pop span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  background-color: #efefef;
 }
 .joinResult .inner .wrap .txt i {
   font-size: 50px;
-  color: #9a9a9a;
+  color: #0b0909;
   margin-bottom: 20px;
 }
 .joinResult .inner .wrap .txt p {
   font-size: 18px;
-  color: #efefef;
-  margin-bottom: 100px;
+  color: rgb(110, 109, 109);
+  margin-bottom: 40px;
+}
+.joinResult .inner .wrap .txt p strong {
+  font-size: 19px;
+  color: rgb(110, 109, 109);
+}
+.joinResult .inner .wrap .txt span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #9a9a9a;
+  margin-bottom: 90px;
+  text-align: center;
 }
 .joinResult .inner .wrap .txt a {
   display: block;
@@ -1243,7 +1255,7 @@ body aside.pop span {
   transition: 0.5s;
 }
 .joinResult .inner .wrap .txt a:hover {
-  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
 }
 
 /*
