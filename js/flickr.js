@@ -6,13 +6,14 @@ const loading = document.querySelector(".loading");
 const input = document.querySelector("#search");
 const btnSearch = document.querySelector(".btnSearch");
 const base = "https://www.flickr.com/services/rest/?";
-const method1 = "flickr.interestingness.getList";
+const method1 = "flickr.favorites.getList";
 const method2 = "flickr.photos.search";
 const key = "c56ad21076b0ceff5779ce087e6afed3";
 const per_page = 50;
 const format = "json";
+const user_id = "197141079@N07";
 
-const url1 = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`;
+const url1 = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&user_id=${user_id}`;
 
 const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=바다&privacy_filter=1`;
 
@@ -153,7 +154,7 @@ function delayLoading() {
 
     let thumb = el.closest(".item").querySelector(".thumb");
     thumb.onerror = (e) => {
-      e.currentTarget.closest(".item").querySelector("div a img").setAttribute("src", "img/k1.jpg");
+      e.currentTarget.closest(".item").querySelector("div a img").setAttribute("src", "img/error_replace.jpg");
     }
   }
 }
