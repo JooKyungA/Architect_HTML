@@ -1,5 +1,49 @@
 .notice {
 	.inner {
+		#noticeSearchBox {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 50px;
+			overflow: hidden;
+			font-size: 0;
+
+			input[type="text"] {
+				width: 300px;
+				height: 30px;
+				background-color: #0b0909;
+				border: 1px solid #9a9a9a;
+				padding-left: 10px;
+				&:focus {
+					outline: none;
+				}
+			}
+			.btnNoticeSearch {
+				width: 80px;
+				height: 30px;
+				background: linear-gradient(
+					45deg,
+					rgb(203, 119, 10),
+					rgb(252, 114, 8)
+				);
+				font-size: 12px;
+				line-height: 30px;
+				text-align: center;
+				border: none;
+				cursor: pointer;
+				margin-left: 10px;
+				vertical-align: top;
+				transition: 0.5s;
+				&:hover {
+					background: linear-gradient(
+						45deg,
+						rgb(250, 158, 59),
+						rgb(249, 157, 36)
+					);
+				}
+			}
+		}
+
 		table {
 			width: 100%;
 			border-bottom: 2px solid #333;
@@ -12,12 +56,12 @@
 				}
 				th {
 					padding: 15px;
-					background: rgb(78, 77, 77);
+					background: rgba(70, 70, 70, 0.5);
 					color: #efefef;
 					&:nth-of-type(1) {
-						width: 12%;
+						width: 10%;
 					}
-					&:nth-of-type(3) {
+					&:nth-of-type(2) {
 						width: 15%;
 					}
 					&:nth-of-type(4) {
@@ -29,12 +73,9 @@
 					border-bottom: 1px solid #444;
 					text-align: center;
 					color: #9a9a9a;
-
-					&:nth-of-type(2) {
-						text-align: left;
-					}
 					&:nth-of-type(3) {
 						font-family: "맑은 고딕";
+						text-align: left;
 					}
 					a {
 						color: #9a9a9a;

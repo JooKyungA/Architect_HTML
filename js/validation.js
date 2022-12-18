@@ -30,10 +30,13 @@ function isTxt(el, len) {
   }
 }
 function isTel(el, len) {
-  if (len === undefined) len = 13;
+  if (len === undefined) len = 11;
   let input = form.querySelector(`[name=${el}]`);
   let txt = input.value;
-  if (txt.length >= len && /-/.test(txt)) {
+
+  const num = /[0-9]/;
+
+  if (txt.length == len && num.test(txt)) {
     const errMsgs = input.closest("td").querySelectorAll("p");
     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
 
@@ -43,7 +46,7 @@ function isTel(el, len) {
     if (errMsgs.length > 0) return false;
 
     const errMsg = document.createElement("p");
-    errMsg.append(`하이픈(-)을 포함하여 휴대폰번호를 입력해주세요`);
+    errMsg.append(`휴대폰번호 11자리를 '-' 없이 입력해주세요`);
     input.closest("td").append(errMsg);
     return false;
   }

@@ -484,8 +484,7 @@ body #footer_sub .inner p {
 body #searchBox {
   width: 100%;
   display: flex;
-  justify-content: right;
-  padding-top: 50px;
+  justify-content: flex-end;
   overflow: hidden;
   font-size: 0;
 }
@@ -495,6 +494,9 @@ body #searchBox input[type=text] {
   background-color: #0b0909;
   border: 1px solid #9a9a9a;
   padding-left: 10px;
+}
+body #searchBox input[type=text]:focus {
+  outline: none;
 }
 body #searchBox .btnSearch {
   width: 80px;
@@ -555,29 +557,40 @@ body #gallery #list li div {
   border: 1px solid rgb(110, 109, 109);
   padding: 20px 10px;
   transition: 0.5s;
+  cursor: pointer;
 }
 body #gallery #list li div:hover {
   border: none;
   background-color: rgba(203, 119, 10, 0.7);
 }
-body #gallery #list li div:hover a img {
-  filter: grayscale(0%);
-}
 body #gallery #list li div:hover p {
   color: #efefef;
+  margin-top: 0px;
+}
+body #gallery #list li div:hover p::before {
+  display: none;
 }
 body #gallery #list li div a img {
   width: 100%;
-  filter: grayscale(60%);
-  transition: 0.5s;
 }
 body #gallery #list li div p {
   font-size: 13px;
   line-height: 1.2;
   color: #9a9a9a;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  position: relative;
   transition: 0.5s;
+}
+body #gallery #list li div p::before {
+  content: "";
+  display: block;
+  width: calc(100% + 20px);
+  height: 1px;
+  background-color: rgb(110, 109, 109);
+  position: absolute;
+  top: 0;
+  left: -10px;
 }
 body #gallery #list li div span {
   display: flex;
@@ -672,10 +685,12 @@ body aside.pop span {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  filter: grayscale(30%);
   transition: 0.5s;
 }
 .vidList article .pic img:hover {
+  filter: grayscale(0%);
+  transform: scaleY(1.2);
   opacity: 1;
 }
 .vidList article .con {
@@ -944,6 +959,40 @@ body aside.pop span {
     padding: 0px 20px;
   }
 }
+.notice .inner #noticeSearchBox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  overflow: hidden;
+  font-size: 0;
+}
+.notice .inner #noticeSearchBox input[type=text] {
+  width: 300px;
+  height: 30px;
+  background-color: #0b0909;
+  border: 1px solid #9a9a9a;
+  padding-left: 10px;
+}
+.notice .inner #noticeSearchBox input[type=text]:focus {
+  outline: none;
+}
+.notice .inner #noticeSearchBox .btnNoticeSearch {
+  width: 80px;
+  height: 30px;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  vertical-align: top;
+  transition: 0.5s;
+}
+.notice .inner #noticeSearchBox .btnNoticeSearch:hover {
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
+}
 .notice .inner table {
   width: 100%;
   border-bottom: 2px solid #333;
@@ -955,13 +1004,13 @@ body aside.pop span {
 }
 .notice .inner table tr th {
   padding: 15px;
-  background: rgb(78, 77, 77);
+  background: rgba(70, 70, 70, 0.5);
   color: #efefef;
 }
 .notice .inner table tr th:nth-of-type(1) {
-  width: 12%;
+  width: 10%;
 }
-.notice .inner table tr th:nth-of-type(3) {
+.notice .inner table tr th:nth-of-type(2) {
   width: 15%;
 }
 .notice .inner table tr th:nth-of-type(4) {
@@ -973,11 +1022,9 @@ body aside.pop span {
   text-align: center;
   color: #9a9a9a;
 }
-.notice .inner table tr td:nth-of-type(2) {
-  text-align: left;
-}
 .notice .inner table tr td:nth-of-type(3) {
   font-family: "맑은 고딕";
+  text-align: left;
 }
 .notice .inner table tr td a {
   color: #9a9a9a;
