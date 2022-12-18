@@ -1,188 +1,193 @@
-.contact {
-	width: 100%;
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	.content {
-		width: 580px;
-		float: left;
-		> div {
-			width: 280px;
-			height: 210px;
+body {
+	.contact {
+		width: 100%;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.content {
+			width: 580px;
 			float: left;
-			padding: 20px;
-			display: flex;
-			flex-direction: column;
-			img {
-				width: 32px;
-				height: 32px;
-				object-fit: cover;
-				margin-bottom: 30px;
-			}
-			p {
-				font-size: 18px;
-				color: #efefef;
-				margin-bottom: 15px;
-			}
-			span {
-				font-size: 16px;
-				color: #9a9a9a;
-			}
-		}
-	}
-	.wrap {
-		float: right;
-		width: 580px;
-		margin: 0px 0px 100px;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		padding: 10px 50px 15px;
-		h2 {
-			font-size: 40px;
-			margin-bottom: 10px;
-			display: flex;
-			align-items: flex-start;
-		}
-		div {
-			width: 100%;
-			font-size: 14px;
-			label {
-				width: 100%;
-				display: block;
-				padding: 15px 0px 3px;
-				color: #9a9a9a;
-			}
-			input[type="text"],
-			input[type="email"] {
-				width: 100%;
-				height: 30px;
-				border: none;
-				border-bottom: 2px solid #333;
-				background: none;
-				&:focus {
-					outline: none;
+			> div {
+				width: 280px;
+				height: 210px;
+				float: left;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				img {
+					width: 32px;
+					height: 32px;
+					object-fit: cover;
+					margin-bottom: 30px;
 				}
-			}
-			select {
-				width: 100%;
-				height: 30px;
-				border: none;
-				border-bottom: 2px solid #333;
-				background: none;
-				&:focus {
-					outline: none;
-				}
-				option {
-					color: #0b0909;
-				}
-			}
-			textarea {
-				width: 100%;
-				height: 25px;
-				margin-top: 5px;
-				border: none;
-				border-bottom: 2px solid #333;
-				background: none;
-				resize: none;
-				&:focus {
-					outline: none;
-				}
-			}
-			input[type="submit"] {
-				width: 100px;
-				height: 30px;
-				border-radius: 0%;
-				background: linear-gradient(
-					45deg,
-					rgb(203, 119, 10),
-					rgb(252, 114, 8)
-				);
-				color: #efefef;
-				margin: 15px 0px 0px 380px;
-				cursor: pointer;
-				transition: 0.5s;
-				&:hover {
-					background: linear-gradient(
-						45deg,
-						rgb(250, 158, 59),
-						rgb(203, 119, 10)
-					);
-					color: #efefef;
-				}
-			}
-		}
-	}
-
-	#map {
-		width: 70%;
-		height: 500px;
-		margin-bottom: 20px;
-		float: left;
-	}
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	.branch {
-		width: 25%;
-		float: right;
-		li {
-			height: calc(500px / 3);
-			float: left;
-			a {
-				display: block;
-				width: 100%;
-				height: 50px;
-				font: bold 16px/50px "맑은 고딕";
-				letter-spacing: 2px;
-				color: #fff;
-				border-bottom: 1px solid #9a9a9a;
-				margin-bottom: 15px;
-				transition: 0.3s;
-			}
-
-			.txt {
-				width: 100%;
 				p {
-					font-size: 14px;
-					color: #cdcccc;
-					margin-bottom: 10px;
+					font-size: 18px;
+					color: #efefef;
+					margin-bottom: 15px;
 				}
 				span {
-					font-size: 13px;
+					font-size: 16px;
 					color: #9a9a9a;
 				}
 			}
-			&.on {
+		}
+		.wrap {
+			float: right;
+			width: 580px;
+			margin: 0px 0px 100px;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			padding: 10px 50px 15px;
+			h2 {
+				font-size: 40px;
+				margin-bottom: 10px;
+				display: flex;
+				align-items: flex-start;
+			}
+			div {
+				width: 100%;
+				font-size: 14px;
+				label {
+					width: 100%;
+					display: block;
+					padding: 15px 0px 3px;
+					color: #9a9a9a;
+				}
+				input[type="text"],
+				input[type="email"] {
+					width: 100%;
+					height: 30px;
+					border: none;
+					border-bottom: 2px solid #333;
+					background: none;
+					&:focus {
+						outline: none;
+					}
+				}
+				select {
+					width: 100%;
+					height: 30px;
+					border: none;
+					border-bottom: 2px solid #333;
+					background: none;
+					&:focus {
+						outline: none;
+					}
+					option {
+						color: #0b0909;
+					}
+				}
+				textarea {
+					width: 100%;
+					height: 25px;
+					margin-top: 5px;
+					border: none;
+					border-bottom: 2px solid #333;
+					background: none;
+					resize: none;
+					&:focus {
+						outline: none;
+					}
+				}
+				input[type="submit"] {
+					width: 100px;
+					height: 30px;
+					border-radius: 0%;
+					background: linear-gradient(
+						45deg,
+						rgb(203, 119, 10),
+						rgb(252, 114, 8)
+					);
+					color: #efefef;
+					margin: 15px 0px 0px 380px;
+					cursor: pointer;
+					transition: 0.5s;
+					&:hover {
+						background: linear-gradient(
+							45deg,
+							rgb(250, 158, 59),
+							rgb(203, 119, 10)
+						);
+						color: #efefef;
+					}
+				}
+			}
+		}
+
+		#map {
+			width: 70%;
+			height: 500px;
+			margin-bottom: 20px;
+			float: left;
+		}
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.branch {
+			width: 25%;
+			float: right;
+			li {
+				height: calc(500px / 3);
+				float: left;
 				a {
-					color: rgb(203, 119, 10);
-					border-bottom: 1px solid rgb(203, 119, 10);
+					display: block;
+					width: 100%;
+					height: 50px;
+					font: bold 16px/50px "맑은 고딕";
+					letter-spacing: 2px;
+					color: #fff;
+					border-bottom: 1px solid #9a9a9a;
+					margin-bottom: 15px;
+					transition: 0.3s;
+				}
+
+				.txt {
+					width: 100%;
+					p {
+						font-size: 14px;
+						color: #cdcccc;
+						margin-bottom: 10px;
+					}
+					span {
+						font-size: 13px;
+						color: #9a9a9a;
+					}
+				}
+				&.on {
+					a {
+						color: rgb(203, 119, 10);
+						border-bottom: 1px solid rgb(203, 119, 10);
+					}
 				}
 			}
 		}
 	}
 }
+
 // tablet - 1179px--------------------
 
 @media screen and (max-width: $tablet) {
-	.contact {
-		.content {
-			width: 100%;
-			div {
-				width: 49%;
+	body {
+		.contact {
+			.content {
+				width: 100%;
+				div {
+					width: 49%;
+				}
 			}
-		}
-		.wrap {
-			width: 100%;
-			margin: 0 auto;
-			div {
-				input[type="submit"] {
-					float: right;
-					margin: 15px 0px 30px 0px;
+			.wrap {
+				width: 100%;
+				margin: 0 auto;
+				div {
+					input[type="submit"] {
+						float: right;
+						margin: 15px 0px 30px 0px;
+					}
 				}
 			}
 		}
@@ -192,16 +197,18 @@
 // middle - 935px--------------------
 
 @media screen and (max-width: $middle) {
-	.contact {
-		#map {
-			width: 100%;
-		}
-		.branch {
-			width: 100%;
-			float: left;
-			li {
-				width: 33.333%;
-				padding: 0px 20px;
+	body {
+		.contact {
+			#map {
+				width: 100%;
+			}
+			.branch {
+				width: 100%;
+				float: left;
+				li {
+					width: 33.333%;
+					padding: 0px 20px;
+				}
 			}
 		}
 	}
@@ -209,16 +216,18 @@
 
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {
-	.contact {
-		#map {
-			width: 100%;
-		}
-		.branch {
-			width: 100%;
-			float: left;
-			li {
+	body {
+		.contact {
+			#map {
 				width: 100%;
-				padding: 0px 20px;
+			}
+			.branch {
+				width: 100%;
+				float: left;
+				li {
+					width: 100%;
+					padding: 0px 20px;
+				}
 			}
 		}
 	}
