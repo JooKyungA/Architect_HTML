@@ -364,15 +364,68 @@ body .about .inner .content h2::after {
   top: 0;
   left: 0;
 }
-body .about .inner .content div {
+body .about .inner .content .wrap {
   width: 870px;
   height: 400px;
   float: right;
-  background-image: url(../img/about.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  margin-right: 20px;
   margin-bottom: 30px;
+  position: relative;
+}
+body .about .inner .content .wrap .slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+body .about .inner .content .wrap .slider ul {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .about .inner .content .wrap .slider ul li {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+}
+body .about .inner .content .wrap .slider ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+body .about .inner .content .wrap .slider ul li img:hover {
+  transform: scale(1.2);
+}
+body .about .inner .content .wrap .prev {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -20px;
+}
+body .about .inner .content .wrap .prev img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .about .inner .content .wrap .next {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -20px;
+}
+body .about .inner .content .wrap .next img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body .about .inner .content p {
   width: 870px;
@@ -463,8 +516,11 @@ body .about .inner .team .wrap article > p {
 }
 
 @media screen and (max-width: 1179px) {
-  body .about .inner .content div {
+  body .about .inner .content .wrap {
     width: 100%;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
   }
   body .about .inner .content p {
     width: 100%;
@@ -1685,7 +1741,7 @@ body #visual .inner .pic > img {
 body #visual .inner .pic > img:hover {
   transform: scale(1.2);
 }
-body #visual .inner .wrap #slider {
+body #visual .inner .wrap .slider {
   width: 250px;
   height: 300px;
   position: absolute;
@@ -1694,26 +1750,26 @@ body #visual .inner .wrap #slider {
   overflow: hidden;
   transition: 1s 0.4s;
 }
-body #visual .inner .wrap #slider ul {
+body #visual .inner .wrap .slider ul {
   width: 500%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-body #visual .inner .wrap #slider ul li {
+body #visual .inner .wrap .slider ul li {
   width: 20%;
   height: 100%;
   float: left;
 }
-body #visual .inner .wrap #slider ul li img {
+body #visual .inner .wrap .slider ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(70%);
   transition: 0.5s;
 }
-body #visual .inner .wrap #slider ul li img:hover {
+body #visual .inner .wrap .slider ul li img:hover {
   transform: scale(1.2);
 }
 body #visual .inner .wrap .prev {

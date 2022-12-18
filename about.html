@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/btnCall.js"></script>
   <script defer src="js/anime.js"></script>
+  <script defer src="js/slider.js"></script>
+
 </head>
 
 <body>
@@ -68,7 +70,21 @@
         nesciunt iusto laboriosam. Minima facilis mollitia, quo tempora illo tenetur!</p>
       <div class="content">
         <h2>Who We Are</h2>
-        <div></div>
+        <div class="wrap">
+          <article class="slider">
+            <ul>
+              <li data-index="1"><img src="img/about/about1.jpg" alt="직원들이 회의실에서 회의하는 사진"></li>
+              <li data-index="2"><img src="img/about/about2.jpg" alt="직원이 건축 설계도를 그리고 있는 사진"></li>
+              <li data-index="3"><img src="img/about/about3.jpg" alt="건축 모형 사진"></li>
+            </ul>
+          </article>
+          <a href="#" class="prev">
+            <img src="img/btnPrev.png" alt="이전 슬라이더로 이동 가능한 왼쪽 방향 화살표 ">
+          </a>
+          <a href="#" class="next">
+            <img src="img/btnNext.png" alt="다음 슬라이더로 이동 가능한 오른쪽 방향 화살표">
+          </a>
+        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam qui nisi nihil, minima commodi
           temporibus, praesentium id necessitatibus sit fugiat. Id nesciunt minus culpa illum aperiam fugiat architecto,
           necessitatibus neque, laborum, est praesentium saepe aliquam autem aut tempora dolor.</p>
