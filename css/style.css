@@ -475,14 +475,14 @@ body .about .inner .content .wrap .slider {
   overflow: hidden;
 }
 body .about .inner .content .wrap .slider ul {
-  width: 300%;
+  width: 400%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
 body .about .inner .content .wrap .slider ul li {
-  width: 33.3333333333%;
+  width: 25%;
   height: 100%;
   float: left;
 }
