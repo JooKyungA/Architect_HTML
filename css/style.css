@@ -244,45 +244,119 @@ body .content_sub .inner > p::after {
 }
 body #footer_sub .inner {
   width: 1180px;
+  height: 200px;
   margin: 0 auto;
-  padding: 30px 0px 20px;
+  padding: 30px 0px 10px;
   border-top: 2px solid #aaa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-body #footer_sub .inner h1 {
-  float: left;
-  font-size: 15px;
-  font-weight: 600;
+body #footer_sub .inner > div {
+  display: flex;
+  flex-direction: column;
 }
-body #footer_sub .inner ul {
-  float: right;
-}
-body #footer_sub .inner ul li {
-  float: left;
-  margin-left: 20px;
-}
-body #footer_sub .inner ul li a {
+body #footer_sub .inner > div h2 {
   font-size: 14px;
-  color: #9a9a9a;
-}
-body #footer_sub .inner ul li a:hover {
-  color: rgb(203, 119, 10);
-}
-body #footer_sub .inner address {
-  float: left;
-  width: 100%;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #9a9a9a;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
-body #footer_sub .inner p {
+body #footer_sub .inner > div ul li {
   float: left;
-  width: 100%;
+  margin-right: 25px;
+}
+body #footer_sub .inner > div p {
   font-size: 13px;
   color: #9a9a9a;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+body #footer_sub .inner > div.footer_txt {
+  width: 35%;
+}
+body #footer_sub .inner > div.footer_txt h1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body #footer_sub .inner > div.footer_txt h1 a {
+  transition: 0.5s;
+}
+body #footer_sub .inner > div.footer_txt h1 a:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer_sub .inner > div.footer_txt ul li a {
+  font-size: 13px;
+  color: #9a9a9a;
+  transition: 0.5s;
+}
+body #footer_sub .inner > div.footer_txt ul li a:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer_sub .inner > div.footer_contact {
+  width: 22%;
+}
+body #footer_sub .inner > div.footer_contact address {
+  width: 90%;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #9a9a9a;
+  margin-bottom: 5px;
+}
+body #footer_sub .inner > div.footer_follow {
+  width: 17%;
+}
+body #footer_sub .inner > div.footer_follow ul li a {
+  display: flex;
+  justify-content: left;
+}
+body #footer_sub .inner > div.footer_follow ul li a i {
+  color: #ccc;
+  transition: 0.5s;
+}
+body #footer_sub .inner > div.footer_follow ul li a i:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer_sub .inner > div.footer_subscribe {
+  width: 26%;
+}
+body #footer_sub .inner > div.footer_subscribe > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #footer_sub .inner > div.footer_subscribe > div #subscribe {
+  width: 73%;
+  height: 25px;
+  padding-left: 10px;
+  background-color: rgb(110, 109, 109);
+  border: none;
+}
+body #footer_sub .inner > div.footer_subscribe > div #subscribe::placeholder {
+  color: #aaa;
+}
+body #footer_sub .inner > div.footer_subscribe > div #subscribe:focus {
+  outline: none;
+}
+body #footer_sub .inner > div.footer_subscribe > div .subscribeBtn {
+  display: inline-block;
+  width: 25%;
+  height: 25px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  cursor: pointer;
+}
+body #footer_sub .inner > div.footer_subscribe > div .subscribeBtn:hover {
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
+}
+body #footer_sub .inner > p {
+  width: 100%;
+  font-size: 13px;
+  color: rgb(110, 109, 109);
+  text-align: center;
+  padding: 15px 0px 30px;
 }
 
 @media screen and (max-width: 1179px) {
@@ -327,6 +401,19 @@ body #footer_sub .inner p {
     font-size: 14px;
     margin-bottom: 30%;
   }
+  body #footer_sub .inner > div.footer_txt {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  body #footer_sub .inner > div.footer_contact {
+    width: 35%;
+  }
+  body #footer_sub .inner > div.footer_follow {
+    width: 25%;
+  }
+  body #footer_sub .inner > div.footer_subscribe {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 539px) {
   body .content_sub .inner h1 {
@@ -334,6 +421,15 @@ body #footer_sub .inner p {
   }
   body .content_sub .inner > p {
     margin-bottom: 40%;
+  }
+  body #footer_sub .inner > div.footer_contact {
+    width: 50%;
+  }
+  body #footer_sub .inner > div.footer_follow {
+    display: none;
+  }
+  body #footer_sub .inner > div.footer_subscribe {
+    width: 50%;
   }
 }
 body .about .inner .content {
@@ -630,6 +726,7 @@ body #gallery #list li div a img {
   width: 100%;
 }
 body #gallery #list li div p {
+  font-weight: bold;
   font-size: 13px;
   line-height: 1.2;
   color: #9a9a9a;
@@ -2243,52 +2340,119 @@ body #blog.on .inner .wrap article:nth-of-type(3) {
 }
 body #footer .inner {
   width: 1180px;
+  height: 200px;
   margin: 0 auto;
-  padding: 30px 0px 20px;
+  padding: 30px 0px 10px;
   border-top: 2px solid #aaa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-body #footer .inner h1 {
-  float: left;
-  font-size: 15px;
-  font-weight: 600;
+body #footer .inner > div {
+  display: flex;
+  flex-direction: column;
 }
-body #footer .inner h1 a {
-  transition: 0.5s;
-}
-body #footer .inner h1 a:hover {
-  color: rgb(203, 119, 10);
-}
-body #footer .inner ul {
-  float: right;
-}
-body #footer .inner ul li {
-  float: left;
-  margin-left: 20px;
-}
-body #footer .inner ul li a {
+body #footer .inner > div h2 {
   font-size: 14px;
-  color: #9a9a9a;
-  transition: 0.5s;
-}
-body #footer .inner ul li a:hover {
-  color: rgb(203, 119, 10);
-}
-body #footer .inner address {
-  float: left;
-  width: 100%;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #9a9a9a;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
-body #footer .inner p {
+body #footer .inner > div ul li {
   float: left;
-  width: 100%;
+  margin-right: 25px;
+}
+body #footer .inner > div p {
   font-size: 13px;
   color: #9a9a9a;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+body #footer .inner > div.footer_txt {
+  width: 35%;
+}
+body #footer .inner > div.footer_txt h1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body #footer .inner > div.footer_txt h1 a {
+  transition: 0.5s;
+}
+body #footer .inner > div.footer_txt h1 a:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer .inner > div.footer_txt ul li a {
+  font-size: 13px;
+  color: #9a9a9a;
+  transition: 0.5s;
+}
+body #footer .inner > div.footer_txt ul li a:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer .inner > div.footer_contact {
+  width: 22%;
+}
+body #footer .inner > div.footer_contact address {
+  width: 90%;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #9a9a9a;
+  margin-bottom: 5px;
+}
+body #footer .inner > div.footer_follow {
+  width: 17%;
+}
+body #footer .inner > div.footer_follow ul li a {
+  display: flex;
+  justify-content: left;
+}
+body #footer .inner > div.footer_follow ul li a i {
+  color: #ccc;
+  transition: 0.5s;
+}
+body #footer .inner > div.footer_follow ul li a i:hover {
+  color: rgb(203, 119, 10);
+}
+body #footer .inner > div.footer_subscribe {
+  width: 26%;
+}
+body #footer .inner > div.footer_subscribe > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body #footer .inner > div.footer_subscribe > div #subscribe {
+  width: 73%;
+  height: 25px;
+  padding-left: 10px;
+  background-color: rgb(110, 109, 109);
+  border: none;
+}
+body #footer .inner > div.footer_subscribe > div #subscribe::placeholder {
+  color: #aaa;
+}
+body #footer .inner > div.footer_subscribe > div #subscribe:focus {
+  outline: none;
+}
+body #footer .inner > div.footer_subscribe > div .subscribeBtn {
+  display: inline-block;
+  width: 25%;
+  height: 25px;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  cursor: pointer;
+}
+body #footer .inner > div.footer_subscribe > div .subscribeBtn:hover {
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
+}
+body #footer .inner > p {
+  width: 100%;
+  font-size: 13px;
+  color: rgb(110, 109, 109);
+  text-align: center;
+  padding: 15px 0px 30px;
 }
 body #aside {
   width: 60vw;
@@ -2391,10 +2555,12 @@ body #aside .inner .content .btnClose {
     height: calc(95vh - 110px);
     overflow: visible;
   }
+  body #visual.off .inner .btnOpen {
+    margin-top: -100%;
+  }
   body #visual .inner .btnOpen {
     left: 12vw;
-    top: 310px;
-    bottom: 0px;
+    top: 300px;
   }
   body #visual .inner .txt {
     width: 35vw;
@@ -2544,6 +2710,19 @@ body #aside .inner .content .btnClose {
   body #blog .inner .wrap article:nth-of-type(3) {
     width: calc(76% + 25px);
   }
+  body #footer .inner > div.footer_txt {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  body #footer .inner > div.footer_contact {
+    width: 35%;
+  }
+  body #footer .inner > div.footer_follow {
+    width: 25%;
+  }
+  body #footer .inner > div.footer_subscribe {
+    width: 40%;
+  }
   body #aside .inner {
     justify-content: center;
     align-content: center;
@@ -2649,6 +2828,15 @@ body #aside .inner .content .btnClose {
   }
   body #blog .inner .wrap article:nth-of-type(3) {
     width: 100%;
+  }
+  body #footer .inner > div.footer_contact {
+    width: 50%;
+  }
+  body #footer .inner > div.footer_follow {
+    display: none;
+  }
+  body #footer .inner > div.footer_subscribe {
+    width: 50%;
   }
   body #aside {
     top: 12%;

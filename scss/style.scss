@@ -314,7 +314,6 @@ body {
 		.inner {
 			width: 100%;
 			height: 100%;
-			// margin: 0 auto;
 			.btnOpen {
 				display: block;
 				width: 150px;
@@ -922,51 +921,137 @@ body {
 	#footer {
 		.inner {
 			width: 1180px;
+			height: 200px;
 			margin: 0 auto;
-			padding: 30px 0px 20px;
+			padding: 30px 0px 10px;
 			border-top: 2px solid #aaa;
-			h1 {
-				float: left;
-				font-size: 15px;
-				font-weight: 600;
-				a {
-					transition: 0.5s;
-					&:hover {
-						color: rgb(203, 119, 10);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			> div {
+				display: flex;
+				flex-direction: column;
+				h2 {
+					font-size: 14px;
+					margin-bottom: 10px;
+				}
+				ul {
+					li {
+						float: left;
+						margin-right: 25px;
 					}
 				}
-			}
-			ul {
-				float: right;
-				li {
-					float: left;
-					margin-left: 20px;
-					a {
-						font-size: 14px;
+				p {
+					font-size: 13px;
+					color: #9a9a9a;
+					margin-bottom: 15px;
+				}
+				&.footer_txt {
+					width: 35%;
+					h1 {
+						font-size: 15px;
+						font-weight: 600;
+						margin-bottom: 10px;
+						a {
+							transition: 0.5s;
+							&:hover {
+								color: rgb(203, 119, 10);
+							}
+						}
+					}
+					ul {
+						li {
+							a {
+								font-size: 13px;
+								color: #9a9a9a;
+								transition: 0.5s;
+								&:hover {
+									color: rgb(203, 119, 10);
+								}
+							}
+						}
+					}
+				}
+				&.footer_contact {
+					width: 22%;
+					address {
+						width: 90%;
+						font-style: normal;
+						font-size: 13px;
+						line-height: 1.8;
 						color: #9a9a9a;
-						transition: 0.5s;
-						&:hover {
-							color: rgb(203, 119, 10);
+						margin-bottom: 5px;
+					}
+				}
+				&.footer_follow {
+					width: 17%;
+					ul {
+						li {
+							a {
+								display: flex;
+								justify-content: left;
+								i {
+									color: #ccc;
+									transition: 0.5s;
+									&:hover {
+										color: rgb(203, 119, 10);
+									}
+								}
+							}
+						}
+					}
+				}
+				&.footer_subscribe {
+					width: 26%;
+					> div {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						#subscribe {
+							width: 73%;
+							height: 25px;
+							padding-left: 10px;
+							background-color: rgb(110, 109, 109);
+							border: none;
+							&::placeholder {
+								color: #aaa;
+							}
+							&:focus {
+								outline: none;
+							}
+						}
+						.subscribeBtn {
+							display: inline-block;
+							width: 25%;
+							height: 25px;
+							vertical-align: top;
+							font-size: 12px;
+							line-height: 25px;
+							text-align: center;
+							background: linear-gradient(
+								45deg,
+								rgb(203, 119, 10),
+								rgb(252, 114, 8)
+							);
+							cursor: pointer;
+							&:hover {
+								background: linear-gradient(
+									45deg,
+									rgb(250, 158, 59),
+									rgb(249, 157, 36)
+								);
+							}
 						}
 					}
 				}
 			}
-			address {
-				float: left;
-				width: 100%;
-				font-style: normal;
-				font-size: 13px;
-				line-height: 1.5;
-				color: #9a9a9a;
-				margin-top: 10px;
-				margin-bottom: 10px;
-			}
-			p {
-				float: left;
+
+			> p {
 				width: 100%;
 				font-size: 13px;
-				color: #9a9a9a;
-				margin-bottom: 30px;
+				color: rgb(110, 109, 109);
+				text-align: center;
+				padding: 15px 0px 30px;
 			}
 		}
 	}
@@ -1078,11 +1163,17 @@ body {
 			width: 100%;
 			height: calc(100vh - 5vh - 110px);
 			overflow: visible;
+			&.off {
+				.inner {
+					.btnOpen {
+						margin-top: -100%;
+					}
+				}
+			}
 			.inner {
 				.btnOpen {
 					left: 12vw;
-					top: 310px;
-					bottom: 0px;
+					top: 300px;
 				}
 				.txt {
 					width: 35vw;
@@ -1214,6 +1305,7 @@ body {
 			}
 		}
 
+		// portfolio 영역
 		#portfolio {
 			.inner {
 				.container {
@@ -1251,6 +1343,7 @@ body {
 				}
 			}
 		}
+
 		// awards 영역
 		#awards {
 			.inner {
@@ -1303,6 +1396,25 @@ body {
 		}
 
 		// footer 영역
+		#footer {
+			.inner {
+				> div {
+					&.footer_txt {
+						width: 100%;
+						margin-bottom: 25px;
+					}
+					&.footer_contact {
+						width: 35%;
+					}
+					&.footer_follow {
+						width: 25%;
+					}
+					&.footer_subscribe {
+						width: 40%;
+					}
+				}
+			}
+		}
 
 		// aside 영역
 		#aside {
@@ -1455,6 +1567,21 @@ body {
 		}
 
 		// footer 영역
+		#footer {
+			.inner {
+				> div {
+					&.footer_contact {
+						width: 50%;
+					}
+					&.footer_follow {
+						display: none;
+					}
+					&.footer_subscribe {
+						width: 50%;
+					}
+				}
+			}
+		}
 
 		// aside 영역
 		#aside {
