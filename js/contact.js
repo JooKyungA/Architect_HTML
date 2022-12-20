@@ -1,3 +1,77 @@
+// validation
+const form = document.querySelector("#contact_form");
+const btnSubmit = form.querySelector("input[type=submit]");
+
+btnSubmit.addEventListener("click", (e) => {
+  if (!isTxt("contact_name")) e.preventDefault();
+  if (!isTxt("contact_message", 10)) e.preventDefault();
+  if (!isEmail("contact_email")) e.preventDefault();
+  if (!isSelect("sel_branch")) e.preventDefault();
+})
+
+function isTxt(el, len) {
+  if (len === undefined) len = 1;
+  let input = form.querySelector(`[name=${el}]`);
+  let txt = input.value;
+  if (txt.length >= len) {
+    const errMsgs = input.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
+
+    return true;
+  } else {
+    const errMsgs = input.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) return false;
+
+    const errMsg = document.createElement("p");
+    errMsg.append(`입력항목을 ${len}글자 이상 입력하세요`);
+    input.closest("td").append(errMsg);
+    return false;
+  }
+}
+
+function isEmail(el) {
+  let input = form.querySelector(`[name=${el}]`);
+  let txt = input.value;
+
+  if (/@/.test(txt)) {
+    const errMsgs = input.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
+    return true;
+  } else {
+    const errMsgs = input.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) return false;
+
+    const errMsg = document.createElement("p");
+    errMsg.append("@를 포함한 전체 이메일 주소를 입력하세요");
+    input.closest("td").append(errMsg);
+    return false;
+  }
+}
+
+function isSelect(el) {
+  let sel = form.querySelector(`[name=${el}]`);
+  let sel_index = sel.options.selectedIndex;
+
+  let val = sel[sel_index].value;
+
+  if (val !== "") {
+    const errMsgs = sel.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) sel.closest("td").querySelector("p").remove();
+
+    return true;
+  } else {
+    const errMsgs = sel.closest("td").querySelectorAll("p");
+    if (errMsgs.length > 0) return false;
+
+    const errMsg = document.createElement("p");
+    errMsg.append("항목을 선택해 주세요");
+    sel.closest("td").append(errMsg);
+
+    return false;
+  }
+}
+
+// map --------------------------------------------------------
 var mapContainer = document.getElementById('map');
 
 const branch_btns = document.querySelectorAll(".branch li");

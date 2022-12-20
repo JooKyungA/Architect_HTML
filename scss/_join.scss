@@ -89,6 +89,9 @@ body {
 						}
 						input[name="email"] {
 							width: 25%;
+							background-color: rgba(0, 0, 0, 0.03);
+							padding: 10px;
+							border: 1px solid #9a9a9a;
 						}
 						select {
 							width: 25%;

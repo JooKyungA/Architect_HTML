@@ -924,11 +924,11 @@ body .contact::after {
   display: block;
   clear: both;
 }
-body .contact .content {
+body .contact .txt {
   width: 580px;
   float: left;
 }
-body .contact .content > div {
+body .contact .txt > div {
   width: 280px;
   height: 210px;
   float: left;
@@ -936,18 +936,18 @@ body .contact .content > div {
   display: flex;
   flex-direction: column;
 }
-body .contact .content > div img {
+body .contact .txt > div img {
   width: 32px;
   height: 32px;
   object-fit: cover;
   margin-bottom: 30px;
 }
-body .contact .content > div p {
+body .contact .txt > div p {
   font-size: 18px;
   color: #efefef;
   margin-bottom: 15px;
 }
-body .contact .content > div span {
+body .contact .txt > div span {
   font-size: 16px;
   color: #9a9a9a;
 }
@@ -960,60 +960,28 @@ body .contact .wrap {
   position: relative;
   padding: 10px 50px 15px;
 }
-body .contact .wrap h2 {
+body .contact .wrap #contact_form fieldset {
+  border: none;
+}
+body .contact .wrap #contact_form fieldset h2 {
   font-size: 40px;
   margin-bottom: 10px;
   display: flex;
   align-items: flex-start;
 }
-body .contact .wrap div {
+body .contact .wrap #contact_form fieldset table tr {
   width: 100%;
   font-size: 14px;
 }
-body .contact .wrap div label {
+body .contact .wrap #contact_form fieldset table tr th label {
   width: 100%;
   display: block;
   padding: 15px 0px 3px;
+  font-weight: normal;
   color: #9a9a9a;
+  text-align: left;
 }
-body .contact .wrap div input[type=text],
-body .contact .wrap div input[type=email] {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-}
-body .contact .wrap div input[type=text]:focus,
-body .contact .wrap div input[type=email]:focus {
-  outline: none;
-}
-body .contact .wrap div select {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-}
-body .contact .wrap div select:focus {
-  outline: none;
-}
-body .contact .wrap div select option {
-  color: #0b0909;
-}
-body .contact .wrap div textarea {
-  width: 100%;
-  height: 25px;
-  margin-top: 5px;
-  border: none;
-  border-bottom: 2px solid #333;
-  background: none;
-  resize: none;
-}
-body .contact .wrap div textarea:focus {
-  outline: none;
-}
-body .contact .wrap div input[type=submit] {
+body .contact .wrap #contact_form fieldset table tr th input[type=submit] {
   width: 100px;
   height: 30px;
   border-radius: 0%;
@@ -1023,9 +991,51 @@ body .contact .wrap div input[type=submit] {
   cursor: pointer;
   transition: 0.5s;
 }
-body .contact .wrap div input[type=submit]:hover {
+body .contact .wrap #contact_form fieldset table tr th input[type=submit]:hover {
   background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
   color: #efefef;
+}
+body .contact .wrap #contact_form fieldset table tr td input[type=text],
+body .contact .wrap #contact_form fieldset table tr td input[type=email] {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+}
+body .contact .wrap #contact_form fieldset table tr td input[type=text]:focus,
+body .contact .wrap #contact_form fieldset table tr td input[type=email]:focus {
+  outline: none;
+}
+body .contact .wrap #contact_form fieldset table tr td select {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+}
+body .contact .wrap #contact_form fieldset table tr td select:focus {
+  outline: none;
+}
+body .contact .wrap #contact_form fieldset table tr td select option {
+  color: #0b0909;
+}
+body .contact .wrap #contact_form fieldset table tr td textarea {
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+  resize: none;
+}
+body .contact .wrap #contact_form fieldset table tr td textarea:focus {
+  outline: none;
+}
+body .contact .wrap #contact_form fieldset table tr td p {
+  font: 11px/1 "맑은고딕";
+  color: rgb(203, 119, 10);
+  margin-top: 10px;
 }
 body .contact #map {
   width: 70%;
@@ -1163,6 +1173,7 @@ body .notice .inner table tr th {
   padding: 15px;
   background: rgba(70, 70, 70, 0.5);
   color: #efefef;
+  font-family: "맑은 고딕";
 }
 body .notice .inner table tr th:nth-of-type(1) {
   width: 10%;
@@ -1348,6 +1359,9 @@ body .join .inner fieldset table td input[type=tel] {
 }
 body .join .inner fieldset table td input[name=email] {
   width: 25%;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #9a9a9a;
 }
 body .join .inner fieldset table td select {
   width: 25%;

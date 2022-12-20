@@ -3,7 +3,7 @@ const btnSubmit = form.querySelector("input[type=submit]");
 
 btnSubmit.addEventListener("click", (e) => {
   if (!isAgree("agree")) e.preventDefault();
-  if (!isTxt("name")) e.preventDefault();
+  if (!isTxt("name", 1)) e.preventDefault();
   if (!isTxt("userid", 5)) e.preventDefault();
   if (!isTel("phone")) e.preventDefault();
   if (!isEmail("email", "company")) e.preventDefault();
@@ -31,7 +31,7 @@ function isAgree(el) {
     if (errMsgs.length > 0) return false;
 
     const errMsg = document.createElement("p");
-    errMsg.append("필수 입력항목을 체크해주세요");
+    errMsg.append("약관에 동의해주세요");
     inputs[0].closest(".agreement").append(errMsg);
 
     return false;
@@ -102,26 +102,6 @@ function isEmail(el1, el2, len) {
   }
 
 }
-
-
-// function isEmail(el) {
-//   let input = form.querySelector(`[name=${el}]`);
-//   let txt = input.value;
-
-//   if (/@/.test(txt)) {
-//     const errMsgs = input.closest("td").querySelectorAll("p");
-//     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
-//     return true;
-//   } else {
-//     const errMsgs = input.closest("td").querySelectorAll("p");
-//     if (errMsgs.length > 0) return false;
-
-//     const errMsg = document.createElement("p");
-//     errMsg.append("@를 포함한 전체 이메일 주소를 입력하세요");
-//     input.closest("td").append(errMsg);
-//     return false;
-//   }
-// }
 
 function isCheck(el) {
   let inputs = form.querySelectorAll(`[name=${el}]`);
