@@ -1288,13 +1288,16 @@ body .join .inner fieldset #terms {
   margin-bottom: 10px;
 }
 body .join .inner fieldset .agreement {
-  display: flex;
-  justify-content: flex-end;
   margin: 0px 10px 70px 0px;
 }
 body .join .inner fieldset .agreement label[for=agree] {
   font-size: 14px;
   margin-left: 10px;
+}
+body .join .inner fieldset .agreement p {
+  font: 11px/1 "맑은고딕";
+  color: rgb(203, 119, 10);
+  margin-top: 10px;
 }
 body .join .inner fieldset table {
   width: 100%;

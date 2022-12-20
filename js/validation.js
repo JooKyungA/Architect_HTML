@@ -2,6 +2,7 @@ const form = document.querySelector("#member");
 const btnSubmit = form.querySelector("input[type=submit]");
 
 btnSubmit.addEventListener("click", (e) => {
+  if (!isAgree("agree")) e.preventDefault();
   if (!isTxt("name")) e.preventDefault();
   if (!isTxt("userid", 5)) e.preventDefault();
   if (!isTel("phone")) e.preventDefault();
@@ -10,6 +11,32 @@ btnSubmit.addEventListener("click", (e) => {
   if (!isPwd("pwd1", "pwd2", 5)) e.preventDefault();
 })
 
+function isAgree(el) {
+  let inputs = form.querySelectorAll(`[name=${el}]`);
+  let isCheck = false;
+
+  for (let el of inputs) {
+    if (el.checked) isCheck = true;
+  }
+
+  if (isCheck) {
+    const errMsgs = inputs[0].closest(".agreement").querySelectorAll("p");
+
+    if (errMsgs.length > 0) inputs[0].closest(".agreement").querySelector("p").remove();
+
+
+    return true;
+  } else {
+    const errMsgs = inputs[0].closest(".agreement").querySelectorAll("p");
+    if (errMsgs.length > 0) return false;
+
+    const errMsg = document.createElement("p");
+    errMsg.append("필수 입력항목을 체크해주세요");
+    inputs[0].closest(".agreement").append(errMsg);
+
+    return false;
+  }
+}
 function isTxt(el, len) {
   if (len === undefined) len = 1;
   let input = form.querySelector(`[name=${el}]`);
@@ -34,8 +61,7 @@ function isTel(el, len) {
   let input = form.querySelector(`[name=${el}]`);
   let txt = input.value;
 
-  const num = /[0-9]/;
-
+  const num = /^[0-9]+$/;
   if (txt.length == len && num.test(txt)) {
     const errMsgs = input.closest("td").querySelectorAll("p");
     if (errMsgs.length > 0) input.closest("td").querySelector("p").remove();
@@ -46,7 +72,7 @@ function isTel(el, len) {
     if (errMsgs.length > 0) return false;
 
     const errMsg = document.createElement("p");
-    errMsg.append(`휴대폰번호 11자리를 '-' 없이 입력해주세요`);
+    errMsg.append(`휴대폰번호 하이픈(-)을 제외하고 입력해주세요 `);
     input.closest("td").append(errMsg);
     return false;
   }

@@ -20,12 +20,15 @@ body {
 					margin-bottom: 10px;
 				}
 				.agreement {
-					display: flex;
-					justify-content: flex-end;
 					margin: 0px 10px 70px 0px;
 					label[for="agree"] {
 						font-size: 14px;
 						margin-left: 10px;
+					}
+					p {
+						font: 11px/1 "맑은고딕";
+						color: rgb(203, 119, 10);
+						margin-top: 10px;
 					}
 				}
 				table {
