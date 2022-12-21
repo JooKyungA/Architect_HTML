@@ -2,7 +2,7 @@ body {
 	.contact {
 		width: 100%;
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
@@ -51,82 +51,78 @@ body {
 						align-items: flex-start;
 					}
 					table {
-						tr {
+						width: 100%;
+						tbody {
 							width: 100%;
-							font-size: 14px;
-							th {
-								label {
-									width: 100%;
-									display: block;
-									padding: 15px 0px 3px;
-									font-weight: normal;
-									color: #9a9a9a;
-									text-align: left;
-								}
-								input[type="submit"] {
-									width: 100px;
-									height: 30px;
-									border-radius: 0%;
-									background: linear-gradient(
-										45deg,
-										rgb(203, 119, 10),
-										rgb(252, 114, 8)
-									);
-									color: #efefef;
-									margin: 15px 0px 0px 380px;
-									cursor: pointer;
-									transition: 0.5s;
-									&:hover {
-										background: linear-gradient(
-											45deg,
-											rgb(250, 158, 59),
-											rgb(203, 119, 10)
-										);
+							tr {
+								width: 100%;
+								font-size: 14px;
+								th {
+									label {
+										width: 100%;
+										display: block;
+										padding: 15px 0px 3px;
+										font-weight: normal;
+										color: #9a9a9a;
+										text-align: left;
+									}
+									input[type='submit'] {
+										width: 100px;
+										height: 30px;
+										border-radius: 0%;
+										background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
 										color: #efefef;
+										margin: 15px 0px 0px 380px;
+										cursor: pointer;
+										transition: 0.5s;
+										&:hover {
+											background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
+											color: #efefef;
+										}
 									}
 								}
-							}
-							td {
-								input[type="text"],
-								input[type="email"] {
-									width: 100%;
-									height: 30px;
-									border: none;
-									border-bottom: 2px solid #333;
-									background: none;
-									&:focus {
-										outline: none;
+								td {
+									input[type='text'],
+									input[type='email'] {
+										width: 100%;
+										height: 30px;
+										border: none;
+										border-bottom: 2px solid #333;
+										background: none;
+										&:focus {
+											outline: none;
+										}
 									}
-								}
-								select {
-									width: 100%;
-									height: 30px;
-									border: none;
-									border-bottom: 2px solid #333;
-									background: none;
-									&:focus {
-										outline: none;
+									select {
+										width: 100%;
+										height: 30px;
+										border: none;
+										border-bottom: 2px solid #333;
+										background: none;
+										&:focus {
+											outline: none;
+										}
+										option {
+											color: #0b0909;
+										}
 									}
-									option {
-										color: #0b0909;
+									textarea {
+										width: 100%;
+										height: 25px;
+										margin-top: 5px;
+										border: none;
+										border-bottom: 2px solid #333;
+										background: none;
+										resize: none;
+										&:focus {
+											outline: none;
+										}
 									}
-								}
-								textarea {
-									width: 100%;
-									height: 25px;
-									margin-top: 5px;
-									border: none;
-									border-bottom: 2px solid #333;
-									background: none;
-									resize: none;
-									&:focus {
-										outline: none;
+									p {
+										font: 11px/1 '맑은고딕';
+										color: rgb(203, 119, 10);
+										margin-top: 10px;
 									}
-								}
-								p {
-									font: 11px/1 "맑은고딕";
-									color: rgb(203, 119, 10);
-									margin-top: 10px;
 								}
 							}
 						}
@@ -142,7 +138,7 @@ body {
 			float: left;
 		}
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
@@ -156,7 +152,7 @@ body {
 					display: block;
 					width: 100%;
 					height: 50px;
-					font: bold 16px/50px "맑은 고딕";
+					font: bold 16px/50px '맑은 고딕';
 					letter-spacing: 2px;
 					color: #fff;
 					border-bottom: 1px solid #9a9a9a;
@@ -192,7 +188,7 @@ body {
 @media screen and (max-width: $tablet) {
 	body {
 		.contact {
-			.content {
+			.txt {
 				width: 100%;
 				div {
 					width: 49%;
@@ -201,10 +197,20 @@ body {
 			.wrap {
 				width: 100%;
 				margin: 0 auto;
-				div {
-					input[type="submit"] {
-						float: right;
-						margin: 15px 0px 30px 0px;
+				#contact_form {
+					fieldset {
+						table {
+							tbody {
+								tr {
+									th {
+										input[type='submit'] {
+											float: right;
+											margin: 15px 0px 30px 0px;
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -236,6 +242,9 @@ body {
 @media screen and (max-width: $mobile) {
 	body {
 		.contact {
+			.wrap {
+				padding: 0px;
+			}
 			#map {
 				width: 100%;
 			}
