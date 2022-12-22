@@ -1,6 +1,7 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
 $tablet: 1179px;
 $middle: 935px;
 $mobile: 539px;
@@ -342,6 +343,7 @@ body {
 				}
 				p {
 					font-size: 16px;
+					font-weight: 200;
 					color: rgb(110, 109, 109);
 				}
 			}
