@@ -1,10 +1,11 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Raleway";
+  font-family: "Fira Sans";
   color: #efefef;
 }
 
@@ -20,7 +21,7 @@ a {
 
 h1 {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .hidden {
@@ -53,7 +54,6 @@ body #header_sub .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
-  font-weight: bold;
 }
 body #header_sub .inner .menuWeb {
   width: 75%;
@@ -258,6 +258,7 @@ body #footer_sub .inner > div {
 }
 body #footer_sub .inner > div h2 {
   font-size: 14px;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 body #footer_sub .inner > div ul li {
@@ -274,7 +275,6 @@ body #footer_sub .inner > div.footer_txt {
 }
 body #footer_sub .inner > div.footer_txt h1 {
   font-size: 15px;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 body #footer_sub .inner > div.footer_txt h1 a {
@@ -604,6 +604,7 @@ body .about .inner .team .wrap article > p {
 }
 body .about .inner .team .wrap article h3 {
   font-size: 18px;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 body .about .inner .team .wrap article > p {
@@ -1627,7 +1628,6 @@ body #header .inner > h1 a {
   display: block;
   width: 100%;
   font-size: 16px;
-  font-weight: bold;
 }
 body #header .inner .menuWeb {
   width: 75%;
@@ -1839,7 +1839,6 @@ body #visual .inner .txt {
 body #visual .inner .txt h1 {
   margin-bottom: 200px;
   font-size: 120px;
-  font-weight: 500;
 }
 body #visual .inner .txt p {
   font-size: 16px;
@@ -2251,7 +2250,7 @@ body #awards .inner .container .award_tab input[type=radio]:checked ~ label h2 {
 }
 body #awards .inner .container .award_tab input[type=radio]:checked ~ label h3 {
   padding: 0px 15px;
-  font-weight: bold;
+  font-weight: 500;
   color: rgb(203, 119, 10);
   border-radius: 2px;
 }
@@ -2276,12 +2275,13 @@ body #awards .inner .container .award_tab label h2 {
   align-items: center;
   color: #efefef;
   font-size: 20px;
+  font-weight: 500;
   margin-right: 50px;
   margin-left: 10px;
 }
 body #awards .inner .container .award_tab label h3 {
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
   color: #9a9a9a;
   z-index: 10;
 }
@@ -2430,6 +2430,7 @@ body #footer .inner > div {
 }
 body #footer .inner > div h2 {
   font-size: 14px;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 body #footer .inner > div ul li {
@@ -2446,7 +2447,6 @@ body #footer .inner > div.footer_txt {
 }
 body #footer .inner > div.footer_txt h1 {
   font-size: 15px;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 body #footer .inner > div.footer_txt h1 a {
