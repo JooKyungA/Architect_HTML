@@ -9,11 +9,11 @@
   <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/btnCall.js"></script>
-  <script defer src="js/join.js"></script>
+  <script defer src="js/validation.js"></script>
 </head>
 
 <body>
-  <!-- header 영역 -->
+  <!-- header_sub 영역 -->
   <header id="header_sub">
     <div class="inner">
       <h1><a href="index.html">DCL ARCHITECTS</a></h1>
@@ -59,6 +59,7 @@
     </div>
   </header>
 
+  <!-- content_sub 영역 -->
   <section class="content_sub join">
     <div class="inner">
       <h1>JOIN</h1>
@@ -141,7 +142,7 @@
               <tr>
                 <th scope="row"><label for="email">E-mail *</label></th>
                 <td>
-                  <input type="email" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
                   @
                   <select name="company" id="company">
                     <option value="">선택하세요</option>
@@ -162,7 +163,7 @@
               </tr>
               <tr>
                 <th colspan="2">
-                  <input type="submit" value="SUBMIT">
+                  <input type="submit" value="SUBMIT" id="join_submit">
                 </th>
               </tr>
             </tbody>
@@ -174,7 +175,7 @@
     </div>
   </section>
 
-  <!-- footer 영역 -->
+  <!-- header_sub 영역 -->
   <footer id="footer_sub">
     <div class="inner">
       <div class="footer_txt">
