@@ -1539,6 +1539,114 @@ body .joinResult .inner .wrap .txt a:hover {
     width: 80%;
   }
 }
+body .contactResult .inner .wrap {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body .contactResult .inner .wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/contact.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  opacity: 0.4;
+}
+body .contactResult .inner .wrap .pic {
+  width: 30%;
+  height: 80%;
+  background-image: url(../img/contact.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+body .contactResult .inner .wrap .txt {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 37px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 2;
+}
+body .contactResult .inner .wrap .txt i {
+  font-size: 50px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+body .contactResult .inner .wrap .txt p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 40px;
+  text-align: center;
+}
+body .contactResult .inner .wrap .txt p strong {
+  font-size: 19px;
+  color: #ddd;
+}
+body .contactResult .inner .wrap .txt span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #9a9a9a;
+  margin-bottom: 90px;
+  text-align: center;
+}
+body .contactResult .inner .wrap .txt a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #efefef;
+  background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+  text-align: center;
+  transition: 0.5s;
+}
+body .contactResult .inner .wrap .txt a:hover {
+  background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
+}
+
+@media screen and (max-width: 1179px) {
+  body .joinResult .inner .wrap .pic {
+    width: 40%;
+  }
+  body .joinResult .inner .wrap .txt {
+    width: 40%;
+  }
+  body .joinResult .inner .wrap .txt span {
+    margin-bottom: 7vw;
+  }
+}
+@media screen and (max-width: 935px) {
+  body .joinResult .inner .wrap .pic {
+    width: 45%;
+  }
+  body .joinResult .inner .wrap .txt {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 539px) {
+  body .joinResult .inner .wrap .pic {
+    display: none;
+  }
+  body .joinResult .inner .wrap .txt {
+    width: 80%;
+  }
+}
 /*
 전체
 color:#efefef;
