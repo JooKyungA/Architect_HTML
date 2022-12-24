@@ -242,6 +242,11 @@ body {
 @media screen and (max-width: $mobile) {
 	body {
 		.contact {
+			.txt {
+				> div {
+					height: 300px;
+				}
+			}
 			.wrap {
 				padding: 0px;
 			}
