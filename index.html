@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DCL ARCHITECTS</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/2df7b8821b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
@@ -16,10 +14,10 @@
   <script defer src="js/slider.js"></script>
 </head>
 
-<body class="scrollView">
+<body>
   <ul id="skipNavi">
     <li><a href="#gnb">주메뉴 바로가기</a></li>
-    <li><a href="#">본문 바로가기</a></li>
+    <li><a href="#about">본문 바로가기</a></li>
     <li><a href="#footer">하단메뉴 바로가기</a></li>
   </ul>
   <ul class="scroll">
@@ -40,7 +38,7 @@
     </li>
   </ul>
   <!-- header 영역 -->
-  <header id="header">
+  <header id="header" class="scrollView on">
     <div class="inner">
       <h1><a href="index.html">DCL ARCHITECTS</a></h1>
       <nav class="menuWeb">
@@ -88,7 +86,7 @@
   <!-- visual 영역 -->
   <figure id="visual">
     <div class="inner">
-      <a href="#" class="btnOpen">VIEW CONTENT</a>
+      <a href="#" class="btnViewOpen">VIEW CONTENT</a>
       <div class="txt">
         <h1>DCL ARCH.</h1>
         <P>
@@ -149,7 +147,7 @@
     <div class="inner">
       <h1>PORTFOLIO </h1>
       <a href="portfolio.html">VIEW MORE <i class="fas fa-arrow-right"></i></a>
-      <div class="container">
+      <div class="tab_menu">
         <div id="tab">
           <ul>
             <li class="on"><a href="#">HOUSE</a></li>
@@ -159,7 +157,6 @@
           </ul>
         </div>
         <section>
-
           <article class="on">
             <div>
               <img src="img/house/pic1.jpg" alt="화이트톤의 각진 주택 사진">
@@ -228,7 +225,7 @@
   <section id="awards" class="scrollView">
     <div class="inner">
       <h1>AWARDS</h1>
-      <div class="container">
+      <div class="wrap">
         <div class="award_tab">
           <input type="radio" name="acc" id="acc1">
           <label for="acc1">
@@ -394,7 +391,7 @@
         <p>Est quia minima aut quos numquam dolor repellendus
           expedita dignissimos, optio excepturi fugiat eum rerum quasi perferendis neque, placeat nam delectus deserunt.
         </p>
-        <a href="#" class="btnClose">
+        <a href="#" class="btnViewClose">
           <img src="img/close.png" alt="view content를 닫는 기능을 하는 X 버튼">
         </a>
       </div>

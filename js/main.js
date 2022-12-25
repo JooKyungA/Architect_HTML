@@ -14,6 +14,7 @@ const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
 let posArr = [];
 const base = -300;
+const scrollSpeed = 500;
 for (let el of scrollView) {
 	posArr.push(el.offsetTop);
 }
@@ -25,7 +26,6 @@ window.addEventListener('scroll', () => {
 		if (scroll >= posArr[index] + base) {
 			btnScroll.forEach((el, index) => {
 				el.classList.remove('on');
-				// scrollView[index].classList.remove("on");
 			});
 			btnScroll[index].classList.add('on');
 			scrollView[index].classList.add('on');
@@ -37,7 +37,7 @@ btnScroll.forEach((el, index) => {
 		new Anim(window, {
 			prop: 'scroll',
 			value: posArr[index],
-			duration: speed,
+			duration: scrollSpeed,
 		});
 		for (let i of btnScroll) {
 			i.classList.remove('on');
@@ -47,45 +47,45 @@ btnScroll.forEach((el, index) => {
 });
 
 // view content 관련---------------------
-const btnOpen = document.querySelector('.btnOpen');
+const btnViewOpen = document.querySelector('.btnViewOpen');
 const visual = document.querySelector('#visual');
 const aside = document.querySelector('#aside');
-const btnClose = aside.querySelector('.btnClose');
+const btnViewClose = aside.querySelector('.btnViewClose');
 const _top = aside.querySelector('.top');
 const _right = aside.querySelector('.right');
 const _bottom = aside.querySelector('.bottom');
 const _left = aside.querySelector('.left');
 const _inner = aside.querySelector('.inner');
-// const speed = 500;
+const viewSpeed = 500;
 
-btnOpen.addEventListener('click', (e) => {
+btnViewOpen.addEventListener('click', (e) => {
 	e.preventDefault();
 	aside.style.display = 'block';
 	visual.classList.add('off');
 	new Anim(_top, {
 		prop: 'width',
 		value: '100%',
-		duration: speed,
+		duration: viewSpeed,
 		callback: () => {
 			new Anim(_right, {
 				prop: 'height',
 				value: '100%',
-				duration: speed,
+				duration: viewSpeed,
 				callback: () => {
 					new Anim(_bottom, {
 						prop: 'width',
 						value: '100%',
-						duration: speed,
+						duration: viewSpeed,
 						callback: () => {
 							new Anim(_left, {
 								prop: 'height',
 								value: '100%',
-								duration: speed,
+								duration: viewSpeed,
 								callback: () => {
 									new Anim(_inner, {
 										prop: 'opacity',
 										value: 1,
-										duration: speed,
+										duration: viewSpeed,
 									});
 								},
 							});
@@ -97,33 +97,33 @@ btnOpen.addEventListener('click', (e) => {
 	});
 });
 
-btnClose.addEventListener('click', (e) => {
+btnViewClose.addEventListener('click', (e) => {
 	e.preventDefault();
 
 	new Anim(_inner, {
 		prop: 'opacity',
 		value: 0,
-		duration: speed,
+		duration: viewSpeed,
 		callback: () => {
 			new Anim(_top, {
 				prop: 'width',
 				value: '0%',
-				duration: speed,
+				duration: viewSpeed,
 			});
 			new Anim(_right, {
 				prop: 'height',
 				value: '0%',
-				duration: speed,
+				duration: viewSpeed,
 			});
 			new Anim(_bottom, {
 				prop: 'width',
 				value: '0%',
-				duration: speed,
+				duration: viewSpeed,
 			});
 			new Anim(_left, {
 				prop: 'height',
 				value: '0%',
-				duration: speed,
+				duration: viewSpeed,
 				callback: () => {
 					aside.style.display = 'none';
 
@@ -135,11 +135,12 @@ btnClose.addEventListener('click', (e) => {
 });
 
 // tab menu 관련 js--------------------------
-const container = document.querySelector('.container');
-const btns = container.querySelectorAll('ul li');
-const boxes = container.querySelectorAll('section article');
+const tab_menu = document.querySelector('.tab_menu');
+const tab_btns = tab_menu.querySelectorAll('ul li');
+const tab_boxes = tab_menu.querySelectorAll('section article');
+const tabSpeed = 300;
 
-btns.forEach((_el, _ind) => {
+tab_btns.forEach((_el, _ind) => {
 	_el.addEventListener('click', (e) => {
 		e.preventDefault();
 
@@ -149,8 +150,8 @@ btns.forEach((_el, _ind) => {
 		if (enableClick) {
 			enableClick = false;
 
-			activation(btns, _ind);
-			activation(boxes, _ind);
+			activation(tab_btns, _ind);
+			activation(tab_boxes, _ind);
 		}
 	});
 });
@@ -162,6 +163,6 @@ function activation(list, index) {
 
 		setTimeout(() => {
 			enableClick = true;
-		}, speed);
+		}, tabSpeed);
 	}
 }
