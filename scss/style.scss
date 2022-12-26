@@ -530,8 +530,8 @@ body {
 			h1 {
 				width: 100%;
 				float: left;
-				transform: translateY(-50%);
 				margin-bottom: 30px;
+				transform: translateY(-50%);
 				opacity: 0;
 				transition: 1s;
 				a {
@@ -726,12 +726,12 @@ body {
 			h1 {
 				float: left;
 				width: 100%;
+				margin-bottom: 30px;
 				transform: translateY(-50%);
 				opacity: 0;
 				transition: 1s;
 			}
 			.wrap {
-				margin-top: 30px;
 				float: right;
 				width: 700px;
 				transform: rotateY(180deg);

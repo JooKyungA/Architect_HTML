@@ -97,62 +97,30 @@
           <fieldset>
             <legend class="hidden">contact 입력 폼 양식</legend>
             <h2>Get In Touch</h2>
-            <table>
-              <caption class="hidden">연락하기 위해 이름, 이메일주소, 지점 선택, 메세지를 작성하는 입력 테이블</caption>
-              <tbody>
-                <tr>
-                  <th scope="col">
-                    <label for="contact_name">NAME</label>
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="text" name="contact_name" id="contact_name">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="col">
-                    <label for="contact_email">E-MAIL</label>
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="email" name="contact_email" id="contact_email">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="col">
-                    <label for="sel_branch">BRANCH</label>
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    <select name="sel_branch" id="sel_branch">
-                      <option value=""></option>
-                      <option value="본점">본점</option>
-                      <option value="안양지점">안양지점</option>
-                      <option value="서울지점">서울지점</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="col">
-                    <label for="contact_message">MESSAGE</label>
-                  </th>
-                </tr>
-                <tr>
-                  <td>
-                    <textarea name="contact_message" id="contact_message"></textarea>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th>
-                    <input type="submit" value="SUBMIT" id="contact_submit">
-                  </th>
-                </tr>
-              </tbody>
-            </table>
+            <div>
+              <label for="contact_name">NAME</label>
+              <input type="text" name="contact_name" id="contact_name">
+            </div>
+            <div>
+              <label for="contact_email">E-MAIL</label>
+              <input type="email" name="contact_email" id="contact_email">
+            </div>
+            <div>
+              <label for="sel_branch">BRANCH</label>
+              <select name="sel_branch" id="sel_branch">
+                <option value=""></option>
+                <option value="본점">본점</option>
+                <option value="안양지점">안양지점</option>
+                <option value="서울지점">서울지점</option>
+              </select>
+            </div>
+            <div>
+              <label for="contact_message">MESSAGE</label>
+              <textarea name="contact_message" id="contact_message"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="SUBMIT" id="contact_submit">
+            </div>
           </fieldset>
         </form>
       </div>

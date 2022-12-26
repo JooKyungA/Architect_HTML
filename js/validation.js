@@ -1,14 +1,7 @@
 const form = document.querySelector('form');
 
-// const btnSubmit_join = form.querySelector('input[type=submit]');
-// const btnSubmit_contact = form.querySelector('input[type=submit]');
 const btnSubmit_join = form.querySelector('#join_submit');
 const btnSubmit_contact = form.querySelector('#contact_submit');
-
-// form.querySelector('input[type=submit]'); 대신 ('#join_submit'),('#contact_submit') 으로 각각 구분하고 싶음
-//  => 변경하면 btnSubmit_join은 작동되나 btnSubmit_contact은 작동 안됨
-// => 이벤트리스너 순서를 바꾸면 btnSubmit_contact은 작동되고 btnSubmit_join은 작동 안됨
-// contact 페이지에서는 join버튼을 사용할 수 없으니 위에 join 이벤트리스너가 있으면 실행이 안되는 것 같은데,.어떻게 해결해야하는지..??
 
 if (btnSubmit_join != null) {
 	btnSubmit_join.addEventListener('click', (e) => {
@@ -60,19 +53,19 @@ function isTxt(el, len) {
 	let input = form.querySelector(`[name=${el}]`);
 	let txt = input.value;
 	if (txt.length >= len) {
-		const errMsgs = input.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) input.closest('td').querySelector('p').remove();
-
+		const errMsgs = input.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) input.parentElement.querySelector('p').remove();
 		return true;
 	} else {
-		const errMsgs = input.closest('td').querySelectorAll('p');
+		const errMsgs = input.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append(`입력항목을 ${len}글자 이상 입력하세요`);
-		input.closest('td').append(errMsg);
+		input.parentElement.append(errMsg);
 		return false;
 	}
+	// closest('td') 대신 parentElement 사용
 }
 function isTel(el, len) {
 	if (len === undefined) len = 11;
@@ -81,17 +74,17 @@ function isTel(el, len) {
 
 	const num = /^[0-9]+$/;
 	if (txt.length == len && num.test(txt)) {
-		const errMsgs = input.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) input.closest('td').querySelector('p').remove();
+		const errMsgs = input.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) input.parentElement.querySelector('p').remove();
 
 		return true;
 	} else {
-		const errMsgs = input.closest('td').querySelectorAll('p');
+		const errMsgs = input.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append(`휴대폰번호 하이픈(-)을 제외하고 입력해주세요 `);
-		input.closest('td').append(errMsg);
+		input.parentElement.append(errMsg);
 		return false;
 	}
 }
@@ -105,17 +98,17 @@ function isEmail1(el1, el2, len) {
 	let val = emailSel[emailSel_index].value;
 
 	if (txt.length >= len && val !== '') {
-		const errMsgs = emailId.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) emailId.closest('td').querySelector('p').remove();
+		const errMsgs = emailId.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) emailId.parentElement.querySelector('p').remove();
 
 		return true;
 	} else {
-		const errMsgs = emailId.closest('td').querySelectorAll('p');
+		const errMsgs = emailId.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append(`이메일을 ${len}글자 이상 입력하고 항목을 선택해주세요.`);
-		emailId.closest('td').append(errMsg);
+		emailId.parentElement.append(errMsg);
 		return false;
 	}
 }
@@ -125,16 +118,16 @@ function isEmail2(el) {
 	let txt = input.value;
 
 	if (/@/.test(txt)) {
-		const errMsgs = input.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) input.closest('td').querySelector('p').remove();
+		const errMsgs = input.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) input.parentElement.querySelector('p').remove();
 		return true;
 	} else {
-		const errMsgs = input.closest('td').querySelectorAll('p');
+		const errMsgs = input.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append('@를 포함한 전체 이메일 주소를 입력하세요');
-		input.closest('td').append(errMsg);
+		input.parentElement.append(errMsg);
 		return false;
 	}
 }
@@ -148,17 +141,17 @@ function isCheck(el) {
 	}
 
 	if (isCheck) {
-		const errMsgs = inputs[0].closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) inputs[0].closest('td').querySelector('p').remove();
+		const errMsgs = inputs[0].parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) inputs[0].parentElement.querySelector('p').remove();
 
 		return true;
 	} else {
-		const errMsgs = inputs[0].closest('td').querySelectorAll('p');
+		const errMsgs = inputs[0].parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append('필수 입력항목을 체크해주세요');
-		inputs[0].closest('td').append(errMsg);
+		inputs[0].parentElement.append(errMsg);
 
 		return false;
 	}
@@ -181,18 +174,18 @@ function isPwd(el1, el2, len) {
 		eng.test(pwd1_val) &&
 		spc.test(pwd1_val)
 	) {
-		const errMsgs = pwd1.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) pwd1.closest('td').querySelector('p').remove();
+		const errMsgs = pwd1.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) pwd1.parentElement.querySelector('p').remove();
 		return true;
 	} else {
-		const errMsgs = pwd1.closest('td').querySelectorAll('p');
+		const errMsgs = pwd1.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append(
 			`비밀번호는 ${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요`
 		);
-		pwd1.closest('td').append(errMsg);
+		pwd1.parentElement.append(errMsg);
 		return false;
 	}
 }
@@ -200,21 +193,21 @@ function isPwd(el1, el2, len) {
 function isSelect(el) {
 	let sel = form.querySelector(`[name=${el}]`);
 	let sel_index = sel.options.selectedIndex;
-
+	console.log(sel.parentElement);
 	let val = sel[sel_index].value;
 
 	if (val !== '') {
-		const errMsgs = sel.closest('td').querySelectorAll('p');
-		if (errMsgs.length > 0) sel.closest('td').querySelector('p').remove();
+		const errMsgs = sel.parentElement.querySelectorAll('p');
+		if (errMsgs.length > 0) sel.parentElement.querySelector('p').remove();
 
 		return true;
 	} else {
-		const errMsgs = sel.closest('td').querySelectorAll('p');
+		const errMsgs = sel.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
 		errMsg.append('항목을 선택해 주세요');
-		sel.closest('td').append(errMsg);
+		sel.parentElement.append(errMsg);
 
 		return false;
 	}
