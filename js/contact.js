@@ -1,6 +1,6 @@
 // map ---------------------------------------------------`-----
 var mapContainer = document.getElementById('map');
-
+console.log('map');
 const branch_btns = document.querySelectorAll('.branch li');
 
 let drag = true;
