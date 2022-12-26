@@ -183,20 +183,14 @@ body {
 				}
 			}
 			.wrap {
-				width: 100%;
-				margin: 0 auto;
 				#contact_form {
+					width: 100%;
+					margin: 0 auto;
 					fieldset {
-						table {
-							tbody {
-								tr {
-									th {
-										input[type='submit'] {
-											float: right;
-											margin: 15px 0px 30px 0px;
-										}
-									}
-								}
+						div {
+							input[type='submit'] {
+								float: right;
+								margin: 15px 0px 30px 0px;
 							}
 						}
 					}
@@ -236,7 +230,9 @@ body {
 				}
 			}
 			.wrap {
-				padding: 0px;
+				#contact_form {
+					padding: 10px 5vw 15px;
+				}
 			}
 			#map {
 				width: 100%;

@@ -134,6 +134,54 @@ btnViewClose.addEventListener('click', (e) => {
 	});
 });
 
+// ---------slider (메인)
+const slider = document.querySelector('.slider');
+const frame = slider.querySelector('ul');
+const boxs = frame.querySelectorAll('li');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const delay = convertSpeed(boxs[0]);
+console.log(delay);
+
+let enableClick = true;
+
+init();
+
+next.addEventListener('click', nextslide);
+
+prev.addEventListener('click', prevslide);
+
+function activationSlide() {
+	setTimeout(() => {
+		const boxs = frame.querySelectorAll('li');
+		for (const el of boxs) el.classList.remove('on');
+		boxs[2].classList.add('on');
+		enableClick = true;
+	}, delay);
+}
+function init() {
+	frame.prepend(frame.lastElementChild);
+	frame.prepend(frame.lastElementChild);
+	boxs[0].classList.add('on');
+}
+function nextslide(e) {
+	e.preventDefault();
+	if (!enableClick) return;
+	enableClick = false;
+	frame.append(frame.firstElementChild);
+	activationSlide();
+}
+function prevslide(e) {
+	e.preventDefault();
+	if (!enableClick) return;
+	enableClick = false;
+	frame.prepend(frame.lastElementChild);
+	activationSlide();
+}
+function convertSpeed(el) {
+	return parseFloat(getComputedStyle(el).transitionDuration) * 1000;
+}
+
 // tab menu 관련 js--------------------------
 const tab_menu = document.querySelector('.tab_menu');
 const tab_btns = tab_menu.querySelectorAll('ul li');
