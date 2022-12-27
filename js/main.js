@@ -13,7 +13,7 @@ for (let el of skipNavi) {
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
 let posArr = [];
-const base = -300;
+const base = -600;
 const scrollSpeed = 500;
 for (let el of scrollView) {
 	posArr.push(el.offsetTop);
@@ -187,9 +187,9 @@ function convertSpeed(el) {
 }
 
 // tab menu 관련 js--------------------------
-const tab_menu = document.querySelector('.tab_menu');
-const tab_btns = tab_menu.querySelectorAll('ul li');
-const tab_boxes = tab_menu.querySelectorAll('section article');
+const tab_container = document.querySelector('.tab_container');
+const tab_btns = tab_container.querySelectorAll('ul li');
+const tab_boxes = tab_container.querySelectorAll('section article');
 const tabSpeed = 300;
 
 tab_btns.forEach((_el, _ind) => {

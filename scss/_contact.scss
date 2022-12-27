@@ -124,6 +124,8 @@ body {
 			height: 500px;
 			margin-bottom: 20px;
 			float: left;
+			opacity: 0.8;
+			filter: grayscale(0.4);
 		}
 		&::after {
 			content: '';

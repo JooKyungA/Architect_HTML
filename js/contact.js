@@ -16,7 +16,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 var markerOptions = [
 	{
 		title: '본점',
-		latlng: new kakao.maps.LatLng(37.4912654, 126.7520173),
+		latlng: new kakao.maps.LatLng(37.4261458, 126.648286),
 		imgSrc: 'img/placeholder.png',
 		imgSize: new kakao.maps.Size(64, 64),
 		imgPos: { offset: new kakao.maps.Point(32, 64) },
@@ -74,12 +74,10 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-setDraggable(drag);
-setZoomable(zoom);
+map.setZoomable(false);
 
-function setZoomable(zoomable) {
-	map.setZoomable(zoomable);
-}
+setDraggable(drag);
+
 function setDraggable(draggable) {
 	map.setDraggable(draggable);
 }

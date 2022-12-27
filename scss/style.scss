@@ -300,8 +300,7 @@ body {
 				}
 				.wrap {
 					.slider,
-					.sliderBtn .prev,
-					.sliderBtn .next {
+					.sliderBtn {
 						margin-left: -100%;
 						opacity: 0;
 					}
@@ -462,7 +461,6 @@ body {
 						}
 					}
 
-					//좌우버튼 방향에 따른 스타일 변경
 					.prev {
 						&::before,
 						&::after {
@@ -470,14 +468,14 @@ body {
 							transform-origin: left center;
 						}
 						&::before {
-							top: 48.3%;
+							top: 46.4%;
 						}
 						&::after {
-							bottom: 48.3%;
+							bottom: 46.4%;
 						}
 						span {
-							left: 25px;
-							top: 48.3%;
+							left: 24.1px;
+							top: 46.4%;
 						}
 
 						&.on {
@@ -494,14 +492,14 @@ body {
 							transform-origin: right center;
 						}
 						&::before {
-							top: 48.9%;
+							top: 47.1%;
 						}
 						&::after {
-							bottom: 48.9%;
+							bottom: 47.1%;
 						}
 						span {
-							right: 25px;
-							top: 48.9%;
+							right: 25.5px;
+							top: 47.1%;
 						}
 
 						&.on {
@@ -511,30 +509,6 @@ body {
 						}
 					}
 				}
-				// .prev {
-				// 	width: 100px;
-				// 	height: 15px;
-				// 	position: absolute;
-				// 	left: 0;
-				// 	bottom: 96.5px;
-				// 	transition: 1s 0.4s;
-				// 	img {
-				// 		width: 100%;
-				// 		height: 100%;
-				// 	}
-				// }
-				// .next {
-				// 	width: 100px;
-				// 	height: 15px;
-				// 	position: absolute;
-				// 	left: 13%;
-				// 	bottom: 98px;
-				// 	transition: 1s 0.4s;
-				// 	img {
-				// 		width: 100px;
-				// 		height: 100%;
-				// 	}
-				// }
 			}
 		}
 	}
@@ -669,7 +643,7 @@ body {
 					color: rgb(203, 119, 10);
 				}
 			}
-			.tab_menu {
+			.tab_container {
 				width: 1180px;
 				float: right;
 				overflow: hidden;
@@ -818,7 +792,7 @@ body {
 					transform: translateX(0%);
 					opacity: 1;
 				}
-				.tab_menu {
+				.tab_container {
 					transform: translateY(0%);
 					opacity: 1;
 				}
@@ -1364,7 +1338,7 @@ body {
 		#about {
 			.inner {
 				width: 100%;
-				padding: 3vw 5vw 5vw;
+				padding: 5vw 5vw 5vw;
 				.txt {
 					display: flex;
 					flex-direction: column;
@@ -1383,7 +1357,7 @@ body {
 		#portfolio {
 			.inner {
 				width: 100%;
-				padding: 3vw 5vw 5vw;
+				padding: 5vw 5vw 5vw;
 			}
 		}
 
@@ -1392,7 +1366,7 @@ body {
 			.inner {
 				width: 100%;
 				height: 670px;
-				padding: 3vw 5vw 5vw;
+				padding: 5vw 5vw 5vw;
 				.wrap {
 					margin-top: 6vh;
 				}
@@ -1403,7 +1377,7 @@ body {
 		#blog {
 			.inner {
 				width: 100%;
-				padding: 30px 5vw 50px;
+				padding: 5vw 5vw 5vw;
 			}
 		}
 
@@ -1411,7 +1385,7 @@ body {
 		#footer {
 			.inner {
 				width: 100%;
-				padding: 3vw 5vw 5vh;
+				padding: 5vw 5vw 5vw;
 			}
 		}
 
@@ -1463,7 +1437,7 @@ body {
 		// portfolio 영역
 		#portfolio {
 			.inner {
-				.tab_menu {
+				.tab_container {
 					width: 100%;
 					&::after {
 						content: '';
@@ -1504,7 +1478,6 @@ body {
 			.inner {
 				width: 100%;
 				height: 100%;
-				padding: 3vw 5vw 5vw;
 				.wrap {
 					margin-top: 6vh;
 					width: 80%;
@@ -1651,11 +1624,12 @@ body {
 				> a {
 					margin-top: -40px;
 				}
-				.tab_menu {
+				.tab_container {
 					#tab {
 						width: 100%;
 						float: left;
 						ul {
+							justify-content: space-evenly;
 							li {
 								margin-left: 2vw;
 								a {
