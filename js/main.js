@@ -151,14 +151,6 @@ next.addEventListener('click', nextslide);
 
 prev.addEventListener('click', prevslide);
 
-function activationSlide() {
-	setTimeout(() => {
-		const boxs = frame.querySelectorAll('li');
-		for (const el of boxs) el.classList.remove('on');
-		boxs[2].classList.add('on');
-		enableClick = true;
-	}, delay);
-}
 function init() {
 	frame.prepend(frame.lastElementChild);
 	frame.prepend(frame.lastElementChild);
@@ -168,6 +160,8 @@ function nextslide(e) {
 	e.preventDefault();
 	if (!enableClick) return;
 	enableClick = false;
+	next.classList.add('on');
+	setTimeout(() => next.classList.remove('on'), 500);
 	frame.append(frame.firstElementChild);
 	activationSlide();
 }
@@ -175,8 +169,18 @@ function prevslide(e) {
 	e.preventDefault();
 	if (!enableClick) return;
 	enableClick = false;
+	prev.classList.add('on');
+	setTimeout(() => prev.classList.remove('on'), 500);
 	frame.prepend(frame.lastElementChild);
 	activationSlide();
+}
+function activationSlide() {
+	setTimeout(() => {
+		const boxs = frame.querySelectorAll('li');
+		for (const el of boxs) el.classList.remove('on');
+		boxs[2].classList.add('on');
+		enableClick = true;
+	}, delay);
 }
 function convertSpeed(el) {
 	return parseFloat(getComputedStyle(el).transitionDuration) * 1000;

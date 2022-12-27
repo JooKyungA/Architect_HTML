@@ -300,8 +300,8 @@ body {
 				}
 				.wrap {
 					.slider,
-					.prev,
-					.next {
+					.sliderBtn .prev,
+					.sliderBtn .next {
 						margin-left: -100%;
 						opacity: 0;
 					}
@@ -419,30 +419,122 @@ body {
 						}
 					}
 				}
-				.prev {
-					width: 100px;
-					height: 15px;
+				.sliderBtn {
 					position: absolute;
+					top: calc(290px + 300px + 2vh);
 					left: 0;
-					bottom: 96.5px;
 					transition: 1s 0.4s;
-					img {
-						width: 100%;
-						height: 100%;
+					.prev,
+					.next {
+						display: inline-block;
+						width: 70px;
+						height: 15px;
+						cursor: pointer;
+						margin-right: 100px;
+						position: relative;
+
+						//화살표 공통 스타일
+						&::before,
+						&::after {
+							content: '';
+							display: block;
+							width: 12px;
+							height: 2px;
+							background: #fff;
+							position: absolute;
+						}
+						&::before {
+							transform: rotate(45deg) translateX(0px);
+						}
+						&::after {
+							transform: rotate(-45deg) translateX(0px);
+						}
+						span {
+							width: 70px;
+							height: 2px;
+							background: #fff;
+							position: absolute;
+							opacity: 1;
+						}
+
+						&.on {
+							animation: wrap 0.3s 1;
+						}
+					}
+
+					//좌우버튼 방향에 따른 스타일 변경
+					.prev {
+						&::before,
+						&::after {
+							left: 25px;
+							transform-origin: left center;
+						}
+						&::before {
+							top: 48.3%;
+						}
+						&::after {
+							bottom: 48.3%;
+						}
+						span {
+							left: 25px;
+							top: 48.3%;
+						}
+
+						&.on {
+							span {
+								animation: prevArrow 0.5s 1;
+							}
+						}
+					}
+
+					.next {
+						&::before,
+						&::after {
+							right: 25px;
+							transform-origin: right center;
+						}
+						&::before {
+							top: 48.9%;
+						}
+						&::after {
+							bottom: 48.9%;
+						}
+						span {
+							right: 25px;
+							top: 48.9%;
+						}
+
+						&.on {
+							span {
+								animation: nextArrow 0.5s 1;
+							}
+						}
 					}
 				}
-				.next {
-					width: 100px;
-					height: 15px;
-					position: absolute;
-					left: 13%;
-					bottom: 98px;
-					transition: 1s 0.4s;
-					img {
-						width: 100px;
-						height: 100%;
-					}
-				}
+				// .prev {
+				// 	width: 100px;
+				// 	height: 15px;
+				// 	position: absolute;
+				// 	left: 0;
+				// 	bottom: 96.5px;
+				// 	transition: 1s 0.4s;
+				// 	img {
+				// 		width: 100%;
+				// 		height: 100%;
+				// 	}
+				// }
+				// .next {
+				// 	width: 100px;
+				// 	height: 15px;
+				// 	position: absolute;
+				// 	left: 13%;
+				// 	bottom: 98px;
+				// 	transition: 1s 0.4s;
+				// 	img {
+				// 		width: 100px;
+				// 		height: 100%;
+				// 	}
+				// }
 			}
 		}
 	}
@@ -1257,14 +1349,12 @@ body {
 
 				.wrap {
 					.slider {
-						margin-top: 5.5vh;
-						margin-left: 8vw;
+						top: 40vh;
+						left: 8vw;
 					}
-					.prev {
-						margin-left: 8vw;
-					}
-					.next {
-						margin-left: 10vw;
+					.sliderBtn {
+						top: calc(40vh + 300px + 2vh);
+						left: 8vw;
 					}
 				}
 			}
@@ -1691,5 +1781,49 @@ body {
 				}
 			}
 		}
+	}
+}
+@keyframes prevArrow {
+	0% {
+		left: 25px;
+		width: 20px;
+		opacity: 1;
+	}
+	70% {
+		left: -30px;
+		width: 50px;
+		opacity: 0;
+	}
+	71% {
+		left: 100px;
+		width: 120px;
+		opacity: 0;
+	}
+	100% {
+		left: 25px;
+		width: 20px;
+		opacity: 1;
+	}
+}
+@keyframes nextArrow {
+	0% {
+		right: 25px;
+		width: 20px;
+		opacity: 1;
+	}
+	70% {
+		right: -30px;
+		width: 50px;
+		opacity: 0;
+	}
+	71% {
+		right: 100px;
+		width: 120px;
+		opacity: 0;
+	}
+	100% {
+		right: 25px;
+		width: 20px;
+		opacity: 1;
 	}
 }

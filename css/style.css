@@ -1903,8 +1903,8 @@ body #visual.off .inner .pic {
   opacity: 0;
 }
 body #visual.off .inner .wrap .slider,
-body #visual.off .inner .wrap .prev,
-body #visual.off .inner .wrap .next {
+body #visual.off .inner .wrap .sliderBtn .prev,
+body #visual.off .inner .wrap .sliderBtn .next {
   margin-left: -100%;
   opacity: 0;
 }
@@ -2019,29 +2019,84 @@ body #visual .inner .wrap .slider ul li:nth-of-type(5) {
   transform: translateX(110%) rotateY(-90deg) scale(0.6);
   opacity: 0;
 }
-body #visual .inner .wrap .prev {
-  width: 100px;
-  height: 15px;
+body #visual .inner .wrap .sliderBtn {
   position: absolute;
+  top: calc(590px + 2vh);
   left: 0;
-  bottom: 96.5px;
   transition: 1s 0.4s;
 }
-body #visual .inner .wrap .prev img {
-  width: 100%;
-  height: 100%;
-}
-body #visual .inner .wrap .next {
-  width: 100px;
+body #visual .inner .wrap .sliderBtn .prev,
+body #visual .inner .wrap .sliderBtn .next {
+  display: inline-block;
+  width: 70px;
   height: 15px;
-  position: absolute;
-  left: 13%;
-  bottom: 98px;
-  transition: 1s 0.4s;
+  cursor: pointer;
+  margin-right: 100px;
+  position: relative;
 }
-body #visual .inner .wrap .next img {
-  width: 100px;
-  height: 100%;
+body #visual .inner .wrap .sliderBtn .prev::before, body #visual .inner .wrap .sliderBtn .prev::after,
+body #visual .inner .wrap .sliderBtn .next::before,
+body #visual .inner .wrap .sliderBtn .next::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+}
+body #visual .inner .wrap .sliderBtn .prev::before,
+body #visual .inner .wrap .sliderBtn .next::before {
+  transform: rotate(45deg) translateX(0px);
+}
+body #visual .inner .wrap .sliderBtn .prev::after,
+body #visual .inner .wrap .sliderBtn .next::after {
+  transform: rotate(-45deg) translateX(0px);
+}
+body #visual .inner .wrap .sliderBtn .prev span,
+body #visual .inner .wrap .sliderBtn .next span {
+  width: 70px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  opacity: 1;
+}
+body #visual .inner .wrap .sliderBtn .prev.on,
+body #visual .inner .wrap .sliderBtn .next.on {
+  animation: wrap 0.3s 1;
+}
+body #visual .inner .wrap .sliderBtn .prev::before, body #visual .inner .wrap .sliderBtn .prev::after {
+  left: 25px;
+  transform-origin: left center;
+}
+body #visual .inner .wrap .sliderBtn .prev::before {
+  top: 48.3%;
+}
+body #visual .inner .wrap .sliderBtn .prev::after {
+  bottom: 48.3%;
+}
+body #visual .inner .wrap .sliderBtn .prev span {
+  left: 25px;
+  top: 48.3%;
+}
+body #visual .inner .wrap .sliderBtn .prev.on span {
+  animation: prevArrow 0.5s 1;
+}
+body #visual .inner .wrap .sliderBtn .next::before, body #visual .inner .wrap .sliderBtn .next::after {
+  right: 25px;
+  transform-origin: right center;
+}
+body #visual .inner .wrap .sliderBtn .next::before {
+  top: 48.9%;
+}
+body #visual .inner .wrap .sliderBtn .next::after {
+  bottom: 48.9%;
+}
+body #visual .inner .wrap .sliderBtn .next span {
+  right: 25px;
+  top: 48.9%;
+}
+body #visual .inner .wrap .sliderBtn .next.on span {
+  animation: nextArrow 0.5s 1;
 }
 body #about .inner {
   width: 1180px;
@@ -2780,14 +2835,12 @@ body #aside .inner .content .btnViewClose {
     z-index: -1;
   }
   body #visual .inner .wrap .slider {
-    margin-top: 5.5vh;
-    margin-left: 8vw;
+    top: 40vh;
+    left: 8vw;
   }
-  body #visual .inner .wrap .prev {
-    margin-left: 8vw;
-  }
-  body #visual .inner .wrap .next {
-    margin-left: 10vw;
+  body #visual .inner .wrap .sliderBtn {
+    top: calc(40vh + 300px + 2vh);
+    left: 8vw;
   }
   body #about .inner {
     width: 100%;
@@ -3078,6 +3131,50 @@ body #aside .inner .content .btnViewClose {
   body #aside .inner .content .btnViewClose {
     margin-top: -22px;
     margin-right: -20px;
+  }
+}
+@keyframes prevArrow {
+  0% {
+    left: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+  70% {
+    left: -30px;
+    width: 50px;
+    opacity: 0;
+  }
+  71% {
+    left: 100px;
+    width: 120px;
+    opacity: 0;
+  }
+  100% {
+    left: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+}
+@keyframes nextArrow {
+  0% {
+    right: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+  70% {
+    right: -30px;
+    width: 50px;
+    opacity: 0;
+  }
+  71% {
+    right: 100px;
+    width: 120px;
+    opacity: 0;
+  }
+  100% {
+    right: 25px;
+    width: 20px;
+    opacity: 1;
   }
 }
 
