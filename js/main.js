@@ -1,4 +1,4 @@
-// skipNavi 관련---------------
+// skipNavi ------------------------------
 const skipNavi = document.querySelectorAll('#skipNavi li a');
 
 for (let el of skipNavi) {
@@ -9,7 +9,7 @@ for (let el of skipNavi) {
 		el.classList.remove('on');
 	});
 }
-// scroll 관련----------------------------------
+// scroll ----------------------------------
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
 let posArr = [];
@@ -46,7 +46,7 @@ btnScroll.forEach((el, index) => {
 	});
 });
 
-// view content 관련---------------------
+// #visual .btnViewOpen -------------------
 const btnViewOpen = document.querySelector('.btnViewOpen');
 const visual = document.querySelector('#visual');
 const aside = document.querySelector('#aside');
@@ -134,14 +134,13 @@ btnViewClose.addEventListener('click', (e) => {
 	});
 });
 
-// ---------slider (메인)
+// #visual .slider-------------------------
 const slider = document.querySelector('.slider');
 const frame = slider.querySelector('ul');
 const boxs = frame.querySelectorAll('li');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const delay = convertSpeed(boxs[0]);
-console.log(delay);
 
 let enableClick = true;
 
@@ -186,7 +185,7 @@ function convertSpeed(el) {
 	return parseFloat(getComputedStyle(el).transitionDuration) * 1000;
 }
 
-// tab menu 관련 js--------------------------
+// #portfolio #tab -------------------------
 const tab_container = document.querySelector('.tab_container');
 const tab_btns = tab_container.querySelectorAll('ul li');
 const tab_boxes = tab_container.querySelectorAll('section article');
@@ -218,3 +217,16 @@ function activation(list, index) {
 		}, tabSpeed);
 	}
 }
+
+// #awards .circle -----------------------
+const circle = document.querySelector('.circle p');
+const len = circle.innerText.split('').length;
+console.log(circle);
+
+circle.innerHTML = circle.innerText
+	.split('')
+	.map(
+		(el, idx) =>
+			`<span style='transform:rotate(${(idx * 360) / len}deg) translateY(-150px)'>${el}</span>`
+	)
+	.join('');

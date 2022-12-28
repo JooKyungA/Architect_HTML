@@ -803,6 +803,7 @@ body {
 			margin: 0 auto;
 			padding: 30px 0px 30px;
 			border-top: 2px solid rgb(110, 109, 109);
+			position: relative;
 			&::after {
 				content: '';
 				display: block;
@@ -924,6 +925,38 @@ body {
 					}
 				}
 			}
+			.circle {
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				top: 20vh;
+				left: 3vw;
+				transform: translateY(50%);
+				opacity: 0;
+				transition: 1s 0.5s;
+				p {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					animation: circle 40s linear infinite;
+					animation-play-state: running;
+					span {
+						display: inline-block;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						font-size: 20px;
+						color: rgb(110, 109, 109);
+						margin-top: -10px;
+						margin-left: -10px;
+					}
+				}
+				&:hover {
+					p {
+						animation-play-state: paused;
+					}
+				}
+			}
 		}
 		&.on {
 			.inner {
@@ -933,6 +966,10 @@ body {
 				}
 				.wrap {
 					transform: rotateY(0deg);
+					opacity: 1;
+				}
+				.circle {
+					transform: translateY(0%);
 					opacity: 1;
 				}
 			}
@@ -1780,5 +1817,13 @@ body {
 		right: 25px;
 		width: 20px;
 		opacity: 1;
+	}
+}
+@keyframes circle {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
