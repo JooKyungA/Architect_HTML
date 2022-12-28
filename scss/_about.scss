@@ -3,7 +3,8 @@ body {
 		.inner {
 			.content {
 				width: 100%;
-				margin-bottom: 100px;
+				height: 700px;
+				padding-right: 20px;
 				position: relative;
 				&::after {
 					content: '';
@@ -32,7 +33,6 @@ body {
 					width: 870px;
 					height: 400px;
 					float: right;
-					margin-right: 20px;
 					margin-bottom: 30px;
 					position: relative;
 					.slider {
@@ -91,11 +91,24 @@ body {
 						}
 					}
 				}
-				p {
+				.txt {
 					width: 870px;
 					float: right;
-					font-size: 18px;
-					color: #9a9a9a;
+					position: relative;
+					p {
+						width: 100%;
+						font-size: 19px;
+						line-height: 1.3;
+						color: #9a9a9a;
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						transition: 0.5s;
+						&.on {
+							opacity: 1;
+						}
+					}
 				}
 			}
 			.team {
@@ -198,11 +211,10 @@ body {
 				.content {
 					.wrap {
 						width: 100%;
-						margin-right: 0px;
 						display: flex;
 						justify-content: center;
 					}
-					p {
+					.txt {
 						width: 100%;
 					}
 				}
@@ -221,7 +233,7 @@ body {
 					.wrap {
 						article {
 							width: calc(100% / 2);
-							padding: 10px 25px;
+							padding: 15px 25px;
 						}
 					}
 				}
@@ -235,10 +247,20 @@ body {
 	body {
 		.about {
 			.inner {
+				.content {
+					height: 820px;
+					padding-right: 0px;
+					.txt {
+						p {
+							font-size: 18px;
+						}
+					}
+				}
 				.team {
 					.wrap {
 						article {
 							width: 100%;
+							padding: 10px 0px;
 						}
 					}
 				}

@@ -102,6 +102,7 @@ body {
 			> h1 {
 				width: 12%;
 				margin-right: 13%;
+				font-weight: 400;
 				a {
 					display: block;
 					width: 100%;
@@ -362,150 +363,144 @@ body {
 					}
 				}
 			}
-			.wrap {
-				.slider {
-					width: 250px;
-					height: 300px;
+
+			.slider {
+				width: 250px;
+				height: 300px;
+				position: absolute;
+				top: 290px;
+				left: 0;
+				overflow: hidden;
+				transition: 1s 0.4s;
+				ul {
+					width: 100%;
+					height: 100%;
 					position: absolute;
-					top: 290px;
+					top: 0;
 					left: 0;
-					overflow: hidden;
-					transition: 1s 0.4s;
-					ul {
+					perspective: 900px;
+					li {
 						width: 100%;
 						height: 100%;
 						position: absolute;
 						top: 0;
 						left: 0;
-						perspective: 900px;
-						li {
+						transition: 0.5s;
+						img {
 							width: 100%;
 							height: 100%;
-							position: absolute;
-							top: 0;
-							left: 0;
+							object-fit: cover;
+							filter: saturate(70%);
 							transition: 0.5s;
-							img {
-								width: 100%;
-								height: 100%;
-								object-fit: cover;
-								filter: saturate(70%);
-								transition: 0.5s;
-								&:hover {
-									transform: scale(1.2);
-								}
+							&:hover {
+								transform: scale(1.2);
 							}
-							&:nth-of-type(1) {
-								transform: translateX(-110%) rotateY(90deg) scale(0.6);
-								opacity: 0;
-							}
-							&:nth-of-type(2) {
-								transform: translateX(-90%) rotateY(60deg) scale(0.6);
-								opacity: 0;
-							}
-							&:nth-of-type(3) {
-								transform: translateX(0%) rotateY(0deg) scale(1);
-								opacity: 1;
-							}
-							&:nth-of-type(4) {
-								transform: translateX(90%) rotateY(-60deg) scale(0.6);
-								opacity: 0;
-							}
-							&:nth-of-type(5) {
-								transform: translateX(110%) rotateY(-90deg) scale(0.6);
-								opacity: 0;
-							}
+						}
+						&:nth-of-type(1) {
+							transform: translateX(-110%) rotateY(90deg) scale(0.6);
+							opacity: 0;
+						}
+						&:nth-of-type(2) {
+							transform: translateX(-90%) rotateY(60deg) scale(0.6);
+							opacity: 0;
+						}
+						&:nth-of-type(3) {
+							transform: translateX(0%) rotateY(0deg) scale(1);
+							opacity: 1;
+						}
+						&:nth-of-type(4) {
+							transform: translateX(90%) rotateY(-60deg) scale(0.6);
+							opacity: 0;
+						}
+						&:nth-of-type(5) {
+							transform: translateX(110%) rotateY(-90deg) scale(0.6);
+							opacity: 0;
 						}
 					}
 				}
-				.sliderBtn {
-					position: absolute;
-					top: calc(290px + 300px + 2vh);
-					left: 0;
-					transition: 1s 0.4s;
-					.prev,
-					.next {
-						display: inline-block;
+			}
+			.sliderBtn {
+				position: absolute;
+				top: calc(290px + 300px + 2vh);
+				left: 0;
+				transition: 1s 0.4s;
+				.prev,
+				.next {
+					display: inline-block;
+					width: 70px;
+					height: 15px;
+					cursor: pointer;
+					margin-right: 100px;
+					position: relative;
+					&::before,
+					&::after {
+						content: '';
+						display: block;
+						width: 12px;
+						height: 2px;
+						background: #fff;
+						position: absolute;
+					}
+					&::before {
+						transform: rotate(45deg) translateX(0px);
+					}
+					&::after {
+						transform: rotate(-45deg) translateX(0px);
+					}
+					span {
 						width: 70px;
-						height: 15px;
-						cursor: pointer;
-						margin-right: 100px;
-						position: relative;
+						height: 2px;
+						background: #fff;
+						position: absolute;
+						opacity: 1;
+					}
+					&.on {
+						animation: wrap 0.3s 1;
+					}
+				}
 
-						//화살표 공통 스타일
-						&::before,
-						&::after {
-							content: '';
-							display: block;
-							width: 12px;
-							height: 2px;
-							background: #fff;
-							position: absolute;
-						}
-						&::before {
-							transform: rotate(45deg) translateX(0px);
-						}
-						&::after {
-							transform: rotate(-45deg) translateX(0px);
-						}
+				.prev {
+					&::before,
+					&::after {
+						left: 25px;
+						transform-origin: left center;
+					}
+					&::before {
+						top: 46.4%;
+					}
+					&::after {
+						bottom: 46.4%;
+					}
+					span {
+						left: 24.1px;
+						top: 46.4%;
+					}
+					&.on {
 						span {
-							width: 70px;
-							height: 2px;
-							background: #fff;
-							position: absolute;
-							opacity: 1;
-						}
-
-						&.on {
-							animation: wrap 0.3s 1;
+							animation: prevArrow 0.5s 1;
 						}
 					}
+				}
 
-					.prev {
-						&::before,
-						&::after {
-							left: 25px;
-							transform-origin: left center;
-						}
-						&::before {
-							top: 46.4%;
-						}
-						&::after {
-							bottom: 46.4%;
-						}
-						span {
-							left: 24.1px;
-							top: 46.4%;
-						}
-
-						&.on {
-							span {
-								animation: prevArrow 0.5s 1;
-							}
-						}
+				.next {
+					&::before,
+					&::after {
+						right: 25px;
+						transform-origin: right center;
 					}
-
-					.next {
-						&::before,
-						&::after {
-							right: 25px;
-							transform-origin: right center;
-						}
-						&::before {
-							top: 47.1%;
-						}
-						&::after {
-							bottom: 47.1%;
-						}
+					&::before {
+						top: 47.1%;
+					}
+					&::after {
+						bottom: 47.1%;
+					}
+					span {
+						right: 25.5px;
+						top: 47.1%;
+					}
+					&.on {
 						span {
-							right: 25.5px;
-							top: 47.1%;
-						}
-
-						&.on {
-							span {
-								animation: nextArrow 0.5s 1;
-							}
+							animation: nextArrow 0.5s 1;
 						}
 					}
 				}
@@ -519,7 +514,7 @@ body {
 			width: 1180px;
 			margin: 0 auto;
 			padding: 30px 0px 70px;
-			border-top: 2px solid #9a9a9a;
+			border-top: 2px solid rgb(110, 109, 109);
 			&::after {
 				content: '';
 				display: block;
@@ -608,7 +603,7 @@ body {
 			width: 1180px;
 			margin: 0 auto;
 			padding: 30px 0px 70px;
-			border-top: 2px solid #aaa;
+			border-top: 2px solid rgb(110, 109, 109);
 			overflow: hidden;
 			position: relative;
 
@@ -807,7 +802,7 @@ body {
 			height: 650px;
 			margin: 0 auto;
 			padding: 30px 0px 30px;
-			border-top: 2px solid #aaa;
+			border-top: 2px solid rgb(110, 109, 109);
 			&::after {
 				content: '';
 				display: block;
@@ -976,26 +971,21 @@ body {
 					width: 280px;
 					float: left;
 					margin-left: 25px;
-					border-top: 1px solid rgb(110, 109, 109);
+					border-top: 1px solid #333;
+					transform: translateY(30%);
+					opacity: 0;
 					&:nth-of-type(1) {
-						transform: translateY(30%);
-						opacity: 0;
 						transition: 0.5s 0.5s;
 					}
 					&:nth-of-type(2) {
-						transform: translateY(30%);
-						opacity: 0;
 						transition: 0.5s 0.8s;
 					}
 					&:nth-of-type(3) {
-						transform: translateY(30%);
-						opacity: 0;
 						transition: 0.5s 1.1s;
 					}
 					h2 {
 						padding-top: 15px;
 						margin-bottom: 25px;
-
 						a {
 							font-size: 19px;
 							color: rgb(203, 119, 10);
@@ -1039,18 +1029,8 @@ body {
 				}
 				.wrap {
 					article {
-						&:nth-of-type(1) {
-							transform: translateY(0%);
-							opacity: 1;
-						}
-						&:nth-of-type(2) {
-							transform: translateY(0%);
-							opacity: 1;
-						}
-						&:nth-of-type(3) {
-							transform: translateY(0%);
-							opacity: 1;
-						}
+						transform: translateY(0%);
+						opacity: 1;
 					}
 				}
 			}
@@ -1064,7 +1044,7 @@ body {
 			height: 200px;
 			margin: 0 auto;
 			padding: 30px 0px 10px;
-			border-top: 2px solid #aaa;
+			border-top: 2px solid rgb(110, 109, 109);
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -1091,6 +1071,7 @@ body {
 					width: 35%;
 					h1 {
 						font-size: 15px;
+						font-weight: 400;
 						margin-bottom: 10px;
 						a {
 							transition: 0.5s;
@@ -1183,6 +1164,7 @@ body {
 				font-size: 13px;
 				color: rgb(110, 109, 109);
 				text-align: center;
+				letter-spacing: 1.1px;
 				padding: 15px 0px 30px;
 			}
 		}
@@ -1321,15 +1303,13 @@ body {
 					z-index: -1;
 				}
 
-				.wrap {
-					.slider {
-						top: 40vh;
-						left: 8vw;
-					}
-					.sliderBtn {
-						top: calc(40vh + 300px + 2vh);
-						left: 8vw;
-					}
+				.slider {
+					top: 40vh;
+					left: 8vw;
+				}
+				.sliderBtn {
+					top: calc(40vh + 300px + 2vh);
+					left: 8vw;
 				}
 			}
 		}
@@ -1417,7 +1397,8 @@ body {
 				.pic {
 					height: 600px;
 				}
-				.wrap {
+				.slider,
+				.sliderBtn {
 					display: none;
 				}
 			}

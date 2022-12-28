@@ -6,6 +6,9 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 let len = lis.length;
 
+const txts = document.querySelectorAll('.txt p');
+let active = 0;
+
 let enableClick = true;
 let sliderSpeed = 500;
 
@@ -26,6 +29,11 @@ prev.addEventListener('click', (e) => {
 	}
 });
 
+function txtActive(arr, index) {
+	for (let el of arr) el.classList.remove('on');
+	arr[index].classList.add('on');
+}
+
 function init() {
 	ul.style.left = '-100%';
 	ul.prepend(ul.lastElementChild);
@@ -45,6 +53,12 @@ function nextslide() {
 			enableClick = true;
 		},
 	});
+	if (active == len - 1) {
+		active = 0;
+	} else {
+		active++;
+	}
+	txtActive(txts, active);
 }
 function prevslide() {
 	new Anim(ul, {
@@ -57,4 +71,10 @@ function prevslide() {
 			enableClick = true;
 		},
 	});
+	if (active == 0) {
+		active = len - 1;
+	} else {
+		active--;
+	}
+	txtActive(txts, active);
 }

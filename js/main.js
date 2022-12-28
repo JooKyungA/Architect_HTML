@@ -13,7 +13,7 @@ for (let el of skipNavi) {
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
 let posArr = [];
-const base = -600;
+const base = -650;
 const scrollSpeed = 500;
 for (let el of scrollView) {
 	posArr.push(el.offsetTop);
