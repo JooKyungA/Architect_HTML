@@ -436,7 +436,7 @@ body #footer_sub .inner > p {
 }
 body .about .inner .content {
   width: 100%;
-  height: 700px;
+  height: 750px;
   padding-right: 20px;
   position: relative;
 }
@@ -531,7 +531,6 @@ body .about .inner .content .txt {
   position: relative;
 }
 body .about .inner .content .txt p {
-  width: 100%;
   font-size: 19px;
   line-height: 1.3;
   color: #9a9a9a;
@@ -540,6 +539,12 @@ body .about .inner .content .txt p {
   left: 0;
   opacity: 0;
   transition: 0.5s;
+}
+body .about .inner .content .txt p span {
+  display: block;
+  font-size: 26px;
+  color: #d2d2d2;
+  margin-bottom: 10px;
 }
 body .about .inner .content .txt p.on {
   opacity: 1;
@@ -645,7 +650,7 @@ body .about .inner .team .wrap article > p {
 }
 @media screen and (max-width: 539px) {
   body .about .inner .content {
-    height: 820px;
+    height: 830px;
     padding-right: 0px;
   }
   body .about .inner .content .txt p {

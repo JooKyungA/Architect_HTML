@@ -6,7 +6,11 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 let len = lis.length;
 
-const txts = document.querySelectorAll('.txt p');
+const txt_p = document.querySelectorAll('.txt p');
+const span = document.querySelector('.txt p span');
+
+span.innerText = '01';
+
 let active = 0;
 
 let enableClick = true;
@@ -28,11 +32,6 @@ prev.addEventListener('click', (e) => {
 		enableClick = false;
 	}
 });
-
-function txtActive(arr, index) {
-	for (let el of arr) el.classList.remove('on');
-	arr[index].classList.add('on');
-}
 
 function init() {
 	ul.style.left = '-100%';
@@ -58,7 +57,7 @@ function nextslide() {
 	} else {
 		active++;
 	}
-	txtActive(txts, active);
+	txtActive(txt_p, active);
 }
 function prevslide() {
 	new Anim(ul, {
@@ -76,5 +75,12 @@ function prevslide() {
 	} else {
 		active--;
 	}
-	txtActive(txts, active);
+	txtActive(txt_p, active);
+}
+
+function txtActive(arr, index) {
+	for (let el of arr) el.classList.remove('on');
+	arr[index].classList.add('on');
+
+	arr[index].querySelector('span').innerText = `0${index + 1}`;
 }
