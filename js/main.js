@@ -221,7 +221,6 @@ function activation(list, index) {
 // #awards .circle -----------------------
 const circle = document.querySelector('.circle p');
 const len = circle.innerText.split('').length;
-console.log(circle);
 
 circle.innerHTML = circle.innerText
 	.split('')
