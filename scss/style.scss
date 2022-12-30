@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&family=Yeseva+One&display=swap');
 
 $tablet: 1179px;
 $middle: 935px;
@@ -1356,11 +1356,13 @@ body {
 				.btnViewOpen {
 					left: 12vw;
 					top: 300px;
+					z-index: 2;
 				}
 				.txt {
 					width: 35vw;
 					top: -110px;
 					left: 12vw;
+					z-index: 2;
 					h1 {
 						margin-bottom: 0px;
 					}
@@ -1368,7 +1370,6 @@ body {
 				.pic {
 					top: 40px;
 					right: 5vw;
-					z-index: -1;
 				}
 
 				.slider {

@@ -13,11 +13,12 @@ for (let el of skipNavi) {
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
 let posArr = [];
-const base = -650;
+const base = -window.innerHeight / 2;
 const scrollSpeed = 500;
-for (let el of scrollView) {
-	posArr.push(el.offsetTop);
-}
+
+getPos();
+
+window.addEventListener('resize', getPos);
 
 window.addEventListener('scroll', () => {
 	let scroll = window.scrollY || window.pageYOffset;
@@ -45,6 +46,12 @@ btnScroll.forEach((el, index) => {
 		el.classList.add('on');
 	});
 });
+function getPos() {
+	posArr = [];
+	for (let el of scrollView) {
+		posArr.push(el.offsetTop);
+	}
+}
 
 // #visual .btnViewOpen -------------------
 const btnViewOpen = document.querySelector('.btnViewOpen');
