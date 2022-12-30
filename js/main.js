@@ -12,45 +12,56 @@ for (let el of skipNavi) {
 // scroll ----------------------------------
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.scroll li');
-let posArr = [];
-const base = -window.innerHeight / 2;
+const btnScroll_arr = Array.from(btnScroll);
+const base = -window.innerHeight / 3;
 const scrollSpeed = 500;
+let posArr = [];
 
 getPos();
 
-window.addEventListener('resize', getPos);
+window.addEventListener('resize', modifyPos);
 
-window.addEventListener('scroll', () => {
-	let scroll = window.scrollY || window.pageYOffset;
+window.addEventListener('scroll', scrollActivation);
 
-	scrollView.forEach((el, index) => {
-		if (scroll >= posArr[index] + base) {
-			btnScroll.forEach((el, index) => {
-				el.classList.remove('on');
-			});
-			btnScroll[index].classList.add('on');
-			scrollView[index].classList.add('on');
-		}
+btnScroll.forEach((btn, idx) => {
+	btn.addEventListener('click', (e) => {
+		const scroll = window.scrollY;
+		const isOn = e.currentTarget.classList.contains('on');
+		if (isOn && scroll === posArr[idx]) return;
+		moveScroll(idx);
 	});
 });
-btnScroll.forEach((el, index) => {
-	el.addEventListener('click', () => {
-		new Anim(window, {
-			prop: 'scroll',
-			value: posArr[index],
-			duration: scrollSpeed,
-		});
-		for (let i of btnScroll) {
-			i.classList.remove('on');
-		}
-		el.classList.add('on');
-	});
-});
+
 function getPos() {
 	posArr = [];
-	for (let el of scrollView) {
-		posArr.push(el.offsetTop);
-	}
+	for (const el of scrollView) posArr.push(el.offsetTop);
+}
+
+function modifyPos() {
+	getPos();
+	const scrollActive = document.querySelector('li.on');
+	const active_index = btnScroll_arr.indexOf(scrollActive);
+	window.scroll(0, posArr[active_index]);
+}
+
+function scrollActivation() {
+	const scroll = window.scrollY || window.pageYOffset;
+
+	scrollView.forEach((_, idx) => {
+		if (scroll >= posArr[idx] + base) {
+			for (const el of btnScroll) el.classList.remove('on');
+			btnScroll[idx].classList.add('on');
+			scrollView[idx].classList.add('on');
+		}
+	});
+}
+
+function moveScroll(index) {
+	new Anim(window, {
+		prop: 'scroll',
+		value: posArr[index],
+		duration: scrollSpeed,
+	});
 }
 
 // #visual .btnViewOpen -------------------
