@@ -50,7 +50,7 @@ body {
 			}
 		}
 	}
-	.scroll {
+	.btnScroll {
 		position: fixed;
 		right: 2vw;
 		top: 50%;
@@ -107,6 +107,10 @@ body {
 					display: block;
 					width: 100%;
 					font-size: 16px;
+					transition: 0.5s;
+					&:hover {
+						color: rgb(203, 119, 10);
+					}
 				}
 			}
 			.menuWeb {

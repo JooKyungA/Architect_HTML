@@ -11,7 +11,7 @@ for (let el of skipNavi) {
 }
 // scroll ----------------------------------
 const scrollView = document.querySelectorAll('.scrollView');
-const btnScroll = document.querySelectorAll('.scroll li');
+const btnScroll = document.querySelectorAll('.btnScroll li');
 const btnScroll_arr = Array.from(btnScroll);
 const base = -window.innerHeight / 3;
 const scrollSpeed = 500;
@@ -35,6 +35,7 @@ btnScroll.forEach((btn, idx) => {
 function getPos() {
 	posArr = [];
 	for (const el of scrollView) posArr.push(el.offsetTop);
+	console.log(posArr);
 }
 
 function modifyPos() {

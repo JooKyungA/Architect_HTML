@@ -18,9 +18,9 @@ fetch(url)
 			if (title.length > 25) {
 				title = title.substr(0, 25) + '...';
 			}
-			let con = el.snippet.description;
-			if (con.length > 90) {
-				con = con.substr(0, 90) + '...';
+			let desc = el.snippet.description;
+			if (desc.length > 90) {
+				desc = desc.substr(0, 90) + '...';
 			}
 			let date = el.snippet.publishedAt;
 			date = date.split('T')[0];
@@ -32,7 +32,7 @@ fetch(url)
           </a>
           <div class="con">
             <h2>${title}</h2>
-            <p>${con}</p>
+            <p>${desc}</p>
             <span>${date}</span>
           </div>
         </article>
