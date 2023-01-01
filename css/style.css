@@ -2172,10 +2172,17 @@ body #about .inner > a {
   color: rgb(203, 119, 10);
   transform: translateX(100%);
   opacity: 0;
-  transition: 1s 1.5s;
+  transition: transform 1s 1.2s, opacity 1s 1.2s, color 0.5s;
 }
 body #about .inner > a i {
   color: rgb(203, 119, 10);
+  transition: 0.5s;
+}
+body #about .inner > a:hover {
+  color: rgb(249, 173, 110);
+}
+body #about .inner > a:hover i {
+  color: rgb(249, 173, 110);
 }
 body #about .inner .txt {
   width: 100%;
@@ -2279,10 +2286,17 @@ body #portfolio .inner > a {
   color: rgb(203, 119, 10);
   transform: translateX(100%);
   opacity: 0;
-  transition: 1s 0.5s;
+  transition: transform 1s 0.5s, opacity 1s 0.5s, color 0.5s;
 }
 body #portfolio .inner > a i {
   color: rgb(203, 119, 10);
+  transition: 0.5s;
+}
+body #portfolio .inner > a:hover {
+  color: rgb(249, 173, 110);
+}
+body #portfolio .inner > a:hover i {
+  color: rgb(249, 173, 110);
 }
 body #portfolio .inner .tab_container {
   width: 1180px;
@@ -2692,7 +2706,7 @@ body #footer .inner {
   width: 1180px;
   height: 200px;
   margin: 0 auto;
-  padding: 30px 0px 10px;
+  padding: 30px 0px 0px;
   border-top: 2px solid rgb(110, 109, 109);
   display: flex;
   flex-wrap: wrap;
@@ -2969,7 +2983,7 @@ body #aside .inner .content .btnViewClose {
   }
   body #footer .inner {
     width: 100%;
-    padding: 5vw 5vw 5vw;
+    padding: 5vw 5vw 0vw;
   }
   body #aside .inner .pic {
     margin-bottom: 2vh;

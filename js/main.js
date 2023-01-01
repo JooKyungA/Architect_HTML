@@ -21,7 +21,7 @@ getPos();
 
 window.addEventListener('resize', modifyPos);
 
-window.addEventListener('scroll', scrollActivation);
+window.addEventListener('scroll', scrollActive);
 
 btnScroll.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
@@ -35,7 +35,6 @@ btnScroll.forEach((btn, idx) => {
 function getPos() {
 	posArr = [];
 	for (const el of scrollView) posArr.push(el.offsetTop);
-	console.log(posArr);
 }
 
 function modifyPos() {
@@ -45,7 +44,7 @@ function modifyPos() {
 	window.scroll(0, posArr[active_index]);
 }
 
-function scrollActivation() {
+function scrollActive() {
 	const scroll = window.scrollY || window.pageYOffset;
 
 	scrollView.forEach((_, idx) => {
