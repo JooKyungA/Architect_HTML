@@ -1,19 +1,15 @@
 // map ---------------------------------------------------`-----
-var mapContainer = document.getElementById('map');
-console.log('map');
+const mapContainer = document.getElementById('map');
 const branch_btns = document.querySelectorAll('.branch li');
 
-let drag = true;
-let zoom = true;
-
 mapOption = {
-	center: new kakao.maps.LatLng(37.4912654, 126.7520173),
+	center: new kakao.maps.LatLng(37.4261458, 126.648286),
 	level: 3,
 };
 
-var map = new kakao.maps.Map(mapContainer, mapOption);
+const map = new kakao.maps.Map(mapContainer, mapOption);
 
-var markerOptions = [
+const markerOptions = [
 	{
 		title: '본점',
 		latlng: new kakao.maps.LatLng(37.4261458, 126.648286),
@@ -68,20 +64,18 @@ window.onresize = () => {
 	map.setCenter(markerOptions[active_index].latlng);
 };
 
-var mapTypeControl = new kakao.maps.MapTypeControl();
+const mapTypeControl = new kakao.maps.MapTypeControl();
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
-var zoomControl = new kakao.maps.ZoomControl();
+const zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 map.setZoomable(false);
-
-setDraggable(drag);
 
 function setDraggable(draggable) {
 	map.setDraggable(draggable);
 }
 function moveTo(target) {
-	var moveLatlng = target;
+	const moveLatlng = target;
 	map.setCenter(moveLatlng);
 }
