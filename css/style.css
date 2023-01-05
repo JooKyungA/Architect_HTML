@@ -669,24 +669,24 @@ body .about .inner .team .wrap article > p {
     padding: 10px 0px;
   }
 }
-body #searchBox {
+body .portfolio .inner #searchBox {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
   font-size: 0;
 }
-body #searchBox input[type=text] {
+body .portfolio .inner #searchBox input[type=text] {
   width: 300px;
   height: 30px;
   background-color: #0b0909;
   border: 1px solid #9a9a9a;
   padding-left: 10px;
 }
-body #searchBox input[type=text]:focus {
+body .portfolio .inner #searchBox input[type=text]:focus {
   outline: none;
 }
-body #searchBox .btnSearch {
+body .portfolio .inner #searchBox .btnSearch {
   width: 80px;
   height: 30px;
   background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
@@ -700,68 +700,68 @@ body #searchBox .btnSearch {
   vertical-align: top;
   transition: 0.5s;
 }
-body #searchBox .btnSearch:hover {
+body .portfolio .inner #searchBox .btnSearch:hover {
   background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
 }
-body #gallery {
-  width: 100%;
-  padding: 50px 0px;
-  overflow: hidden;
-}
-body #gallery .loading {
+body .portfolio .inner .loading {
   width: 200px;
   position: absolute;
-  top: 85%;
+  top: 400px;
   left: 50%;
   transform: translateX(-50%);
   transition: 1s;
   opacity: 1;
 }
-body #gallery .loading.off {
+body .portfolio .inner .loading.off {
   opacity: 0;
 }
-body #gallery #list {
+body .portfolio .inner #gallery {
+  width: 100%;
+  padding: 50px 0px;
+  overflow: hidden;
+}
+body .portfolio .inner #gallery .list {
   opacity: 0;
   transform: translateY(100px);
   transition: 1s;
 }
-body #gallery #list.on {
+body .portfolio .inner #gallery .list.on {
   opacity: 1;
   transform: translateY(0px);
 }
-body #gallery #list::after {
+body .portfolio .inner #gallery .list::after {
   content: "";
   display: block;
   clear: both;
 }
-body #gallery #list li {
+body .portfolio .inner #gallery .list li {
   width: 25%;
   float: left;
   padding: 10px;
   margin-bottom: 20px;
 }
-body #gallery #list li div {
+body .portfolio .inner #gallery .list li div {
   width: 100%;
   border: 1px solid rgb(81, 80, 80);
   padding: 20px 10px;
   transition: 0.5s;
   cursor: pointer;
 }
-body #gallery #list li div:hover {
+body .portfolio .inner #gallery .list li div:hover {
   border: none;
   background-color: rgba(203, 119, 10, 0.7);
 }
-body #gallery #list li div:hover p {
+body .portfolio .inner #gallery .list li div:hover p {
   color: #efefef;
   margin-top: 0px;
 }
-body #gallery #list li div:hover p::before {
+body .portfolio .inner #gallery .list li div:hover p::before {
   display: none;
 }
-body #gallery #list li div a img {
+body .portfolio .inner #gallery .list li div a img {
   width: 100%;
 }
-body #gallery #list li div p {
+body .portfolio .inner #gallery .list li div p {
   font-weight: bold;
   font-size: 13px;
   line-height: 1.2;
@@ -772,7 +772,7 @@ body #gallery #list li div p {
   position: relative;
   transition: 0.5s;
 }
-body #gallery #list li div p::before {
+body .portfolio .inner #gallery .list li div p::before {
   content: "";
   display: block;
   width: calc(100% + 20px);
@@ -782,19 +782,19 @@ body #gallery #list li div p::before {
   top: 0;
   left: -10px;
 }
-body #gallery #list li div span {
+body .portfolio .inner #gallery .list li div span {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
 }
-body #gallery #list li div span img {
+body .portfolio .inner #gallery .list li div span img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 10px;
 }
-body #gallery #list li div span strong {
+body .portfolio .inner #gallery .list li div span strong {
   font-size: 11px;
   color: rgb(203, 119, 10);
 }
@@ -837,7 +837,7 @@ body aside.pop .btnClosePic:hover {
   }
 }
 @media screen and (max-width: 935px) {
-  body #gallery #list li {
+  body .portfolio .inner #gallery .list li {
     width: 33.3333333333%;
   }
   body aside.pop img {
@@ -846,31 +846,31 @@ body aside.pop .btnClosePic:hover {
   }
 }
 @media screen and (max-width: 539px) {
-  body #gallery #list li {
+  body .portfolio .inner #gallery .list li {
     width: 50%;
   }
 }
-body .vidList {
+body .youtube .inner .vidList {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
 }
-body .vidList article {
+body .youtube .inner .vidList article {
   width: 32%;
   height: 450px;
   border-top: 1px solid rgb(110, 109, 109);
   padding-top: 2vh;
   margin-bottom: 40px;
 }
-body .vidList article .pic {
+body .youtube .inner .vidList article .pic {
   display: block;
   width: 100%;
   height: 60%;
   padding: 10px;
 }
-body .vidList article .pic img {
+body .youtube .inner .vidList article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -878,30 +878,30 @@ body .vidList article .pic img {
   transform: translateY(10%);
   transition: 0.5s;
 }
-body .vidList article .pic img:hover {
+body .youtube .inner .vidList article .pic img:hover {
   opacity: 1;
   transform: translateY(0%);
 }
-body .vidList article .con {
+body .youtube .inner .vidList article .con {
   width: 100%;
   height: 40%;
   padding: 20px;
 }
-body .vidList article .con h2 {
+body .youtube .inner .vidList article .con h2 {
   font: bold 20px/1.2 "arial";
   color: rgba(203, 119, 10, 0.8);
   margin-bottom: 15px;
 }
-body .vidList article .con p {
+body .youtube .inner .vidList article .con p {
   font: 14px/1.4 "arial";
   color: #a9a9a9;
   margin-bottom: 20px;
 }
-body .vidList article .con span {
+body .youtube .inner .vidList article .con span {
   font: 16px/1 "arial";
   color: rgb(110, 109, 109);
 }
-body .vidList figure.pop {
+body .youtube .inner .vidList figure.pop {
   width: 100%;
   height: 100vh;
   padding: 5vw;
@@ -913,7 +913,7 @@ body .vidList figure.pop {
   justify-content: center;
   align-items: center;
 }
-body .vidList figure.pop .btnCloseVid {
+body .youtube .inner .vidList figure.pop .btnCloseVid {
   position: absolute;
   top: 20px;
   right: 3vw;
@@ -922,48 +922,45 @@ body .vidList figure.pop .btnCloseVid {
   color: rgb(203, 119, 10);
   cursor: pointer;
   transform: rotate(45deg);
-  transition: scale 0.5s;
+  transition: 0.5s;
 }
-body .vidList figure.pop .btnCloseVid:hover {
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+body .youtube .inner .vidList figure.pop .btnCloseVid:hover {
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
 }
 
 @media screen and (max-width: 1179px) {
-  body .vidList figure.pop {
+  body .youtube .inner .vidList figure.pop {
     padding: 8vw;
   }
 }
 @media screen and (max-width: 935px) {
-  body .vidList article {
+  body .youtube .inner .vidList article {
     width: 49%;
     margin-bottom: 40px;
   }
-  body .vidList figure.pop {
+  body .youtube .inner .vidList figure.pop {
     padding: 15vh 4vw;
   }
 }
 @media screen and (max-width: 539px) {
-  body .vidList article {
+  body .youtube .inner .vidList article {
     width: 100%;
     margin-bottom: 25px;
   }
-  body .vidList figure.pop {
+  body .youtube .inner .vidList figure.pop {
     padding: 25vh 4vw;
   }
 }
-body .contact {
-  width: 100%;
-}
-body .contact::after {
+body .contact .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-body .contact .txt {
+body .contact .inner .txt {
   width: 580px;
   float: left;
 }
-body .contact .txt > div {
+body .contact .inner .txt > div {
   width: 280px;
   height: 210px;
   float: left;
@@ -971,22 +968,22 @@ body .contact .txt > div {
   display: flex;
   flex-direction: column;
 }
-body .contact .txt > div img {
+body .contact .inner .txt > div img {
   width: 32px;
   height: 32px;
   object-fit: cover;
   margin-bottom: 30px;
 }
-body .contact .txt > div p {
+body .contact .inner .txt > div p {
   font-size: 18px;
   color: #efefef;
   margin-bottom: 15px;
 }
-body .contact .txt > div span {
+body .contact .inner .txt > div span {
   font-size: 16px;
   color: #9a9a9a;
 }
-body .contact .wrap #contact_form {
+body .contact .inner .wrap #contact_form {
   float: right;
   width: 580px;
   margin: 0px 0px 100px;
@@ -995,51 +992,49 @@ body .contact .wrap #contact_form {
   position: relative;
   padding: 10px 50px 15px;
 }
-body .contact .wrap #contact_form fieldset {
+body .contact .inner .wrap #contact_form fieldset {
   border: none;
 }
-body .contact .wrap #contact_form fieldset h2 {
+body .contact .inner .wrap #contact_form fieldset h2 {
   font-size: 40px;
   margin-bottom: 10px;
   display: flex;
   align-items: flex-start;
 }
-body .contact .wrap #contact_form fieldset div {
+body .contact .inner .wrap #contact_form fieldset div {
   width: 100%;
   font-size: 14px;
 }
-body .contact .wrap #contact_form fieldset div label {
+body .contact .inner .wrap #contact_form fieldset div label {
   width: 100%;
   display: block;
   padding: 15px 0px 3px;
   color: #9a9a9a;
 }
-body .contact .wrap #contact_form fieldset div input[type=text],
-body .contact .wrap #contact_form fieldset div input[type=email] {
+body .contact .inner .wrap #contact_form fieldset div input[type=text] {
   width: 100%;
   height: 30px;
   border: none;
   border-bottom: 2px solid #333;
   background: none;
 }
-body .contact .wrap #contact_form fieldset div input[type=text]:focus,
-body .contact .wrap #contact_form fieldset div input[type=email]:focus {
+body .contact .inner .wrap #contact_form fieldset div input[type=text]:focus {
   outline: none;
 }
-body .contact .wrap #contact_form fieldset div select {
+body .contact .inner .wrap #contact_form fieldset div select {
   width: 100%;
   height: 30px;
   border: none;
   border-bottom: 2px solid #333;
   background: none;
 }
-body .contact .wrap #contact_form fieldset div select:focus {
+body .contact .inner .wrap #contact_form fieldset div select:focus {
   outline: none;
 }
-body .contact .wrap #contact_form fieldset div select option {
+body .contact .inner .wrap #contact_form fieldset div select option {
   color: #0b0909;
 }
-body .contact .wrap #contact_form fieldset div textarea {
+body .contact .inner .wrap #contact_form fieldset div textarea {
   width: 100%;
   height: 25px;
   margin-top: 5px;
@@ -1048,10 +1043,10 @@ body .contact .wrap #contact_form fieldset div textarea {
   background: none;
   resize: none;
 }
-body .contact .wrap #contact_form fieldset div textarea:focus {
+body .contact .inner .wrap #contact_form fieldset div textarea:focus {
   outline: none;
 }
-body .contact .wrap #contact_form fieldset div input[type=submit] {
+body .contact .inner .wrap #contact_form fieldset div input[type=submit] {
   width: 100px;
   height: 30px;
   border-radius: 0%;
@@ -1061,16 +1056,16 @@ body .contact .wrap #contact_form fieldset div input[type=submit] {
   cursor: pointer;
   transition: 0.5s;
 }
-body .contact .wrap #contact_form fieldset div input[type=submit]:hover {
+body .contact .inner .wrap #contact_form fieldset div input[type=submit]:hover {
   background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
   color: #efefef;
 }
-body .contact .wrap #contact_form fieldset div p {
+body .contact .inner .wrap #contact_form fieldset div p {
   font: 11px/1 "맑은고딕";
   color: rgb(203, 119, 10);
   margin-top: 10px;
 }
-body .contact #map {
+body .contact .inner #map {
   width: 70%;
   height: 500px;
   margin-bottom: 20px;
@@ -1078,20 +1073,20 @@ body .contact #map {
   opacity: 0.8;
   filter: grayscale(0.4);
 }
-body .contact::after {
+body .contact .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-body .contact .branch {
+body .contact .inner .branch {
   width: 25%;
   float: right;
 }
-body .contact .branch li {
+body .contact .inner .branch li {
   height: 166.6666666667px;
   float: left;
 }
-body .contact .branch li a {
+body .contact .inner .branch li a {
   display: block;
   width: 100%;
   height: 50px;
@@ -1102,67 +1097,67 @@ body .contact .branch li a {
   margin-bottom: 15px;
   transition: 0.3s;
 }
-body .contact .branch li .txt {
+body .contact .inner .branch li .txt {
   width: 100%;
 }
-body .contact .branch li .txt p {
+body .contact .inner .branch li .txt p {
   font-size: 14px;
   color: #cdcccc;
   margin-bottom: 10px;
 }
-body .contact .branch li .txt span {
+body .contact .inner .branch li .txt span {
   font-size: 13px;
   color: #9a9a9a;
 }
-body .contact .branch li.on a {
+body .contact .inner .branch li.on a {
   color: rgb(203, 119, 10);
   border-bottom: 1px solid rgb(203, 119, 10);
 }
 
 @media screen and (max-width: 1179px) {
-  body .contact .txt {
+  body .contact .inner .txt {
     width: 100%;
   }
-  body .contact .txt div {
+  body .contact .inner .txt div {
     width: 49%;
   }
-  body .contact .wrap #contact_form {
+  body .contact .inner .wrap #contact_form {
     width: 100%;
     margin: 0 auto;
   }
-  body .contact .wrap #contact_form fieldset div input[type=submit] {
+  body .contact .inner .wrap #contact_form fieldset div input[type=submit] {
     float: right;
     margin: 15px 0px 30px 0px;
   }
 }
 @media screen and (max-width: 935px) {
-  body .contact #map {
+  body .contact .inner #map {
     width: 100%;
   }
-  body .contact .branch {
+  body .contact .inner .branch {
     width: 100%;
     float: left;
   }
-  body .contact .branch li {
+  body .contact .inner .branch li {
     width: 33.333%;
     padding: 0px 20px;
   }
 }
 @media screen and (max-width: 539px) {
-  body .contact .txt > div {
+  body .contact .inner .txt > div {
     height: 300px;
   }
-  body .contact .wrap #contact_form {
+  body .contact .inner .wrap #contact_form {
     padding: 10px 5vw 15px;
   }
-  body .contact #map {
+  body .contact .inner #map {
     width: 100%;
   }
-  body .contact .branch {
+  body .contact .inner .branch {
     width: 100%;
     float: left;
   }
-  body .contact .branch li {
+  body .contact .inner .branch li {
     width: 100%;
     padding: 0px 20px;
   }
@@ -1392,24 +1387,20 @@ body .join .inner fieldset table td {
 }
 body .join .inner fieldset table td input[type=text],
 body .join .inner fieldset table td input[type=password],
-body .join .inner fieldset table td input[type=tel] {
+body .join .inner fieldset table td select {
   width: 50%;
   background-color: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #9a9a9a;
+  color: #9a9a9a;
 }
-body .join .inner fieldset table td input[name=email] {
-  width: 25%;
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 10px;
-  border: 1px solid #9a9a9a;
+body .join .inner fieldset table td input[type=text]:focus,
+body .join .inner fieldset table td input[type=password]:focus,
+body .join .inner fieldset table td select:focus {
+  outline: none;
 }
-body .join .inner fieldset table td select {
-  width: 25%;
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 10px;
-  border: 1px solid #9a9a9a;
-}
+body .join .inner fieldset table td input[type=text] option,
+body .join .inner fieldset table td input[type=password] option,
 body .join .inner fieldset table td select option {
   color: #0b0909;
 }
@@ -1421,7 +1412,7 @@ body .join .inner fieldset table td label {
   margin-right: 25px;
 }
 body .join .inner fieldset table td p {
-  font: 11px/1 "맑은고딕";
+  font: 11px/1.4 "맑은고딕";
   color: rgb(203, 119, 10);
   margin-top: 10px;
 }
@@ -1436,14 +1427,8 @@ body .join .inner fieldset table td p {
   }
   body .join .inner fieldset table td input[type=text],
   body .join .inner fieldset table td input[type=password],
-  body .join .inner fieldset table td input[type=tel] {
-    width: 250px;
-  }
-  body .join .inner fieldset table td input[name=email] {
-    width: 180px;
-  }
   body .join .inner fieldset table td select {
-    width: 120px;
+    width: 250px;
   }
 }
 @media screen and (max-width: 539px) {
@@ -1452,15 +1437,8 @@ body .join .inner fieldset table td p {
   }
   body .join .inner fieldset table td input[type=text],
   body .join .inner fieldset table td input[type=password],
-  body .join .inner fieldset table td input[type=tel] {
-    width: 100%;
-  }
-  body .join .inner fieldset table td input[name=email] {
-    width: 180px;
-  }
   body .join .inner fieldset table td select {
-    width: 120px;
-    margin-top: 10px;
+    width: 100%;
   }
 }
 body .joinResult .inner .wrap {
@@ -1872,7 +1850,7 @@ body #header .inner .btnCall.on span {
 }
 body #header .inner .menuMo {
   width: 270px;
-  height: 100vh;
+  height: 100%;
   background-color: #efefef;
   text-align: center;
   position: fixed;
@@ -1904,7 +1882,7 @@ body #header .inner .menuMo h1 p {
   color: #464646;
 }
 body #header .inner .menuMo #gnbMo {
-  margin-bottom: 300px;
+  margin-bottom: 5vh;
 }
 body #header .inner .menuMo #gnbMo li a {
   display: block;
@@ -1915,7 +1893,6 @@ body #header .inner .menuMo #gnbMo li a {
   color: #636262;
 }
 body #header .inner .menuMo .snsMo {
-  display: block;
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -1945,8 +1922,8 @@ body #visual.off .inner .pic {
   margin-right: -100%;
   opacity: 0;
 }
-body #visual.off .inner .wrap .slider,
-body #visual.off .inner .wrap .sliderBtn {
+body #visual.off .inner .slider,
+body #visual.off .inner .sliderBtn {
   margin-left: -100%;
   opacity: 0;
 }
@@ -2829,43 +2806,37 @@ body #aside {
   transform: translateX(-50%);
   display: none;
 }
+body #aside > * {
+  background: #dedede;
+  position: absolute;
+}
 body #aside .top {
   width: 0%;
   height: 1px;
-  background: #efefef;
-  position: absolute;
   top: 0px;
   left: 0px;
 }
 body #aside .right {
   width: 1px;
   height: 0%;
-  background: #efefef;
-  position: absolute;
   top: 0px;
   right: 0px;
 }
 body #aside .bottom {
   width: 0%;
   height: 1px;
-  background: #efefef;
-  position: absolute;
   bottom: 0px;
   right: 0px;
 }
 body #aside .left {
   width: 1px;
   height: 0%;
-  background: #efefef;
-  position: absolute;
   bottom: 0px;
   left: 0px;
 }
 body #aside .inner {
   width: 100%;
   height: 100%;
-  background: #cfcece;
-  position: absolute;
   top: 0px;
   left: 0px;
   opacity: 0;
@@ -2875,7 +2846,7 @@ body #aside .inner {
   justify-content: space-between;
   align-items: center;
 }
-body #aside .inner .pic {
+body #aside .inner .asidePic {
   width: 30%;
 }
 body #aside .inner .content {
@@ -2985,7 +2956,7 @@ body #aside .inner .content .btnViewClose {
     width: 100%;
     padding: 5vw 5vw 0vw;
   }
-  body #aside .inner .pic {
+  body #aside .inner .asidePic {
     margin-bottom: 2vh;
   }
 }
@@ -3092,7 +3063,7 @@ body #aside .inner .content .btnViewClose {
     justify-content: center;
     align-content: center;
   }
-  body #aside .inner .pic {
+  body #aside .inner .asidePic {
     width: 65%;
   }
   body #aside .inner .content {
@@ -3225,7 +3196,7 @@ body #aside .inner .content .btnViewClose {
     padding: 2vw;
     align-content: center;
   }
-  body #aside .inner .pic {
+  body #aside .inner .asidepic {
     width: 70%;
     margin-top: 2vh;
   }
@@ -3237,7 +3208,6 @@ body #aside .inner .content .btnViewClose {
   body #aside .inner .content p {
     font-size: 12px;
     line-height: 1.2;
-    color: #0b0909;
   }
   body #aside .inner .content .btnViewClose {
     margin-top: -22px;

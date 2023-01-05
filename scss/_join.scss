@@ -58,9 +58,7 @@ body {
 							line-height: 40px;
 							font-weight: 400;
 							background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
-
 							color: #efefef;
-
 							cursor: pointer;
 							transition: 0.5s;
 							&:hover {
@@ -72,23 +70,15 @@ body {
 						border-left: 1px solid #9a9a9a;
 						input[type='text'],
 						input[type='password'],
-						input[type='tel'] {
+						select {
 							width: 50%;
 							background-color: rgba(0, 0, 0, 0.03);
 							padding: 10px;
 							border: 1px solid #9a9a9a;
-						}
-						input[name='email'] {
-							width: 25%;
-							background-color: rgba(0, 0, 0, 0.03);
-							padding: 10px;
-							border: 1px solid #9a9a9a;
-						}
-						select {
-							width: 25%;
-							background-color: rgba(0, 0, 0, 0.03);
-							padding: 10px;
-							border: 1px solid #9a9a9a;
+							color: #9a9a9a;
+							&:focus {
+								outline: none;
+							}
 							option {
 								color: #0b0909;
 							}
@@ -101,7 +91,7 @@ body {
 							margin-right: 25px;
 						}
 						p {
-							font: 11px/1 '맑은고딕';
+							font: 11px/1.4 '맑은고딕';
 							color: rgb(203, 119, 10);
 							margin-top: 10px;
 						}
@@ -134,14 +124,8 @@ body {
 						td {
 							input[type='text'],
 							input[type='password'],
-							input[type='tel'] {
-								width: 250px;
-							}
-							input[name='email'] {
-								width: 180px;
-							}
 							select {
-								width: 120px;
+								width: 250px;
 							}
 						}
 					}
@@ -164,15 +148,8 @@ body {
 						td {
 							input[type='text'],
 							input[type='password'],
-							input[type='tel'] {
-								width: 100%;
-							}
-							input[name='email'] {
-								width: 180px;
-							}
 							select {
-								width: 120px;
-								margin-top: 10px;
+								width: 100%;
 							}
 						}
 					}

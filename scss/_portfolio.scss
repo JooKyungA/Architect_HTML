@@ -1,135 +1,140 @@
 body {
-	#searchBox {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		overflow: hidden;
-		font-size: 0;
-		input[type='text'] {
-			width: 300px;
-			height: 30px;
-			background-color: #0b0909;
-			border: 1px solid #9a9a9a;
-			padding-left: 10px;
-			&:focus {
-				outline: none;
-			}
-		}
-		.btnSearch {
-			width: 80px;
-			height: 30px;
-			background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
-			font-size: 12px;
-			line-height: 30px;
-			text-align: center;
-			border: none;
-			cursor: pointer;
-			margin-left: 10px;
-			margin-right: 10px;
-			vertical-align: top;
-			transition: 0.5s;
-			&:hover {
-				background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
-			}
-		}
-	}
-	#gallery {
-		width: 100%;
-		padding: 50px 0px;
-		overflow: hidden;
-		.loading {
-			width: 200px;
-			position: absolute;
-			top: 85%;
-			left: 50%;
-			transform: translateX(-50%);
-			transition: 1s;
-			opacity: 1;
-			&.off {
-				opacity: 0;
-			}
-		}
-		#list {
-			opacity: 0;
-			transform: translateY(100px);
-			transition: 1s;
-			&.on {
-				opacity: 1;
-				transform: translateY(0px);
-			}
-			&::after {
-				content: '';
-				display: block;
-				clear: both;
-			}
-			li {
-				width: calc(100% / 4);
-				float: left;
-				padding: 10px;
-				margin-bottom: 20px;
-				div {
-					width: 100%;
-					border: 1px solid rgb(81, 80, 80);
-					padding: 20px 10px;
-					transition: 0.5s;
+	.portfolio {
+		.inner {
+			#searchBox {
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				overflow: hidden;
+				font-size: 0;
+				input[type='text'] {
+					width: 300px;
+					height: 30px;
+					background-color: #0b0909;
+					border: 1px solid #9a9a9a;
+					padding-left: 10px;
+					&:focus {
+						outline: none;
+					}
+				}
+				.btnSearch {
+					width: 80px;
+					height: 30px;
+					background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+					font-size: 12px;
+					line-height: 30px;
+					text-align: center;
+					border: none;
 					cursor: pointer;
+					margin-left: 10px;
+					margin-right: 10px;
+					vertical-align: top;
+					transition: 0.5s;
 					&:hover {
-						border: none;
-						background-color: rgba(203, 119, 10, 0.7);
-						p {
-							color: #efefef;
-							margin-top: 0px;
-							&::before {
-								display: none;
-							}
-						}
+						background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
 					}
-					a {
-						img {
+				}
+			}
+			.loading {
+				width: 200px;
+				position: absolute;
+				top: 400px;
+				left: 50%;
+				transform: translateX(-50%);
+				transition: 1s;
+				opacity: 1;
+				&.off {
+					opacity: 0;
+				}
+			}
+			#gallery {
+				width: 100%;
+				padding: 50px 0px;
+				overflow: hidden;
+				.list {
+					opacity: 0;
+					transform: translateY(100px);
+					transition: 1s;
+					&.on {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+					&::after {
+						content: '';
+						display: block;
+						clear: both;
+					}
+					li {
+						width: calc(100% / 4);
+						float: left;
+						padding: 10px;
+						margin-bottom: 20px;
+						div {
 							width: 100%;
-						}
-					}
-					p {
-						font-weight: bold;
-						font-size: 13px;
-						line-height: 1.2;
-						text-align: center;
-						color: #9a9a9a;
-						margin-top: 20px;
-						padding-top: 15px;
-						position: relative;
-						transition: 0.5s;
-						&::before {
-							content: '';
-							display: block;
-							width: calc(100% + 20px);
-							height: 1px;
-							background-color: rgb(81, 80, 80);
-							position: absolute;
-							top: 0;
-							left: -10px;
-						}
-					}
-					span {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						margin-top: 20px;
-						img {
-							width: 20px;
-							height: 20px;
-							border-radius: 50%;
-							margin-right: 10px;
-						}
-						strong {
-							font-size: 11px;
-							color: rgb(203, 119, 10);
+							border: 1px solid rgb(81, 80, 80);
+							padding: 20px 10px;
+							transition: 0.5s;
+							cursor: pointer;
+							&:hover {
+								border: none;
+								background-color: rgba(203, 119, 10, 0.7);
+								p {
+									color: #efefef;
+									margin-top: 0px;
+									&::before {
+										display: none;
+									}
+								}
+							}
+							a {
+								img {
+									width: 100%;
+								}
+							}
+							p {
+								font-weight: bold;
+								font-size: 13px;
+								line-height: 1.2;
+								text-align: center;
+								color: #9a9a9a;
+								margin-top: 20px;
+								padding-top: 15px;
+								position: relative;
+								transition: 0.5s;
+								&::before {
+									content: '';
+									display: block;
+									width: calc(100% + 20px);
+									height: 1px;
+									background-color: rgb(81, 80, 80);
+									position: absolute;
+									top: 0;
+									left: -10px;
+								}
+							}
+							span {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								margin-top: 20px;
+								img {
+									width: 20px;
+									height: 20px;
+									border-radius: 50%;
+									margin-right: 10px;
+								}
+								strong {
+									font-size: 11px;
+									color: rgb(203, 119, 10);
+								}
+							}
 						}
 					}
 				}
 			}
 		}
 	}
+
 	aside.pop {
 		width: 100%;
 		height: 100%;
@@ -178,10 +183,14 @@ body {
 
 @media screen and (max-width: $middle) {
 	body {
-		#gallery {
-			#list {
-				li {
-					width: calc(100% / 3);
+		.portfolio {
+			.inner {
+				#gallery {
+					.list {
+						li {
+							width: calc(100% / 3);
+						}
+					}
 				}
 			}
 		}
@@ -197,10 +206,14 @@ body {
 // mobile - 539px -------------------
 @media screen and (max-width: $mobile) {
 	body {
-		#gallery {
-			#list {
-				li {
-					width: calc(100% / 2);
+		.portfolio {
+			.inner {
+				#gallery {
+					.list {
+						li {
+							width: calc(100% / 2);
+						}
+					}
 				}
 			}
 		}

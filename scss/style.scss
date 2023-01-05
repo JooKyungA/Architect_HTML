@@ -219,7 +219,7 @@ body {
 			}
 			.menuMo {
 				width: 270px;
-				height: 100vh;
+				height: 100%;
 				background-color: #efefef;
 				text-align: center;
 				position: fixed;
@@ -250,7 +250,7 @@ body {
 					}
 				}
 				#gnbMo {
-					margin-bottom: 300px;
+					margin-bottom: 5vh;
 					li {
 						a {
 							display: block;
@@ -263,7 +263,6 @@ body {
 					}
 				}
 				.snsMo {
-					display: block;
 					width: 100%;
 					padding: 20px 0;
 					display: flex;
@@ -303,12 +302,11 @@ body {
 					margin-right: -100%;
 					opacity: 0;
 				}
-				.wrap {
-					.slider,
-					.sliderBtn {
-						margin-left: -100%;
-						opacity: 0;
-					}
+
+				.slider,
+				.sliderBtn {
+					margin-left: -100%;
+					opacity: 0;
 				}
 			}
 		}
@@ -1266,43 +1264,37 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		display: none;
+		> * {
+			background: #dedede;
+			position: absolute;
+		}
 		.top {
 			width: 0%;
 			height: 1px;
-			background: #efefef;
-			position: absolute;
 			top: 0px;
 			left: 0px;
 		}
 		.right {
 			width: 1px;
 			height: 0%;
-			background: #efefef;
-			position: absolute;
 			top: 0px;
 			right: 0px;
 		}
 		.bottom {
 			width: 0%;
 			height: 1px;
-			background: #efefef;
-			position: absolute;
 			bottom: 0px;
 			right: 0px;
 		}
 		.left {
 			width: 1px;
 			height: 0%;
-			background: #efefef;
-			position: absolute;
 			bottom: 0px;
 			left: 0px;
 		}
 		.inner {
 			width: 100%;
 			height: 100%;
-			background: #cfcece;
-			position: absolute;
 			top: 0px;
 			left: 0px;
 			opacity: 0;
@@ -1311,7 +1303,7 @@ body {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			.pic {
+			.asidePic {
 				width: 30%;
 			}
 			.content {
@@ -1460,7 +1452,7 @@ body {
 		// aside 영역
 		#aside {
 			.inner {
-				.pic {
+				.asidePic {
 					margin-bottom: 2vh;
 				}
 			}
@@ -1618,7 +1610,7 @@ body {
 			.inner {
 				justify-content: center;
 				align-content: center;
-				.pic {
+				.asidePic {
 					width: 65%;
 				}
 				.content {
@@ -1802,7 +1794,7 @@ body {
 			.inner {
 				padding: 2vw;
 				align-content: center;
-				.pic {
+				.asidepic {
 					width: 70%;
 					margin-top: 2vh;
 				}
@@ -1815,7 +1807,6 @@ body {
 					p {
 						font-size: 12px;
 						line-height: 1.2;
-						color: #0b0909;
 					}
 					.btnViewClose {
 						margin-top: -22px;

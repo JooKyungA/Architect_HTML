@@ -69,7 +69,7 @@
         <fieldset>
           <legend class="hidden">회원가입 폼 입력 양식</legend>
           <h2>회원약관</h2>
-          <textarea name="terms" id="terms">
+          <textarea name="terms" id="terms" cols="30" rows="10">
             제 1 장 총 칙
             제 1 조 (목적)
             본 이용약관(이하 '약관'이라 합니다)은 DCL ARCHITECTS와 이용 고객(이하 '회원'이라 합니다)간에 DCL ARCHITECTS가 제공하는 홈페이지 서비스(이하 '홈페이지' 또는 '서비스'라 합니다)의 가입조건 및 이용에 관한 제반 사항과 기타 필요한 사항을 구체적으로 규정함을 목적으로 합니다.
@@ -99,7 +99,7 @@
 
             <tbody>
               <tr>
-                <th scope="row">Member Type *</th>
+                <th scope="row">Member Type</th>
                 <td>
                   <input type="radio" name="memberType" id="corporate" value="corporate">
                   <label for="corporate">Corporate</label>
@@ -109,46 +109,44 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="userName">Name *</label></th>
+                <th scope="row"><label for="userName">Name</label></th>
                 <td>
                   <input type="text" name="userName" id="userName" placeholder="이름을 입력하세요.">
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="userid">User ID *</label></th>
+                <th scope="row"><label for="userid">User ID</label></th>
                 <td>
                   <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="pwd1">Password *</label></th>
+                <th scope="row"><label for="pwd1">Password</label></th>
                 <td>
                   <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="pwd2">Confirm Password *</label></th>
+                <th scope="row"><label for="pwd2">Confirm Password</label></th>
                 <td>
                   <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요.">
                 </td>
               </tr>
-              <tr>
-                <th scope="row"><label for="phone">Phone *</label></th>
-                <td>
 
-                  <input type="tel" id="phone" name="phone" placeholder="하이픈(-)을 제외하고 입력해주세요.">
+              <tr>
+                <th scope="row"><label for="email">E-mail</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
                 </td>
               </tr>
               <tr>
-                <th scope="row"><label for="email">E-mail *</label></th>
+                <th scope="row"><label for="join_branch">Branch</label></th>
                 <td>
-                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
-                  @
-                  <select name="company" id="company">
-                    <option value="">선택하세요</option>
-                    <option value="naver">naver.com</option>
-                    <option value="daum">hanmail.net</option>
-                    <option value="nate">gmail.com</option>
+                  <select name="join_branch" id="join_branch">
+                    <option value="">선택해주세요</option>
+                    <option value="본점">본점</option>
+                    <option value="안양지점">안양지점</option>
+                    <option value="서울지점">서울지점</option>
                   </select>
                 </td>
               </tr>

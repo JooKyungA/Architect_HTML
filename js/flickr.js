@@ -1,28 +1,27 @@
 const body = document.querySelector('body');
-const frame = document.querySelector('#list');
+const frame = document.querySelector('.list');
+const list = document.querySelector('.list');
 const loading = document.querySelector('.loading');
-
 const input = document.querySelector('#search');
 const btnSearch = document.querySelector('.btnSearch');
-const base = 'https://www.flickr.com/services/rest/?';
-const method1 = 'flickr.favorites.getList';
-const method2 = 'flickr.photos.search';
+const base = 'https://www.flickr.com/services/rest/?format=json&nojsoncallback=1';
+const method_user = 'flickr.people.getPhotos';
+const method_search = 'flickr.photos.search';
 const key = 'c56ad21076b0ceff5779ce087e6afed3';
-const per_page = 50;
-const format = 'json';
+const per_page = 30;
 const user_id = '197141079@N07';
 
-const url1 = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&user_id=${user_id}`;
+const url1 = `${base}&method=${method_user}&api_key=${key}&per_page=${per_page}&user_id=${user_id}`;
 
-const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=바다&privacy_filter=1`;
+const url2 = `${base}&method=${method_search}&api_key=${key}&per_page=${per_page}&tags=바다`;
 
 btnSearch.addEventListener('click', () => {
 	let tag = input.value;
 	tag = tag.trim();
-	const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+	const url = `${base}&method=${method_search}&api_key=${key}&per_page=${per_page}&tags=${tag}`;
 
 	if (tag != '') {
-		callData(url2);
+		callData(url);
 	} else {
 		alert('검색어를 입력하세요.');
 	}
@@ -32,9 +31,10 @@ input.addEventListener('keypress', (e) => {
 	if (e.keyCode == 13) {
 		let tag = input.value;
 		tag = tag.trim();
-		const url2 = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+		const url = `${base}&method=${method_search}&api_key=${key}&per_page=${per_page}&tags=${tag}`;
 		if (tag != '') {
-			callData(url2);
+			callData(url);
+			input.value = '';
 		} else {
 			alert('검색어를 입력하세요.');
 		}
@@ -106,8 +106,6 @@ function createList(items) {
 	let htmls = '';
 
 	items.map((el) => {
-		console.log(el);
-
 		let imgSrc = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_m.jpg`;
 		let imgSrcBig = `https://live.staticflickr.com/${el.server}/${el.id}_${el.secret}_b.jpg`;
 
@@ -151,8 +149,7 @@ function delayLoading() {
 function isoLayout() {
 	loading.classList.add('off');
 	frame.classList.add('on');
-
-	new Isotope('#list', {
+	new Isotope('.list', {
 		itemSelection: '.item',
 		columnWidth: '.item',
 		transitionDuration: '0.5s',

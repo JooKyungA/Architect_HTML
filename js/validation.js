@@ -8,9 +8,10 @@ if (btnSubmit_join != null) {
 		if (!isAgree('agree')) e.preventDefault();
 		if (!isTxt('userName', 1)) e.preventDefault();
 		if (!isTxt('userid', 5)) e.preventDefault();
-		if (!isTel('phone')) e.preventDefault();
-		if (!isEmail1('email', 'company')) e.preventDefault();
+		if (!isEmail('email')) e.preventDefault();
+		if (!isSelect('join_branch')) e.preventDefault();
 		if (!isCheck('memberType')) e.preventDefault();
+		if (!isCheck('project')) e.preventDefault();
 		if (!isPwd('pwd1', 5)) e.preventDefault();
 		if (!isPwd2('pwd1', 'pwd2', 5)) e.preventDefault();
 	});
@@ -19,8 +20,8 @@ if (btnSubmit_contact != null) {
 	btnSubmit_contact.addEventListener('click', (e) => {
 		if (!isTxt('contact_name')) e.preventDefault();
 		if (!isTxt('contact_message', 10)) e.preventDefault();
-		if (!isEmail2('contact_email')) e.preventDefault();
-		if (!isSelect('sel_branch')) e.preventDefault();
+		if (!isEmail('contact_email')) e.preventDefault();
+		if (!isSelect('contact_branch')) e.preventDefault();
 	});
 }
 
@@ -88,32 +89,7 @@ function isTel(el, len) {
 		return false;
 	}
 }
-function isEmail1(el1, el2, len) {
-	if (len === undefined) len = 1;
-	let emailId = form.querySelector(`[name=${el1}]`);
-	let emailSel = form.querySelector(`[name=${el2}]`);
-	let emailSel_index = emailSel.options.selectedIndex;
-
-	let txt = emailId.value;
-	let val = emailSel[emailSel_index].value;
-
-	if (txt.length >= len && val !== '') {
-		const errMsgs = emailId.parentElement.querySelectorAll('p');
-		if (errMsgs.length > 0) emailId.parentElement.querySelector('p').remove();
-
-		return true;
-	} else {
-		const errMsgs = emailId.parentElement.querySelectorAll('p');
-		if (errMsgs.length > 0) return false;
-
-		const errMsg = document.createElement('p');
-		errMsg.append(`이메일을 ${len}글자 이상 입력하고 항목을 선택해주세요.`);
-		emailId.parentElement.append(errMsg);
-		return false;
-	}
-}
-
-function isEmail2(el) {
+function isEmail(el) {
 	let input = form.querySelector(`[name=${el}]`);
 	let txt = input.value;
 
