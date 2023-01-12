@@ -6,7 +6,7 @@ body {
 				display: block;
 				clear: both;
 			}
-			.txt {
+			.info {
 				width: 580px;
 				float: left;
 				> div {
@@ -124,7 +124,7 @@ body {
 				margin-bottom: 20px;
 				float: left;
 				opacity: 0.8;
-				filter: grayscale(0.4);
+				filter: brightness(0.8) invert(1) grayscale();
 			}
 			&::after {
 				content: '';
@@ -179,7 +179,7 @@ body {
 	body {
 		.contact {
 			.inner {
-				.txt {
+				.info {
 					width: 100%;
 					div {
 						width: 49%;
@@ -231,7 +231,7 @@ body {
 	body {
 		.contact {
 			.inner {
-				.txt {
+				.info {
 					> div {
 						height: 300px;
 					}

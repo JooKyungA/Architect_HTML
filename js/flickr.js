@@ -1,6 +1,5 @@
 const body = document.querySelector('body');
 const frame = document.querySelector('.list');
-const list = document.querySelector('.list');
 const loading = document.querySelector('.loading');
 const input = document.querySelector('#search');
 const btnSearch = document.querySelector('.btnSearch');
@@ -53,7 +52,9 @@ frame.addEventListener('click', (e) => {
 		let pop = document.createElement('aside');
 		pop.classList.add('pop');
 		let pops = `
-      <img src="${imgSrc}">
+			<div class="box">
+      	<img src="${imgSrc}">
+			</div>
       <span class="btnClosePic">+</span>
     `;
 		pop.innerHTML = pops;
@@ -91,7 +92,6 @@ function callData(url) {
 		})
 		.then((json) => {
 			let items = json.photos.photo;
-
 			if (items.length > 0) {
 				createList(items);
 				delayLoading();

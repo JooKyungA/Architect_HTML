@@ -51,7 +51,7 @@ body {
 						}
 					}
 				}
-				figure.pop {
+				aside.pop {
 					width: 100%;
 					height: 100vh;
 					padding: 5vw;
@@ -59,9 +59,13 @@ body {
 					top: 0;
 					left: 0;
 					background-color: rgba(0, 0, 0, 0.8);
-					display: flex;
-					justify-content: center;
-					align-items: center;
+					.box {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
 					.btnCloseVid {
 						position: absolute;
 						top: 20px;
@@ -88,7 +92,7 @@ body {
 		.youtube {
 			.inner {
 				.vidList {
-					figure.pop {
+					aside.pop {
 						padding: 8vw;
 					}
 				}
@@ -108,7 +112,7 @@ body {
 						width: 49%;
 						margin-bottom: 40px;
 					}
-					figure.pop {
+					aside.pop {
 						padding: 15vh 4vw;
 					}
 				}
@@ -127,7 +131,7 @@ body {
 						width: 100%;
 						margin-bottom: 25px;
 					}
-					figure.pop {
+					aside.pop {
 						padding: 25vh 4vw;
 					}
 				}

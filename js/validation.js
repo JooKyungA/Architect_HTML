@@ -13,7 +13,7 @@ if (btnSubmit_join != null) {
 		if (!isCheck('memberType')) e.preventDefault();
 		if (!isCheck('project')) e.preventDefault();
 		if (!isPwd('pwd1', 5)) e.preventDefault();
-		if (!isPwd2('pwd1', 'pwd2', 5)) e.preventDefault();
+		if (!isPwd2('pwd1', 'pwd2')) e.preventDefault();
 	});
 }
 if (btnSubmit_contact != null) {
@@ -68,27 +68,6 @@ function isTxt(el, len) {
 		return false;
 	}
 }
-function isTel(el, len) {
-	if (len === undefined) len = 11;
-	let input = form.querySelector(`[name=${el}]`);
-	let txt = input.value;
-
-	const num = /^[0-9]+$/;
-	if (txt.length == len && num.test(txt)) {
-		const errMsgs = input.parentElement.querySelectorAll('p');
-		if (errMsgs.length > 0) input.parentElement.querySelector('p').remove();
-
-		return true;
-	} else {
-		const errMsgs = input.parentElement.querySelectorAll('p');
-		if (errMsgs.length > 0) return false;
-
-		const errMsg = document.createElement('p');
-		errMsg.append(`휴대폰번호 하이픈(-)을 제외하고 입력해주세요 `);
-		input.parentElement.append(errMsg);
-		return false;
-	}
-}
 function isEmail(el) {
 	let input = form.querySelector(`[name=${el}]`);
 	let txt = input.value;
@@ -135,21 +114,12 @@ function isCheck(el) {
 
 function isPwd(el1, len) {
 	let pwd1 = form.querySelector(`[name=${el1}]`);
-	// let pwd2 = form.querySelector(`[name=${el2}]`);
 	let pwd1_val = pwd1.value;
-	// let pwd2_val = pwd2.value;
-
 	const num = /[0-9]/;
 	const eng = /[a-zA-Z]/;
 	const spc = /[~!@#$%^&*()_+?><]/;
 
-	if (
-		// pwd1_val === pwd2_val &&
-		pwd1_val.length >= len &&
-		num.test(pwd1_val) &&
-		eng.test(pwd1_val) &&
-		spc.test(pwd1_val)
-	) {
+	if (pwd1_val.length >= len && num.test(pwd1_val) && eng.test(pwd1_val) && spc.test(pwd1_val)) {
 		const errMsgs = pwd1.parentElement.querySelectorAll('p');
 		if (errMsgs.length > 0) pwd1.parentElement.querySelector('p').remove();
 		return true;
@@ -166,13 +136,13 @@ function isPwd(el1, len) {
 	}
 }
 
-function isPwd2(el1, el2, len) {
+function isPwd2(el1, el2) {
 	let pwd1 = form.querySelector(`[name=${el1}]`);
 	let pwd2 = form.querySelector(`[name=${el2}]`);
 	let pwd1_val = pwd1.value;
 	let pwd2_val = pwd2.value;
 
-	if (pwd1_val === pwd2_val && pwd2_val.length >= len) {
+	if (pwd2_val && pwd1_val === pwd2_val) {
 		const errMsgs = pwd2.parentElement.querySelectorAll('p');
 
 		if (errMsgs.length > 0) pwd2.parentElement.querySelector('p').remove();
@@ -191,7 +161,6 @@ function isPwd2(el1, el2, len) {
 function isSelect(el) {
 	let sel = form.querySelector(`[name=${el}]`);
 	let sel_index = sel.options.selectedIndex;
-	console.log(sel.parentElement);
 	let val = sel[sel_index].value;
 
 	if (val !== '') {

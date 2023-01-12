@@ -468,14 +468,14 @@ body {
 						transform-origin: left center;
 					}
 					&::before {
-						top: 46.4%;
+						top: 41%;
 					}
 					&::after {
-						bottom: 46.4%;
+						bottom: 41%;
 					}
 					span {
-						left: 24.1px;
-						top: 46.4%;
+						left: 25px;
+						top: 45.1%;
 					}
 					&.on {
 						span {
@@ -498,7 +498,7 @@ body {
 					}
 					span {
 						right: 25.5px;
-						top: 47.1%;
+						top: 45.1%;
 					}
 					&.on {
 						span {
@@ -528,7 +528,7 @@ body {
 				margin-bottom: 35px;
 				transform: translateY(-50%);
 				opacity: 0;
-				transition: 1s;
+				transition: 0.5s;
 				a {
 					transition: 0.5s;
 					&:hover {
@@ -543,7 +543,7 @@ body {
 				color: rgb(203, 119, 10);
 				transform: translateX(100%);
 				opacity: 0;
-				transition: transform 1s 1.2s, opacity 1s 1.2s, color 0.5s;
+				transition: transform 0.5s 0.7s, opacity 0.5s 0.7s, color 0.5s;
 				i {
 					color: rgb(203, 119, 10);
 					transition: 0.5s;
@@ -562,7 +562,6 @@ body {
 				display: flex;
 				justify-content: space-between;
 				h2 {
-					width: 40%;
 					p {
 						display: inline-block;
 						overflow: hidden;
@@ -578,20 +577,20 @@ body {
 							position: absolute;
 							top: 0;
 							left: -100%;
-							transition: 0.8s 0.5s;
+							transition: 0.3s 0.1s;
 						}
 						span {
 							color: #9a9a9a;
 							opacity: 0;
-							transition: 0.3s 0.8s;
+							transition: 0.3s 0.3s;
 						}
 					}
 					p:nth-of-type(2) {
 						&::before {
-							transition-delay: 1s;
+							transition-delay: 0.5s;
 						}
 						span {
-							transition-delay: 1.3s;
+							transition-delay: 0.7s;
 						}
 					}
 				}
@@ -602,7 +601,7 @@ body {
 					color: rgb(110, 109, 109);
 					transform: translateX(20%);
 					opacity: 0;
-					transition: 1s 1.2s;
+					transition: 0.5s 0.7s;
 				}
 			}
 		}
@@ -639,7 +638,6 @@ body {
 	// portfolio 영역
 	#portfolio {
 		width: 100%;
-
 		.inner {
 			width: 1180px;
 			margin: 0 auto;
@@ -647,7 +645,6 @@ body {
 			border-top: 2px solid rgb(110, 109, 109);
 			overflow: hidden;
 			position: relative;
-
 			&::after {
 				content: '';
 				display: block;
@@ -659,7 +656,7 @@ body {
 				margin-bottom: 30px;
 				transform: translateY(-50%);
 				opacity: 0;
-				transition: 1s;
+				transition: 0.5s;
 				a {
 					transition: 0.5s;
 					&:hover {
@@ -674,7 +671,7 @@ body {
 				color: rgb(203, 119, 10);
 				transform: translateX(100%);
 				opacity: 0;
-				transition: transform 1s 0.5s, opacity 1s 0.5s, color 0.5s;
+				transition: transform 0.5s 0.2s, opacity 0.5s 0.2s, color 0.5s;
 				i {
 					color: rgb(203, 119, 10);
 					transition: 0.5s;
@@ -692,7 +689,7 @@ body {
 				overflow: hidden;
 				transform: translateY(50%);
 				opacity: 0;
-				transition: 1s 0.5s;
+				transition: 0.5s 0.2s;
 				&::after {
 					content: '';
 					display: block;
@@ -736,7 +733,6 @@ body {
 									}
 								}
 							}
-
 							&.on {
 								a {
 									color: rgb(203, 119, 10);
@@ -863,14 +859,14 @@ body {
 				margin-bottom: 30px;
 				transform: translateY(-50%);
 				opacity: 0;
-				transition: 1s;
+				transition: 0.5s;
 			}
 			.wrap {
 				float: right;
 				width: 700px;
 				transform: rotateY(180deg);
 				opacity: 0;
-				transition: 1s 0.5s;
+				transition: 0.5s 0.2s;
 				.award_tab {
 					width: 700px;
 					height: 100%;
@@ -973,38 +969,6 @@ body {
 					}
 				}
 			}
-			.circle {
-				width: 300px;
-				height: 300px;
-				position: absolute;
-				top: 20vh;
-				left: 3vw;
-				transform: translateY(50%);
-				opacity: 0;
-				transition: 1s 0.5s;
-				p {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					animation: circle 40s linear infinite;
-					animation-play-state: running;
-					span {
-						display: inline-block;
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						font-size: 20px;
-						color: rgb(110, 109, 109);
-						margin-top: -10px;
-						margin-left: -10px;
-					}
-				}
-				&:hover {
-					p {
-						animation-play-state: paused;
-					}
-				}
-			}
 		}
 		&.on {
 			.inner {
@@ -1014,10 +978,6 @@ body {
 				}
 				.wrap {
 					transform: rotateY(0deg);
-					opacity: 1;
-				}
-				.circle {
-					transform: translateY(0%);
 					opacity: 1;
 				}
 			}
@@ -1045,7 +1005,7 @@ body {
 				margin-bottom: 60px;
 				transform: translateY(-50%);
 				opacity: 0;
-				transition: 1s;
+				transition: 0.5s;
 			}
 			.wrap {
 				width: 100%;
@@ -1060,13 +1020,13 @@ body {
 					transform: translateY(30%);
 					opacity: 0;
 					&:nth-of-type(1) {
-						transition: 0.5s 0.5s;
+						transition: 0.5s 0.2s;
 					}
 					&:nth-of-type(2) {
-						transition: 0.5s 0.8s;
+						transition: 0.5s 0.3s;
 					}
 					&:nth-of-type(3) {
-						transition: 0.5s 1.1s;
+						transition: 0.5s 0.4s;
 					}
 					h2 {
 						padding-top: 15px;
@@ -1403,10 +1363,9 @@ body {
 					display: flex;
 					flex-direction: column;
 					h2 {
-						width: 100%;
 						margin-bottom: 15px;
 					}
-					p {
+					> p {
 						width: 100%;
 					}
 				}
@@ -1427,9 +1386,6 @@ body {
 				width: 100%;
 				height: 670px;
 				padding: 5vw 5vw 5vw;
-				.wrap {
-					margin-top: 6vh;
-				}
 			}
 		}
 
@@ -1485,15 +1441,6 @@ body {
 		}
 
 		// about 영역
-		#about {
-			.inner {
-				.txt {
-					p {
-						width: 100%;
-					}
-				}
-			}
-		}
 
 		// portfolio 영역
 		#portfolio {
@@ -1537,11 +1484,9 @@ body {
 		// awards 영역
 		#awards {
 			.inner {
-				width: 100%;
-				height: 100%;
 				.wrap {
-					margin-top: 6vh;
 					width: 80%;
+					margin-top: 20px;
 					.award_tab {
 						width: 100%;
 						input[type='radio'] {
@@ -1717,14 +1662,13 @@ body {
 		// awards 영역
 		#awards {
 			.inner {
-				height: 750px;
 				.wrap {
 					width: 100%;
 					.award_tab {
 						padding: 10px 0px 10px;
 						input[type='radio'] {
 							&:checked ~ .content {
-								max-height: 200px;
+								max-height: 180px;
 							}
 							&:checked ~ label h2 {
 								display: none;
@@ -1860,13 +1804,5 @@ body {
 		right: 25px;
 		width: 20px;
 		opacity: 1;
-	}
-}
-@keyframes circle {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
 	}
 }

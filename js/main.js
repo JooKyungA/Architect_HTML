@@ -13,11 +13,13 @@ for (let el of skipNavi) {
 const scrollView = document.querySelectorAll('.scrollView');
 const btnScroll = document.querySelectorAll('.btnScroll li');
 const btnScroll_arr = Array.from(btnScroll);
-const base = -window.innerHeight / 3;
+const base = -window.innerHeight / 2;
 const scrollSpeed = 500;
 let posArr = [];
 
 getPos();
+
+window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
 window.addEventListener('resize', modifyPos);
 
@@ -178,7 +180,9 @@ function nextslide(e) {
 	if (!enableClick) return;
 	enableClick = false;
 	next.classList.add('on');
+
 	setTimeout(() => next.classList.remove('on'), 500);
+
 	frame.append(frame.firstElementChild);
 	activationSlide();
 }
@@ -187,7 +191,9 @@ function prevslide(e) {
 	if (!enableClick) return;
 	enableClick = false;
 	prev.classList.add('on');
+
 	setTimeout(() => prev.classList.remove('on'), 500);
+
 	frame.prepend(frame.lastElementChild);
 	activationSlide();
 }
@@ -235,15 +241,3 @@ function activation(list, index) {
 		}, tabSpeed);
 	}
 }
-
-// #awards .circle -----------------------
-const circle = document.querySelector('.circle p');
-const len = circle.innerText.split('').length;
-
-circle.innerHTML = circle.innerText
-	.split('')
-	.map(
-		(el, idx) =>
-			`<span style='transform:rotate(${(idx * 360) / len}deg) translateY(-150px)'>${el}</span>`
-	)
-	.join('');
