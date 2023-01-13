@@ -124,7 +124,7 @@ body {
 				margin-bottom: 20px;
 				float: left;
 				opacity: 0.8;
-				filter: brightness(0.8) invert(1) grayscale();
+				filter: brightness(0.8) invert(1) grayscale(1);
 			}
 			&::after {
 				content: '';
