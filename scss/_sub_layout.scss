@@ -18,6 +18,9 @@ body {
 					display: block;
 					width: 100%;
 					font-size: 16px;
+					&:hover {
+						color: #cb770a;
+					}
 				}
 			}
 			.menuWeb {
@@ -37,7 +40,7 @@ body {
 							transition: 0.5s;
 
 							&:hover {
-								color: rgb(203, 119, 10);
+								color: #cb770a;
 							}
 						}
 					}
@@ -58,7 +61,7 @@ body {
 							}
 							&:hover {
 								i {
-									color: rgb(203, 119, 10);
+									color: #cb770a;
 								}
 							}
 						}
@@ -141,7 +144,7 @@ body {
 				}
 				h1 {
 					padding-bottom: 30px;
-					border-bottom: 1px solid rgb(172, 166, 166);
+					border-bottom: 1px solid #9a9a9a;
 					a {
 						display: block;
 						font-size: 24px;
@@ -153,24 +156,23 @@ body {
 					}
 					p {
 						font-size: 12px;
-						color: #464646;
+						color: #0b090980;
 					}
 				}
 				#gnbMo {
-					margin-bottom: 300px;
+					margin-bottom: 20px;
 					li {
 						a {
 							display: block;
 							width: 100%;
 							padding: 20px 0;
-							border-bottom: 1px solid rgb(172, 166, 166);
+							border-bottom: 1px solid #9a9a9a;
 							font-size: 14px;
-							color: #636262;
+							color: #6e6d6d;
 						}
 					}
 				}
 				.snsMo {
-					display: block;
 					width: 100%;
 					padding: 20px 0;
 					display: flex;
@@ -179,7 +181,10 @@ body {
 						a {
 							i {
 								font-size: 13px;
-								color: #636262;
+								color: #6e6d6d;
+								&:hover {
+									color: #cb770a;
+								}
 							}
 						}
 					}
@@ -201,7 +206,7 @@ body {
 				width: 65%;
 				font-size: 50px;
 				color: #efefef;
-				border-bottom: 1px solid #9a9a9a;
+				border-bottom: 1px solid #6e6d6d;
 				padding-bottom: 30px;
 				margin-bottom: 30px;
 			}
@@ -215,7 +220,7 @@ body {
 					display: block;
 					width: 100%;
 					height: 1px;
-					background-color: #9a9a9a;
+					background-color: #6e6d6d;
 					position: absolute;
 					top: 300px;
 					left: 0;
@@ -231,7 +236,7 @@ body {
 			height: 200px;
 			margin: 0 auto;
 			padding: 30px 0px 10px;
-			border-top: 2px solid #aaa;
+			border-top: 2px solid #6e6d6d80;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -263,7 +268,7 @@ body {
 						a {
 							transition: 0.5s;
 							&:hover {
-								color: rgb(203, 119, 10);
+								color: #cb770a;
 							}
 						}
 					}
@@ -274,7 +279,7 @@ body {
 								color: #9a9a9a;
 								transition: 0.5s;
 								&:hover {
-									color: rgb(203, 119, 10);
+									color: #cb770a;
 								}
 							}
 						}
@@ -299,10 +304,10 @@ body {
 								display: flex;
 								justify-content: left;
 								i {
-									color: #ccc;
+									color: #9a9a9a;
 									transition: 0.5s;
 									&:hover {
-										color: rgb(203, 119, 10);
+										color: #cb770a;
 									}
 								}
 							}
@@ -319,10 +324,10 @@ body {
 							width: 73%;
 							height: 25px;
 							padding-left: 10px;
-							background-color: rgb(110, 109, 109);
+							background-color: #6e6d6d;
 							border: none;
 							&::placeholder {
-								color: #aaa;
+								color: #9a9a9a;
 							}
 							&:focus {
 								outline: none;
@@ -336,10 +341,10 @@ body {
 							font-size: 12px;
 							line-height: 25px;
 							text-align: center;
-							background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+							background-color: #cb770a;
 							cursor: pointer;
 							&:hover {
-								background: linear-gradient(45deg, rgb(250, 158, 59), rgb(249, 157, 36));
+								background-color: #eb7206;
 							}
 						}
 					}
@@ -349,7 +354,7 @@ body {
 			> p {
 				width: 100%;
 				font-size: 13px;
-				color: rgb(110, 109, 109);
+				color: #6e6d6d;
 				text-align: center;
 				letter-spacing: 1.1px;
 				padding: 15px 0px 30px;
@@ -450,11 +455,6 @@ body {
 @media screen and (max-width: $mobile) {
 	body {
 		// header_sub 영역
-		// #header_sub {
-		// 	.inner {
-		// 		height: 1vh;
-		// 	}
-		// }
 
 		// content_sub 영역
 		.content_sub {
@@ -463,8 +463,6 @@ body {
 					font-size: 45px;
 				}
 				> p {
-					// width: 75%;
-					// font-size: 14px;
 					margin-bottom: 40%;
 				}
 			}

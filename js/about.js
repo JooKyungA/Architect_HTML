@@ -42,7 +42,7 @@ function init() {
 	});
 }
 function nextslide() {
-	new Anim(ul, {
+	new Anime(ul, {
 		prop: 'left',
 		value: '-200%',
 		duration: sliderSpeed,
@@ -60,7 +60,7 @@ function nextslide() {
 	txtActive(txt_p, active);
 }
 function prevslide() {
-	new Anim(ul, {
+	new Anime(ul, {
 		prop: 'left',
 		value: '0%',
 		duration: sliderSpeed,

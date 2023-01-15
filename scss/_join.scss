@@ -16,7 +16,7 @@ body {
 					font-size: 12px;
 					line-height: 1.3;
 					color: #0b0909;
-					background-color: #ddd;
+					background-color: #efefefe5;
 					margin-bottom: 10px;
 				}
 				.agreement {
@@ -27,7 +27,7 @@ body {
 					}
 					p {
 						font: 11px/1 '맑은고딕';
-						color: rgb(203, 119, 10);
+						color: #cb770a;
 						margin-top: 10px;
 					}
 				}
@@ -37,7 +37,7 @@ body {
 					border-bottom: 2px solid #9a9a9a;
 					th,
 					td {
-						border-bottom: 1px solid rgb(110, 109, 109);
+						border-bottom: 1px solid #6e6d6d;
 						padding: 25px;
 					}
 					th {
@@ -57,12 +57,12 @@ body {
 							font-size: 14px;
 							line-height: 40px;
 							font-weight: 400;
-							background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+							background-color: #cb770a;
 							color: #efefef;
 							cursor: pointer;
 							transition: 0.5s;
 							&:hover {
-								background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
+								background-color: #eb7206;
 							}
 						}
 					}
@@ -88,11 +88,12 @@ body {
 							margin-right: 5px;
 						}
 						label {
+							color: #9a9a9a;
 							margin-right: 25px;
 						}
 						p {
 							font: 11px/1.4 '맑은고딕';
-							color: rgb(203, 119, 10);
+							color: #cb770a;
 							margin-top: 10px;
 						}
 					}

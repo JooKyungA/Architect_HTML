@@ -1,65 +1,21 @@
 body {
 	.notice {
 		.inner {
-			#noticeSearchBox {
-				width: 100%;
-				display: flex;
-				justify-content: flex-end;
-				margin-bottom: 50px;
-				overflow: hidden;
-				font-size: 0;
-
-				input[type="text"] {
-					width: 300px;
-					height: 30px;
-					background-color: #0b0909;
-					border: 1px solid #9a9a9a;
-					padding-left: 10px;
-					&:focus {
-						outline: none;
-					}
-				}
-				.btnNoticeSearch {
-					width: 80px;
-					height: 30px;
-					background: linear-gradient(
-						45deg,
-						rgb(203, 119, 10),
-						rgb(252, 114, 8)
-					);
-					font-size: 12px;
-					line-height: 30px;
-					text-align: center;
-					border: none;
-					cursor: pointer;
-					margin-left: 10px;
-					vertical-align: top;
-					transition: 0.5s;
-					&:hover {
-						background: linear-gradient(
-							45deg,
-							rgb(250, 158, 59),
-							rgb(249, 157, 36)
-						);
-					}
-				}
-			}
-
 			table {
 				width: 100%;
-				border-bottom: 2px solid #333;
+				border-bottom: 2px solid #6e6d6d80;
 				border-collapse: collapse;
 				margin-bottom: 50px;
 				tr {
 					&:hover td,
 					&:hover a {
-						color: rgb(203, 119, 10);
+						color: #cb770a;
 					}
 					th {
 						padding: 15px;
-						background: rgba(70, 70, 70, 0.5);
+						background: #6e6d6d80;
 						color: #efefef;
-						font-family: "맑은 고딕";
+						font-family: '맑은 고딕';
 						&:nth-of-type(1) {
 							width: 10%;
 						}
@@ -72,11 +28,11 @@ body {
 					}
 					td {
 						padding: 15px 13px;
-						border-bottom: 1px solid #444;
+						border-bottom: 1px solid #6e6d6d;
 						text-align: center;
 						color: #9a9a9a;
 						&:nth-of-type(3) {
-							font-family: "맑은 고딕";
+							font-family: '맑은 고딕';
 							text-align: left;
 						}
 						a {
@@ -90,7 +46,7 @@ body {
 				width: 100%;
 				text-align: center;
 				&::after {
-					content: "";
+					content: '';
 					display: block;
 					clear: both;
 				}
@@ -121,14 +77,14 @@ body {
 						display: inline-block;
 						width: 30px;
 						height: 30px;
-						border: 1px solid #888;
+						border: 1px solid #9a9a9a;
 						font-size: 11px;
 						line-height: 30px;
-						color: #666;
+						color: #9a9a9a;
 						margin: 0 5px;
 						transition: 0.5s;
 						&:hover {
-							background: rgb(203, 119, 10);
+							background: #cb770a;
 							color: #efefef;
 						}
 					}

@@ -10,7 +10,7 @@ body {
 				article {
 					width: 32%;
 					height: 450px;
-					border-top: 1px solid rgb(110, 109, 109);
+					border-top: 1px solid #6e6d6d;
 					padding-top: 2vh;
 					margin-bottom: 40px;
 					.pic {
@@ -36,18 +36,21 @@ body {
 						height: 40%;
 						padding: 20px;
 						h2 {
-							font: bold 20px/1.2 'arial';
-							color: rgb(203, 119, 10, 0.8);
+							font-weight: bold;
+							font-size: 20px;
+							line-height: 1.2;
+							color: #cb770a;
 							margin-bottom: 15px;
 						}
 						p {
-							font: 14px/1.4 'arial';
+							font-size: 14px;
+							line-height: 1.4;
 							color: #a9a9a9;
 							margin-bottom: 20px;
 						}
 						span {
-							font: 16px/1 'arial';
-							color: rgb(110, 109, 109);
+							font-size: 16px;
+							color: #6e6d6d;
 						}
 					}
 				}
@@ -72,7 +75,7 @@ body {
 						right: 3vw;
 						font-size: 50px;
 						font-weight: bold;
-						color: rgb(203, 119, 10);
+						color: #cb770a;
 						cursor: pointer;
 						transform: rotate(45deg);
 						transition: 0.5s;

@@ -59,7 +59,7 @@ function scrollActive() {
 }
 
 function moveScroll(index) {
-	new Anim(window, {
+	new Anime(window, {
 		prop: 'scroll',
 		value: posArr[index],
 		duration: scrollSpeed,
@@ -82,27 +82,27 @@ btnViewOpen.addEventListener('click', (e) => {
 	e.preventDefault();
 	aside.style.display = 'block';
 	visual.classList.add('off');
-	new Anim(_top, {
+	new Anime(_top, {
 		prop: 'width',
 		value: '100%',
 		duration: viewSpeed,
 		callback: () => {
-			new Anim(_right, {
+			new Anime(_right, {
 				prop: 'height',
 				value: '100%',
 				duration: viewSpeed,
 				callback: () => {
-					new Anim(_bottom, {
+					new Anime(_bottom, {
 						prop: 'width',
 						value: '100%',
 						duration: viewSpeed,
 						callback: () => {
-							new Anim(_left, {
+							new Anime(_left, {
 								prop: 'height',
 								value: '100%',
 								duration: viewSpeed,
 								callback: () => {
-									new Anim(_inner, {
+									new Anime(_inner, {
 										prop: 'opacity',
 										value: 1,
 										duration: viewSpeed,
@@ -120,27 +120,27 @@ btnViewOpen.addEventListener('click', (e) => {
 btnViewClose.addEventListener('click', (e) => {
 	e.preventDefault();
 
-	new Anim(_inner, {
+	new Anime(_inner, {
 		prop: 'opacity',
 		value: 0,
 		duration: viewSpeed,
 		callback: () => {
-			new Anim(_top, {
+			new Anime(_top, {
 				prop: 'width',
 				value: '0%',
 				duration: viewSpeed,
 			});
-			new Anim(_right, {
+			new Anime(_right, {
 				prop: 'height',
 				value: '0%',
 				duration: viewSpeed,
 			});
-			new Anim(_bottom, {
+			new Anime(_bottom, {
 				prop: 'width',
 				value: '0%',
 				duration: viewSpeed,
 			});
-			new Anim(_left, {
+			new Anime(_left, {
 				prop: 'height',
 				value: '0%',
 				duration: viewSpeed,

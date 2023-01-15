@@ -63,7 +63,7 @@ body {
 								width: 100%;
 								height: 30px;
 								border: none;
-								border-bottom: 2px solid #333;
+								border-bottom: 2px solid #6e6d6d80;
 								background: none;
 								&:focus {
 									outline: none;
@@ -73,7 +73,7 @@ body {
 								width: 100%;
 								height: 30px;
 								border: none;
-								border-bottom: 2px solid #333;
+								border-bottom: 2px solid #6e6d6d80;
 								background: none;
 								&:focus {
 									outline: none;
@@ -87,7 +87,7 @@ body {
 								height: 25px;
 								margin-top: 5px;
 								border: none;
-								border-bottom: 2px solid #333;
+								border-bottom: 2px solid #6e6d6d80;
 								background: none;
 								resize: none;
 								&:focus {
@@ -98,19 +98,19 @@ body {
 								width: 100px;
 								height: 30px;
 								border-radius: 0%;
-								background: linear-gradient(45deg, rgb(203, 119, 10), rgb(252, 114, 8));
+								background-color: #cb770a;
 								color: #efefef;
 								margin: 15px 0px 0px 380px;
 								cursor: pointer;
 								transition: 0.5s;
 								&:hover {
-									background: linear-gradient(45deg, rgb(250, 158, 59), rgb(203, 119, 10));
+									background-color: #eb7206;
 									color: #efefef;
 								}
 							}
 							p {
 								font: 11px/1 '맑은고딕';
-								color: rgb(203, 119, 10);
+								color: #cb770a;
 								margin-top: 10px;
 							}
 						}
@@ -124,7 +124,7 @@ body {
 				margin-bottom: 20px;
 				float: left;
 				opacity: 0.8;
-				filter: brightness(0.8) invert(1) grayscale(1);
+				filter: grayscale(40%);
 			}
 			&::after {
 				content: '';
@@ -143,8 +143,8 @@ body {
 						height: 50px;
 						font: bold 16px/50px '맑은 고딕';
 						letter-spacing: 2px;
-						color: #fff;
-						border-bottom: 1px solid #9a9a9a;
+						color: #efefef;
+						border-bottom: 1px solid #6e6d6d;
 						margin-bottom: 15px;
 						transition: 0.3s;
 					}
@@ -153,18 +153,18 @@ body {
 						width: 100%;
 						p {
 							font-size: 14px;
-							color: #cdcccc;
+							color: #9a9a9a;
 							margin-bottom: 10px;
 						}
 						span {
 							font-size: 13px;
-							color: #9a9a9a;
+							color: #6e6d6d;
 						}
 					}
 					&.on {
 						a {
-							color: rgb(203, 119, 10);
-							border-bottom: 1px solid rgb(203, 119, 10);
+							color: #cb770a;
+							border-bottom: 1px solid #cb770a;
 						}
 					}
 				}
