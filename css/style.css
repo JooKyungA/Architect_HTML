@@ -46,8 +46,8 @@ body #header_sub .inner {
   position: relative;
 }
 body #header_sub .inner > h1 {
-  width: 12%;
-  margin-right: 13%;
+  width: 140px;
+  margin-right: 160px;
   font-weight: 400;
 }
 body #header_sub .inner > h1 a {
@@ -257,9 +257,10 @@ body #footer_sub .inner {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-body #footer_sub .inner > div {
-  display: flex;
-  flex-direction: column;
+body #footer_sub .inner > div::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 body #footer_sub .inner > div h2 {
   font-size: 14px;
@@ -275,30 +276,32 @@ body #footer_sub .inner > div p {
   color: #9a9a9a;
   margin-bottom: 15px;
 }
-body #footer_sub .inner > div.footer_txt {
-  width: 35%;
+body #footer_sub .inner > div.footer_menu {
+  width: 400px;
+  float: left;
 }
-body #footer_sub .inner > div.footer_txt h1 {
+body #footer_sub .inner > div.footer_menu h1 {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-body #footer_sub .inner > div.footer_txt h1 a {
+body #footer_sub .inner > div.footer_menu h1 a {
   transition: 0.5s;
 }
-body #footer_sub .inner > div.footer_txt h1 a:hover {
+body #footer_sub .inner > div.footer_menu h1 a:hover {
   color: #cb770a;
 }
-body #footer_sub .inner > div.footer_txt ul li a {
+body #footer_sub .inner > div.footer_menu ul li a {
   font-size: 13px;
   color: #9a9a9a;
   transition: 0.5s;
 }
-body #footer_sub .inner > div.footer_txt ul li a:hover {
+body #footer_sub .inner > div.footer_menu ul li a:hover {
   color: #cb770a;
 }
 body #footer_sub .inner > div.footer_contact {
-  width: 22%;
+  width: 300px;
+  float: left;
 }
 body #footer_sub .inner > div.footer_contact address {
   width: 90%;
@@ -309,7 +312,8 @@ body #footer_sub .inner > div.footer_contact address {
   margin-bottom: 5px;
 }
 body #footer_sub .inner > div.footer_follow {
-  width: 17%;
+  width: 180px;
+  float: left;
 }
 body #footer_sub .inner > div.footer_follow ul li a {
   display: flex;
@@ -323,7 +327,8 @@ body #footer_sub .inner > div.footer_follow ul li a i:hover {
   color: #cb770a;
 }
 body #footer_sub .inner > div.footer_subscribe {
-  width: 26%;
+  width: 300px;
+  float: left;
 }
 body #footer_sub .inner > div.footer_subscribe > div {
   width: 100%;
@@ -394,9 +399,20 @@ body #footer_sub .inner > p {
   }
   body #footer_sub .inner {
     width: 100%;
-    padding: 3vw 5vw 5vh;
-    left: 0;
-    right: 5vw;
+    padding: 5vw 5vw 0vw;
+  }
+  body #footer_sub .inner > div.footer_menu {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  body #footer_sub .inner > div.footer_contact {
+    width: 40%;
+  }
+  body #footer_sub .inner > div.footer_follow {
+    width: 20%;
+  }
+  body #footer_sub .inner > div.footer_subscribe {
+    width: 40%;
   }
 }
 @media screen and (max-width: 935px) {
@@ -408,18 +424,11 @@ body #footer_sub .inner > p {
     font-size: 14px;
     margin-bottom: 30%;
   }
-  body #footer_sub .inner > div.footer_txt {
-    width: 100%;
-    margin-bottom: 25px;
-  }
   body #footer_sub .inner > div.footer_contact {
     width: 35%;
   }
   body #footer_sub .inner > div.footer_follow {
     width: 25%;
-  }
-  body #footer_sub .inner > div.footer_subscribe {
-    width: 40%;
   }
 }
 @media screen and (max-width: 539px) {
@@ -1706,8 +1715,8 @@ body #header .inner {
   position: relative;
 }
 body #header .inner > h1 {
-  width: 12%;
-  margin-right: 13%;
+  width: 140px;
+  margin-right: 160px;
   font-weight: 400;
 }
 body #header .inner > h1 a {
@@ -1909,8 +1918,8 @@ body #visual .inner .btnViewOpen {
   width: 150px;
   height: 20px;
   position: absolute;
-  left: 25%;
-  bottom: 98px;
+  left: 300px;
+  bottom: 135px;
   font-size: 14px;
   line-height: 20px;
   color: #cb770a;
@@ -1925,7 +1934,7 @@ body #visual .inner .txt {
   width: 320px;
   position: absolute;
   top: 0;
-  left: 25%;
+  left: 300px;
   transition: 1s 0s;
 }
 body #visual .inner .txt h1 {
@@ -1938,7 +1947,7 @@ body #visual .inner .txt p {
   color: #6e6d6d;
 }
 body #visual .inner .pic {
-  width: 470px;
+  width: 480px;
   height: 650px;
   position: absolute;
   top: 10px;
@@ -2140,6 +2149,9 @@ body #about .inner .txt {
   display: flex;
   justify-content: space-between;
 }
+body #about .inner .txt h2 {
+  width: 480px;
+}
 body #about .inner .txt h2 p {
   display: inline-block;
   overflow: hidden;
@@ -2246,7 +2258,7 @@ body #portfolio .inner > a:hover i {
   color: #eb7206;
 }
 body #portfolio .inner .tab_container {
-  width: 1180px;
+  width: 100%;
   float: right;
   overflow: hidden;
   transform: translateY(50%);
@@ -2304,7 +2316,7 @@ body #portfolio .inner .tab_container #tab ul li.on a {
   color: #cb770a;
 }
 body #portfolio .inner .tab_container section {
-  width: 820px;
+  width: 800px;
   height: 250px;
   position: relative;
   float: right;
@@ -2326,7 +2338,7 @@ body #portfolio .inner .tab_container section article.on {
   opacity: 1;
 }
 body #portfolio .inner .tab_container section article div {
-  width: 260px;
+  width: 253px;
   height: 100%;
   float: left;
   margin-left: 20px;
@@ -2437,7 +2449,6 @@ body #awards .inner .wrap .award_tab input[type=radio] {
   position: absolute;
 }
 body #awards .inner .wrap .award_tab input[type=radio]:checked + label::after {
-  transform: rotate(135deg);
   opacity: 0;
 }
 body #awards .inner .wrap .award_tab input[type=radio]:checked ~ .content {
@@ -2559,13 +2570,14 @@ body #blog .inner .wrap {
 body #blog .inner .wrap article {
   width: 280px;
   float: left;
-  margin-left: 25px;
+  margin-left: 20px;
   border-top: 1px solid #6e6d6d;
   transform: translateY(30%);
   opacity: 0;
 }
 body #blog .inner .wrap article:nth-of-type(1) {
   transition: 0.5s 0.2s;
+  margin-left: 0px;
 }
 body #blog .inner .wrap article:nth-of-type(2) {
   transition: 0.5s 0.3s;
@@ -2626,9 +2638,10 @@ body #footer .inner {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-body #footer .inner > div {
-  display: flex;
-  flex-direction: column;
+body #footer .inner > div::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 body #footer .inner > div h2 {
   font-size: 14px;
@@ -2644,30 +2657,32 @@ body #footer .inner > div p {
   color: #9a9a9a;
   margin-bottom: 15px;
 }
-body #footer .inner > div.footer_txt {
-  width: 35%;
+body #footer .inner > div.footer_menu {
+  width: 400px;
+  float: left;
 }
-body #footer .inner > div.footer_txt h1 {
+body #footer .inner > div.footer_menu h1 {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-body #footer .inner > div.footer_txt h1 a {
+body #footer .inner > div.footer_menu h1 a {
   transition: 0.5s;
 }
-body #footer .inner > div.footer_txt h1 a:hover {
+body #footer .inner > div.footer_menu h1 a:hover {
   color: #cb770a;
 }
-body #footer .inner > div.footer_txt ul li a {
+body #footer .inner > div.footer_menu ul li a {
   font-size: 13px;
   color: #9a9a9a;
   transition: 0.5s;
 }
-body #footer .inner > div.footer_txt ul li a:hover {
+body #footer .inner > div.footer_menu ul li a:hover {
   color: #cb770a;
 }
 body #footer .inner > div.footer_contact {
-  width: 22%;
+  width: 300px;
+  float: left;
 }
 body #footer .inner > div.footer_contact address {
   width: 90%;
@@ -2678,7 +2693,8 @@ body #footer .inner > div.footer_contact address {
   margin-bottom: 5px;
 }
 body #footer .inner > div.footer_follow {
-  width: 17%;
+  width: 180px;
+  float: left;
 }
 body #footer .inner > div.footer_follow ul li a {
   display: flex;
@@ -2692,7 +2708,8 @@ body #footer .inner > div.footer_follow ul li a i:hover {
   color: #cb770a;
 }
 body #footer .inner > div.footer_subscribe {
-  width: 26%;
+  width: 300px;
+  float: left;
 }
 body #footer .inner > div.footer_subscribe > div {
   width: 100%;
@@ -2813,7 +2830,9 @@ body #aside .inner .content .btnViewClose {
     width: 100%;
   }
   body #header .inner > h1 {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -999999px;
   }
   body #header .inner .menuWeb {
     display: none;
@@ -2888,6 +2907,19 @@ body #aside .inner .content .btnViewClose {
   body #footer .inner {
     width: 100%;
     padding: 5vw 5vw 0vw;
+  }
+  body #footer .inner > div.footer_menu {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  body #footer .inner > div.footer_contact {
+    width: 40%;
+  }
+  body #footer .inner > div.footer_follow {
+    width: 20%;
+  }
+  body #footer .inner > div.footer_subscribe {
+    width: 40%;
   }
   body #aside .inner .asidePic {
     margin-bottom: 2vh;
@@ -2972,18 +3004,11 @@ body #aside .inner .content .btnViewClose {
   body #blog .inner .wrap article:nth-of-type(3) {
     width: calc(76% + 25px);
   }
-  body #footer .inner > div.footer_txt {
-    width: 100%;
-    margin-bottom: 25px;
-  }
   body #footer .inner > div.footer_contact {
     width: 35%;
   }
   body #footer .inner > div.footer_follow {
     width: 25%;
-  }
-  body #footer .inner > div.footer_subscribe {
-    width: 40%;
   }
   body #aside .inner {
     justify-content: center;

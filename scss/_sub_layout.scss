@@ -11,8 +11,8 @@ body {
 			justify-content: space-between;
 			position: relative;
 			> h1 {
-				width: 12%;
-				margin-right: 13%;
+				width: 140px;
+				margin-right: 160px;
 				font-weight: 400;
 				a {
 					display: block;
@@ -241,8 +241,11 @@ body {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			> div {
-				display: flex;
-				flex-direction: column;
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
 				h2 {
 					font-size: 14px;
 					font-weight: 400;
@@ -259,8 +262,9 @@ body {
 					color: #9a9a9a;
 					margin-bottom: 15px;
 				}
-				&.footer_txt {
-					width: 35%;
+				&.footer_menu {
+					width: 400px;
+					float: left;
 					h1 {
 						font-size: 15px;
 						font-weight: 400;
@@ -286,7 +290,8 @@ body {
 					}
 				}
 				&.footer_contact {
-					width: 22%;
+					width: 300px;
+					float: left;
 					address {
 						width: 90%;
 						font-style: normal;
@@ -297,7 +302,8 @@ body {
 					}
 				}
 				&.footer_follow {
-					width: 17%;
+					width: 180px;
+					float: left;
 					ul {
 						li {
 							a {
@@ -315,7 +321,8 @@ body {
 					}
 				}
 				&.footer_subscribe {
-					width: 26%;
+					width: 300px;
+					float: left;
 					> div {
 						width: 100%;
 						display: flex;
@@ -402,9 +409,22 @@ body {
 		#footer_sub {
 			.inner {
 				width: 100%;
-				padding: 3vw 5vw 5vh;
-				left: 0;
-				right: 5vw;
+				padding: 5vw 5vw 0vw;
+				> div {
+					&.footer_menu {
+						width: 100%;
+						margin-bottom: 25px;
+					}
+					&.footer_contact {
+						width: 40%;
+					}
+					&.footer_follow {
+						width: 20%;
+					}
+					&.footer_subscribe {
+						width: 40%;
+					}
+				}
 			}
 		}
 	}
@@ -432,18 +452,11 @@ body {
 		#footer_sub {
 			.inner {
 				> div {
-					&.footer_txt {
-						width: 100%;
-						margin-bottom: 25px;
-					}
 					&.footer_contact {
 						width: 35%;
 					}
 					&.footer_follow {
 						width: 25%;
-					}
-					&.footer_subscribe {
-						width: 40%;
 					}
 				}
 			}

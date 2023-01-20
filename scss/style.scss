@@ -100,8 +100,8 @@ body {
 			justify-content: space-between;
 			position: relative;
 			> h1 {
-				width: 12%;
-				margin-right: 13%;
+				width: 140px;
+				margin-right: 160px;
 				font-weight: 400;
 				a {
 					display: block;
@@ -322,8 +322,8 @@ body {
 				width: 150px;
 				height: 20px;
 				position: absolute;
-				left: 25%;
-				bottom: 98px;
+				left: 300px;
+				bottom: 135px;
 				font-size: 14px;
 				line-height: 20px;
 				color: #cb770a;
@@ -338,7 +338,7 @@ body {
 				width: 320px;
 				position: absolute;
 				top: 0;
-				left: 25%;
+				left: 300px;
 				transition: 1s 0s;
 				h1 {
 					margin-bottom: 200px;
@@ -351,7 +351,7 @@ body {
 				}
 			}
 			.pic {
-				width: 470px;
+				width: 480px;
 				height: 650px;
 				position: absolute;
 				top: 10px;
@@ -566,6 +566,7 @@ body {
 				display: flex;
 				justify-content: space-between;
 				h2 {
+					width: 480px;
 					p {
 						display: inline-block;
 						overflow: hidden;
@@ -688,7 +689,7 @@ body {
 				}
 			}
 			.tab_container {
-				width: 1180px;
+				width: 100%;
 				float: right;
 				overflow: hidden;
 				transform: translateY(50%);
@@ -747,7 +748,7 @@ body {
 					}
 				}
 				section {
-					width: 820px;
+					width: 800px;
 					height: 250px;
 					position: relative;
 					float: right;
@@ -767,7 +768,7 @@ body {
 							opacity: 1;
 						}
 						div {
-							width: 260px;
+							width: 253px;
 							height: 100%;
 							float: left;
 							margin-left: 20px;
@@ -888,7 +889,6 @@ body {
 						appearance: none;
 						position: absolute;
 						&:checked + label::after {
-							transform: rotate(135deg);
 							opacity: 0;
 						}
 						&:checked ~ .content {
@@ -1020,12 +1020,13 @@ body {
 				article {
 					width: 280px;
 					float: left;
-					margin-left: 25px;
+					margin-left: 20px;
 					border-top: 1px solid #6e6d6d;
 					transform: translateY(30%);
 					opacity: 0;
 					&:nth-of-type(1) {
 						transition: 0.5s 0.2s;
+						margin-left: 0px;
 					}
 					&:nth-of-type(2) {
 						transition: 0.5s 0.3s;
@@ -1099,8 +1100,11 @@ body {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			> div {
-				display: flex;
-				flex-direction: column;
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
 				h2 {
 					font-size: 14px;
 					font-weight: 400;
@@ -1117,8 +1121,9 @@ body {
 					color: #9a9a9a;
 					margin-bottom: 15px;
 				}
-				&.footer_txt {
-					width: 35%;
+				&.footer_menu {
+					width: 400px;
+					float: left;
 					h1 {
 						font-size: 15px;
 						font-weight: 400;
@@ -1144,7 +1149,8 @@ body {
 					}
 				}
 				&.footer_contact {
-					width: 22%;
+					width: 300px;
+					float: left;
 					address {
 						width: 90%;
 						font-style: normal;
@@ -1155,7 +1161,8 @@ body {
 					}
 				}
 				&.footer_follow {
-					width: 17%;
+					width: 180px;
+					float: left;
 					ul {
 						li {
 							a {
@@ -1173,7 +1180,8 @@ body {
 					}
 				}
 				&.footer_subscribe {
-					width: 26%;
+					width: 300px;
+					float: left;
 					> div {
 						width: 100%;
 						display: flex;
@@ -1302,7 +1310,9 @@ body {
 			.inner {
 				width: 100%;
 				> h1 {
-					display: none;
+					opacity: 0;
+					position: absolute;
+					top: -999999px;
 				}
 				.menuWeb {
 					display: none;
@@ -1407,6 +1417,21 @@ body {
 			.inner {
 				width: 100%;
 				padding: 5vw 5vw 0vw;
+				> div {
+					&.footer_menu {
+						width: 100%;
+						margin-bottom: 25px;
+					}
+					&.footer_contact {
+						width: 40%;
+					}
+					&.footer_follow {
+						width: 20%;
+					}
+					&.footer_subscribe {
+						width: 40%;
+					}
+				}
 			}
 		}
 
@@ -1538,18 +1563,11 @@ body {
 		#footer {
 			.inner {
 				> div {
-					&.footer_txt {
-						width: 100%;
-						margin-bottom: 25px;
-					}
 					&.footer_contact {
 						width: 35%;
 					}
 					&.footer_follow {
 						width: 25%;
-					}
-					&.footer_subscribe {
-						width: 40%;
 					}
 				}
 			}
