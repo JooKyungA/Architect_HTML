@@ -119,20 +119,15 @@ body {
 			}
 
 			#map {
-				width: 70%;
+				width: 880px;
 				height: 500px;
 				margin-bottom: 20px;
 				float: left;
 				opacity: 0.8;
 				filter: grayscale(40%);
 			}
-			&::after {
-				content: '';
-				display: block;
-				clear: both;
-			}
 			.branch {
-				width: 25%;
+				width: 280px;
 				float: right;
 				li {
 					height: calc(500px / 3);
@@ -198,6 +193,12 @@ body {
 							}
 						}
 					}
+				}
+				#map {
+					width: 72%;
+				}
+				.branch {
+					width: 25%;
 				}
 			}
 		}

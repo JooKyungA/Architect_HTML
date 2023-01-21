@@ -482,7 +482,7 @@ body .about .inner .content article {
   height: 100%;
 }
 body .about .inner .content article .wrap {
-  width: 870px;
+  width: 880px;
   height: 400px;
   float: right;
   margin-bottom: 30px;
@@ -1077,20 +1077,15 @@ body .contact .inner .wrap #contact_form fieldset div p {
   margin-top: 10px;
 }
 body .contact .inner #map {
-  width: 70%;
+  width: 880px;
   height: 500px;
   margin-bottom: 20px;
   float: left;
   opacity: 0.8;
   filter: grayscale(40%);
 }
-body .contact .inner::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 body .contact .inner .branch {
-  width: 25%;
+  width: 280px;
   float: right;
 }
 body .contact .inner .branch li {
@@ -1139,6 +1134,12 @@ body .contact .inner .branch li.on a {
   body .contact .inner .wrap #contact_form fieldset div input[type=submit] {
     float: right;
     margin: 15px 0px 30px 0px;
+  }
+  body .contact .inner #map {
+    width: 72%;
+  }
+  body .contact .inner .branch {
+    width: 25%;
   }
 }
 @media screen and (max-width: 935px) {
