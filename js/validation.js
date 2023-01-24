@@ -1,18 +1,17 @@
 const form = document.querySelector('form');
-
 const btnSubmit_join = form.querySelector('#join_submit');
 const btnSubmit_contact = form.querySelector('#contact_submit');
 
 if (btnSubmit_join != null) {
 	btnSubmit_join.addEventListener('click', (e) => {
-		if (!isAgree('agree')) e.preventDefault();
+		if (!isCheck('agree')) e.preventDefault();
 		if (!isTxt('userName', 1)) e.preventDefault();
 		if (!isTxt('userid', 5)) e.preventDefault();
 		if (!isEmail('email')) e.preventDefault();
 		if (!isSelect('join_branch')) e.preventDefault();
 		if (!isCheck('memberType')) e.preventDefault();
 		if (!isCheck('project')) e.preventDefault();
-		if (!isPwd('pwd1', 5)) e.preventDefault();
+		if (!isPwd1('pwd1', 5)) e.preventDefault();
 		if (!isPwd2('pwd1', 'pwd2')) e.preventDefault();
 	});
 }
@@ -25,31 +24,6 @@ if (btnSubmit_contact != null) {
 	});
 }
 
-function isAgree(el) {
-	let inputs = form.querySelectorAll(`[name=${el}]`);
-	let isCheck = false;
-
-	for (let el of inputs) {
-		if (el.checked) isCheck = true;
-	}
-
-	if (isCheck) {
-		const errMsgs = inputs[0].closest('.agreement').querySelectorAll('p');
-
-		if (errMsgs.length > 0) inputs[0].closest('.agreement').querySelector('p').remove();
-
-		return true;
-	} else {
-		const errMsgs = inputs[0].closest('.agreement').querySelectorAll('p');
-		if (errMsgs.length > 0) return false;
-
-		const errMsg = document.createElement('p');
-		errMsg.append('약관에 동의해주세요');
-		inputs[0].closest('.agreement').append(errMsg);
-
-		return false;
-	}
-}
 function isTxt(el, len) {
 	if (len === undefined) len = 1;
 	let input = form.querySelector(`[name=${el}]`);
@@ -68,6 +42,7 @@ function isTxt(el, len) {
 		return false;
 	}
 }
+
 function isEmail(el) {
 	let input = form.querySelector(`[name=${el}]`);
 	let txt = input.value;
@@ -112,7 +87,7 @@ function isCheck(el) {
 	}
 }
 
-function isPwd(el1, len) {
+function isPwd1(el1, len) {
 	let pwd1 = form.querySelector(`[name=${el1}]`);
 	let pwd1_val = pwd1.value;
 	const num = /[0-9]/;
