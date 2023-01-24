@@ -42,11 +42,10 @@ input.addEventListener('keypress', (e) => {
 
 frame.addEventListener('click', (e) => {
 	e.preventDefault();
-	if (e.target == frame) return;
 
 	let target = e.target.closest('.item').querySelector('div');
 
-	if (e.target.closest('div') == target) {
+	if (e.target.closest('div') === target) {
 		let imgSrc = e.target.closest('.item').querySelector('a').getAttribute('href');
 
 		let pop = document.createElement('aside');

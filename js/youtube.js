@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const vidList = document.querySelector('.vidList');
 const key = 'AIzaSyCe4VTdOeeczNpK2P90-h1K2ZmPWygTVOY';
 const playlistId = 'PLB11APmWdapRtpUvss55ipqwUpcIxj3Eq';
@@ -42,7 +43,7 @@ fetch(url)
 
 vidList.addEventListener('click', (e) => {
 	e.preventDefault();
-
+	if (!e.target.closest('a')) return;
 	const vidId = e.target.closest('a').getAttribute('href');
 
 	let pop = document.createElement('aside');
@@ -53,14 +54,18 @@ vidList.addEventListener('click', (e) => {
 			</div>
       <span class="btnCloseVid">+</span>
     `;
-	vidList.append(pop);
+	body.append(pop);
+	body.style.overflow = 'hidden';
 });
 
-vidList.addEventListener('click', (e) => {
-	const pop = vidList.querySelector('.pop');
+body.addEventListener('click', (e) => {
+	let pop = body.querySelector('.pop');
 
 	if (pop) {
-		const close = pop.querySelector('.btnCloseVid');
-		if (e.target == close) pop.remove();
+		let close = pop.querySelector('.btnCloseVid');
+		if (e.target == close) {
+			pop.remove();
+			body.style.overflow = 'auto';
+		}
 	}
 });
