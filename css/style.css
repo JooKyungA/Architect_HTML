@@ -165,7 +165,7 @@ body #header_sub .inner .menuMo {
   top: 0;
   left: -270px;
   padding: 35px 30px;
-  z-index: 10;
+  z-index: 4;
   transition: 0.5s;
   display: none;
 }
@@ -249,7 +249,6 @@ body .content_sub .inner > p::after {
 }
 body #footer_sub .inner {
   width: 1180px;
-  height: 200px;
   margin: 0 auto;
   padding: 30px 0px 10px;
   border-top: 2px solid rgba(110, 109, 109, 0.5019607843);
@@ -448,20 +447,17 @@ body #footer_sub .inner > p {
     width: 50%;
   }
 }
-body .about .inner .content {
-  width: 100%;
-  height: 770px;
-  padding-right: 20px;
-  position: relative;
-}
-body .about .inner .content::after {
+body .about .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-body .about .inner .content h2 {
+body .about .inner .content {
   width: 100%;
-  float: left;
+  padding-right: 20px;
+  position: relative;
+}
+body .about .inner .content h2 {
   font-size: 30px;
   font-weight: 400;
   padding-top: 10px;
@@ -479,7 +475,11 @@ body .about .inner .content h2::after {
 }
 body .about .inner .content article {
   width: 100%;
-  height: 100%;
+}
+body .about .inner .content article::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 body .about .inner .content article .wrap {
   width: 880px;
@@ -544,7 +544,8 @@ body .about .inner .content article .wrap .next img {
   object-fit: cover;
 }
 body .about .inner .content article .txt {
-  width: 870px;
+  width: 880px;
+  height: 250px;
   float: right;
   position: relative;
 }
@@ -573,11 +574,6 @@ body .about .inner .team {
   width: 100%;
   position: relative;
 }
-body .about .inner .team::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 body .about .inner .team h2 {
   font-size: 30px;
   font-weight: 400;
@@ -594,6 +590,14 @@ body .about .inner .team h2::after {
   top: 0;
   left: 0;
 }
+body .about .inner .team .wrap {
+  width: 100%;
+}
+body .about .inner .team .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 body .about .inner .team .wrap article {
   width: 25%;
   float: left;
@@ -603,7 +607,6 @@ body .about .inner .team .wrap article .pic {
   width: 100%;
   height: 300px;
   overflow: hidden;
-  filter: saturate(70%);
   margin-bottom: 15px;
   position: relative;
 }
@@ -611,7 +614,7 @@ body .about .inner .team .wrap article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(70%);
+  filter: saturate(60%);
   transition: 0.5s;
 }
 body .about .inner .team .wrap article .pic p {
@@ -638,7 +641,7 @@ body .about .inner .team .wrap article .pic:hover img {
 }
 body .about .inner .team .wrap article .pic:hover p a {
   opacity: 1;
-  z-index: 3;
+  z-index: 2;
 }
 body .about .inner .team .wrap article h3,
 body .about .inner .team .wrap article > p {
@@ -666,6 +669,9 @@ body .about .inner .team .wrap article > p {
   }
 }
 @media screen and (max-width: 935px) {
+  body .about .inner .content article .txt {
+    height: 280px;
+  }
   body .about .inner .team .wrap article {
     width: 50%;
     padding: 15px 25px;
@@ -675,6 +681,9 @@ body .about .inner .team .wrap article > p {
   body .about .inner .content {
     height: 860px;
     padding-right: 0px;
+  }
+  body .about .inner .content article .txt {
+    height: 330px;
   }
   body .about .inner .content article .txt p {
     font-size: 18px;
@@ -1082,7 +1091,7 @@ body .contact .inner #map {
   margin-bottom: 20px;
   float: left;
   opacity: 0.8;
-  filter: grayscale(40%);
+  filter: grayscale(20%);
 }
 body .contact .inner .branch {
   width: 280px;
@@ -1642,12 +1651,12 @@ color:#efefef;
 톤다운 1
 color:#a9a9a9;
 톤다운 2
-color: rgb(110, 109, 109);
+color:#6e6d6d;
 포인트
-color: rgb(203, 119, 10);
+color:#cb770a;
 */
 body #skipNavi {
-  z-index: 10;
+  z-index: 5;
 }
 body #skipNavi li a {
   display: block;
@@ -1671,7 +1680,7 @@ body .btnScroll {
   right: 2vw;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 20;
+  z-index: 5;
 }
 body .btnScroll li {
   display: flex;
@@ -1683,7 +1692,7 @@ body .btnScroll li p {
   color: #cb770a;
   cursor: pointer;
   opacity: 0;
-  transition: 1;
+  transition: 0.5s;
 }
 body .btnScroll li a {
   display: block;
@@ -1767,7 +1776,7 @@ body #header .inner .menuWeb .sns li a {
 body #header .inner .menuWeb .sns li a i {
   transition: 0.5s;
 }
-body #header .inner .menuWeb .sns li a:hover i {
+body #header .inner .menuWeb .sns li a i:hover {
   color: #cb770a;
 }
 body #header .inner .btnCall {
@@ -1836,7 +1845,7 @@ body #header .inner .menuMo {
   top: 0;
   left: -270px;
   padding: 35px 30px;
-  z-index: 10;
+  z-index: 4;
   transition: 0.5s;
   display: none;
 }
@@ -1915,16 +1924,11 @@ body #visual .inner {
   height: 100%;
 }
 body #visual .inner .btnViewOpen {
-  display: block;
-  width: 150px;
-  height: 20px;
   position: absolute;
   left: 300px;
   bottom: 135px;
   font-size: 14px;
-  line-height: 20px;
   color: #cb770a;
-  text-decoration-line: underline;
   transition: 1s 0s;
 }
 body #visual .inner .btnViewOpen:hover {
@@ -1981,7 +1985,7 @@ body #visual .inner .slider ul {
   position: absolute;
   top: 0;
   left: 0;
-  perspective: 900px;
+  perspective: 600px;
 }
 body #visual .inner .slider ul li {
   width: 100%;
@@ -2002,24 +2006,19 @@ body #visual .inner .slider ul li img:hover {
   transform: scale(1.2);
 }
 body #visual .inner .slider ul li:nth-of-type(1) {
-  transform: translateX(-110%) rotateY(90deg) scale(0.6);
-  opacity: 0;
+  transform: translateX(-130%) rotateY(90deg) scale(0.6);
 }
 body #visual .inner .slider ul li:nth-of-type(2) {
   transform: translateX(-90%) rotateY(60deg) scale(0.6);
-  opacity: 0;
 }
 body #visual .inner .slider ul li:nth-of-type(3) {
   transform: translateX(0%) rotateY(0deg) scale(1);
-  opacity: 1;
 }
 body #visual .inner .slider ul li:nth-of-type(4) {
   transform: translateX(90%) rotateY(-60deg) scale(0.6);
-  opacity: 0;
 }
 body #visual .inner .slider ul li:nth-of-type(5) {
-  transform: translateX(110%) rotateY(-90deg) scale(0.6);
-  opacity: 0;
+  transform: translateX(130%) rotateY(-90deg) scale(0.6);
 }
 body #visual .inner .sliderBtn {
   position: absolute;
@@ -2061,10 +2060,6 @@ body #visual .inner .sliderBtn .next span {
   background: #efefef;
   position: absolute;
   opacity: 1;
-}
-body #visual .inner .sliderBtn .prev.on,
-body #visual .inner .sliderBtn .next.on {
-  animation: wrap 0.3s 1;
 }
 body #visual .inner .sliderBtn .prev::before, body #visual .inner .sliderBtn .prev::after {
   left: 25px;
@@ -2118,12 +2113,6 @@ body #about .inner h1 {
   transform: translateY(-50%);
   opacity: 0;
   transition: 0.5s;
-}
-body #about .inner h1 a {
-  transition: 0.5s;
-}
-body #about .inner h1 a:hover {
-  color: #cb770a;
 }
 body #about .inner > a {
   display: block;
@@ -2233,13 +2222,7 @@ body #portfolio .inner h1 {
   opacity: 0;
   transition: 0.5s;
 }
-body #portfolio .inner h1 a {
-  transition: 0.5s;
-}
-body #portfolio .inner h1 a:hover {
-  color: #cb770a;
-}
-body #portfolio .inner > a {
+body #portfolio .inner a {
   display: block;
   float: right;
   margin-top: -70px;
@@ -2248,14 +2231,14 @@ body #portfolio .inner > a {
   opacity: 0;
   transition: transform 0.5s 0.2s, opacity 0.5s 0.2s, color 0.5s;
 }
-body #portfolio .inner > a i {
+body #portfolio .inner a i {
   color: #cb770a;
   transition: 0.5s;
 }
-body #portfolio .inner > a:hover {
+body #portfolio .inner a:hover {
   color: #eb7206;
 }
-body #portfolio .inner > a:hover i {
+body #portfolio .inner a:hover i {
   color: #eb7206;
 }
 body #portfolio .inner .tab_container {
@@ -2265,11 +2248,6 @@ body #portfolio .inner .tab_container {
   transform: translateY(50%);
   opacity: 0;
   transition: 0.5s 0.2s;
-}
-body #portfolio .inner .tab_container::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 body #portfolio .inner .tab_container #tab {
   width: 500px;
@@ -2281,17 +2259,12 @@ body #portfolio .inner .tab_container #tab ul {
   justify-content: flex-end;
 }
 body #portfolio .inner .tab_container #tab ul li {
-  float: left;
   margin-left: 70px;
 }
 body #portfolio .inner .tab_container #tab ul li a {
-  display: block;
   padding-bottom: 5px;
   font-size: 14px;
   color: #6e6d6d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 0.3s;
   position: relative;
 }
@@ -2357,7 +2330,6 @@ body #portfolio .inner .tab_container section article div img {
   transition: 0.5s;
 }
 body #portfolio .inner .tab_container section article div p {
-  display: block;
   width: 100%;
   position: absolute;
   bottom: 17px;
@@ -2367,7 +2339,7 @@ body #portfolio .inner .tab_container section article div p {
   letter-spacing: 4px;
   color: #eee;
   opacity: 0;
-  z-index: 4;
+  z-index: 3;
 }
 body #portfolio .inner .tab_container section article div::after {
   content: "";
@@ -2380,7 +2352,7 @@ body #portfolio .inner .tab_container section article div::after {
   left: 0;
   opacity: 0.8;
   transition: 0.5s;
-  z-index: 3;
+  z-index: 2;
 }
 body #portfolio .inner .tab_container section article div:hover img {
   transform: scale(1.2);
@@ -2396,7 +2368,7 @@ body #portfolio.on .inner h1 {
   transform: translateY(0%);
   opacity: 1;
 }
-body #portfolio.on .inner > a {
+body #portfolio.on .inner a {
   transform: translateX(0%);
   opacity: 1;
 }
@@ -2433,7 +2405,7 @@ body #awards .inner .wrap {
   transition: 0.5s 0.2s;
 }
 body #awards .inner .wrap .award_tab {
-  width: 700px;
+  width: 100%;
   height: 100%;
   position: relative;
   margin: 0px;
@@ -2478,7 +2450,6 @@ body #awards .inner .wrap .award_tab input[type=radio]:checked ~ label h3 {
   padding: 0px 15px;
   font-weight: 500;
   color: #cb770a;
-  border-radius: 2px;
 }
 body #awards .inner .wrap .award_tab label {
   display: flex;
@@ -2509,7 +2480,7 @@ body #awards .inner .wrap .award_tab label h3 {
   position: relative;
   font-weight: 400;
   color: #9a9a9a;
-  z-index: 10;
+  z-index: 1;
 }
 body #awards .inner .wrap .award_tab .content {
   max-height: 0;
@@ -2529,7 +2500,7 @@ body #awards .inner .wrap .award_tab .content p {
   position: relative;
   padding: 10px 0;
   color: #9a9a9a;
-  z-index: 10;
+  z-index: 2;
 }
 body #awards.on .inner h1 {
   transform: translateY(0%);
@@ -2570,7 +2541,6 @@ body #blog .inner .wrap {
 }
 body #blog .inner .wrap article {
   width: 280px;
-  float: left;
   margin-left: 20px;
   border-top: 1px solid #6e6d6d;
   transform: translateY(30%);
@@ -2631,7 +2601,6 @@ body #blog.on .inner .wrap article {
 }
 body #footer .inner {
   width: 1180px;
-  height: 200px;
   margin: 0 auto;
   padding: 30px 0px 0px;
   border-top: 2px solid rgba(110, 109, 109, 0.5019607843);
@@ -2883,7 +2852,6 @@ body #aside .inner .content .btnViewClose {
     padding: 5vw 5vw 5vw;
   }
   body #about .inner .txt {
-    display: flex;
     flex-direction: column;
   }
   body #about .inner .txt h2 {
@@ -2940,24 +2908,11 @@ body #aside .inner .content .btnViewClose {
   body #visual .inner .sliderBtn {
     display: none;
   }
-  body #portfolio .inner .tab_container {
-    width: 100%;
-  }
-  body #portfolio .inner .tab_container::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
   body #portfolio .inner .tab_container .tab {
     width: 100%;
-    float: right;
   }
   body #portfolio .inner .tab_container .tab ul {
     width: 40%;
-    float: right;
-  }
-  body #portfolio .inner .tab_container .tab ul li {
-    float: left;
   }
   body #portfolio .inner .tab_container section {
     width: 100%;
@@ -2977,9 +2932,6 @@ body #aside .inner .content .btnViewClose {
     width: 80%;
     margin-top: 20px;
   }
-  body #awards .inner .wrap .award_tab {
-    width: 100%;
-  }
   body #awards .inner .wrap .award_tab input[type=radio]:checked ~ label h2 {
     display: none;
   }
@@ -2995,12 +2947,6 @@ body #aside .inner .content .btnViewClose {
   body #blog .inner .wrap article {
     width: 38%;
     margin-bottom: 25px;
-  }
-  body #blog .inner .wrap article:nth-of-type(1) {
-    float: left;
-  }
-  body #blog .inner .wrap article:nth-of-type(2) {
-    float: right;
   }
   body #blog .inner .wrap article:nth-of-type(3) {
     width: calc(76% + 25px);
@@ -3054,19 +3000,29 @@ body #aside .inner .content .btnViewClose {
   }
   body #visual .inner .pic {
     width: 70%;
-    height: 55vh;
+    height: 50vh;
     margin-right: 0vw;
   }
   body #about .inner h1 {
     margin-bottom: 50px;
   }
-  body #about .inner > a {
+  body #about .inner a {
     margin-top: -40px;
+  }
+  body #about .inner .txt h2 {
+    width: 100%;
+  }
+  body #about .inner .txt h2 p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  body #about .inner .txt > p {
+    font-size: 13px;
   }
   body #portfolio .inner h1 {
     margin-bottom: 50px;
   }
-  body #portfolio .inner > a {
+  body #portfolio .inner a {
     margin-top: -40px;
   }
   body #portfolio .inner .tab_container #tab {
@@ -3099,9 +3055,6 @@ body #aside .inner .content .btnViewClose {
   }
   body #awards .inner .wrap .award_tab input[type=radio]:checked ~ .content {
     max-height: 180px;
-  }
-  body #awards .inner .wrap .award_tab input[type=radio]:checked ~ label h2 {
-    display: none;
   }
   body #awards .inner .wrap .award_tab label h2 {
     font-size: 16px;
@@ -3143,7 +3096,6 @@ body #aside .inner .content .btnViewClose {
   }
   body #aside .inner {
     padding: 2vw;
-    align-content: center;
   }
   body #aside .inner .asidepic {
     width: 70%;
@@ -3156,7 +3108,6 @@ body #aside .inner .content .btnViewClose {
   }
   body #aside .inner .content p {
     font-size: 12px;
-    line-height: 1.2;
   }
   body #aside .inner .content .btnViewClose {
     margin-top: -22px;

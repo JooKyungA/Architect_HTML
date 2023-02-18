@@ -29,7 +29,7 @@ color:#cb770a;
 
 body {
 	#skipNavi {
-		z-index: 10;
+		z-index: 5;
 		li {
 			a {
 				display: block;
@@ -55,7 +55,7 @@ body {
 		right: 2vw;
 		top: 50%;
 		transform: translateY(-50%);
-		z-index: 20;
+		z-index: 5;
 		li {
 			display: flex;
 			justify-content: flex-end;
@@ -65,7 +65,7 @@ body {
 				color: #cb770a;
 				cursor: pointer;
 				opacity: 0;
-				transition: 1;
+				transition: 0.5s;
 			}
 			a {
 				display: block;
@@ -128,7 +128,6 @@ body {
 						a {
 							font-size: 14px;
 							transition: 0.5s;
-
 							&:hover {
 								color: #cb770a;
 							}
@@ -140,7 +139,6 @@ body {
 					li {
 						float: left;
 						margin-right: 20px;
-
 						&:last-of-type {
 							margin-right: 0px;
 						}
@@ -148,9 +146,7 @@ body {
 							font-size: 14px;
 							i {
 								transition: 0.5s;
-							}
-							&:hover {
-								i {
+								&:hover {
 									color: #cb770a;
 								}
 							}
@@ -226,7 +222,7 @@ body {
 				top: 0;
 				left: -270px;
 				padding: 35px 30px;
-				z-index: 10;
+				z-index: 4;
 				transition: 0.5s;
 				display: none;
 				&.on {
@@ -306,7 +302,6 @@ body {
 					margin-right: -100%;
 					opacity: 0;
 				}
-
 				.slider,
 				.sliderBtn {
 					margin-left: -100%;
@@ -318,16 +313,11 @@ body {
 			width: 100%;
 			height: 100%;
 			.btnViewOpen {
-				display: block;
-				width: 150px;
-				height: 20px;
 				position: absolute;
 				left: 300px;
 				bottom: 135px;
 				font-size: 14px;
-				line-height: 20px;
 				color: #cb770a;
-				text-decoration-line: underline;
 				transition: 1s 0s;
 				&:hover {
 					color: #eb7206;
@@ -369,7 +359,6 @@ body {
 					}
 				}
 			}
-
 			.slider {
 				width: 250px;
 				height: 300px;
@@ -384,7 +373,7 @@ body {
 					position: absolute;
 					top: 0;
 					left: 0;
-					perspective: 900px;
+					perspective: 600px;
 					li {
 						width: 100%;
 						height: 100%;
@@ -403,24 +392,19 @@ body {
 							}
 						}
 						&:nth-of-type(1) {
-							transform: translateX(-110%) rotateY(90deg) scale(0.6);
-							opacity: 0;
+							transform: translateX(-130%) rotateY(90deg) scale(0.6);
 						}
 						&:nth-of-type(2) {
 							transform: translateX(-90%) rotateY(60deg) scale(0.6);
-							opacity: 0;
 						}
 						&:nth-of-type(3) {
 							transform: translateX(0%) rotateY(0deg) scale(1);
-							opacity: 1;
 						}
 						&:nth-of-type(4) {
 							transform: translateX(90%) rotateY(-60deg) scale(0.6);
-							opacity: 0;
 						}
 						&:nth-of-type(5) {
-							transform: translateX(110%) rotateY(-90deg) scale(0.6);
-							opacity: 0;
+							transform: translateX(130%) rotateY(-90deg) scale(0.6);
 						}
 					}
 				}
@@ -459,9 +443,6 @@ body {
 						background: #efefef;
 						position: absolute;
 						opacity: 1;
-					}
-					&.on {
-						animation: wrap 0.3s 1;
 					}
 				}
 
@@ -533,12 +514,6 @@ body {
 				transform: translateY(-50%);
 				opacity: 0;
 				transition: 0.5s;
-				a {
-					transition: 0.5s;
-					&:hover {
-						color: #cb770a;
-					}
-				}
 			}
 			> a {
 				display: block;
@@ -662,14 +637,8 @@ body {
 				transform: translateY(-50%);
 				opacity: 0;
 				transition: 0.5s;
-				a {
-					transition: 0.5s;
-					&:hover {
-						color: #cb770a;
-					}
-				}
 			}
-			> a {
+			a {
 				display: block;
 				float: right;
 				margin-top: -70px;
@@ -695,11 +664,6 @@ body {
 				transform: translateY(50%);
 				opacity: 0;
 				transition: 0.5s 0.2s;
-				&::after {
-					content: '';
-					display: block;
-					clear: both;
-				}
 				#tab {
 					width: 500px;
 					float: right;
@@ -708,16 +672,11 @@ body {
 						display: flex;
 						justify-content: flex-end;
 						li {
-							float: left;
 							margin-left: 70px;
 							a {
-								display: block;
 								padding-bottom: 5px;
 								font-size: 14px;
 								color: #6e6d6d;
-								display: flex;
-								justify-content: center;
-								align-items: center;
 								transition: 0.3s;
 								position: relative;
 								&::after {
@@ -785,7 +744,6 @@ body {
 								transition: 0.5s;
 							}
 							p {
-								display: block;
 								width: 100%;
 								position: absolute;
 								bottom: 17px;
@@ -795,7 +753,7 @@ body {
 								letter-spacing: 4px;
 								color: #eee;
 								opacity: 0;
-								z-index: 4;
+								z-index: 3;
 							}
 							&::after {
 								content: '';
@@ -808,7 +766,7 @@ body {
 								left: 0;
 								opacity: 0.8;
 								transition: 0.5s;
-								z-index: 3;
+								z-index: 2;
 							}
 							&:hover {
 								img {
@@ -833,7 +791,7 @@ body {
 					transform: translateY(0%);
 					opacity: 1;
 				}
-				> a {
+				a {
 					transform: translateX(0%);
 					opacity: 1;
 				}
@@ -874,7 +832,7 @@ body {
 				opacity: 0;
 				transition: 0.5s 0.2s;
 				.award_tab {
-					width: 700px;
+					width: 100%;
 					height: 100%;
 					position: relative;
 					margin: 0px;
@@ -918,7 +876,6 @@ body {
 							padding: 0px 15px;
 							font-weight: 500;
 							color: #cb770a;
-							border-radius: 2px;
 						}
 					}
 					label {
@@ -949,7 +906,7 @@ body {
 							position: relative;
 							font-weight: 400;
 							color: #9a9a9a;
-							z-index: 10;
+							z-index: 1;
 						}
 					}
 					.content {
@@ -969,7 +926,7 @@ body {
 							position: relative;
 							padding: 10px 0;
 							color: #9a9a9a;
-							z-index: 10;
+							z-index: 2;
 						}
 					}
 				}
@@ -1019,7 +976,6 @@ body {
 				justify-content: flex-end;
 				article {
 					width: 280px;
-					float: left;
 					margin-left: 20px;
 					border-top: 1px solid #6e6d6d;
 					transform: translateY(30%);
@@ -1092,7 +1048,6 @@ body {
 	#footer {
 		.inner {
 			width: 1180px;
-			height: 200px;
 			margin: 0 auto;
 			padding: 30px 0px 0px;
 			border-top: 2px solid #6e6d6d80;
@@ -1375,7 +1330,6 @@ body {
 				width: 100%;
 				padding: 5vw 5vw 5vw;
 				.txt {
-					display: flex;
 					flex-direction: column;
 					h2 {
 						margin-bottom: 15px;
@@ -1476,21 +1430,10 @@ body {
 		#portfolio {
 			.inner {
 				.tab_container {
-					width: 100%;
-					&::after {
-						content: '';
-						display: block;
-						clear: both;
-					}
 					.tab {
 						width: 100%;
-						float: right;
 						ul {
 							width: 40%;
-							float: right;
-							li {
-								float: left;
-							}
 						}
 					}
 					section {
@@ -1518,7 +1461,6 @@ body {
 					width: 80%;
 					margin-top: 20px;
 					.award_tab {
-						width: 100%;
 						input[type='radio'] {
 							&:checked ~ label h2 {
 								display: none;
@@ -1545,12 +1487,6 @@ body {
 					article {
 						width: 38%;
 						margin-bottom: 25px;
-						&:nth-of-type(1) {
-							float: left;
-						}
-						&:nth-of-type(2) {
-							float: right;
-						}
 						&:nth-of-type(3) {
 							width: calc(76% + 25px);
 						}
@@ -1626,7 +1562,7 @@ body {
 				}
 				.pic {
 					width: 70%;
-					height: 55vh;
+					height: 50vh;
 					margin-right: 0vw;
 				}
 			}
@@ -1638,8 +1574,20 @@ body {
 				h1 {
 					margin-bottom: 50px;
 				}
-				> a {
+				a {
 					margin-top: -40px;
+				}
+				.txt {
+					h2 {
+						width: 100%;
+						p {
+							font-size: 13px;
+							font-weight: 500;
+						}
+					}
+					> p {
+						font-size: 13px;
+					}
 				}
 			}
 		}
@@ -1650,7 +1598,7 @@ body {
 				h1 {
 					margin-bottom: 50px;
 				}
-				> a {
+				a {
 					margin-top: -40px;
 				}
 				.tab_container {
@@ -1692,9 +1640,6 @@ body {
 						input[type='radio'] {
 							&:checked ~ .content {
 								max-height: 180px;
-							}
-							&:checked ~ label h2 {
-								display: none;
 							}
 						}
 						label {
@@ -1760,7 +1705,6 @@ body {
 			top: 12%;
 			.inner {
 				padding: 2vw;
-				align-content: center;
 				.asidepic {
 					width: 70%;
 					margin-top: 2vh;
@@ -1773,7 +1717,6 @@ body {
 					}
 					p {
 						font-size: 12px;
-						line-height: 1.2;
 					}
 					.btnViewClose {
 						margin-top: -22px;

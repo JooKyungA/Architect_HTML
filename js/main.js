@@ -41,7 +41,7 @@ function getPos() {
 
 function modifyPos() {
 	getPos();
-	const scrollActive = document.querySelector('li.on');
+	const scrollActive = document.querySelector('.btnScroll li.on');
 	const active_index = btnScroll_arr.indexOf(scrollActive);
 	window.scroll(0, posArr[active_index]);
 }
@@ -173,7 +173,6 @@ prev.addEventListener('click', prevslide);
 function init() {
 	frame.prepend(frame.lastElementChild);
 	frame.prepend(frame.lastElementChild);
-	boxs[0].classList.add('on');
 }
 function nextslide(e) {
 	e.preventDefault();
@@ -199,9 +198,6 @@ function prevslide(e) {
 }
 function activationSlide() {
 	setTimeout(() => {
-		const boxs = frame.querySelectorAll('li');
-		for (const el of boxs) el.classList.remove('on');
-		boxs[2].classList.add('on');
 		enableClick = true;
 	}, delay);
 }
