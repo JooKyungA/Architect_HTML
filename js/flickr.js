@@ -12,8 +12,6 @@ const user_id = '197141079@N07';
 
 const url1 = `${base}&method=${method_user}&api_key=${key}&per_page=${per_page}&user_id=${user_id}`;
 
-const url2 = `${base}&method=${method_search}&api_key=${key}&per_page=${per_page}&tags=바다`;
-
 btnSearch.addEventListener('click', () => {
 	let tag = input.value;
 	tag = tag.trim();
@@ -21,6 +19,7 @@ btnSearch.addEventListener('click', () => {
 
 	if (tag != '') {
 		callData(url);
+		input.value = '';
 	} else {
 		alert('검색어를 입력하세요.');
 	}
@@ -134,14 +133,6 @@ function delayLoading() {
 
 			if (count == len) isoLayout();
 		});
-
-		let thumb = el.closest('.item').querySelector('.thumb');
-		thumb.onerror = (e) => {
-			e.currentTarget
-				.closest('.item')
-				.querySelector('div a img')
-				.setAttribute('src', 'img/error_replace.jpg');
-		};
 	}
 }
 

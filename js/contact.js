@@ -70,8 +70,13 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 const zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-map.setZoomable(false);
+setZoomable(false);
 
+setDraggable(true);
+
+function setZoomable(Zoomable) {
+	map.setZoomable(Zoomable);
+}
 function setDraggable(draggable) {
 	map.setDraggable(draggable);
 }

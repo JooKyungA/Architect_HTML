@@ -16,6 +16,9 @@ body {
 					padding: 20px;
 					display: flex;
 					flex-direction: column;
+					&:nth-of-type(odd) {
+						margin-right: 20px;
+					}
 					img {
 						width: 32px;
 						height: 32px;
@@ -47,8 +50,6 @@ body {
 						h2 {
 							font-size: 40px;
 							margin-bottom: 10px;
-							display: flex;
-							align-items: flex-start;
 						}
 						div {
 							width: 100%;
@@ -59,7 +60,9 @@ body {
 								padding: 15px 0px 3px;
 								color: #9a9a9a;
 							}
-							input[type='text'] {
+							input[type='text'],
+							select,
+							textarea {
 								width: 100%;
 								height: 30px;
 								border: none;
@@ -70,37 +73,21 @@ body {
 								}
 							}
 							select {
-								width: 100%;
-								height: 30px;
-								border: none;
-								border-bottom: 2px solid #6e6d6d80;
-								background: none;
-								&:focus {
-									outline: none;
-								}
 								option {
 									color: #0b0909;
 								}
 							}
 							textarea {
-								width: 100%;
-								height: 25px;
 								margin-top: 5px;
-								border: none;
-								border-bottom: 2px solid #6e6d6d80;
-								background: none;
 								resize: none;
-								&:focus {
-									outline: none;
-								}
 							}
 							input[type='submit'] {
 								width: 100px;
 								height: 30px;
-								border-radius: 0%;
 								background-color: #cb770a;
 								color: #efefef;
-								margin: 15px 0px 0px 380px;
+								float: right;
+								margin: 15px 0px 10px;
 								cursor: pointer;
 								transition: 0.5s;
 								&:hover {
@@ -178,20 +165,15 @@ body {
 					width: 100%;
 					div {
 						width: 49%;
+						&:nth-of-type(odd) {
+							margin-right: 2%;
+						}
 					}
 				}
 				.wrap {
 					#contact_form {
 						width: 100%;
-						margin: 0 auto;
-						fieldset {
-							div {
-								input[type='submit'] {
-									float: right;
-									margin: 15px 0px 30px 0px;
-								}
-							}
-						}
+						margin: 0px auto 50px;
 					}
 				}
 				#map {
@@ -219,7 +201,8 @@ body {
 					float: left;
 					li {
 						width: 33.333%;
-						padding: 0px 20px;
+						height: auto;
+						padding: 0px 20px 15px;
 					}
 				}
 			}
@@ -234,7 +217,7 @@ body {
 			.inner {
 				.info {
 					> div {
-						height: 300px;
+						height: 260px;
 					}
 				}
 				.wrap {
@@ -244,13 +227,11 @@ body {
 				}
 				#map {
 					width: 100%;
+					height: 400px;
 				}
 				.branch {
-					width: 100%;
-					float: left;
 					li {
 						width: 100%;
-						padding: 0px 20px;
 					}
 				}
 			}
